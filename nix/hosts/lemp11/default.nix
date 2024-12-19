@@ -25,6 +25,8 @@
   imports = [
     inputs.agenix.nixosModules.default
 
+    ../common
+
     ./configuration.nix
     ./secrets.nix
 
