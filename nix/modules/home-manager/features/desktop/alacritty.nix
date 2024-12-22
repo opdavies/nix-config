@@ -27,7 +27,7 @@ with lib;
           size = 10;
 
           bold.style = "Regular";
-          normal.family = "JetBrainsMono Nerd Font Mono";
+          normal.family = "MesloLGSDZ Nerd Font Mono";
         };
 
         terminal.shell = {
