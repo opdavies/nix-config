@@ -223,9 +223,6 @@
 
   programs.dconf.enable = true;
 
-  programs.zsh.enable = true;
-  programs.zsh.histSize = 5000;
-
   users.defaultUserShell = "/etc/profiles/per-user/${username}/bin/zsh";
 
   zramSwap.enable = true;

@@ -2,11 +2,12 @@
 
 {
   programs.zsh = {
-    dotDir = ".config/zsh";
     enable = true;
     enableCompletion = true;
+    enableSyntaxHighlighting = true;
 
     cdpath = [ "~/Code" ];
+    dotDir = ".config/zsh";
 
     shellAliases = (import ./zsh/aliases.nix);
 
@@ -21,12 +22,6 @@
       alias -s {jpg,JPG,png,PNG}="background okular"
       alias -s {pdf,PDF}="background okular"
       alias -s {zip,ZIP}="unzip -l"
-
-      background() {
-        for ((i=2;i<=$#;i++)); do
-          ''${@[1]} ''${@[$i]} &> /dev/null &
-        done
-      }
 
       git() {
         if [[ "''${1}" == "root" ]]; then
@@ -52,45 +47,8 @@
         command yt-dlp --paths ~/Videos "$@"
       }
 
-      # Case insensitive autocompletion.
-      zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|=*" "l:|=* r:|=*"
-      autoload -Uz compinit && compinit
-
       bindkey -s ^f "tmux-sessionizer\n"
       bindkey -s ^v "nvim\n"
-
-      clear-ls-all() {
-        clear
-        ls -al
-        zle reset-prompt
-      }
-      zle -N clear-ls-all
-
-      clear-git-status() {
-        clear
-        git status
-        zle reset-prompt
-      }
-      zle -N clear-git-status
-
-      clear-tree-2() {
-        clear
-        tree -L 2
-        zle reset-prompt
-      }
-      zle -N clear-tree-2
-
-      clear-tree-3() {
-        clear
-        tree -L 3
-        zle reset-prompt
-      }
-      zle -N clear-tree-3
-
-      bindkey '^G' clear-git-status
-      # bindkey '^H' clear-tree-3
-      # bindkey '^J' clear-tree-2
-      # bindkey '^K' clear-ls-all
 
       setopt auto_cd
       setopt auto_pushd
@@ -102,21 +60,8 @@
       enable = true;
 
       plugins = [
-        {
-          name = "plugin/git";
-          tags = [ "from:oh-my-zsh" ];
-        }
-
-        {
-          name = "plugin/vi-mode";
-          tags = [ "from:oh-my-zsh" ];
-        }
-
         { name = "Aloxaf/fzf-tab"; }
         { name = "olets/zsh-abbr"; }
-
-        { name = "zsh-users/zsh-completions"; }
-        { name = "zsh-users/zsh-syntax-highlighting"; }
       ];
     };
   };
