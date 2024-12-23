@@ -18,6 +18,7 @@
 
   outputs =
     {
+      agenix,
       disko,
       home-manager,
       nixos-hardware,
@@ -64,7 +65,11 @@
             hostname = "lemp11";
           };
 
-          modules = [ ./nix/hosts/lemp11 ];
+          modules = [
+            agenix.nixosModules.default
+
+            ./nix/hosts/lemp11
+          ];
         };
 
         t490 = nixpkgs.lib.nixosSystem {
@@ -73,10 +78,11 @@
           };
 
           modules = [
-            ./nix/hosts/t490
-
+            agenix.nixosModules.default
             nixos-hardware.nixosModules.common-gpu-intel
             nixos-hardware.nixosModules.lenovo-thinkpad-t490
+
+            ./nix/hosts/t490
           ];
         };
 
