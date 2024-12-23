@@ -148,7 +148,10 @@
       "networkmanager"
       "wheel"
     ];
-    packages = [ ];
+    packages = with pkgs; [
+      android-tools
+      via
+    ];
   };
 
   users.groups.media = { };
