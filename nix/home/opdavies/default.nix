@@ -1,6 +1,6 @@
 {
   config,
-  desktop,
+  headless ? false,
   hostname,
   inputs,
   outputs,
@@ -44,7 +44,7 @@ let
 
   shared-packages = import "${self}/nix/lib/shared/home-manager-packages.nix" {
     inherit
-      desktop
+      headless
       inputs
       pkgs
       username
@@ -56,7 +56,7 @@ in
 
   home.packages =
     shared-packages
-    ++ pkgs.lib.optionals desktop (
+    ++ pkgs.lib.optionals (!headless) (
       with pkgs;
       [
         build-glove80

@@ -34,6 +34,8 @@
       username = "opdavies";
 
       specialArgs = {
+        headless = false;
+
         inherit
           inputs
           outputs
@@ -59,7 +61,6 @@
       nixosConfigurations = {
         lemp11 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
-            desktop = true;
             hostname = "lemp11";
           };
 
@@ -68,7 +69,6 @@
 
         t490 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
-            desktop = true;
             hostname = "t490";
           };
 
@@ -81,7 +81,11 @@
         };
 
         hetznix = nixpkgs.lib.nixosSystem {
-          inherit specialArgs system;
+          inherit system;
+
+          specialArgs = specialArgs // {
+            headless = true;
+          };
 
           modules = [
             disko.nixosModules.disko
@@ -95,7 +99,7 @@
           inherit pkgs;
 
           extraSpecialArgs = specialArgs // {
-            desktop = false;
+            headless = true;
             hostname = "PW05CH3L";
           };
 

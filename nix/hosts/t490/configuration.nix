@@ -1,9 +1,9 @@
 {
+  headless ? false,
   hostname,
   inputs,
   outputs,
   pkgs,
-  desktop ? false,
   self,
   system,
   username,
@@ -21,7 +21,7 @@
         hostname
         inputs
         outputs
-        desktop
+        headless
         self
         system
         username
@@ -170,7 +170,7 @@
       yt-dlp
       ytfzf
     ]
-    ++ pkgs.lib.optionals desktop [
+    ++ pkgs.lib.optionals (!headless) [
       acpi
       arandr
       brightnessctl

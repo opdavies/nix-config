@@ -1,6 +1,5 @@
 {
-  desktop,
-  inputs,
+  headless,
   pkgs,
   username,
   ...
@@ -70,7 +69,7 @@ with pkgs;
   deliver
   run
 ]
-++ pkgs.lib.optionals desktop [
+++ pkgs.lib.optionals (!headless) [
   # Scripts.
   _timer
   export-video-list
