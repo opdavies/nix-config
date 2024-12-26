@@ -29,7 +29,8 @@ in
       nginx = {
         enable = true;
 
-        virtualHosts."forgejo.davies.home".locations."/".proxyPass = "http://localhost:${toString port}/";
+        virtualHosts."forgejo.oliverdavies.uk".locations."/".proxyPass =
+          "http://localhost:${toString port}/";
       };
     };
   };

@@ -29,7 +29,7 @@ in
       nginx = {
         enable = true;
 
-        virtualHosts."gitea.davies.home".locations."/".proxyPass = "http://localhost:${toString port}/";
+        virtualHosts."gitea.oliverdavies.uk".locations."/".proxyPass = "http://localhost:${toString port}/";
       };
     };
   };

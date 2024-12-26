@@ -22,7 +22,8 @@ with lib;
     services.nginx = {
       enable = true;
 
-      virtualHosts."immich.davies.home".locations."/".proxyPass = "http://localhost:${toString config.services.immich.port}/";
+      virtualHosts."immich.oliverdavies.uk".locations."/".proxyPass =
+        "http://localhost:${toString config.services.immich.port}/";
     };
   };
 }

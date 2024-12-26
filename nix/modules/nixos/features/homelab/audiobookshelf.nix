@@ -12,14 +12,14 @@ in
     services.audiobookshelf = {
       enable = true;
 
-      host = "audiobookshelf.davies.home";
+      host = "audiobookshelf.oliverdavies.uk";
       port = 4001;
     };
 
     services.nginx = {
       enable = true;
 
-      virtualHosts."audiobookshelf.davies.home" = {
+      virtualHosts."audiobookshelf.oliverdavies.uk" = {
         locations."/" = {
           proxyPass = "http://localhost:${toString config.services.audiobookshelf.port}/";
           proxyWebsockets = true;

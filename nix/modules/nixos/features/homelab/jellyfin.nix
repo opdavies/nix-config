@@ -16,7 +16,7 @@ with lib;
     services.nginx = {
       enable = true;
 
-      virtualHosts."jellyfin.davies.home".locations."/".proxyPass = "http://localhost:8096/";
+      virtualHosts."jellyfin.oliverdavies.uk".locations."/".proxyPass = "http://localhost:8096/";
     };
   };
 }

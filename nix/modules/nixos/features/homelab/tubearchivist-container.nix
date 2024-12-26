@@ -289,7 +289,8 @@ in
     services.nginx = {
       enable = true;
 
-      virtualHosts."tubearchivist.davies.home".locations."/".proxyPass = "http://localhost:${toString port}/";
+      virtualHosts."tubearchivist.oliverdavies.uk".locations."/".proxyPass =
+        "http://localhost:${toString port}/";
     };
   };
 }
