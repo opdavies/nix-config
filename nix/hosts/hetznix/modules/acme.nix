@@ -1,10 +1,16 @@
+{ config, ... }:
+
 {
   security.acme = {
     acceptTerms = true;
     defaults.email = "oliver@oliverdavies.uk";
+    defaults.environmentFile = config.age.secrets.cloudflare.path;
 
     certs."oliverdavies.uk" = {
       domain = "oliverdavies.uk";
+      dnsProvider = "cloudflare";
+      webroot = null;
+
       extraDomainNames = [
         # TODO Refactor to use a wildcard certificate.
         "2020.oliverdavies.uk"

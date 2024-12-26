@@ -12,6 +12,7 @@
 
     ./disks.nix
     ./hardware-configuration.nix
+    ./secrets.nix
 
     ./modules/acme.nix
     ./modules/nginx

@@ -94,7 +94,9 @@
           };
 
           modules = [
+            agenix.nixosModules.default
             disko.nixosModules.disko
+
             ./nix/hosts/hetznix/configuration.nix
           ];
         };
