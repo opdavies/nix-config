@@ -1,20 +1,29 @@
-{ config, ... }:
+{ config, lib, ... }:
 
+with lib;
+
+let
+  cfg = config.features.homelab.audiobookshelf;
+in
 {
-  services.audiobookshelf = {
-    enable = true;
+  options.features.homelab.audiobookshelf.enable = mkEnableOption "Enable audiobookshelf";
 
-    host = "audiobookshelf.davies.home";
-    port = 4001;
-  };
+  config = mkIf cfg.enable {
+    services.audiobookshelf = {
+      enable = true;
 
-  services.nginx = {
-    enable = true;
+      host = "audiobookshelf.davies.home";
+      port = 4001;
+    };
 
-    virtualHosts."audiobookshelf.davies.home" = {
-      locations."/" = {
-        proxyPass = "http://localhost:${toString config.services.audiobookshelf.port}/";
-        proxyWebsockets = true;
+    services.nginx = {
+      enable = true;
+
+      virtualHosts."audiobookshelf.davies.home" = {
+        locations."/" = {
+          proxyPass = "http://localhost:${toString config.services.audiobookshelf.port}/";
+          proxyWebsockets = true;
+        };
       };
     };
   };
