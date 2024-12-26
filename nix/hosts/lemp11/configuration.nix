@@ -112,6 +112,9 @@
       layout = "gb";
       variant = "";
     };
+
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
   # Configure console keymap
