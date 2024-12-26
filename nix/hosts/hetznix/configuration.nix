@@ -15,7 +15,7 @@
     ./secrets.nix
 
     ./modules/acme.nix
-    ./modules/nginx
+    ./modules/caddy
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs-2405}" ];
