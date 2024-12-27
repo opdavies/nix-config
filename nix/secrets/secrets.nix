@@ -15,5 +15,8 @@ in
     users.opdavies
   ];
 
-  "tubearchivist.age".publicKeys = [ hosts.lemp11 ];
+  "tubearchivist.age".publicKeys = [
+    hosts.lemp11
+    users.opdavies
+  ];
 }
