@@ -24,10 +24,12 @@ with lib;
         };
 
         font = {
-          size = 10;
+          size = 16;
 
           bold.style = "Regular";
-          normal.family = "MesloLGSDZ Nerd Font Mono";
+          bold_italic.style = "Regular";
+          italic.style = "Regular";
+          normal.family = "Terminus (TTF)";
         };
 
         terminal.shell = {

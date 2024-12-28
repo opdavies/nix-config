@@ -9,7 +9,8 @@
     packages = with pkgs; [
       nerd-fonts.jetbrains-mono
       nerd-fonts.meslo-lg
-      nerd-fonts.terminess-ttf
+      terminus_font
+      terminus_font_ttf
     ];
   };
 }
