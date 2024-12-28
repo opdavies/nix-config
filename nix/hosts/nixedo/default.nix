@@ -1,14 +1,7 @@
-{ inputs, ... }:
-
 {
   features = {
     cli = {
       docker.enable = true;
-    };
-
-    desktop = {
-      gaming.enable = true;
-      peek.enable = true;
     };
 
     homelab = {
@@ -19,6 +12,7 @@
       paperless.enable = true;
       pihole.enable = true;
       tubearchivist-container.enable = true;
+      # vaultwarden.enable = true;
     };
   };
 
@@ -26,5 +20,9 @@
     ../common
 
     ./configuration.nix
+    ./secrets.nix
+    ./extra.nix
+
+    ./modules/nginx.nix
   ];
 }

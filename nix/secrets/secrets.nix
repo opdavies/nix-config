@@ -2,6 +2,7 @@ let
   hosts = {
     hetznix = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMk8n03VeShc0q4ztcaNrmScwM7u0j6fFVtmupy2RlM2";
     lemp11 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZ+ljJKd6uqdAk+fqxwtObI4Stab2N9Bjo4QFHY/v8n";
+    nixedo = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvtcGJnc94k6wCPfvK9oBvGey0WWVCR8IYSqg5vqage";
     t490 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvtcGJnc94k6wCPfvK9oBvGey0WWVCR8IYSqg5vqage";
   };
 
@@ -12,11 +13,13 @@ in
 {
   "cloudflare.age".publicKeys = [
     hosts.hetznix
+    hosts.t490
     users.opdavies
   ];
 
   "tubearchivist.age".publicKeys = [
     hosts.lemp11
+    hosts.nixedo
     users.opdavies
   ];
 }

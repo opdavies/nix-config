@@ -72,6 +72,19 @@
           ];
         };
 
+        nixedo = nixpkgs.lib.nixosSystem {
+          specialArgs = specialArgs // {
+            headless = true;
+            hostname = "nixedo";
+          };
+
+          modules = [
+            agenix.nixosModules.default
+
+            ./nix/hosts/nixedo
+          ];
+        };
+
         t490 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
             hostname = "t490";
