@@ -46,7 +46,6 @@ for key, value in pairs(settings) do
 end
 
 vim.opt.backupdir:remove "." -- keep backups out of the current directory
-vim.opt.clipboard:append "unnamedplus"
 vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
 vim.opt.listchars:append {
   trail = "·",

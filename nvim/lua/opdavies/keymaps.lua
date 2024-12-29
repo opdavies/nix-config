@@ -1,11 +1,5 @@
 local set = vim.keymap.set
 
-set("n", "<Leader>so", ":call opdavies#save_and_exec()<CR>")
-
--- Format paragraphs to an 80 character line length.
-set("n", "<Leader>g", "gqap")
-set("x", "<Leader>g", "gqa")
-
 -- Execute Lua in the current file, line or range.
 set("n", "<leader><leader>x", "<cmd>source %<CR>")
 set("n", "<leader>x", ":.lua<CR>")
@@ -22,22 +16,12 @@ set("n", "N", "Nzzzv")
 set("v", "<down>", "<nop>")
 set("v", "<up>", "<nop>")
 
--- Use the left and right arrow keys to change tabs.
-set("v", "<left>", "gT")
-set("v", "<right>", "gt")
-
 -- Easily switch back to visual mode.
 set("i", "jk", "<Esc>")
 
 -- Easy insertion of a trailing ; or , from insert mode
 set("i", ",,", "<Esc>A,<Esc>")
 set("i", ";;", "<Esc>A;<Esc>")
-
-set("n", "ga", "<Plug>(EasyAlign)")
-set("x", "ga", "<Plug>(EasyAlign)")
-
--- Focus on the current buffer.
-set("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", { noremap = true, silent = true })
 
 -- Automatically resize buffers.
 set("n", "<leader>=", ":wincmd =<cr>", { noremap = true, silent = true })
@@ -73,12 +57,6 @@ vim.cmd [[ nnoremap <expr> <CR> {-> v:hlsearch ? ":nohl\<CR>" : "\<CR>"}() ]]
 set("n", "Q", "@qj")
 set("x", "Q", ":norm @q<CR>")
 
--- Easier navigation between splits.
-set("n", "<C-h>", "<C-w><C-h>")
-set("n", "<C-j>", "<C-w><C-j>")
-set("n", "<C-k>", "<C-w><C-k>")
-set("n", "<C-l>", "<C-w><C-l>")
-
 set("v", "Q", "<nop>")
 
 set("v", "J", ":m '>+1<CR>gvrgv")
@@ -90,28 +68,7 @@ set("n", "<C-u>", "<C-u>zz")
 set("n", "n", "nzzzv")
 set("n", "N", "Nzzzv")
 
--- Easily access project-specific notes.
-set("n", "<leader>en", function()
-  if vim.fn.filereadable ".ignored/notes" == 1 then
-    vim.cmd "tabnew .ignored/notes"
-  else
-    vim.cmd "tabnew notes"
-  end
-end)
-
--- Easily access project-specific todos.
-set("n", "<leader>et", function()
-  if vim.fn.filereadable ".ignored/todo" == 1 then
-    vim.cmd "tabnew .ignored/todo"
-  else
-    vim.cmd "tabnew todo"
-  end
-end)
-
 set("n", "<leader>ec", ":edit composer.json<CR>")
 
--- These mappings control the size of splits (height/width).
-set("n", "<M-,>", "<c-w>5<")
-set("n", "<M-.>", "<c-w>5>")
-set("n", "<M-t>", "<C-W>+")
-set("n", "<M-s>", "<C-W>-")
+set({ "n", "v" }, "<leader>y", [["+y]])
+set("n", "<leader>Y", [["+Y]])
