@@ -24,12 +24,9 @@ with lib;
         };
 
         font = {
-          size = 16;
+          size = 15;
 
-          bold.style = "Regular";
-          bold_italic.style = "Regular";
-          italic.style = "Regular";
-          normal.family = "Terminus (TTF)";
+          normal.family = "JetBrainsMono Nerd Font ";
         };
 
         terminal.shell = {
