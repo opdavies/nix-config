@@ -17,49 +17,28 @@ with lib;
 
       plugins = with pkgs.vimPlugins; [
         comment-nvim
-        dial-nvim
-        fidget-nvim
+        conf-vim
+        edit-alternate-vim
         gitsigns-nvim
         harpoon
-        impatient-nvim
         mini-nvim
-        neodev-nvim
-        nvim-spectre
         nvim-web-devicons
         oil-nvim
         refactoring-nvim
-        sort-nvim
-        treesj
+        standard-vim
         undotree
-        vim-abolish
-        vim-eunuch
-        vim-highlightedyank
-        vim-just
         vim-nix
-        vim-obsession
         vim-pasta
         vim-repeat
         vim-sleuth
-        vim-sort-motion
-        vim-terraform
-        vim-textobj-user
-        vim-unimpaired
-
-        conf-vim
-        edit-alternate-vim
-        nvim-tmux-navigation
-        standard-vim
-        vim-autoread
         vim-textobj-indent
         vim-textobj-xmlattr
-        vim-zoom
+        vim-unimpaired
 
         # Testing
         vim-test
 
         # Git
-        committia-vim
-        diffview-nvim
         vim-fugitive
 
         # Debugging

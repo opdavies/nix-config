@@ -15,4 +15,6 @@ require("mini.move").setup {}
 
 require("mini.operators").setup {}
 
+require("mini.splitjoin").setup {}
+
 require("mini.surround").setup {}
