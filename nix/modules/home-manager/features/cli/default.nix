@@ -30,15 +30,10 @@
         ;
     })
 
-    ./bat.nix
     ./bin.nix
-    ./bluetuith.nix
     ./direnv.nix
     ./fzf.nix
     ./git.nix
-    ./htop.nix
-    ./lsd.nix
-    ./pet.nix
     ./phpactor.nix
     ./ripgrep.nix
     ./starship.nix

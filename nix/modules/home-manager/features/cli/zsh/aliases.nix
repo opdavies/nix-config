@@ -5,7 +5,6 @@
   "..." = "cd ../..";
   "...." = "cd ../../..";
   "....." = "cd ../../../..";
-  cat = "bat";
   s = "secrets";
   secrets = ''doppler --project "$(whoami)" run'';
   tag = "tag-release";

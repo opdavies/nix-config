@@ -3,7 +3,6 @@
 {
   features = {
     cli = {
-      bluetuith.enable = true;
       direnv.enable = true;
       tmux-sessionizer.enable = true;
     };
