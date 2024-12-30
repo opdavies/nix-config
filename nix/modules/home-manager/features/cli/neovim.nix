@@ -32,6 +32,7 @@ with lib;
         vim-repeat
         vim-sleuth
         vim-textobj-indent
+        vim-textobj-user
         vim-textobj-xmlattr
         vim-unimpaired
 

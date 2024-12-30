@@ -2,8 +2,6 @@ local cmp_nvim_lsp = require "cmp_nvim_lsp"
 local handlers = require "opdavies.lsp.handlers"
 local lspconfig = require "lspconfig"
 
-require("neodev").setup {}
-
 local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 lspconfig.bashls.setup {
