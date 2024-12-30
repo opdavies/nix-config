@@ -1,6 +1,5 @@
 {
   imports = [
-    ./autorandr.nix
     ./features/cli
     ./features/desktop
     ./features/gaming.nix

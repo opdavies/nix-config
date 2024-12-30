@@ -7,6 +7,7 @@
     };
 
     desktop = {
+      autorandr.enable = true;
       gaming.enable = true;
       peek.enable = true;
     };

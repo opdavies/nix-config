@@ -14,6 +14,8 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-2405.url = "github:nixos/nixpkgs/nixos-24.05";
+
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
   outputs =
@@ -22,6 +24,7 @@
       disko,
       home-manager,
       nixos-hardware,
+      nixos-wsl,
       nixpkgs,
       self,
       ...
@@ -99,6 +102,23 @@
           ];
         };
 
+        PW05CH3L = nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          specialArgs = specialArgs // {
+            headless = true;
+            hostname = "PW05CH3L";
+          };
+
+          modules = [
+            agenix.nixosModules.default
+            disko.nixosModules.disko
+            nixos-wsl.nixosModules.default
+
+            ./nix/hosts/PW05CH3L
+          ];
+        };
+
         hetznix = nixpkgs.lib.nixosSystem {
           inherit system;
 
@@ -111,21 +131,6 @@
             disko.nixosModules.disko
 
             ./nix/hosts/hetznix/configuration.nix
-          ];
-        };
-      };
-
-      homeConfigurations = {
-        "${username}@PW05CH3L" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-
-          extraSpecialArgs = specialArgs // {
-            headless = true;
-            hostname = "PW05CH3L";
-          };
-
-          modules = [
-            ./nix/home/opdavies
           ];
         };
       };
