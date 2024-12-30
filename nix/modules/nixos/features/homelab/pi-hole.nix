@@ -31,8 +31,8 @@ in
           };
 
           volumes = [
-            "/mnt/media/pihole/etc-dnsmasq.d:/etc/dnsmasq.d:rw"
-            "/mnt/media/pihole/etc-pihole:/etc/pihole:rw"
+            "/home/opdavies/pihole/etc-dnsmasq.d:/etc/dnsmasq.d:rw"
+            "/home/opdavies/pihole/etc-pihole:/etc/pihole:rw"
           ];
 
           ports = [
