@@ -1,7 +1,13 @@
 {
+  headless,
   hostname,
   inputs,
   outputs,
+  pkgs,
+  self,
+  stateVersion,
+  system,
+  username,
   ...
 }:
 
@@ -10,7 +16,90 @@
     inputs.home-manager.nixosModules.home-manager
 
     outputs.nixosModules.default
+
+    ./programs.nix
+    ./users.nix
   ];
 
+  environment.systemPackages =
+    with pkgs;
+    [
+      fastfetch
+      mermaid-cli
+      mkcert
+    ]
+    ++ pkgs.lib.optionals (!headless) [
+      acpi
+      arandr
+      brightnessctl
+      cpufrequtils
+      libnotify
+      pmutils
+      ffmpegthumbnailer
+      libreoffice
+      logseq
+      shotwell
+      vscode
+      xfce.thunar
+      xfce.thunar-volman
+      xfce.tumbler
+    ];
+
+  home-manager = {
+    extraSpecialArgs = {
+      inherit
+        hostname
+        inputs
+        outputs
+        headless
+        self
+        system
+        username
+        ;
+    };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+
+    users."${username}" = import "${self}/nix/home/${username}";
+  };
+
+  nixpkgs = {
+    config.allowUnfree = true;
+
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+      outputs.overlays.stable-packages
+    ];
+  };
+
+  nix.extraOptions = ''
+    trusted-users = root ${username}
+  '';
+
   networking.hostName = hostname;
+
+  time.timeZone = "Europe/London";
+
+  i18n = {
+    defaultLocale = "en_GB.UTF-8";
+
+    extraLocaleSettings = {
+      LC_ADDRESS = "en_GB.UTF-8";
+      LC_IDENTIFICATION = "en_GB.UTF-8";
+      LC_MEASUREMENT = "en_GB.UTF-8";
+      LC_MONETARY = "en_GB.UTF-8";
+      LC_NAME = "en_GB.UTF-8";
+      LC_NUMERIC = "en_GB.UTF-8";
+      LC_PAPER = "en_GB.UTF-8";
+      LC_TELEPHONE = "en_GB.UTF-8";
+      LC_TIME = "en_GB.UTF-8";
+    };
+  };
+
+  console.keyMap = "uk";
+
+  security.sudo.wheelNeedsPassword = false;
+
+  system.stateVersion = stateVersion;
 }

@@ -66,6 +66,7 @@
         lemp11 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
             hostname = "lemp11";
+            stateVersion = "22.11";
           };
 
           modules = [
@@ -79,6 +80,7 @@
           specialArgs = specialArgs // {
             headless = true;
             hostname = "nixedo";
+            stateVersion = "24.11";
           };
 
           modules = [
@@ -91,6 +93,7 @@
         t490 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
             hostname = "t490";
+            stateVersion = "22.11";
           };
 
           modules = [
@@ -108,6 +111,7 @@
           specialArgs = specialArgs // {
             headless = true;
             hostname = "PW05CH3L";
+            stateVersion = "22.11";
           };
 
           modules = [
