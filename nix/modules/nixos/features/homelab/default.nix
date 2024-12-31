@@ -2,7 +2,7 @@
   imports = [
     ./audiobookshelf.nix
     ./forgejo.nix
-    ./freshrss
+    ./freshrss.nix
     ./gitea.nix
     ./immich.nix
     ./jellyfin.nix
