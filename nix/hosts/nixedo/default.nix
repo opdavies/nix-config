@@ -6,6 +6,7 @@
 
     homelab = {
       forgejo.enable = true;
+      freshrss.enable = true;
       gitea.enable = true;
       immich.enable = true;
       jellyfin.enable = true;
