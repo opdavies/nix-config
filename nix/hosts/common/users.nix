@@ -15,6 +15,6 @@
       packages = [ ];
     };
 
-    defaultUserShell = "/etc/profiles/per-user/${username}/bin/zsh";
+    defaultUserShell = pkgs.zsh;
   };
 }
