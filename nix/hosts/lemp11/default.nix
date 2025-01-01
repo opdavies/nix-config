@@ -25,6 +25,7 @@
 
   imports = [
     ../common
+    ../../users/opdavies
 
     ./configuration.nix
   ];

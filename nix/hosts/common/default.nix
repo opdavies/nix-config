@@ -18,8 +18,9 @@
     outputs.nixosModules.default
 
     ./programs.nix
-    ./users.nix
   ];
+
+  users.defaultUserShell = pkgs.zsh;
 
   environment.systemPackages =
     with pkgs;
