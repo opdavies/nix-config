@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   users.users.opdavies = {
     description = "Oliver Davies";
@@ -9,6 +11,9 @@
       "wheel"
     ];
 
-    packages = [ ];
+    packages = with pkgs; [
+      brave
+      chromium
+    ];
   };
 }
