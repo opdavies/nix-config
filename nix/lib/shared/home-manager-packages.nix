@@ -20,21 +20,12 @@ let
 in
 with pkgs;
 [
-  age
-  awscli2
-  bitwarden-cli
-  bottom
   cachix
-  ctop
   delta
   devenv
-  dog
   doppler
   entr
-  fd
-  file
   gcc
-  gh
   git
   git-crypt
   gnupg
@@ -43,27 +34,21 @@ with pkgs;
   jq
   killall
   lua
-  mariadb
   mob
   php
   phpPackages.composer
   pv
-  rustywind
   simple-http-server
   sshs
   tldr
   tree
   tree-sitter
   unzip
-  virtualenv
   w3m
   watchexec
   wget
   xclip
-  xcp
   xdg-utils
-  xh
-  yarn
 
   # Scripts.
   deliver
