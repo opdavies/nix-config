@@ -13,7 +13,7 @@
       paperless.enable = true;
       pihole.enable = true;
       tubearchivist-container.enable = true;
-      # vaultwarden.enable = true;
+      vaultwarden.enable = true;
     };
   };
 

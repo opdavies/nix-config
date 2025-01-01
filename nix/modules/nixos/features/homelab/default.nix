@@ -9,5 +9,6 @@
     ./paperless.nix
     ./pi-hole.nix
     ./tubearchivist-container.nix
+    ./vaultwarden.nix
   ];
 }
