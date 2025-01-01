@@ -50,8 +50,8 @@
       variant = "";
     };
 
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    displayManager.lightdm.enable = true;
+    desktopManager.cinnamon.enable = true;
   };
 
   services.avahi.enable = true;
