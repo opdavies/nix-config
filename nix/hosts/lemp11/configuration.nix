@@ -16,6 +16,7 @@
     ./hardware-configuration.nix
 
     ../../users/eric
+    ../../users/luke
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
