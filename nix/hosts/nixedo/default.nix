@@ -5,6 +5,7 @@
     };
 
     homelab = {
+      audiobookshelf.enable = true;
       forgejo.enable = true;
       freshrss.enable = true;
       gitea.enable = true;
