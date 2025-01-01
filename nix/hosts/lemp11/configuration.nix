@@ -14,6 +14,8 @@
     inputs.nixos-hardware.nixosModules.system76
 
     ./hardware-configuration.nix
+
+    ../../users/eric
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
