@@ -3,3 +3,4 @@ Add daily script
 Add create-podcast-tasks script
 Add vaultwarden for password management
 Replace doppler with agenix
+Evaluate services.languagetool as a replacement for Grammarly
