@@ -37,9 +37,18 @@
         }
 
         @articles path_regexp ^/articles/(.*)$
-        @old-dailies path_regexp ^/archive/(.*)$
         @talks path_regexp ^/talks/(.*)$
         @talks-archive path_regexp ^/talks/archive/(.*)$
+
+        # Exclude /daily/page/{number} from the /archive/* redirection
+        @excludeArchivePages {
+          path_regexp ^/archive/page/\d+$
+        }
+
+        @old-dailies {
+          path_regexp oldDailies ^/archive/(.*)$
+          not path_regexp ^/archive/page/\d+$
+        }
 
         redir @articles /blog/{re.1} permanent
         redir @old-dailies /daily/{re.1} permanent
