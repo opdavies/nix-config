@@ -2,11 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
+
+    ./modules/acme.nix
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
@@ -30,4 +32,6 @@
     80
     443
   ];
+
+  services.caddy.enable = true;
 }

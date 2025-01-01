@@ -13,8 +13,12 @@ in
 {
   "cloudflare.age".publicKeys = [
     hosts.hetznix
-    hosts.nixedo
     hosts.t490
+    users.opdavies
+  ];
+
+  "cloudflare-opdavies-uk.age".publicKeys = [
+    hosts.nixedo
     users.opdavies
   ];
 

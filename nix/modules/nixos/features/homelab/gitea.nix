@@ -26,10 +26,10 @@ in
         };
       };
 
-      nginx = {
-        enable = true;
+      caddy.virtualHosts."gitea.opdavies.uk" = {
+        useACMEHost = "opdavies.uk";
 
-        virtualHosts."gitea.oliverdavies.uk".locations."/".proxyPass = "http://localhost:${toString port}/";
+        extraConfig = "reverse_proxy localhost:${toString port}";
       };
     };
   };

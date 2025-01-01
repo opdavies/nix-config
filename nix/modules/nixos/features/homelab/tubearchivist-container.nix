@@ -10,7 +10,7 @@ with lib;
 let
   cfg = config.features.homelab.tubearchivist-container;
 
-  port = 8000;
+  port = 8085;
 in
 {
   options.features.homelab.tubearchivist-container = {
@@ -286,11 +286,10 @@ in
       wantedBy = [ "multi-user.target" ];
     };
 
-    services.nginx = {
-      enable = true;
+    services.caddy.virtualHosts."tubearchivist.opdavies.uk" = {
+      useACMEHost = "opdavies.uk";
 
-      virtualHosts."tubearchivist.oliverdavies.uk".locations."/".proxyPass =
-        "http://localhost:${toString port}/";
+      extraConfig = "reverse_proxy localhost:${toString port}";
     };
   };
 }

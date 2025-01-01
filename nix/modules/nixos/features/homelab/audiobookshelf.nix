@@ -9,21 +9,17 @@ in
   options.features.homelab.audiobookshelf.enable = mkEnableOption "Enable audiobookshelf";
 
   config = mkIf cfg.enable {
-    services.audiobookshelf = {
-      enable = true;
+    services = {
+      audiobookshelf = {
+        enable = true;
 
-      host = "audiobookshelf.oliverdavies.uk";
-      port = 4001;
-    };
+        port = 4001;
+      };
 
-    services.nginx = {
-      enable = true;
+      caddy.virtualHosts."audiobookshelf.opdavies.uk" = {
+        useACMEHost = "opdavies.uk";
 
-      virtualHosts."audiobookshelf.oliverdavies.uk" = {
-        locations."/" = {
-          proxyPass = "http://localhost:${toString config.services.audiobookshelf.port}/";
-          proxyWebsockets = true;
-        };
+        extraConfig = "reverse_proxy localhost:${toString config.services.audiobookshelf.port}";
       };
     };
   };

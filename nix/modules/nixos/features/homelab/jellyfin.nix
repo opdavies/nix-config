@@ -13,10 +13,10 @@ with lib;
       configDir = "/mnt/media/jellyfin";
     };
 
-    services.nginx = {
-      enable = true;
+    services.caddy.virtualHosts."jellyfin.opdavies.uk" = {
+      useACMEHost = "opdavies.uk";
 
-      virtualHosts."jellyfin.oliverdavies.uk".locations."/".proxyPass = "http://localhost:8096/";
+      extraConfig = "reverse_proxy localhost:8096";
     };
   };
 }

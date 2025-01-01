@@ -6,8 +6,20 @@ with lib;
   options.features.homelab.paperless.enable = mkEnableOption "Enable paperless";
 
   config = mkIf config.features.homelab.paperless.enable {
-    services.paperless = {
-      enable = true;
+    services = {
+      paperless = {
+        enable = true;
+
+        settings = {
+          PAPERLESS_URL = "https://paperless.opdavies.uk";
+        };
+      };
+
+      caddy.virtualHosts."paperless.opdavies.uk" = {
+        useACMEHost = "opdavies.uk";
+
+        extraConfig = "reverse_proxy localhost:28981";
+      };
     };
   };
 }

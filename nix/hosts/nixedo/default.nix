@@ -23,7 +23,5 @@
     ./configuration.nix
     ./secrets.nix
     ./extra.nix
-
-    ./modules/nginx.nix
   ];
 }

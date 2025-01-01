@@ -95,9 +95,5 @@ in
         wantedBy = [ "multi-user.target" ];
       };
     };
-
-    services.nginx.virtualHosts."pihole.localhost" = {
-      locations."/".proxyPass = "http://localhost:${toString port}/";
-    };
   };
 }

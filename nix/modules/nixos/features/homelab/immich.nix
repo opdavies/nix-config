@@ -19,11 +19,10 @@ with lib;
 
     environment.systemPackages = [ pkgs.immich-cli ];
 
-    services.nginx = {
-      enable = true;
+    services.caddy.virtualHosts."immich.opdavies.uk" = {
+      useACMEHost = "opdavies.uk";
 
-      virtualHosts."immich.oliverdavies.uk".locations."/".proxyPass =
-        "http://localhost:${toString config.services.immich.port}/";
+      extraConfig = "reverse_proxy localhost:${toString config.services.immich.port}";
     };
   };
 }

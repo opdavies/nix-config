@@ -2,9 +2,6 @@
 
 with lib;
 
-let
-  port = 2223;
-in
 {
   options.features.homelab.forgejo.enable = mkEnableOption "Enable forgejo";
 
@@ -17,7 +14,8 @@ in
 
         settings = {
           server = {
-            HTTP_PORT = port;
+            DOMAIN = "forgejo.opdavies.uk";
+            HTTP_PORT = 2223;
           };
 
           service = {
@@ -26,11 +24,10 @@ in
         };
       };
 
-      nginx = {
-        enable = true;
+      caddy.virtualHosts."${config.services.forgejo.settings.server.DOMAIN}" = {
+        useACMEHost = "opdavies.uk";
 
-        virtualHosts."forgejo.oliverdavies.uk".locations."/".proxyPass =
-          "http://localhost:${toString port}/";
+        extraConfig = "reverse_proxy localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
       };
     };
   };

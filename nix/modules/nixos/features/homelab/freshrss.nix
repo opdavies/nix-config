@@ -95,11 +95,10 @@ in
       wantedBy = [ "multi-user.target" ];
     };
 
-    services.nginx = {
-      enable = true;
+    services.caddy.virtualHosts."freshrss.opdavies.uk" = {
+      useACMEHost = "opdavies.uk";
 
-      virtualHosts."freshrss.oliverdavies.uk".locations."/".proxyPass =
-        "http://localhost:${toString port}/";
+      extraConfig = "reverse_proxy localhost:${toString port}";
     };
   };
 }
