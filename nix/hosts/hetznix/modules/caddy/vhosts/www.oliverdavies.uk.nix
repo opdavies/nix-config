@@ -400,6 +400,7 @@
         redir /tailwind-repos https://github.com/opdavies?utf8=%e2%9c%93&tab=repositories&q=tailwindcss permanent
         redir /tailwind-talk /talks/taking-flight-with-tailwind-css permanent
         redir /tailwindcss-demo http://tailwindcss-demo.oliverdavies.uk/ permanent
+        redir /talks /presentations permanent
         redir /talks-offer-tweet https://twitter.com/opdavies/status/1250870367712935938 permanent
         redir /talks/2012/09/05/what-is-this-drupal-thing-unified-diff /talks/what-is-this-drupal-thing permanent
         redir /talks/2013/07/10/drupal-ldap-swdug /talks/drupal-ldap permanent
