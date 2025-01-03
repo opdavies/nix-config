@@ -75,9 +75,10 @@ in
         set-option -g pane-border-style "fg=#1f2335"
 
         bind-key -r f run-shell "tmux new-window tmux-sessionizer"
-        bind-key -r N run-shell "tmux split-window -h notes"
 
-        if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux.conf.local'
+        bind-key -r N split-window -h "notes"
+        bind-key -r T split-window -h -c ~/Documents/wiki "nvim todo.txt"
+        bind-key -r W split-window -h -c ~/Documents/wiki "nvim '+Telescope find_files'"
       '';
 
       plugins = [
