@@ -110,6 +110,16 @@ local M = {
     ]],
     { i(1), i(2), i(0) }
   ),
+
+  testat = fmta(
+    [[
+    [#Test]
+    public function <>(): void {
+      <>
+    }<>
+    ]],
+    { i(1), i(2), i(0) }
+  ),
 }
 
 return M
