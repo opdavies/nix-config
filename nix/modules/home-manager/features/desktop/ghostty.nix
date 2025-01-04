@@ -27,6 +27,8 @@ in
       font-feature = -liga
       font-feature = -dlig
 
+      font-size = 15
+
       window-decoration = false
 
       window-padding-x = 10
