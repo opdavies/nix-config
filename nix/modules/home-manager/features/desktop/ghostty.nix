@@ -2,6 +2,7 @@
   config,
   inputs,
   lib,
+  self,
   system,
   ...
 }:
@@ -19,20 +20,6 @@ in
   config = mkIf cfg.enable {
     home.packages = [ pkgs-master.ghostty ];
 
-    xdg.configFile."ghostty/config".text = ''
-      background = #000000
-
-      # Disable ligatures.
-      font-feature = -calt
-      font-feature = -liga
-      font-feature = -dlig
-
-      font-size = 15
-
-      window-decoration = false
-
-      window-padding-x = 10
-      window-padding-y = 10
-    '';
+    xdg.configFile."ghostty/config".source = "${self}/ghostty/config";
   };
 }
