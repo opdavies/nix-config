@@ -18,6 +18,8 @@ with lib;
           TERM = "screen-256color";
         };
 
+        colors.primary.background = "#000000";
+
         window.padding = {
           x = 10;
           y = 10;
