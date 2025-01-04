@@ -6,6 +6,7 @@
 
     homelab = {
       audiobookshelf.enable = true;
+      beaverhabits.enable = true;
       forgejo.enable = true;
       freshrss.enable = true;
       gitea.enable = true;
