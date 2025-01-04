@@ -37,7 +37,8 @@
       };
 
       desktop = {
-        alacritty.enable = lib.mkDefault true;
+        alacritty.enable = lib.mkDefault false;
+        ghostty.enable = lib.mkDefault true;
       };
     }
   ];
