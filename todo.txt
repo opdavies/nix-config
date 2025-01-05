@@ -1,6 +1,5 @@
 Use nixosModules and homeManagerModules outputs in flake.nix to simplify importing modules
 Add daily script
 Add create-podcast-tasks script
-Add vaultwarden for password management
 Replace doppler with agenix
 Evaluate services.languagetool as a replacement for Grammarly
