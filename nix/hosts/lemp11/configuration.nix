@@ -15,8 +15,6 @@
 
     ./hardware-configuration.nix
 
-    ../common
-    ../../users/opdavies
     ../../users/eric
     ../../users/luke
   ];

@@ -8,20 +8,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-
-    ../common
-    ../../users/opdavies
-
   ];
-
-  features = {
-    desktop = {
-      autorandr.enable = true;
-      gaming.enable = true;
-      i3.enable = true;
-      peek.enable = true;
-    };
-  };
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 

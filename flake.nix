@@ -73,7 +73,7 @@
           modules = [
             agenix.nixosModules.default
 
-            ./nix/hosts/lemp11/configuration.nix
+            ./nix/hosts/lemp11
           ];
         };
 
@@ -87,7 +87,7 @@
           modules = [
             agenix.nixosModules.default
 
-            ./nix/hosts/nixedo/configuration.nix
+            ./nix/hosts/nixedo
           ];
         };
 
@@ -102,7 +102,7 @@
             nixos-hardware.nixosModules.common-gpu-intel
             nixos-hardware.nixosModules.lenovo-thinkpad-t490
 
-            ./nix/hosts/t490/configuration.nix
+            ./nix/hosts/t490
           ];
         };
 
@@ -120,7 +120,7 @@
             disko.nixosModules.disko
             nixos-wsl.nixosModules.default
 
-            ./nix/hosts/PW05CH3L/configuration.nix
+            ./nix/hosts/PW05CH3L
           ];
         };
 
