@@ -4,6 +4,10 @@
     ../../users/opdavies
 
     ./configuration.nix
+    ./hardware.nix
+    ./programs.nix
+    ./services
+    ./users.nix
   ];
 
   features = {
