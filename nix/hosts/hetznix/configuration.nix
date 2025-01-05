@@ -13,9 +13,8 @@
     ./disks.nix
     ./hardware-configuration.nix
     ./secrets.nix
-
-    ./modules/acme.nix
-    ./modules/caddy
+    ./security
+    ./services
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs-2405}" ];
@@ -29,8 +28,6 @@
     efiSupport = true;
     efiInstallAsRemovable = true;
   };
-
-  services.openssh.enable = true;
 
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
