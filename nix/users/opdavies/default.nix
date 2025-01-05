@@ -11,9 +11,12 @@
       "wheel"
     ];
 
-    packages = with pkgs; [
-      brave
-      chromium
-    ];
+    packages =
+      with pkgs;
+      [ ]
+      ++ pkgs.lib.optionals (!headless) [
+        brave
+        firefox
+      ];
   };
 }
