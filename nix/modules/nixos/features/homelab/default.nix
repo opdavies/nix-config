@@ -2,7 +2,6 @@
   imports = [
     ./audiobookshelf.nix
     ./beaverhabits.nix
-    ./forgejo.nix
     ./freshrss.nix
     ./gitea.nix
     ./immich.nix

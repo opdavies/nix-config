@@ -15,9 +15,17 @@
     ./secrets.nix
     ./security
     ./services
+
+    ../../users/opdavies
   ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs-2405}" ];
+  nix = {
+    extraOptions = ''
+      trusted-users = root opdavies
+    '';
+
+    nixPath = [ "nixpkgs=${inputs.nixpkgs-2405}" ];
+  };
 
   networking.firewall.allowedTCPPorts = [
     80

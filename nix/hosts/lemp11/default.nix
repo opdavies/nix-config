@@ -13,7 +13,6 @@
     };
 
     homelab = {
-      forgejo.enable = true;
       gitea.enable = true;
       immich.enable = true;
       jellyfin.enable = true;

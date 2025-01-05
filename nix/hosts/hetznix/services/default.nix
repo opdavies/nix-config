@@ -1,10 +1,7 @@
 {
   imports = [
-    ./acme.nix
     ./caddy
+    ./forgejo.nix
+    ./openssl.nix
   ];
-
-  services = {
-    openssh.enable = true;
-  };
 }

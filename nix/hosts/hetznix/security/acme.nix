@@ -18,6 +18,7 @@
         # TODO Refactor to use a wildcard certificate.
         "2020.oliverdavies.uk"
         "bootstrap-with-tailwind.oliverdavies.uk"
+        "code.oliverdavies.uk"
         "florida-drupalcamp-tailwind-css.oliverdavies.uk"
         "luke.oliverdavies.uk"
         "phpsw-sculpin-demo.oliverdavies.uk"
