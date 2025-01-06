@@ -3,7 +3,7 @@
 {
   services = {
     forgejo = {
-      enable = true;
+      enable = false;
 
       settings = {
         server = {
