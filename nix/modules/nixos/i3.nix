@@ -70,7 +70,7 @@ in
           keybindings = inputs.nixpkgs.lib.mkOptionDefault {
             "${modifier}+d" = "exec rofi -show drun";
 
-            "${modifier}+Shift+b" = "exec ${pkgs.firefox}/bin/firefox";
+            "${modifier}+Shift+b" = "exec ${pkgs.brave}/bin/brave";
             "${modifier}+Shift+f" = "exec ${pkgs.xfce.thunar}/bin/thunar";
 
             # Change focus.
@@ -91,7 +91,8 @@ in
 
             "XF86AudioRaiseVolume" = "exec pamixer -ui 2 && pamixer --get-volume";
             "XF86AudioLowerVolume" = "exec pamixer -ud 2 && pamixer --get-volume";
-            "XF86AudioMute" = ''exec pamixer --toggle-mute && ( [ "$(pamixer --get-mute)" = "true" ] && echo 0'';
+            "XF86AudioMute" =
+              ''exec pamixer --toggle-mute && ( [ "$(pamixer --get-mute)" = "true" ] && echo 0'';
 
             "XF86MonBrightnessDown" = "exec brightnessctl set 5%- | sed -En 's/.*(([0-9]+)%).*/1/p'";
             "XF86MonBrightnessUp" = "exec brightnessctl set +5% | sed -En 's/.*(([0-9]+)%).*/1/p'";
