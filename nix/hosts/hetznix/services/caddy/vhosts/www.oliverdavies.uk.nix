@@ -14,7 +14,7 @@
       extraConfig = ''
         encode gzip
 
-        root * /var/www/vhosts/www.oliverdavies.uk-sculpin/output_prod
+        root * /var/www/vhosts/www.oliverdavies.uk
 
         file_server {
           disable_canonical_uris
