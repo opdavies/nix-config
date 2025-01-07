@@ -10,7 +10,7 @@
           DOMAIN = "code.oliverdavies.uk";
           HTTP_PORT = 2223;
           ROOT_URL = "https://${config.services.forgejo.settings.server.DOMAIN}";
-          SSH_DOMAIN = "ssh.code.oliverdavies.uk";
+          SSH_DOMAIN = "ssh.${config.services.forgejo.settings.server.DOMAIN}";
         };
 
         service = {
