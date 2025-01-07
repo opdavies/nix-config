@@ -18,4 +18,6 @@
     enable = true;
     defaultUser = username;
   };
+
+  services.syncthing.enable = true;
 }
