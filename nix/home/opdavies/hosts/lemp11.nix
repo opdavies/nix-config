@@ -12,7 +12,6 @@
       discord.enable = true;
       espanso.enable = true;
       flameshot.enable = true;
-      ghostty.enable = true;
       gtk.enable = true;
       slack.enable = true;
 
