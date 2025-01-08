@@ -23,7 +23,6 @@
     {
       agenix,
       disko,
-      home-manager,
       nixos-hardware,
       nixos-wsl,
       nixpkgs,
