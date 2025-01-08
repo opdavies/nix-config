@@ -124,3 +124,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
   end,
 })
+
+vim.keymap.set("n", "<leader>dd", function()
+  vim.diagnostic.enable(false)
+end)
+
+vim.keymap.set("n", "<leader>de", function()
+  vim.diagnostic.enable(true)
+end)
