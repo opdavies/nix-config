@@ -8,6 +8,10 @@
 
 with lib;
 
+let
+  php = pkgs.php82;
+  phpPackages = pkgs.php82Packages;
+in
 {
   options.features.cli.neovim.enable = mkEnableOption "Enable neovim";
 
@@ -130,7 +134,7 @@ with lib;
         # Languages
         nodePackages.typescript
         nodejs-slim
-        php81
+        php
 
         # Language servers
         gopls
@@ -162,8 +166,8 @@ with lib;
         html-tidy
         nodePackages.jsonlint
         nodePackages.markdownlint-cli
-        php82Packages.php-codesniffer
-        php82Packages.phpstan
+        phpPackages.php-codesniffer
+        phpPackages.phpstan
         proselint
         shellcheck
         yamllint
