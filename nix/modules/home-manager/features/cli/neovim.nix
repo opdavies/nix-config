@@ -145,7 +145,6 @@ in
         nodePackages."@tailwindcss/language-server"
         nodePackages.bash-language-server
         nodePackages.dockerfile-language-server-nodejs
-        nodePackages.intelephense
         nodePackages.typescript-language-server
         nodePackages.vscode-langservers-extracted
         nodePackages.yaml-language-server

@@ -23,7 +23,7 @@ lspconfig.html.setup {
   capabilities = capabilities,
 }
 
-lspconfig.intelephense.setup {
+lspconfig.phpactor.setup {
   capabilities = capabilities,
 }
 
