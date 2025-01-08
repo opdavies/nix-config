@@ -7,9 +7,35 @@
 {
   imports = [
     ./hardware-configuration.nix
-
+    ./secrets.nix
     ./modules/acme.nix
+
+    ../common
+    ../../users/opdavies
   ];
+
+  features = {
+    cli = {
+      docker.enable = true;
+    };
+
+    homelab = {
+      audiobookshelf.enable = true;
+      beaverhabits.enable = true;
+      freshrss.enable = true;
+      gitea.enable = true;
+      immich.enable = true;
+      jellyfin.enable = true;
+      paperless.enable = true;
+      pihole.enable = true;
+      tubearchivist-container.enable = true;
+      vaultwarden.enable = true;
+    };
+  };
+
+  programs.dconf.enable = true;
+
+  services.logind.lidSwitchExternalPower = "ignore";
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 

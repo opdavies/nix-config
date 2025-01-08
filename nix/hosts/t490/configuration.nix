@@ -1,14 +1,25 @@
-{
-  inputs,
-  pkgs,
-  username,
-  ...
-}:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    ./hardware.nix
+    ./programs.nix
+    ./services
+    ./users.nix
+
+    ../common
+    ../../users/opdavies
   ];
+
+  features = {
+    desktop = {
+      autorandr.enable = true;
+      gaming.enable = true;
+      i3.enable = true;
+      peek.enable = true;
+    };
+  };
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
