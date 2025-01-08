@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ prototype.namespace }};
+
+{% for class in prototype.classes %}
+final class {{ class.name }} implements \IteratorAggregate {
+
+  public function __construct(private array $items = []) {
+  }
+
+  public function getIterator(): \Iterator {
+    return new \ArrayIterator($this->items);
+  }
+
+  public function toArray(): array {
+    return $this->items;
+  }
+
+}
+{% endfor %}
