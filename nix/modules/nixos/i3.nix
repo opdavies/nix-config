@@ -20,14 +20,6 @@ in
 
   config = mkIf config.features.desktop.i3.enable {
     services = {
-      cron = {
-        enable = true;
-
-        systemCronJobs = [
-          "* * * * * opdavies ${pkgs.notify-battery}/bin/notify-battery"
-        ];
-      };
-
       displayManager.defaultSession = "none+i3";
 
       xserver = {
@@ -108,6 +100,7 @@ in
 
           exec_always --no-startup-id caffeine
           exec_always --no-startup-id ${pkgs.autorandr}/bin/autorandr --change
+          exec_always --no-startup-id ${pkgs.i3-battery-popup}/bin/i3-battery-popup -n
 
           smart_borders on
           smart_gaps on

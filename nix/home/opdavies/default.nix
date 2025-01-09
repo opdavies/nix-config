@@ -54,7 +54,6 @@ in
         build-glove80
         gscan2pdf
         meslo-lg
-        notify-battery
         obs-studio
         okular
         pamixer

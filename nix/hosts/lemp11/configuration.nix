@@ -148,12 +148,6 @@
 
   services.blueman.enable = true;
 
-  services.cron = {
-    enable = true;
-
-    systemCronJobs = [ "* * * * * opdavies /home/${username}/.local/bin/notify-battery" ];
-  };
-
   services.auto-cpufreq.enable = true;
 
   services.udev = {

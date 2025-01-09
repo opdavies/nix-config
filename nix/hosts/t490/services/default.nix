@@ -19,12 +19,6 @@
 
     blueman.enable = true;
 
-    cron = {
-      enable = true;
-
-      systemCronJobs = [ "* * * * * opdavies /home/${username}/.local/bin/notify-battery" ];
-    };
-
     gvfs.enable = true;
     openssh.enable = true;
     power-profiles-daemon.enable = false;

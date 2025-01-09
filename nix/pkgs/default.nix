@@ -8,7 +8,7 @@ in
 {
   build-glove80 = callPackage ./build-glove80.nix { };
   notes = callPackage ./notes.nix { };
-  notify-battery = callPackage ./notify-battery.nix { };
+  i3-battery-popup = callPackage ./i3-battery-popup.nix { };
   tmux-sessionizer = callPackage ./tmux-sessionizer.nix { };
 
   vimPlugins = prev.vimPlugins // vimPlugins;
