@@ -12,6 +12,7 @@
 
     ./disks.nix
     ./hardware-configuration.nix
+    ./networking.nix
     ./secrets.nix
     ./security
     ./services
@@ -26,11 +27,6 @@
 
     nixPath = [ "nixpkgs=${inputs.nixpkgs-2405}" ];
   };
-
-  networking.firewall.allowedTCPPorts = [
-    80
-    443
-  ];
 
   boot.loader.grub = {
     efiSupport = true;
