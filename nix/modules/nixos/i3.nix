@@ -20,26 +20,18 @@ in
 
   config = mkIf config.features.desktop.i3.enable {
     services = {
-      displayManager.defaultSession = "none+i3";
+      displayManager.ly.enable = true;
 
-      xserver = {
-        displayManager.lightdm.enable = true;
+      xserver.windowManager.i3 = {
+        enable = true;
 
-        windowManager.i3 = {
-          enable = true;
-          extraPackages = with pkgs; [
-            i3status
-            i3lock
-            i3blocks
-          ];
-        };
+        extraPackages = with pkgs; [
+          i3status
+          i3lock
+          i3blocks
+        ];
       };
     };
-
-    environment.systemPackages = with pkgs; [
-      acpi
-      libnotify
-    ];
 
     home-manager.users.${username} = {
       xsession.windowManager.i3 = {
