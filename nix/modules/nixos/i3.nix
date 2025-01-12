@@ -11,8 +11,6 @@
 with lib;
 
 let
-  theme = import "${self}/nix/lib/theme" { inherit pkgs; };
-
   modifier = "Mod4";
 in
 {
