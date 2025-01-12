@@ -1,20 +1,22 @@
 { pkgs, ... }:
 
 {
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    pinentryPackage = pkgs.pinentry-qt;
-  };
+  programs = {
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+      pinentryPackage = pkgs.pinentry-qt;
+    };
 
-  programs.firefox = {
-    enable = true;
+    firefox = {
+      enable = true;
 
-    languagePacks = [ "en-GB" ];
+      languagePacks = [ "en-GB" ];
 
-    preferences = {
-      "intl.accept_languages" = "en-GB, en";
-      "intl.regional_prefs.use_os_locales" = true;
+      preferences = {
+        "intl.accept_languages" = "en-GB, en";
+        "intl.regional_prefs.use_os_locales" = true;
+      };
     };
   };
 }
