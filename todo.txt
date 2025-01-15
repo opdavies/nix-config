@@ -1,4 +1,3 @@
-Use nixosModules and homeManagerModules outputs in flake.nix to simplify importing modules
 Add daily script
 Add create-podcast-tasks script
 Replace doppler with agenix

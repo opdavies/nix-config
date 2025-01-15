@@ -62,6 +62,8 @@
 
       nixosModules.default = ./nix/modules/nixos;
 
+      homeManagerModules.default = ./nix/modules/home-manager;
+
       nixosConfigurations = {
         lemp11 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {

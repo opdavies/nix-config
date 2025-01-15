@@ -1,12 +1,5 @@
-{
-  config,
-  hostname,
-  inputs,
-  lib,
-  pkgs,
-  username,
-  self,
-}:
+{ lib, username, ... }:
+
 {
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -40,19 +33,5 @@
         alacritty.enable = lib.mkDefault true;
       };
     }
-  ];
-
-  imports = [
-    (import ../../modules/home-manager {
-      inherit
-        config
-        inputs
-        lib
-        self
-        pkgs
-        ;
-    })
-
-    ../../home/${username}/hosts/${hostname}.nix
   ];
 }

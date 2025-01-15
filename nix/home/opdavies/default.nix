@@ -44,7 +44,10 @@ let
   };
 in
 {
-  imports = [ shared-config ];
+  imports = [
+    ../common
+    shared-config
+  ];
 
   home.packages =
     shared-packages
@@ -64,6 +67,7 @@ in
     );
 
   home.sessionVariables = {
+    DOCUMENTS = "$HOME/Documents";
     EDITOR = "nvim";
     LANG = "en_GB.UTF-8";
     LC_ALL = "en_GB.UTF-8";
