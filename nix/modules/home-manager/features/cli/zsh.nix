@@ -6,6 +6,12 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
+    zsh-abbr = {
+      enable = true;
+
+      abbreviations = import ./zsh/abbreviations.nix;
+    };
+
     cdpath = [ "~/Code" ];
     dotDir = ".config/zsh";
 
@@ -55,16 +61,5 @@
       setopt pushd_ignore_dups
       setopt pushdminus
     '';
-
-    zplug = {
-      enable = true;
-
-      plugins = [
-        { name = "Aloxaf/fzf-tab"; }
-        { name = "olets/zsh-abbr"; }
-      ];
-    };
   };
-
-  home.file.".config/zsh-abbr/user-abbreviations".text = builtins.readFile ./zsh/abbreviations.zsh;
 }
