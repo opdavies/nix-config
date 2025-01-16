@@ -5,6 +5,7 @@
     extraGroups = [ "media" ];
 
     packages = with pkgs; [
+      abook
       android-tools
       via
     ];
