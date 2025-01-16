@@ -10,6 +10,7 @@ in
   notes = callPackage ./notes.nix { };
   i3-battery-popup = callPackage ./i3-battery-popup.nix { };
   tmux-sessionizer = callPackage ./tmux-sessionizer.nix { };
+  upload-to-files = callPackage ./upload-to-files.nix { };
 
   vimPlugins = prev.vimPlugins // vimPlugins;
 }
