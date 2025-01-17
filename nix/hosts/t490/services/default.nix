@@ -26,5 +26,6 @@
     pulseaudio.enable = false;
     throttled.enable = true;
     thermald.enable = true;
+    upower.enable = true;
   };
 }
