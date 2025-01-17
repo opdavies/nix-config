@@ -27,6 +27,8 @@ in
           image = "pihole/pihole:latest";
 
           environment = {
+            "PIHOLE_DNS_1" = "8.8.8.8";
+            "PIHOLE_DNS_2" = "8.8.4.4";
             "TZ" = "Europe/London";
           };
 
