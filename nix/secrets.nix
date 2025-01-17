@@ -13,7 +13,7 @@ let
   };
 in
 {
-  "cloudflare.age".publicKeys = [
+  "secrets/cloudflare.age".publicKeys = [
     hosts.hetznix
     hosts.t490
     users.opdavies
@@ -21,13 +21,13 @@ in
     users.opdavies-hetznix
   ];
 
-  "cloudflare-opdavies-uk.age".publicKeys = [
+  "secrets/cloudflare-opdavies-uk.age".publicKeys = [
     hosts.nixedo
     users.opdavies
     users.opdavies2
   ];
 
-  "tubearchivist.age".publicKeys = [
+  "secrets/tubearchivist.age".publicKeys = [
     hosts.lemp11
     hosts.nixedo
     users.opdavies
