@@ -27,4 +27,6 @@
       zoom.enable = true;
     };
   };
+
+  home.packages = with pkgs; [ isync ];
 }
