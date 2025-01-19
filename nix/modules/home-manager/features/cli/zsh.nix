@@ -30,19 +30,39 @@
       alias -s {zip,ZIP}="unzip -l"
 
       git() {
-        if [[ "''${1}" == "root" ]]; then
-          shift
+        case "$1" in
+          clone)
+            shift
 
-          local ROOT="$(${pkgs.git}/bin/git rev-parse --show-toplevel 2> /dev/null || echo -n .)"
+            local repo_url="$1"
+            local repo_path="''${2:-}"
 
-          if [[ $# == 0 ]]; then
-            cd "''${ROOT}"
-          else
-            (cd "''${ROOT}" && eval "''${@}")
-          fi
-        else
-          ${pkgs.git}/bin/git "''${@}"
-        fi
+            if [ -n "$TARGET_DIR" ]; then
+              command git clone "$repo_url" "$repo_path"
+            else
+              command git clone "$repo_url"
+              repo_path=$(basename "$repo_url" .git)
+            fi
+
+            ${pkgs.tmux-sessionizer}/bin/tmux-sessionizer "$repo_path"
+            ;;
+
+          root)
+            shift
+
+            local ROOT="$(${pkgs.git}/bin/git rev-parse --show-toplevel 2> /dev/null || echo -n .)"
+
+            if [[ $# == 0 ]]; then
+              cd "''${ROOT}"
+            else
+              (cd "''${ROOT}" && eval "''${@}")
+            fi
+            ;;
+
+          *)
+            ${pkgs.git}/bin/git "''${@}"
+            ;;
+        esac
       }
 
       ttyper() {
