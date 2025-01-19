@@ -15,9 +15,13 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ bash ];
 
+  patches = [
+    ./create-daily-notes.patch
+  ];
+
   installPhase = ''
     mkdir -p $out/bin
-    cp $src/notes $out/bin/notes
+    cp notes $out/bin/notes
     chmod +x $out/bin/notes
   '';
 }
