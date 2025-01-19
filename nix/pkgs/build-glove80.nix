@@ -1,9 +1,11 @@
 { pkgs, ... }:
 
-pkgs.writeShellApplication {
+with pkgs;
+
+writeShellApplication {
   name = "build-glove80";
 
-  runtimeInputs = with pkgs; [
+  runtimeInputs = [
     cachix
     git
     nix

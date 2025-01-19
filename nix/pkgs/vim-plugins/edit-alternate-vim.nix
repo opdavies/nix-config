@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
-pkgs.vimUtils.buildVimPlugin {
+with pkgs;
+
+vimUtils.buildVimPlugin {
   name = "edit-alternate-vim";
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "tjdevries";
     repo = "edit_alternate.vim";
     rev = "master";

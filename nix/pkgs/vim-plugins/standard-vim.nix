@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
-pkgs.vimUtils.buildVimPlugin {
+with pkgs;
+
+vimUtils.buildVimPlugin {
   name = "standard-vim";
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "tjdevries";
     repo = "standard.vim";
     rev = "master";

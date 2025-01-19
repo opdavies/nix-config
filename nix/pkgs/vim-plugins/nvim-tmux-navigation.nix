@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
-pkgs.vimUtils.buildVimPlugin {
+with pkgs;
+
+vimUtils.buildVimPlugin {
   name = "nvim-tmux-navigation";
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "alexghergh";
     repo = "nvim-tmux-navigation";
     rev = "4898c98702954439233fdaf764c39636681e2861";

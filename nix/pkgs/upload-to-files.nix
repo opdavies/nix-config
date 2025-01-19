@@ -1,6 +1,8 @@
 { pkgs }:
 
-pkgs.writeShellApplication {
+with pkgs;
+
+writeShellApplication {
   name = "upload-to-files";
 
   text = ''

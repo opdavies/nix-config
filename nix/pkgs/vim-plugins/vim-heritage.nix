@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
-pkgs.vimUtils.buildVimPlugin {
+with pkgs;
+
+vimUtils.buildVimPlugin {
   name = "vim-heritage";
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "jessarcher";
     repo = "vim-heritage";
     rev = "cffa05c78c0991c998adc4504d761b3068547db6";

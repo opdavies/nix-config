@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
-pkgs.vimUtils.buildVimPlugin {
+with pkgs;
+
+vimUtils.buildVimPlugin {
   name = "vim-textobj-indent";
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "kana";
     repo = "vim-textobj-indent";
     rev = "deb76867c302f933c8f21753806cbf2d8461b548";

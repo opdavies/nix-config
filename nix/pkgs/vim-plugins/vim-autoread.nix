@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
-pkgs.vimUtils.buildVimPlugin {
+with pkgs;
+
+vimUtils.buildVimPlugin {
   name = "vim-autoread";
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "djoshea";
     repo = "vim-autoread";
     rev = "24061f84652d768bfb85d222c88580b3af138dab";

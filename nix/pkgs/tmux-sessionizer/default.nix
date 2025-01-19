@@ -1,17 +1,19 @@
 { pkgs, ... }:
 
-pkgs.stdenv.mkDerivation rec {
+with pkgs;
+
+stdenv.mkDerivation {
   pname = "tmux-sessonizer";
   version = "0.1.0";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "theprimeagen";
     repo = "tmux-sessionizer";
     rev = "master";
     sha256 = "bZXt9TyMU1Ed/WR0/ahMQ4oyIi6yXLKnXKYPPNBt/s4=";
   };
 
-  buildInputs = with pkgs; [
+  buildInputs = [
     bash
     fzf
     tmux

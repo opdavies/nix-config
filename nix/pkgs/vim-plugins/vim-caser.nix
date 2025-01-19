@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
-pkgs.vimUtils.buildVimPlugin {
+with pkgs;
+
+vimUtils.buildVimPlugin {
   name = "vim-caser";
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "arthurxavierx";
     repo = "vim-caser";
     rev = "6bc9f41d170711c58e0157d882a5fe8c30f34bf6";

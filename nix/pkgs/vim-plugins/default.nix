@@ -10,5 +10,4 @@
   vim-heritage = callPackage ./vim-heritage.nix { };
   vim-textobj-indent = callPackage ./vim-textobj-indent.nix { };
   vim-textobj-xmlattr = callPackage ./vim-textobj-xmlattr.nix { };
-  vim-zoom = callPackage ./vim-zoom.nix { };
 }
