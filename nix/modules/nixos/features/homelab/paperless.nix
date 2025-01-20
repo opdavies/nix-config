@@ -10,6 +10,8 @@ with lib;
       paperless = {
         enable = true;
 
+        dataDir = "/mnt/media/paperless";
+
         settings = {
           PAPERLESS_URL = "https://paperless.opdavies.uk";
         };
