@@ -8,6 +8,8 @@
     ./services
     ./users.nix
 
+    ./modules/docker.nix
+
     ../common
     ../../users/opdavies
   ];
