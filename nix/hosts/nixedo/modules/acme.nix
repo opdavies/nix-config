@@ -5,14 +5,14 @@
     acceptTerms = true;
 
     certs = {
-      "opdavies.uk" = {
-        domain = "opdavies.uk";
+      "oliverdavies.uk" = {
+        domain = "oliverdavies.uk";
         dnsProvider = "cloudflare";
         email = "oliver@oliverdavies.uk";
-        environmentFile = config.age.secrets.cloudflare-opdavies-uk.path;
+        environmentFile = config.age.secrets.cloudflare.path;
         webroot = null;
 
-        extraDomainNames = [ "*.opdavies.uk" ];
+        extraDomainNames = [ "*.oliverdavies.uk" ];
       };
     };
   };

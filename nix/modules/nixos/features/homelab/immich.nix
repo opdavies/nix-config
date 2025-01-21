@@ -19,8 +19,8 @@ with lib;
 
     environment.systemPackages = [ pkgs.immich-cli ];
 
-    services.caddy.virtualHosts."immich.opdavies.uk" = {
-      useACMEHost = "opdavies.uk";
+    services.caddy.virtualHosts."immich.oliverdavies.uk" = {
+      useACMEHost = "oliverdavies.uk";
 
       extraConfig = "reverse_proxy localhost:${toString config.services.immich.port}";
     };

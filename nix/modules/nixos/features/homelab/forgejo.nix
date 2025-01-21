@@ -14,7 +14,7 @@ with lib;
 
         settings = {
           server = {
-            DOMAIN = "forgejo.opdavies.uk";
+            DOMAIN = "forgejo.oliverdavies.uk";
             HTTP_PORT = 2223;
           };
 
@@ -25,7 +25,7 @@ with lib;
       };
 
       caddy.virtualHosts."${config.services.forgejo.settings.server.DOMAIN}" = {
-        useACMEHost = "opdavies.uk";
+        useACMEHost = "oliverdavies.uk";
 
         extraConfig = "reverse_proxy localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
       };

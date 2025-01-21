@@ -11,7 +11,7 @@ with lib;
         enable = true;
 
         config = {
-          DOMAIN = "https://vaultwarden.opdavies.uk";
+          DOMAIN = "https://vaultwarden.oliverdavies.uk";
 
           # TODO: check registrations are disabled.
           SIGNUPS_ALLOWED = false;
@@ -21,8 +21,8 @@ with lib;
         };
       };
 
-      caddy.virtualHosts."vaultwarden.opdavies.uk" = {
-        useACMEHost = "opdavies.uk";
+      caddy.virtualHosts."vaultwarden.oliverdavies.uk" = {
+        useACMEHost = "oliverdavies.uk";
 
         extraConfig = "reverse_proxy localhost:${toString config.services.vaultwarden.config.ROCKET_PORT}";
       };

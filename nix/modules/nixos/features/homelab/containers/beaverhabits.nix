@@ -93,8 +93,8 @@ in
       };
     };
 
-    services.caddy.virtualHosts."beaverhabits.opdavies.uk" = {
-      useACMEHost = "opdavies.uk";
+    services.caddy.virtualHosts."beaverhabits.oliverdavies.uk" = {
+      useACMEHost = "oliverdavies.uk";
 
       extraConfig = "reverse_proxy localhost:${toString port}";
     };

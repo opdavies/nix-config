@@ -13,12 +13,9 @@ in
 {
   "secrets/cloudflare.age".publicKeys = [
     hosts.hetznix
+    hosts.nixedo
     hosts.t490
     users.opdavies
-  ] ++ users;
-
-  "secrets/cloudflare-opdavies-uk.age".publicKeys = [
-    hosts.nixedo
   ] ++ users;
 
   "secrets/tubearchivist.age".publicKeys = [

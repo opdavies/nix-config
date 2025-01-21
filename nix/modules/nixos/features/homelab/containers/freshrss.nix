@@ -100,8 +100,8 @@ in
       wantedBy = [ "multi-user.target" ];
     };
 
-    services.caddy.virtualHosts."freshrss.opdavies.uk" = {
-      useACMEHost = "opdavies.uk";
+    services.caddy.virtualHosts."freshrss.oliverdavies.uk" = {
+      useACMEHost = "oliverdavies.uk";
 
       extraConfig = "reverse_proxy localhost:${toString port}";
     };

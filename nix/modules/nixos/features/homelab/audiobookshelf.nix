@@ -16,8 +16,8 @@ in
         port = 4001;
       };
 
-      caddy.virtualHosts."audiobookshelf.opdavies.uk" = {
-        useACMEHost = "opdavies.uk";
+      caddy.virtualHosts."audiobookshelf.oliverdavies.uk" = {
+        useACMEHost = "oliverdavies.uk";
 
         extraConfig = "reverse_proxy localhost:${toString config.services.audiobookshelf.port}";
       };

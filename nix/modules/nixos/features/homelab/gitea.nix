@@ -26,8 +26,8 @@ in
         };
       };
 
-      caddy.virtualHosts."gitea.opdavies.uk" = {
-        useACMEHost = "opdavies.uk";
+      caddy.virtualHosts."gitea.oliverdavies.uk" = {
+        useACMEHost = "oliverdavies.uk";
 
         extraConfig = "reverse_proxy localhost:${toString port}";
       };

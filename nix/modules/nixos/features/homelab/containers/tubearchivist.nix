@@ -286,8 +286,8 @@ in
       wantedBy = [ "multi-user.target" ];
     };
 
-    services.caddy.virtualHosts."tubearchivist.opdavies.uk" = {
-      useACMEHost = "opdavies.uk";
+    services.caddy.virtualHosts."tubearchivist.oliverdavies.uk" = {
+      useACMEHost = "oliverdavies.uk";
 
       extraConfig = "reverse_proxy localhost:${toString port}";
     };

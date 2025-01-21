@@ -13,8 +13,8 @@ with lib;
       configDir = "/mnt/media/jellyfin";
     };
 
-    services.caddy.virtualHosts."jellyfin.opdavies.uk" = {
-      useACMEHost = "opdavies.uk";
+    services.caddy.virtualHosts."jellyfin.oliverdavies.uk" = {
+      useACMEHost = "oliverdavies.uk";
 
       extraConfig = "reverse_proxy localhost:8096";
     };

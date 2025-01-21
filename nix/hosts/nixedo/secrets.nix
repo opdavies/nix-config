@@ -1,6 +1,6 @@
 {
   age.secrets = {
-    cloudflare-opdavies-uk.file = ../../secrets/cloudflare-opdavies-uk.age;
+    cloudflare.file = ../../secrets/cloudflare.age;
     tubearchivist.file = ../../secrets/tubearchivist.age;
   };
 }
