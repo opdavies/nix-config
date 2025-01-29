@@ -33,6 +33,6 @@
   };
 
   age.identityPaths = [
-    "/home/opdavies/.ssh/id_ed25519"
+    "/home/opdavies/.ssh/id_rsa"
   ];
 }

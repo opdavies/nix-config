@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./hardware.nix
     ./programs.nix
+    ./secrets.nix
     ./services
     ./users.nix
 
