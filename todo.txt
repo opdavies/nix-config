@@ -3,5 +3,4 @@ Add create-podcast-tasks script
 Replace doppler with agenix
 Evaluate services.languagetool as a replacement for Grammarly
 Make git email address configurable
-Make NOTES_DIRECTORY configurable
 Finish configuring syncthing with nix - https://github.com/neeasade/dotfiles/blob/694c2a11107c10947af956befe16cbe5cee0abda/os/nixos/config/shared.nix#L62

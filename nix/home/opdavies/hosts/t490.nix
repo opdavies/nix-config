@@ -4,6 +4,13 @@
   features = {
     cli = {
       direnv.enable = true;
+
+      notes = {
+        enable = true;
+
+        directory = "$HOME/Documents/wiki/notes";
+      };
+
       syncthing.enable = true;
       tmux-sessionizer.enable = true;
     };

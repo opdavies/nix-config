@@ -19,8 +19,6 @@
         ;
     })
 
-    (import ./notes.nix { inherit pkgs; })
-
     (import ./tmux-sessionizer.nix {
       inherit
         config
@@ -34,6 +32,7 @@
     ./direnv.nix
     ./fzf.nix
     ./git.nix
+    ./notes.nix
     ./phpactor.nix
     ./ripgrep.nix
     ./starship.nix
