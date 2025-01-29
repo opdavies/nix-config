@@ -16,4 +16,8 @@
     xcape
     xsel
   ];
+
+  programs = {
+    yazi.enable = true;
+  };
 }
