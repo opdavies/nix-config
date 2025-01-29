@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   features = {
@@ -28,5 +28,8 @@
     };
   };
 
-  home.packages = with pkgs; [ isync ];
+  home.packages = with pkgs; [
+    isync
+    upload-to-files
+  ];
 }

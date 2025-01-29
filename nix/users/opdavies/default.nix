@@ -23,9 +23,7 @@
 
     packages =
       with pkgs;
-      [
-        upload-to-files
-      ]
+      [ ]
       ++ pkgs.lib.optionals (!headless) [
         brave
         firefox
