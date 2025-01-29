@@ -9,6 +9,9 @@
     inputs.nixos-hardware.nixosModules.system76
 
     ./hardware-configuration.nix
+    ./hardware.nix
+    ./programs.nix
+    ./services.nix
 
     ../common
     ../../users/opdavies
@@ -33,54 +36,16 @@
     };
   };
 
-  services.thermald.enable = true;
-  services.power-profiles-daemon.enable = false;
-
   systemd.extraConfig = ''
     DefaultTimeoutStopSec=10s
   '';
 
   networking.networkmanager.enable = true;
 
-  services.xserver.enable = true;
-
-  services.xserver = {
-    xkb = {
-      layout = "gb";
-      variant = "";
-    };
-
-    displayManager.lightdm.enable = true;
-    desktopManager.cinnamon.enable = true;
-  };
-
-  services.avahi.enable = true;
-  services.avahi.nssmdns4 = true;
-  services.avahi.openFirewall = true;
-
-  services.printing.enable = true;
-
-  services.pulseaudio.enable = false;
-
-  hardware.bluetooth.enable = true;
-
   security = {
     polkit.enable = true;
     rtkit.enable = true;
   };
-
-  services.pipewire = {
-    enable = true;
-
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-
-    pulse.enable = true;
-  };
-
-  services.openssh.enable = true;
 
   zramSwap.enable = true;
 
@@ -102,34 +67,4 @@
       warn-dirty = false;
     };
   };
-
-  services.gvfs.enable = true;
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    pinentryPackage = pkgs.pinentry-qt;
-  };
-
-  programs.firefox = {
-    enable = true;
-    languagePacks = [ "en-GB" ];
-    preferences = {
-      "intl.accept_languages" = "en-GB, en";
-      "intl.regional_prefs.use_os_locales" = true;
-    };
-  };
-
-  services.blueman.enable = true;
-
-  services.auto-cpufreq.enable = true;
-
-  services.udev = {
-    enable = true;
-    extraRules = ''
-      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
-    '';
-  };
-
-  hardware.sane.enable = true;
 }
