@@ -44,27 +44,16 @@ let
   };
 in
 {
-  imports = [
-    ../common
-    shared-config
-  ];
+  imports =
+    [
+      ../common
+      shared-config
+    ]
+    ++ pkgs.lib.optionals (!headless) [
+      ./desktop
+    ];
 
-  home.packages =
-    shared-packages
-    ++ pkgs.lib.optionals (!headless) (
-      with pkgs;
-      [
-        build-glove80
-        gscan2pdf
-        meslo-lg
-        obs-studio
-        okular
-        pamixer
-        pavucontrol
-        xcape
-        xsel
-      ]
-    );
+  home.packages = shared-packages;
 
   home.sessionVariables = {
     DOCUMENTS = "$HOME/Documents";
