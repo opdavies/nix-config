@@ -1,11 +1,10 @@
-{ ... }:
-
 {
   imports = [
+    ./dwm.nix
     ./interception-tools.nix
     ./sound.nix
-    ./xserver.nix
     ./udev.nix
+    ./xserver.nix
   ];
 
   services = {

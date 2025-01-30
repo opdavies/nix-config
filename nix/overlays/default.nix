@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, self, ... }:
 
 {
   additions =
@@ -9,7 +9,15 @@
       pkgs = final;
     };
 
-  modifications = final: prev: { };
+  modifications = final: prev: {
+    dwm = prev.dwm.override {
+      patches = [
+        "${self}/patches/dwm/change-mod-key.patch"
+        "${self}/patches/dwm/change-termcmd.patch"
+        "${self}/patches/dwm/dwm-hide_vacant_tags-6.4.diff"
+      ];
+    };
+  };
 
   stable-packages = final: _prev: {
     nixpkgs-2405 = import inputs.nixpkgs-2405 {

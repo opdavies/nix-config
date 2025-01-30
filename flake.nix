@@ -59,7 +59,7 @@
 
       formatter.${system} = pkgs.nixfmt-rfc-style;
 
-      overlays = import ./nix/overlays { inherit inputs; };
+      overlays = import ./nix/overlays { inherit inputs self; };
 
       nixosModules.default = ./nix/modules/nixos;
 
