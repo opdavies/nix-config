@@ -42,9 +42,6 @@
       logseq
       shotwell
       vscode
-      xfce.thunar
-      xfce.thunar-volman
-      xfce.tumbler
     ];
 
   home-manager = {
