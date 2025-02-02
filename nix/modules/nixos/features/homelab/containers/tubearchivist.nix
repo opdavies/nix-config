@@ -11,6 +11,7 @@ let
   cfg = config.features.homelab.tubearchivist-container;
 
   port = 8085;
+  url = "tubearchivist.oliverdavies.uk";
 in
 {
   options.features.homelab.tubearchivist-container = {
