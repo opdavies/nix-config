@@ -12,6 +12,7 @@
   modifications = final: prev: {
     dwm = prev.dwm.override {
       patches = [
+        "${self}/patches/dwm/add-custom-commands-and-keys.patch"
         "${self}/patches/dwm/change-mod-key.patch"
         "${self}/patches/dwm/change-termcmd.patch"
         "${self}/patches/dwm/dwm-hide_vacant_tags-6.4.diff"
