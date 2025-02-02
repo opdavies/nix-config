@@ -25,6 +25,7 @@
   environment.systemPackages =
     with pkgs;
     [
+      cryptsetup
       fastfetch
       mermaid-cli
       mkcert
