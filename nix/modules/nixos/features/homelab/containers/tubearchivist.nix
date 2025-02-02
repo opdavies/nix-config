@@ -142,8 +142,8 @@ in
       ];
 
       volumes = [
-        "tubearchivist_cache:/cache:rw"
-        "tubearchivist_media:/youtube:rw"
+        "/mnt/media/tubearchivist_cache:/cache:rw"
+        "/mnt/media/tubearchivist_media:/youtube:rw"
       ];
 
       ports = [
