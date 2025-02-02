@@ -83,4 +83,8 @@
       warn-dirty = false;
     };
   };
+
+  networking.hosts = {
+    "192.168.1.116" = [ "nixedo" ];
+  };
 }
