@@ -39,4 +39,10 @@
     isync
     upload-to-files
   ];
+
+  programs.neomutt = {
+    enable = true;
+
+    vimKeys = true;
+  };
 }
