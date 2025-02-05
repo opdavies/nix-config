@@ -54,6 +54,7 @@
 
   environment.systemPackages = with pkgs; [
     gtypist
+    pass
     rclone
     rclone-browser
     sxiv
