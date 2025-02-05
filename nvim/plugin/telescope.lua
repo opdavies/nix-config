@@ -29,10 +29,6 @@ local builtin = require "telescope.builtin"
 
 local M = {}
 
-M.diagnostics = function()
-  builtin.diagnostics { bufnr = 0 }
-end
-
 M.grep_bluecheese = function()
   builtin.live_grep { cwd = "web/sites/default/themes/bluecheese" }
 end
@@ -55,7 +51,6 @@ vim.keymap.set("n", "<space>fi", M.search_all_files)
 vim.keymap.set("n", "<space>fk", builtin.keymaps)
 vim.keymap.set("n", "<space>ft", builtin.git_files)
 
-vim.keymap.set("n", "<space>dl", M.diagnostics)
 vim.keymap.set("n", "<space>ds", builtin.lsp_document_symbols)
 
 vim.keymap.set("n", "<space>gw", builtin.grep_string)
