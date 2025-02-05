@@ -56,6 +56,7 @@
     gtypist
     rclone
     rclone-browser
+    sxiv
     ttyper
     yt-dlp
     ytfzf
