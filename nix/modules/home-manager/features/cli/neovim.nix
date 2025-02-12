@@ -32,6 +32,7 @@ in
         refactoring-nvim
         standard-vim
         undotree
+        vim-caser
         vim-nix
         vim-pasta
         vim-repeat
