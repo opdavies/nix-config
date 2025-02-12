@@ -44,6 +44,7 @@ in
 
         # Testing
         vim-test
+        vimux
 
         # Git
         vim-fugitive
