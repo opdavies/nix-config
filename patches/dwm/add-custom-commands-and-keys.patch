@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 9efa774..6eabff1 100644
+index 9efa774..eb69e91 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -60,9 +60,14 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn()
@@ -7,7 +7,7 @@ index 9efa774..6eabff1 100644
  static const char *termcmd[]  = { "st", NULL };
  
 +/* custom commands */
-+static const char *brave[]  = { "brave", NULL };
++static const char *firefox[]  = { "firefox", NULL };
 +static const char *rofi[]  = { "rofi", "-show", "drun", NULL };
 +static const char *thunar[]  = { "thunar", NULL };
 +
@@ -22,7 +22,7 @@ index 9efa774..6eabff1 100644
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
  	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = brave } },
++	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = firefox } },
 +	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = thunar } },
  };
  
