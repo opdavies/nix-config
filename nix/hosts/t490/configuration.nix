@@ -20,7 +20,6 @@
       autorandr.enable = true;
       dwm.enable = true;
       gaming.enable = true;
-      i3.enable = true;
       thunar.enable = true;
       peek.enable = true;
     };
