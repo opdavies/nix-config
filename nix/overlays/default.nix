@@ -18,6 +18,12 @@
         "${self}/patches/dwm/dwm-hide_vacant_tags-6.4.diff"
       ];
     };
+
+    st = prev.st.override {
+      patches = [
+        "${self}/patches/st/change-font.patch"
+      ];
+    };
   };
 
   stable-packages = final: _prev: {
