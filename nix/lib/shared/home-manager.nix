@@ -28,10 +28,6 @@
         neovim.enable = lib.mkDefault true;
         tmux.enable = lib.mkDefault true;
       };
-
-      desktop = {
-        alacritty.enable = lib.mkDefault true;
-      };
     }
   ];
 }

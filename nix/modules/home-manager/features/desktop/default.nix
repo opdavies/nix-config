@@ -1,6 +1,5 @@
 {
   imports = [
-    ./alacritty.nix
     ./copyq.nix
     ./discord.nix
     ./espanso.nix
