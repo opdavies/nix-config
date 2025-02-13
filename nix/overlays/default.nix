@@ -15,6 +15,7 @@
         "${self}/patches/dwm/add-custom-commands-and-keys.patch"
         "${self}/patches/dwm/change-mod-key.patch"
         "${self}/patches/dwm/dwm-hide_vacant_tags-6.4.diff"
+        "${self}/patches/dwm/dwm-pertag-20200914-61bb8b2.diff"
       ];
     };
 
