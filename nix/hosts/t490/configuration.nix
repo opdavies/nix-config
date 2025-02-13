@@ -59,7 +59,6 @@
     sxiv
     ttyper
     yt-dlp
-    ytfzf
   ];
 
   zramSwap.enable = true;
