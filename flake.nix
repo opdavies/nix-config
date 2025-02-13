@@ -18,6 +18,8 @@
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs =
