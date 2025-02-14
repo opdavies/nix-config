@@ -4,6 +4,10 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+function build {
+  _nixos build "$@"
+}
+
 function check {
   nix flake check
 }
@@ -25,39 +29,16 @@ function help {
   printf "\nExtended help:\n  Each task has comments for general usage\n"
 }
 
-function home-manager:build {
-  _home build "$@"
-}
-
-function home-manager:switch {
-  _home switch "$@"
-}
-
-function nixos:build {
-  _nixos build "$@"
-}
-
-function nixos:switch {
+function switch {
   _nixos switch "$@"
 }
 
-function nixos:test {
+function test {
   _nixos test "$@"
 }
 
 function update {
   nix flake update
-}
-
-function _home {
-  local command="$1"
-  shift 1
-
-  NIXPKGS_ALLOW_UNFREE=1 home-manager "$command" \
-    --extra-experimental-features flakes \
-    --extra-experimental-features nix-command \
-    --flake ".#$(whoami)@$(hostname)" \
-    --impure "$@"
 }
 
 function _nixos {
