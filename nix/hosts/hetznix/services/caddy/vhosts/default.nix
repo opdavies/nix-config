@@ -1,7 +1,6 @@
 {
   imports = [
     ./bootstrap-with-tailwind.oliverdavies.uk.nix
-    ./files.oliverdavies.uk.nix
     ./florida-drupalcamp-tailwind-css.oliverdavies.uk.nix
     ./luke.oliverdavies.uk.nix
     ./phpsw-sculpin-demo.oliverdavies.uk.nix
