@@ -36,6 +36,7 @@ with lib;
       dmenu-bluetooth
       networkmanager_dmenu
       st
+      xdotool
     ];
   };
 }
