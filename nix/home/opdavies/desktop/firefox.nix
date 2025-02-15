@@ -9,6 +9,7 @@
     profiles = {
       default = {
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          awesome-rss
           bitwarden
           darkreader
           onetab
