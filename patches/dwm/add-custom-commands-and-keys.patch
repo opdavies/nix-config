@@ -1,24 +1,16 @@
 diff --git a/config.def.h b/config.def.h
-index 9efa774..e029834 100644
+index 9efa774..dd6779a 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -60,6 +60,10 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn()
- static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
- static const char *termcmd[]  = { "st", NULL };
- 
-+/* custom commands */
-+static const char *firefox[]  = { "firefox", NULL };
-+static const char *thunar[]  = { "thunar", NULL };
-+
- static const Key keys[] = {
- 	/* modifier                     key        function        argument */
- 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-@@ -95,6 +99,8 @@ static const Key keys[] = {
+@@ -95,6 +95,11 @@ static const Key keys[] = {
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
  	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = firefox } },
-+	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = thunar } },
++	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("firefox") },
++	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("thunar") },
++	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui") },
++	{ MODKEY|ShiftMask,             XK_y,      spawn,          SHCMD("copyq toggle") },
++	{ MODKEY,                       XK_Insert, spawn,          SHCMD("xdotool type $(grep -v '^#' ~/snippets.txt | sort | dmenu -i -l 50 | cut -d' ' -f1)") },
  };
  
  /* button definitions */
