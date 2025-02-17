@@ -22,6 +22,7 @@
     st = prev.st.override {
       patches = [
         "${self}/patches/st/change-font.patch"
+        "${self}/patches/st/st-anysize-20220718-baa9357.diff"
       ];
     };
   };
