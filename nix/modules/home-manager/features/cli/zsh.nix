@@ -22,6 +22,10 @@
     };
 
     initExtra = ''
+      if [[ -z "$DISPLAY" ]] && [[ "$(tty)" == "/dev/tty1" ]]; then
+        exec startx &>/dev/null
+      fi
+
       # suffix
       alias -s gz="tar -tf"
       alias -s {html,HTML}="background firefox"
