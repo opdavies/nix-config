@@ -1,4 +1,4 @@
-{ inputs, self, ... }:
+{ inputs, ... }:
 
 {
   additions =
@@ -10,21 +10,6 @@
     };
 
   modifications = final: prev: {
-    dwm = prev.dwm.override {
-      patches = [
-        "${self}/patches/dwm/add-custom-commands-and-keys.patch"
-        "${self}/patches/dwm/change-mod-key.patch"
-        "${self}/patches/dwm/dwm-hide_vacant_tags-6.4.diff"
-        "${self}/patches/dwm/dwm-pertag-20200914-61bb8b2.diff"
-      ];
-    };
-
-    st = prev.st.override {
-      patches = [
-        "${self}/patches/st/change-font.patch"
-        "${self}/patches/st/st-anysize-20220718-baa9357.diff"
-      ];
-    };
   };
 
   stable-packages = final: _prev: {
