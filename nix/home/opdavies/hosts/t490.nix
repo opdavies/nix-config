@@ -18,6 +18,7 @@
     desktop = {
       copyq.enable = true;
       discord.enable = true;
+      dwm.enable = true;
       espanso.enable = true;
       flameshot.enable = true;
       gtk.enable = true;

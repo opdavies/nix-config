@@ -2,6 +2,7 @@
   imports = [
     ./copyq.nix
     ./discord.nix
+    ./dwm.nix
     ./espanso.nix
     ./flameshot.nix
     ./gtk.nix
