@@ -3,6 +3,7 @@
 {
   imports = [
     ./bin.nix
+    ./bluetuith.nix
     ./direnv.nix
     ./fzf.nix
     ./git.nix

@@ -3,6 +3,7 @@
 {
   features = {
     cli = {
+      bluetuith.enable = true;
       direnv.enable = true;
 
       notes = {
