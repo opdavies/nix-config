@@ -15,6 +15,7 @@
           onetab
           tree-style-tab
           ublock-origin
+          videospeed
           vimium
           web-developer
         ];
