@@ -1,7 +1,6 @@
 {
   imports = [
     ./cron.nix
-    ./dwm.nix
     ./interception-tools.nix
     ./sound.nix
     ./udev.nix

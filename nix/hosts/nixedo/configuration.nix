@@ -20,6 +20,8 @@
       docker.enable = true;
     };
 
+    desktop.dwm.enable = true;
+
     homelab = {
       audiobookshelf.enable = true;
       beaverhabits.enable = true;

@@ -8,7 +8,8 @@
     };
 
     desktop = {
-      gtk.enable = true;
+      dwm.enable = true;
+      # gtk.enable = true;
     };
   };
 }
