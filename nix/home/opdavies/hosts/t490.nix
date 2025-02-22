@@ -5,6 +5,7 @@
     cli = {
       bluetuith.enable = true;
       direnv.enable = true;
+      neovim.enable = true;
 
       notes = {
         enable = true;
@@ -13,6 +14,7 @@
       };
 
       syncthing.enable = true;
+      tmux.enable = true;
       tmux-sessionizer.enable = true;
     };
 

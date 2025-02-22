@@ -1,4 +1,4 @@
-{ lib, username, ... }:
+{ username, ... }:
 
 {
   home.username = "${username}";
@@ -21,13 +21,4 @@
   home.stateVersion = "22.05";
 
   programs.home-manager.enable = true;
-
-  features = lib.mkMerge [
-    {
-      cli = {
-        neovim.enable = lib.mkDefault true;
-        tmux.enable = lib.mkDefault true;
-      };
-    }
-  ];
 }
