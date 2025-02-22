@@ -14,13 +14,13 @@ with lib;
     home.file.".xinitrc".text = ''
       systemctl --user import-environment DISPLAY
 
-      ${pkgs.autorandr}/bin/autorandr --change
+      autorandr --change
 
-      ${pkgs.copyq}/bin/copyq &
+      copyq &
 
       systemctl --user start dwm-status &
 
-      exec ${pkgs.dwm}/bin/dwm
+      exec dwm
     '';
   };
 }
