@@ -2,6 +2,7 @@
   features = {
     cli = {
       direnv.enable = true;
+      neovim.enable = true;
 
       notes = {
         enable = true;
