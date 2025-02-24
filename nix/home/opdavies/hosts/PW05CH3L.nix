@@ -3,6 +3,7 @@
     cli = {
       direnv.enable = true;
       neovim.enable = true;
+      tmux.enable = true;
 
       notes = {
         enable = true;
