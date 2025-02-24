@@ -29,6 +29,14 @@
       fastfetch
       mermaid-cli
       mkcert
+      (pass.withExtensions (
+        e: with e; [
+          passExtensions.pass-audit
+          passExtensions.pass-import
+          passExtensions.pass-otp
+          passExtensions.pass-update
+        ]
+      ))
     ]
     ++ pkgs.lib.optionals (!headless) [
       acpi

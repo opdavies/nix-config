@@ -54,7 +54,6 @@
   environment.systemPackages = with pkgs; [
     gtypist
     newsboat
-    pass
     rclone
     rclone-browser
     sxiv

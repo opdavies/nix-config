@@ -1,9 +1,18 @@
-{ inputs, username, ... }:
+{
+  inputs,
+  pkgs,
+  username,
+  ...
+}:
 
 {
   imports = [
     ../common
     ../../users/opdavies
+  ];
+
+  environment.systemPackages = with pkgs; [
+    wl-clipboard
   ];
 
   features = {
