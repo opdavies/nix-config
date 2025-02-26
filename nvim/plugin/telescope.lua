@@ -49,6 +49,7 @@ vim.keymap.set("n", "<space>fd", builtin.find_files)
 vim.keymap.set("n", "<space>fh", builtin.help_tags)
 vim.keymap.set("n", "<space>fi", M.search_all_files)
 vim.keymap.set("n", "<space>fk", builtin.keymaps)
+vim.keymap.set("n", "<space>fr", builtin.lsp_references)
 vim.keymap.set("n", "<space>ft", builtin.git_files)
 
 vim.keymap.set("n", "<space>ds", builtin.lsp_document_symbols)
