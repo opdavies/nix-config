@@ -108,10 +108,8 @@
         core = {
           editor = "nvim";
           excludesFile = "~/.config/git/ignore";
-          pager = "delta";
         };
 
-        delta.line-numbers = true;
         diff.tool = "vimdiff";
         fetch.prune = true;
         gpg.format = "ssh";
