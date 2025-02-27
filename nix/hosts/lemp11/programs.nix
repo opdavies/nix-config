@@ -2,12 +2,6 @@
 
 {
   programs = {
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-      pinentryPackage = pkgs.pinentry-qt;
-    };
-
     firefox = {
       enable = true;
       languagePacks = [ "en-GB" ];
