@@ -69,6 +69,5 @@ in
     ];
     PULUMI_SKIP_UPDATE_CHECK = "true";
     REPOS = "$HOME/Code";
-    RIPGREP_CONFIG_PATH = "$HOME/.config/ripgrep/config";
   };
 }

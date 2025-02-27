@@ -10,7 +10,6 @@
     ./neovim.nix
     ./notes.nix
     ./phpactor.nix
-    ./ripgrep.nix
     ./starship.nix
     ./syncthing.nix
     ./tmux.nix

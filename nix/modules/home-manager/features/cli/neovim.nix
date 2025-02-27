@@ -170,6 +170,7 @@ in
         phpPackages.php-codesniffer
         phpPackages.phpstan
         proselint
+        ripgrep
         shellcheck
         yamllint
       ];
