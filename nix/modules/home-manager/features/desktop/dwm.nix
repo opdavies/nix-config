@@ -11,16 +11,25 @@ with lib;
   options.features.desktop.dwm.enable = mkEnableOption "Enable dwm";
 
   config = mkIf config.features.desktop.dwm.enable {
-    home.file.".xinitrc".text = ''
-      systemctl --user import-environment DISPLAY
+    home = {
+      file.".xinitrc".text = ''
+        systemctl --user import-environment DISPLAY
 
-      autorandr --change
+        autorandr --change
 
-      copyq &
+        copyq &
 
-      systemctl --user start dwm-status &
+        poweralertd -s &
 
-      exec dwm
-    '';
+        systemctl --user start dwm-status &
+
+        exec dwm
+      '';
+
+      packages = with pkgs; [
+        dunst
+        poweralertd
+      ];
+    };
   };
 }
