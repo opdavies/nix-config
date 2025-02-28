@@ -24,7 +24,7 @@ in
         conf-vim
         edit-alternate-vim
         gitsigns-nvim
-        harpoon
+        harpoon2
         mini-nvim
         nvim-web-devicons
         oil-nvim
