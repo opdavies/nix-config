@@ -13,6 +13,6 @@ with lib;
   config = mkIf config.features.desktop.gaming.enable {
     programs.steam.enable = true;
 
-    environment.systemPackages = with pkgs; [ nixpkgs-2411.zeroad ];
+    environment.systemPackages = with pkgs; [ zeroad ];
   };
 }

@@ -17,6 +17,7 @@ let
 
     overlays = [
       outputs.overlays.additions
+      outputs.overlays.stable-packages
     ];
   };
 

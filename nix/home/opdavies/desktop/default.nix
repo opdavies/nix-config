@@ -9,9 +9,9 @@
   home.packages = with pkgs; [
     build-glove80
     gscan2pdf
+    kdePackages.okular
     meslo-lg
     obs-studio
-    okular
     pamixer
     pavucontrol
     xcape
