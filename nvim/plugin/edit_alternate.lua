@@ -27,6 +27,20 @@ vim.fn["edit_alternate#rule#add"]("php", function(filename)
   end
 end)
 
+if vim.fn.filereadable "composer.json" == 1 then
+  vim.fn["edit_alternate#rule#add"]("json", function(filename)
+    if filename:find "composer.json" then
+      return (filename:gsub("%.json$", ".lock"))
+    end
+  end)
+
+  vim.fn["edit_alternate#rule#add"]("lock", function(filename)
+    if filename:find "composer.lock" then
+      return (filename:gsub("%.lock$", ".json"))
+    end
+  end)
+end
+
 if vim.fn.filereadable "fractal.config.js" == 1 then
   vim.fn["edit_alternate#rule#add"]("twig", function(filename)
     return (filename:gsub("%.twig$", ".config.yml"))
