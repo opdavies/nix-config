@@ -6,4 +6,8 @@ vim.filetype.add {
     pcss = "scss",
     theme = "php",
   },
+
+  filename = {
+    ["composer.lock"] = "json",
+  },
 }
