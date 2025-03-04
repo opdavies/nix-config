@@ -118,7 +118,7 @@ with lib;
                 { MODKEY|ShiftMask, XK_q, quit, {0} },
                 { MODKEY|ShiftMask, XK_b, spawn, SHCMD("${pkgs.firefox}/bin/firefox") },
                 { MODKEY|ShiftMask, XK_f, spawn, SHCMD("${pkgs.xfce.thunar}/bin/thunar") },
-                { MODKEY|ShiftMask, XK_i, spawn, SHCMD("${pkgs.xdotool}/bin/xdotool type $(grep -v '^#' ~/snippets.txt | grep "\S" | sort | dmenu -i -l 50 | cut -d' ' -f1)") },
+                { MODKEY|ShiftMask, XK_i, spawn, SHCMD("${pkgs.xdotool}/bin/xdotool type $(cat ~/snippets.txt | grep -v '^#' | grep -v '^$' | sort | dmenu -i -l 50 | cut -d' ' -f1)") },
                 { MODKEY|ShiftMask, XK_s, spawn, SHCMD("${pkgs.flameshot}/bin/flameshot gui") },
                 { MODKEY|ShiftMask, XK_y, spawn, SHCMD("${pkgs.copyq}/bin/copyq toggle") },
               };
