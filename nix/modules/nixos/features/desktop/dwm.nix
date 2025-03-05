@@ -116,7 +116,7 @@ with lib;
                 TAGKEYS(XK_8, 7)
                 TAGKEYS(XK_9, 8)
                 { MODKEY|ShiftMask, XK_q, quit, {0} },
-                { MODKEY|ShiftMask, XK_b, spawn, SHCMD("${pkgs.firefox}/bin/firefox") },
+                { MODKEY|ShiftMask, XK_b, spawn, SHCMD("${pkgs.librewolf}/bin/librewolf") },
                 { MODKEY|ShiftMask, XK_f, spawn, SHCMD("${pkgs.xfce.thunar}/bin/thunar") },
                 { MODKEY|ShiftMask, XK_i, spawn, SHCMD("${pkgs.xdotool}/bin/xdotool type $(cat ~/snippets.txt | grep -v '^#' | grep -v '^$' | sort | dmenu -i -l 50 | cut -d' ' -f1)") },
                 { MODKEY|ShiftMask, XK_p, spawn, {.v = (const char*[]){ "${pkgs.pass}/bin/passmenu", "-i", "-l", "50", NULL} } },
