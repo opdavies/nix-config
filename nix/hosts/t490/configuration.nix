@@ -15,6 +15,10 @@
     ../../users/opdavies
   ];
 
+  nixosModules = {
+    st.enable = true;
+  };
+
   features = {
     desktop = {
       autorandr.enable = true;
