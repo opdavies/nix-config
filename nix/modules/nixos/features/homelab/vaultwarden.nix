@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.homelab.vaultwarden.enable = mkEnableOption "Enable vaultwarden";
+  options.nixosModules.vaultwarden.enable = mkEnableOption "Enable vaultwarden";
 
-  config = mkIf config.features.homelab.vaultwarden.enable {
+  config = mkIf config.nixosModules.vaultwarden.enable {
     services = {
       vaultwarden = {
         enable = true;

@@ -16,17 +16,12 @@
   ];
 
   nixosModules = {
+    autorandr.enable = true;
+    dwm.enable = true;
+    gaming.enable = true;
     st.enable = true;
-  };
-
-  features = {
-    desktop = {
-      autorandr.enable = true;
-      dwm.enable = true;
-      gaming.enable = true;
-      thunar.enable = true;
-      peek.enable = true;
-    };
+    thunar.enable = true;
+    peek.enable = true;
   };
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
@@ -58,6 +53,7 @@
   environment.systemPackages = with pkgs; [
     gtypist
     newsboat
+    pam_gnupg
     rclone
     rclone-browser
     sxiv

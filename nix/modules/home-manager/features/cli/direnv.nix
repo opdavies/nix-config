@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.cli.direnv.enable = mkEnableOption "Enable direnv";
+  options.homeManagerModules.direnv.enable = mkEnableOption "Enable direnv";
 
-  config = mkIf config.features.cli.direnv.enable {
+  config = mkIf config.homeManagerModules.direnv.enable {
     programs.direnv = {
       enable = true;
       enableZshIntegration = true;

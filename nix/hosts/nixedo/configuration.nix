@@ -15,25 +15,19 @@
     ../../users/opdavies
   ];
 
-  features = {
-    cli = {
-      docker.enable = true;
-    };
-
-    desktop.dwm.enable = true;
-
-    homelab = {
-      audiobookshelf.enable = true;
-      beaverhabits.enable = true;
-      freshrss.enable = true;
-      gitea.enable = true;
-      immich.enable = true;
-      jellyfin.enable = true;
-      paperless.enable = true;
-      pihole.enable = true;
-      tubearchivist-container.enable = true;
-      vaultwarden.enable = true;
-    };
+  nixosModules = {
+    audiobookshelf.enable = true;
+    beaverhabits.enable = true;
+    docker.enable = true;
+    dwm.enable = true;
+    freshrss.enable = true;
+    gitea.enable = true;
+    immich.enable = true;
+    jellyfin.enable = true;
+    paperless.enable = true;
+    pihole.enable = true;
+    tubearchivist-container.enable = true;
+    vaultwarden.enable = true;
   };
 
   programs.dconf.enable = true;

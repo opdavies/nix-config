@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.homelab.jellyfin.enable = mkEnableOption "Enable jellyfin";
+  options.nixosModules.jellyfin.enable = mkEnableOption "Enable jellyfin";
 
-  config = mkIf config.features.homelab.jellyfin.enable {
+  config = mkIf config.nixosModules.jellyfin.enable {
     services.jellyfin = {
       enable = true;
       openFirewall = true;

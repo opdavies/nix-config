@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.desktop.espanso.enable = mkEnableOption "Enable espanso";
+  options.homeManagerModules.espanso.enable = mkEnableOption "Enable espanso";
 
-  config = mkIf config.features.desktop.espanso.enable {
+  config = mkIf config.homeManagerModules.espanso.enable {
     services.espanso = {
       enable = true;
 

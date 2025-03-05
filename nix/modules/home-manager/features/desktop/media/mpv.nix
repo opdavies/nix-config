@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.desktop.media.mpv.enable = mkEnableOption "Enable mpv media player";
+  options.homeManagerModules.mpv.enable = mkEnableOption "Enable mpv media player";
 
-  config = mkIf config.features.desktop.media.mpv.enable {
+  config = mkIf config.homeManagerModules.mpv.enable {
     programs.mpv = {
       enable = true;
 

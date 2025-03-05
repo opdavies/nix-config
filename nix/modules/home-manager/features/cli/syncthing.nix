@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.cli.syncthing;
+  cfg = config.homeManagerModules.syncthing;
 in
 {
-  options.features.cli.syncthing.enable = mkEnableOption "Enable syncthing";
+  options.homeManagerModules.syncthing.enable = mkEnableOption "Enable syncthing";
 
   config = mkIf cfg.enable {
     services.syncthing.enable = true;

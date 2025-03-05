@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.zoom.enable = mkEnableOption "Enable zoom";
+  options.homeManagerModules.zoom.enable = mkEnableOption "Enable zoom";
 
-  config = mkIf config.features.desktop.zoom.enable {
+  config = mkIf config.homeManagerModules.zoom.enable {
     home.packages = with pkgs; [ zoom-us ];
   };
 }

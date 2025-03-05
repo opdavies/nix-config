@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.cli.docker.enable = mkEnableOption "Enable Docker";
+  options.nixosModules.docker.enable = mkEnableOption "Enable Docker";
 
-  config = mkIf config.features.cli.docker.enable {
+  config = mkIf config.nixosModules.docker.enable {
     virtualisation.docker = {
       enable = true;
 

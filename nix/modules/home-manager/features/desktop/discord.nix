@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.discord.enable = mkEnableOption "Enable Discord";
+  options.homeManagerModules.discord.enable = mkEnableOption "Enable Discord";
 
-  config = mkIf config.features.desktop.discord.enable {
+  config = mkIf config.homeManagerModules.discord.enable {
     home.packages = with pkgs; [ discord ];
   };
 }

@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.desktop.autorandr.enable = mkEnableOption "Enable autorandr";
+  options.nixosModules.autorandr.enable = mkEnableOption "Enable autorandr";
 
-  config = mkIf config.features.desktop.autorandr.enable {
+  config = mkIf config.nixosModules.autorandr.enable {
     services.autorandr = {
       enable = true;
 

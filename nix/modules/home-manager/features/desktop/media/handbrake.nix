@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.media.handbrake.enable = mkEnableOption "Enable handbrake";
+  options.homeManagerModules.handbrake.enable = mkEnableOption "Enable handbrake";
 
-  config = mkIf config.features.desktop.media.handbrake.enable {
+  config = mkIf config.homeManagerModules.handbrake.enable {
     home.packages = with pkgs; [ handbrake ];
   };
 }

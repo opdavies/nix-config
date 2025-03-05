@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.flameshot.enable = mkEnableOption "Enable flameshot";
+  options.homeManagerModules.flameshot.enable = mkEnableOption "Enable flameshot";
 
-  config = mkIf config.features.desktop.flameshot.enable {
+  config = mkIf config.homeManagerModules.flameshot.enable {
     services.flameshot = {
       enable = true;
 

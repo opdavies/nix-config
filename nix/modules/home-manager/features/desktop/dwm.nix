@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.dwm.enable = mkEnableOption "Enable dwm";
+  options.homeManagerModules.dwm.enable = mkEnableOption "Enable dwm";
 
-  config = mkIf config.features.desktop.dwm.enable {
+  config = mkIf config.homeManagerModules.dwm.enable {
     home = {
       file.".xinitrc".text = ''
         systemctl --user import-environment DISPLAY

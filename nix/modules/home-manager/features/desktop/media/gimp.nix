@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.media.gimp.enable = mkEnableOption "Enable gimp";
+  options.homeManagerModules.gimp.enable = mkEnableOption "Enable gimp";
 
-  config = mkIf config.features.desktop.media.gimp.enable {
+  config = mkIf config.homeManagerModules.gimp.enable {
     home.packages = with pkgs; [ gimp ];
   };
 }

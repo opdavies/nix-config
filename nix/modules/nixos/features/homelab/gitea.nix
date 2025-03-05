@@ -6,9 +6,9 @@ let
   port = 2222;
 in
 {
-  options.features.homelab.gitea.enable = mkEnableOption "Enable gitea";
+  options.nixosModules.gitea.enable = mkEnableOption "Enable gitea";
 
-  config = mkIf config.features.homelab.gitea.enable {
+  config = mkIf config.nixosModules.gitea.enable {
     services = {
       gitea = {
         enable = true;

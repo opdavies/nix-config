@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.cli.bluetuith.enable = mkEnableOption "Enable bluetuith";
+  options.homeManagerModules.bluetuith.enable = mkEnableOption "Enable bluetuith";
 
-  config = mkIf config.features.cli.bluetuith.enable {
+  config = mkIf config.homeManagerModules.bluetuith.enable {
     home.packages = with pkgs; [
       bluetuith
     ];

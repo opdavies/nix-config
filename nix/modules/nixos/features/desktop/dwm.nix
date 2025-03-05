@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.dwm.enable = mkEnableOption "Enable dwm";
+  options.nixosModules.dwm.enable = mkEnableOption "Enable dwm";
 
-  config = mkIf config.features.desktop.dwm.enable {
+  config = mkIf config.nixosModules.dwm.enable {
     services = {
       dwm-status = {
         enable = true;

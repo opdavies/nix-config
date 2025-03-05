@@ -9,12 +9,12 @@
 with lib;
 
 let
-  cfg = config.features.homelab.beaverhabits;
+  cfg = config.nixosModules.beaverhabits;
 
   port = 8084;
 in
 {
-  options.features.homelab.beaverhabits.enable = mkEnableOption "Enable beaverhabits";
+  options.nixosModules.beaverhabits.enable = mkEnableOption "Enable beaverhabits";
 
   config = mkIf cfg.enable {
     virtualisation = {

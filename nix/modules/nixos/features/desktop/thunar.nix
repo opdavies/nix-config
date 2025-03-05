@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.thunar.enable = mkEnableOption "Enable thunar";
+  options.nixosModules.thunar.enable = mkEnableOption "Enable thunar";
 
-  config = mkIf config.features.desktop.thunar.enable {
+  config = mkIf config.nixosModules.thunar.enable {
     programs.thunar = {
       enable = true;
 

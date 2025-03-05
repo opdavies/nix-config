@@ -9,9 +9,9 @@
 with lib;
 
 {
-  options.features.desktop.screenkey.enable = mkEnableOption "Enable screenkey";
+  options.nixosModules.screenkey.enable = mkEnableOption "Enable screenkey";
 
-  config = mkIf config.features.desktop.screenkey.enable {
+  config = mkIf config.nixosModules.screenkey.enable {
     environment.systemPackages = with pkgs; [ screenkey ];
 
     home-manager.users.${username}.xdg.configFile."screenkey.json".text = builtins.toJSON {

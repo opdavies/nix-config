@@ -1,15 +1,9 @@
 { ... }:
 
 {
-  features = {
-    cli = {
-      direnv.enable = true;
-      syncthing.enable = true;
-    };
-
-    desktop = {
-      dwm.enable = true;
-      # gtk.enable = true;
-    };
+  homeManagerModules = {
+    direnv.enable = true;
+    dwm.enable = true;
+    syncthing.enable = true;
   };
 }

@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.homelab.immich.enable = mkEnableOption "Enable immich";
+  options.nixosModules.immich.enable = mkEnableOption "Enable immich";
 
-  config = mkIf config.features.homelab.immich.enable {
+  config = mkIf config.nixosModules.immich.enable {
     services.immich = {
       enable = true;
       group = "media";

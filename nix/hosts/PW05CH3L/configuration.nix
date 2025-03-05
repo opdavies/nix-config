@@ -15,10 +15,8 @@
     wl-clipboard
   ];
 
-  features = {
-    cli = {
-      docker.enable = true;
-    };
+  nixosModules = {
+    docker.enable = true;
   };
 
   wsl = {

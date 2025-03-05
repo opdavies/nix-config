@@ -11,9 +11,9 @@ let
   port = 8082;
 in
 {
-  options.features.homelab.pihole.enable = mkEnableOption "Enable pihole";
+  options.nixosModules.pihole.enable = mkEnableOption "Enable pihole";
 
-  config = mkIf config.features.homelab.pihole.enable {
+  config = mkIf config.nixosModules.pihole.enable {
     virtualisation = {
       docker = {
         enable = true;

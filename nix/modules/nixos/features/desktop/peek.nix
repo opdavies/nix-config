@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.peek.enable = mkEnableOption "Enable peek";
+  options.nixosModules.peek.enable = mkEnableOption "Enable peek";
 
-  config = mkIf config.features.desktop.peek.enable {
+  config = mkIf config.nixosModules.peek.enable {
     environment.systemPackages = with pkgs; [ peek ];
   };
 }

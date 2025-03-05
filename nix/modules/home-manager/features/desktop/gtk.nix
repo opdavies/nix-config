@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.gtk.enable = mkEnableOption "Enable gtk";
+  options.homeManagerModules.gtk.enable = mkEnableOption "Enable gtk";
 
-  config = mkIf config.features.desktop.gtk.enable {
+  config = mkIf config.homeManagerModules.gtk.enable {
     gtk = {
       enable = true;
 

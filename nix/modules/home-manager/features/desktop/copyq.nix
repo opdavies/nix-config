@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.desktop.copyq.enable = mkEnableOption "Enable copyq";
+  options.homeManagerModules.copyq.enable = mkEnableOption "Enable copyq";
 
-  config = mkIf config.features.desktop.copyq.enable {
+  config = mkIf config.homeManagerModules.copyq.enable {
     services.copyq.enable = true;
   };
 }

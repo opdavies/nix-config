@@ -6,9 +6,9 @@ let
   url = "paperless.oliverdavies.uk";
 in
 {
-  options.features.homelab.paperless.enable = mkEnableOption "Enable paperless";
+  options.nixosModules.paperless.enable = mkEnableOption "Enable paperless";
 
-  config = mkIf config.features.homelab.paperless.enable {
+  config = mkIf config.nixosModules.paperless.enable {
     services = {
       paperless = {
         enable = true;

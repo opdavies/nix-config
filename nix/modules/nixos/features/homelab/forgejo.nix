@@ -3,9 +3,9 @@
 with lib;
 
 {
-  options.features.homelab.forgejo.enable = mkEnableOption "Enable forgejo";
+  options.nixosModules.forgejo.enable = mkEnableOption "Enable forgejo";
 
-  config = mkIf config.features.homelab.forgejo.enable {
+  config = mkIf config.nixosModules.forgejo.enable {
     services = {
       forgejo = {
         enable = true;

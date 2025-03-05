@@ -11,9 +11,9 @@ let
   inherit (pkgs) tmuxPlugins;
 in
 {
-  options.features.cli.tmux.enable = mkEnableOption "Enable tmux";
+  options.homeManagerModules.tmux.enable = mkEnableOption "Enable tmux";
 
-  config = mkIf config.features.cli.tmux.enable {
+  config = mkIf config.homeManagerModules.tmux.enable {
     programs.tmux = {
       enable = true;
 

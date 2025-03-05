@@ -8,11 +8,11 @@
 with lib;
 
 let
-  cfg = config.features.homelab.freshrss;
+  cfg = config.nixosModules.freshrss;
   port = 4003;
 in
 {
-  options.features.homelab.freshrss.enable = mkEnableOption "Enable freshrss";
+  options.nixosModules.freshrss.enable = mkEnableOption "Enable freshrss";
 
   config = mkIf cfg.enable {
     # Auto-generated using compose2nix v0.3.2-pre.

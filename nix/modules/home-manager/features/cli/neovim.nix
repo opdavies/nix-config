@@ -13,9 +13,9 @@ let
   phpPackages = pkgs.php82Packages;
 in
 {
-  options.features.cli.neovim.enable = mkEnableOption "Enable neovim";
+  options.homeManagerModules.neovim.enable = mkEnableOption "Enable neovim";
 
-  config = mkIf config.features.cli.neovim.enable {
+  config = mkIf config.homeManagerModules.neovim.enable {
     programs.neovim = {
       enable = true;
 

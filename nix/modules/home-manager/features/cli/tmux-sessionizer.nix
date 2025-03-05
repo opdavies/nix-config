@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.cli.tmux-sessionizer.enable = mkEnableOption "Enable tmux-sessionizer";
+  options.homeManagerModules.tmux-sessionizer.enable = mkEnableOption "Enable tmux-sessionizer";
 
-  config = mkIf config.features.cli.tmux-sessionizer.enable {
+  config = mkIf config.homeManagerModules.tmux-sessionizer.enable {
     home.packages = with pkgs; [ tmux-sessionizer ];
 
     home.file.".tmux-sessionizer".source = "${

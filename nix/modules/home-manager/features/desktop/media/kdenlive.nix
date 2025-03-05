@@ -8,9 +8,9 @@
 with lib;
 
 {
-  options.features.desktop.media.kdenlive.enable = mkEnableOption "Enable kdenlive";
+  options.homeManagerModules.kdenlive.enable = mkEnableOption "Enable kdenlive";
 
-  config = mkIf config.features.desktop.media.kdenlive.enable {
+  config = mkIf config.homeManagerModules.kdenlive.enable {
     home.packages = with pkgs; [ kdePackages.kdenlive ];
   };
 }

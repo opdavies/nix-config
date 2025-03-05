@@ -8,13 +8,13 @@
 with lib;
 
 let
-  cfg = config.features.homelab.tubearchivist-container;
+  cfg = config.nixosModules.tubearchivist-container;
 
   port = 8085;
   url = "tubearchivist.oliverdavies.uk";
 in
 {
-  options.features.homelab.tubearchivist-container = {
+  options.nixosModules.tubearchivist-container = {
     enable = mkEnableOption "Enable the tubearchivist-container service.";
   };
 

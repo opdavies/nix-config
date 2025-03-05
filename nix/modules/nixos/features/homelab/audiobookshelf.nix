@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.homelab.audiobookshelf;
+  cfg = config.nixosModules.audiobookshelf;
 in
 {
-  options.features.homelab.audiobookshelf.enable = mkEnableOption "Enable audiobookshelf";
+  options.nixosModules.audiobookshelf.enable = mkEnableOption "Enable audiobookshelf";
 
   config = mkIf cfg.enable {
     services = {
