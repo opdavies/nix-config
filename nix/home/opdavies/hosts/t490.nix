@@ -30,6 +30,7 @@
   };
 
   home.packages = with pkgs; [
+    displayselect
     isync
     upload-to-files
   ];
