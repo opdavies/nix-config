@@ -51,6 +51,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    bc # Needed for ./displayselect script.
     gtypist
     newsboat
     pam_gnupg
