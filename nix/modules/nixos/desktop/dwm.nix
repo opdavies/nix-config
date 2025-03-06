@@ -17,9 +17,7 @@ with lib;
 
         order = [
           "audio"
-          "backlight"
           "battery"
-          "cpu_load"
           "network"
           "time"
         ];

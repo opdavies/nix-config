@@ -9,7 +9,7 @@
 
 {
   imports = [
-    (import ./features/cli {
+    (import ./cli {
       inherit
         config
         inputs
@@ -19,6 +19,6 @@
         ;
     })
 
-    ./features/desktop
+    ./desktop
   ];
 }
