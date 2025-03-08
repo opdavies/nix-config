@@ -1,16 +1,16 @@
 {
   inputs = {
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "github:nix-community/home-manager/master";
-
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
     agenix.url = "github:ryantm/agenix";
 
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/disko";
     };
+
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.url = "github:nix-community/home-manager/master";
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-2405.url = "github:nixos/nixpkgs/nixos-24.05";
