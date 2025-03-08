@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  self,
   ...
 }:
 
@@ -113,6 +114,7 @@ with lib;
                 TAGKEYS(XK_8, 7)
                 TAGKEYS(XK_9, 8)
                 { MODKEY|ShiftMask, XK_q, quit, {0} },
+                { MODKEY|ControlMask|ShiftMask, XK_q, quit, {1} },
                 { MODKEY|ShiftMask, XK_b, spawn, SHCMD("${lib.getExe pkgs.brave}") },
                 { MODKEY|ShiftMask, XK_f, spawn, SHCMD("${pkgs.xfce.thunar}/bin/thunar") },
                 { MODKEY|ShiftMask, XK_i, spawn, SHCMD("${pkgs.xdotool}/bin/xdotool type $(cat ~/snippets.txt | grep -v '^#' | grep -v '^$' | sort | dmenu -i -l 50 | cut -d' ' -f1)") },
@@ -137,6 +139,13 @@ with lib;
             '';
 
             patches = with pkgs; [
+              "${self}/patches/dwm/restartsig.patch"
+
+              (fetchpatch {
+                url = "https://dwm.suckless.org/patches/preserveonrestart/dwm-preserveonrestart-6.3.diff";
+                sha256 = "zgwTCgD3YE+2K4BF6Em+qkM1Gax5vOZfeuWa6zXx8cE=";
+              })
+
               (fetchpatch {
                 url = "https://dwm.suckless.org/patches/hide_vacant_tags/dwm-hide_vacant_tags-6.4.diff";
                 sha256 = "GIbRW0Inwbp99rsKLfIDGvPwZ3pqihROMBp5vFlHx5Q=";
