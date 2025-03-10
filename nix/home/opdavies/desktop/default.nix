@@ -15,7 +15,6 @@
     pavucontrol
     xcape
     xsel
-    zbar
   ];
 
   programs = {

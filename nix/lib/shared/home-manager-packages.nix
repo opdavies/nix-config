@@ -49,6 +49,7 @@ with pkgs;
   wget
   xclip
   xdg-utils
+  zbar
 
   # Scripts.
   deliver
