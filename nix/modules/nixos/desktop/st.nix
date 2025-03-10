@@ -17,6 +17,11 @@ with lib;
       (st.override {
         conf = ''
           static char *font = "MesloLGSNerdFontMono:pixelsize=16:antialias=true:autohint=true";
+
+          int disablebold = 1;
+          int disableitalic = 1;
+          int disableroman = 1;
+
           static int borderpx = 2;
 
           static char *shell = "/bin/sh";
@@ -353,6 +358,11 @@ with lib;
         '';
 
         patches = [
+          (fetchpatch {
+            url = "https://st.suckless.org/patches/disable_bold_italic_fonts/st-disable-bold-italic-fonts-0.8.2.diff";
+            sha256 = "PG96QMqbX3Fr0EvDmF4lm/J3gj18eyBfm1bJ3M7plvQ=";
+          })
+
           (fetchpatch {
             url = "https://st.suckless.org/patches/anysize/st-anysize-20220718-baa9357.diff";
             sha256 = "yx9VSwmPACx3EN3CAdQkxeoJKJxQ6ziC9tpBcoWuWHc=";
