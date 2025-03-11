@@ -15,6 +15,10 @@ with lib;
       enable = true;
       package = pkgs.brave;
 
+      commandLineArgs = [
+        "--password-store=basic"
+      ];
+
       extensions = [
         "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
         "eimadpbcbfnmbkopoojfekhnkhdbieeh" # Dark Reader
