@@ -364,6 +364,7 @@
         redir /pair-with-me /pair permanent
         redir /pairing /pair permanent
         redir /php-ansible /talks/deploying-php-ansible-ansistrano permanent
+        redir /presentations/building-static-websites-sculpin /presentations/sculpin permanent
         redir /qSHAl /articles/published-my-first-npm-package/ permanent
         redir /qT1Rb https://github.com/opdavies/drupal-meetups-twitterbot permanent
         redir /rebuilding-acquia https://rebuilding-acquia.oliverdavies.uk permanent
