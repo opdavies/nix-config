@@ -12,6 +12,11 @@ function check {
   nix flake check
 }
 
+function clean {
+  nix store gc --verbose
+  nix store optimise --verbose
+}
+
 function collect-garbage {
   nix-collect-garbage -d
   sudo nix-collect-garbage -d
