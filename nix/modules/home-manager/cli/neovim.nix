@@ -164,6 +164,7 @@ in
         # Tools
         hadolint
         html-tidy
+        mariadb
         nodePackages.jsonlint
         nodePackages.markdownlint-cli
         phpPackages.php-codesniffer
