@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+lsblk_output="$(lsblk -rpo "uuid,name,type,size,label,mountpoint,mountpoints,fstype" | grep "part" | grep -Ev "/(boot|nix/store)")"
+partition_names="$(echo "$lsblk_output" | awk '{ printf "%s (%s)\n", $2, $4 }' )";
+
+selected=$(echo "$partition_names" | dmenu -p "Select drive:" | awk '{ print $1 }')
+test -n "$selected"
+mount_device="$selected"
+
+if sudo cryptsetup isLuks "$selected"; then
+  luks_name="usb"
+
+  ${TERMINAL:-st} -n floatterm -g 60x1 -e sudo cryptsetup open "$selected" "$luks_name"
+
+  mount_device="/dev/mapper/$luks_name"
+
+  test -b "/dev/mapper/$luks_name"
+fi
+
+mount_point=$(echo -e "/mnt\n/media\n/run/media/$USER" | dmenu -p "Select mount point:")
+test -n "$mount_point"
+
+sudo mkdir -p "$mount_point"
+
+if sudo mount "$mount_device" "$mount_point"; then
+  notify-send "Device mounted" "Mounted $selected at $mount_point."
+else
+  notify-send "Mount failed" "Failed to mount $selected."
+
+  exit 1
+fi
+
