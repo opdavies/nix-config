@@ -11,7 +11,6 @@
     ./notes.nix
     ./phpactor.nix
     ./starship.nix
-    ./syncthing.nix
     ./tmux.nix
     ./tmux-sessionizer.nix
     ./zsh.nix

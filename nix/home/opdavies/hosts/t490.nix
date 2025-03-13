@@ -24,7 +24,6 @@
 
     pocket-casts.enable = true;
     slack.enable = true;
-    syncthing.enable = true;
     tmux.enable = true;
     tmux-sessionizer.enable = true;
     zoom.enable = true;

@@ -24,7 +24,5 @@
     defaultUser = username;
   };
 
-  services.syncthing.enable = true;
-
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 }
