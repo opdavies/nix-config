@@ -16,7 +16,6 @@ with lib;
 
       plugins = with pkgs.xfce; [
         thunar-archive-plugin
-        thunar-volman
       ];
     };
 
