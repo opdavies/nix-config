@@ -61,7 +61,6 @@
       ffmpegthumbnailer
       hunspellDicts.en-gb-large
       libreoffice
-      logseq
       shotwell
       vscode
     ];
