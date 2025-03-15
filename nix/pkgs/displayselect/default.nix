@@ -10,7 +10,7 @@ stdenv.mkDerivation {
     owner = "lukesmithxyz";
     repo = "voidrice";
     rev = "master";
-    sha256 = "BybEijy1zH+UNyCgWnenmcazwE8B3PXGc+Cl0FO/n3o=";
+    sha256 = "ZoEyircvifmAH7QqDpdDxhaHMdAfWtjZB6JiSvMBRVg=";
   };
 
   buildInputs = [
