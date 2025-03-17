@@ -74,6 +74,12 @@ in
         set-option -g pane-active-border-style "fg=#1f2335"
         set-option -g pane-border-style "fg=#1f2335"
 
+        # Vim-like pane navigation.
+        bind h select-pane -L
+        bind j select-pane -D
+        bind k select-pane -U
+        bind l select-pane -R
+
         bind-key -r f run-shell "tmux new-window tmux-sessionizer"
 
         bind-key -r N split-window -h "notes"
