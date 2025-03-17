@@ -62,6 +62,7 @@ in
     LANG = "en_GB.UTF-8";
     LC_ALL = "en_GB.UTF-8";
     LC_CTYPE = "en_GB.UTF-8";
+    PASSWORD_STORE_DIR = "${config.xdg.dataHome}/pass";
     PATH = lib.concatStringsSep ":" [
       "$PATH"
       "$HOME/go/bin"
@@ -71,5 +72,6 @@ in
     PULUMI_SKIP_UPDATE_CHECK = "true";
     REPOS = "$HOME/Code";
     XDG_CONFIG_HOME = "${config.xdg.configHome}";
+    XDG_DATA_HOME = "${config.xdg.dataHome}";
   };
 }
