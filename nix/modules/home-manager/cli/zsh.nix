@@ -14,7 +14,7 @@
 
     dotDir = "${config.xdg.configHome}/zsh";
 
-    shellAliases = (import ./zsh/aliases.nix);
+    shellAliases = (import ./zsh/aliases.nix { inherit config; });
 
     localVariables = {
       ABBR_SET_EXPANSION_CURSOR = 1;
