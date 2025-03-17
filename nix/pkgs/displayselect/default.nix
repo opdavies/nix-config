@@ -15,13 +15,16 @@ stdenv.mkDerivation {
 
   buildInputs = [
     bash
-    bc
     xorg.xrandr
   ];
+
+  patches = [ ./scaling.patch ];
 
   installPhase = ''
     mkdir -p $out/bin
     cp .local/bin/displayselect $out/bin
     chmod +x $out/bin/displayselect
   '';
+
+  meta.mainProgram = "displayselect";
 }

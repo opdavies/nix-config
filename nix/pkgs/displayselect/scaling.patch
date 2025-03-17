@@ -1,0 +1,26 @@
+diff --git a/.local/bin/displayselect b/.local/bin/displayselect
+index 51dd468..c132b7a 100755
+--- a/.local/bin/displayselect
++++ b/.local/bin/displayselect
+@@ -15,20 +15,13 @@ twoscreen() { # If multi-monitor is selected and there are two screens.
+ 
+         res_external=$(xrandr --query | sed -n "/^$external/,/\+/p" | \
+             tail -n 1 | awk '{print $1}')
+-        res_internal=$(xrandr --query | sed -n "/^$internal/,/\+/p" | \
+-            tail -n 1 | awk '{print $1}')
+ 
+         res_ext_x=$(echo "$res_external" | sed 's/x.*//')
+         res_ext_y=$(echo "$res_external" | sed 's/.*x//')
+-        res_int_x=$(echo "$res_internal" | sed 's/x.*//')
+-        res_int_y=$(echo "$res_internal" | sed 's/.*x//')
+-
+-        scale_x=$(echo "$res_ext_x / $res_int_x" | bc -l)
+-        scale_y=$(echo "$res_ext_y / $res_int_y" | bc -l)
+ 
+         xrandr --output "$external" --auto --scale 1.0x1.0 \
+             --output "$internal" --auto --same-as "$external" \
+-            --scale "$scale_x"x"$scale_y"
++            --scale-from "${res_ext_x}x${res_ext_y}"
+     else
+ 
+         primary=$(echo "$screens" | dmenu -i -p "Select primary display:")
