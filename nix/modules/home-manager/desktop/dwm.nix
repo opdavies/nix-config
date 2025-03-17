@@ -21,6 +21,8 @@ with lib;
 
         poweralertd -s &
 
+        setbg &
+
         systemctl --user start dwm-status &
 
         exec dwm
@@ -29,6 +31,7 @@ with lib;
       packages = with pkgs; [
         dunst
         poweralertd
+        xwallpaper
       ];
     };
   };

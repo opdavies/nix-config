@@ -19,10 +19,6 @@ stdenv.mkDerivation {
     xorg.xrandr
   ];
 
-  patches = [
-    ./remove-setbg.patch
-  ];
-
   installPhase = ''
     mkdir -p $out/bin
     cp .local/bin/displayselect $out/bin
