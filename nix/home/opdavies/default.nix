@@ -70,8 +70,8 @@ in
       "./node_modules/.bin"
     ];
     PULUMI_SKIP_UPDATE_CHECK = "true";
-    REPOS = "$HOME/Code";
     XDG_CONFIG_HOME = "${config.xdg.configHome}";
     XDG_DATA_HOME = "${config.xdg.dataHome}";
+    XDG_REPOS_DIR = "$HOME/Code";
   };
 }

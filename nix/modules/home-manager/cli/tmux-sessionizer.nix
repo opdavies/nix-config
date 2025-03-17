@@ -25,7 +25,7 @@ with lib;
           set +o errexit
           set +o nounset
 
-          if [[ "$PWD" == "$REPOS/os" || "$PWD" == "$REPOS/personal" ]]; then
+          if [[ "$PWD" == "$XDG_REPOS_DIR/os" || "$PWD" == "$XDG_REPOS_DIR/personal" ]]; then
             clear
 
             return

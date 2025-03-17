@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.zsh = {
@@ -12,8 +12,8 @@
       abbreviations = import ./zsh/abbreviations.nix;
     };
 
-    cdpath = [ "~/Code" ];
-    dotDir = ".config/zsh";
+    cdpath = [ "$HOME/Code" ];
+    dotDir = "${config.xdg.configHome}/zsh";
 
     shellAliases = (import ./zsh/aliases.nix);
 
