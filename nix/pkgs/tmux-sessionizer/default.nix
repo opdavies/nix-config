@@ -3,7 +3,7 @@
 with pkgs;
 
 stdenv.mkDerivation {
-  pname = "tmux-sessonizer";
+  pname = "tmux-sessionizer";
   version = "0.1.0";
 
   src = fetchFromGitHub {
