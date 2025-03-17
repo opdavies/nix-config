@@ -12,7 +12,6 @@
       abbreviations = import ./zsh/abbreviations.nix;
     };
 
-    cdpath = [ "$HOME/Code" ];
     dotDir = "${config.xdg.configHome}/zsh";
 
     shellAliases = (import ./zsh/aliases.nix);
