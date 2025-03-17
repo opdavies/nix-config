@@ -13,7 +13,7 @@ with lib;
   config = mkIf config.homeManagerModules.tmux-sessionizer.enable {
     home.packages = with pkgs; [ tmux-sessionizer ];
 
-    home.file.".tmux-sessionizer".source = "${
+    home.file."${config.xdg.configHome}/tmux-sessionizer/default".source = "${
       pkgs.writeShellApplication {
         name = ".tmux-sessionizer";
 

@@ -70,5 +70,6 @@ in
     ];
     PULUMI_SKIP_UPDATE_CHECK = "true";
     REPOS = "$HOME/Code";
+    XDG_CONFIG_HOME = "${config.xdg.configHome}";
   };
 }

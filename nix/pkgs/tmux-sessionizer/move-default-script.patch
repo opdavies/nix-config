@@ -1,0 +1,13 @@
+diff --git a/tmux-sessionizer b/tmux-sessionizer
+index fa1bec5..1a5319f 100755
+--- a/tmux-sessionizer
++++ b/tmux-sessionizer
+@@ -15,7 +15,7 @@ hydrate() {
+     if [ -f $2/.tmux-sessionizer ]; then
+         tmux send-keys -t $1 "source $2/.tmux-sessionizer" c-M
+     elif [ -f $HOME/.tmux-sessionizer ]; then
+-        tmux send-keys -t $1 "source $HOME/.tmux-sessionizer" c-M
++        tmux send-keys -t $1 "source $XDG_CONFIG_HOME/tmux-sessionizer/default" c-M
+     fi
+ }
+ 

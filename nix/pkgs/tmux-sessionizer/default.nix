@@ -19,7 +19,10 @@ stdenv.mkDerivation {
     tmux
   ];
 
-  patches = [ ./configure-directories.patch ];
+  patches = [
+    ./move-default-script.patch
+    ./configure-directories.patch
+  ];
 
   installPhase = ''
     mkdir -p $out/bin
