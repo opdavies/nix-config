@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-  home.file.".gitmessage".text = ''
+  home.file."${config.xdg.configHome}/git/message".text = ''
 
 
     # Description
@@ -103,7 +103,7 @@
         checkout.defaultRemote = "origin";
         color.ui = true;
         column.ui = "auto";
-        commit.template = "~/.gitmessage";
+        commit.template = "${config.xdg.configHome}/git/message";
 
         core = {
           editor = "nvim";
