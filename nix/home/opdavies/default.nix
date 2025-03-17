@@ -57,7 +57,6 @@ in
   home.packages = shared-packages;
 
   home.sessionVariables = {
-    DOCUMENTS = "$HOME/Documents";
     EDITOR = "nvim";
     LANG = "en_GB.UTF-8";
     LC_ALL = "en_GB.UTF-8";
@@ -72,6 +71,7 @@ in
     PULUMI_SKIP_UPDATE_CHECK = "true";
     XDG_CONFIG_HOME = "${config.xdg.configHome}";
     XDG_DATA_HOME = "${config.xdg.dataHome}";
+    XDG_DOCUMENTS_DIR = "$HOME/Documents";
     XDG_REPOS_DIR = "$HOME/Code";
   };
 }
