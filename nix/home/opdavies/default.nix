@@ -48,6 +48,7 @@ in
   imports =
     [
       ../common
+      ./modules/node.nix
       shared-config
     ]
     ++ pkgs.lib.optionals (!headless) [
