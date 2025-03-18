@@ -21,7 +21,13 @@ let
     ];
   };
 
-  inherit (config.xdg) cacheHome configHome;
+  inherit (config.xdg)
+    cacheHome
+    configHome
+    dataHome
+    stateHome
+    ;
+
   inherit (pkgs) lib;
 
   shared-config = import "${self}/nix/lib/shared/home-manager.nix" {
@@ -63,7 +69,7 @@ in
     LANG = "en_GB.UTF-8";
     LC_ALL = "en_GB.UTF-8";
     LC_CTYPE = "en_GB.UTF-8";
-    PASSWORD_STORE_DIR = "${config.xdg.dataHome}/pass";
+    PASSWORD_STORE_DIR = "${dataHome}/pass";
     PATH = lib.concatStringsSep ":" [
       "$PATH"
       "$HOME/go/bin"
@@ -71,10 +77,10 @@ in
       "./node_modules/.bin"
     ];
     PULUMI_SKIP_UPDATE_CHECK = "true";
-    W3M_DIR = "${config.xdg.stateHome}/w3m";
+    W3M_DIR = "${stateHome}/w3m";
     WGETRC = "${configHome}/wgetrc";
-    XDG_CONFIG_HOME = "${config.xdg.configHome}";
-    XDG_DATA_HOME = "${config.xdg.dataHome}";
+    XDG_CONFIG_HOME = configHome;
+    XDG_DATA_HOME = dataHome;
     XDG_DOCUMENTS_DIR = "$HOME/Documents";
     XDG_REPOS_DIR = "$HOME/Code";
     XDG_STATE_HOME = config.xdg.stateHome;
