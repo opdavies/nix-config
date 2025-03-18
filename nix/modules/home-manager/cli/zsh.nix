@@ -12,7 +12,7 @@
       abbreviations = import ./zsh/abbreviations.nix;
     };
 
-    dotDir = "${config.xdg.configHome}/zsh";
+    dotDir = ".config/zsh";
 
     shellAliases = (import ./zsh/aliases.nix { inherit config; });
 
