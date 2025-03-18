@@ -68,6 +68,10 @@
         esac
       }
 
+      mbsync() {
+        ${pkgs.isync}/bin/mbsync --config "${config.xdg.configHome}/isync/mbsyncrc" "''${@}"
+      }
+
       ttyper() {
         command ${pkgs.ttyper}/bin/ttyper --language english1000 --words 50 "''${@}"
       }
