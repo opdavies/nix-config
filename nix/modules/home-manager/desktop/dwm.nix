@@ -12,7 +12,7 @@ with lib;
 
   config = mkIf config.homeManagerModules.dwm.enable {
     home = {
-      file.".xinitrc".text = ''
+      file."${config.home.sessionVariables.XINITRC}".text = ''
         systemctl --user import-environment DISPLAY
 
         copyq &
@@ -25,6 +25,10 @@ with lib;
 
         exec dwm
       '';
+
+      sessionVariables = {
+        XINITRC = "${config.xdg.configHome}/X11/xinitrc";
+      };
 
       packages = with pkgs; [
         dunst
