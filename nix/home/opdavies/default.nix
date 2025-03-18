@@ -69,6 +69,7 @@ in
       "./node_modules/.bin"
     ];
     PULUMI_SKIP_UPDATE_CHECK = "true";
+    W3M_DIR = "${config.xdg.stateHome}/w3m";
     XDG_CONFIG_HOME = "${config.xdg.configHome}";
     XDG_DATA_HOME = "${config.xdg.dataHome}";
     XDG_DOCUMENTS_DIR = "$HOME/Documents";
