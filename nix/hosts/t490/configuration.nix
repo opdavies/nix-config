@@ -16,7 +16,6 @@
   ];
 
   nixosModules = {
-    autorandr.enable = true;
     dwm.enable = true;
     gaming.enable = true;
     redshift.enable = true;

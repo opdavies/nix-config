@@ -15,8 +15,6 @@ with lib;
       file.".xinitrc".text = ''
         systemctl --user import-environment DISPLAY
 
-        autorandr --change
-
         copyq &
 
         poweralertd -s &
