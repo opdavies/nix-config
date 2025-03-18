@@ -66,6 +66,7 @@ in
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    IMAPFILTER_HOME = "${configHome}/imapfilter";
     LANG = "en_GB.UTF-8";
     LC_ALL = "en_GB.UTF-8";
     LC_CTYPE = "en_GB.UTF-8";
