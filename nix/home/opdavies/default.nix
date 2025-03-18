@@ -77,6 +77,7 @@ in
     XDG_DATA_HOME = "${config.xdg.dataHome}";
     XDG_DOCUMENTS_DIR = "$HOME/Documents";
     XDG_REPOS_DIR = "$HOME/Code";
+    XDG_STATE_HOME = config.xdg.stateHome;
   };
 
   xdg.configFile = {
