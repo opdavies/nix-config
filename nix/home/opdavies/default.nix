@@ -55,8 +55,8 @@ in
   imports =
     [
       ../common
-      ./modules/node.nix
       shared-config
+      ./modules
     ]
     ++ pkgs.lib.optionals (!headless) [
       ./desktop
