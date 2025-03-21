@@ -91,9 +91,9 @@
         ];
 
         search = {
-          default = "DuckDuckGo";
+          default = "ddg";
           force = true;
-          privateDefault = "DuckDuckGo";
+          privateDefault = "ddg";
         };
 
         settings = {
