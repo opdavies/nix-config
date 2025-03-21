@@ -95,6 +95,21 @@
           ];
         };
 
+        t480 = nixpkgs.lib.nixosSystem {
+          specialArgs = specialArgs // {
+            hostname = "t480";
+            stateVersion = "22.11";
+          };
+
+          modules = [
+            agenix.nixosModules.default
+            nixos-hardware.nixosModules.common-gpu-intel
+            nixos-hardware.nixosModules.lenovo-thinkpad-t480
+
+            ./nix/hosts/t480/configuration.nix
+          ];
+        };
+
         t490 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
             hostname = "t490";

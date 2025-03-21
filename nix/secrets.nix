@@ -4,6 +4,7 @@ let
     lemp11 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZ+ljJKd6uqdAk+fqxwtObI4Stab2N9Bjo4QFHY/v8n";
     mail = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDop//jfN3Hj5yRQLzPwy/A1StdJ2krxIbI8LUWPX7ht";
     nixedo = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvtcGJnc94k6wCPfvK9oBvGey0WWVCR8IYSqg5vqage";
+    t480 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvtcGJnc94k6wCPfvK9oBvGey0WWVCR8IYSqg5vqage";
     t490 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvtcGJnc94k6wCPfvK9oBvGey0WWVCR8IYSqg5vqage";
   };
 
@@ -16,6 +17,7 @@ in
     hosts.hetznix
     hosts.mail
     hosts.nixedo
+    hosts.t480
     hosts.t490
   ] ++ users;
 
