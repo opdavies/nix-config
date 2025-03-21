@@ -5,7 +5,6 @@
     copyq.enable = true;
     direnv.enable = true;
     discord.enable = true;
-    espanso.enable = true;
     flameshot.enable = true;
     gimp.enable = true;
     gtk.enable = true;
