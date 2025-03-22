@@ -15,6 +15,7 @@
     kdenlive.enable = true;
     mpv.enable = true;
     neovim.enable = true;
+    newsboat.enable = true;
 
     notes = {
       enable = true;

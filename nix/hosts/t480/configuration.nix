@@ -52,7 +52,6 @@
 
   environment.systemPackages = with pkgs; [
     gtypist
-    newsboat
     pam_gnupg
     rclone
     rclone-browser
