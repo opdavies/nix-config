@@ -27,7 +27,6 @@ in
         harpoon2
         mini-nvim
         nvim-web-devicons
-        oil-nvim
         phpactor
         refactoring-nvim
         standard-vim
