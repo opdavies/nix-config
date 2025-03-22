@@ -15,8 +15,6 @@ with lib;
       file."${config.home.sessionVariables.XINITRC}".text = ''
         systemctl --user import-environment DISPLAY
 
-        copyq &
-
         poweralertd -s &
 
         setbg &

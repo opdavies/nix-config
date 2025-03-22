@@ -2,7 +2,6 @@
 
 {
   homeManagerModules = {
-    copyq.enable = true;
     direnv.enable = true;
     discord.enable = true;
     flameshot.enable = true;

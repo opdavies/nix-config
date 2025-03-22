@@ -1,7 +1,6 @@
 {
   imports = [
     ./brave.nix
-    ./copyq.nix
     ./discord.nix
     ./dwm.nix
     ./flameshot.nix

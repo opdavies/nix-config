@@ -120,7 +120,6 @@ with lib;
                 { MODKEY|ShiftMask, XK_q, quit, {0} },
                 { MODKEY|ShiftMask, XK_r, quit, {1} },
                 { MODKEY|ShiftMask, XK_s, spawn, SHCMD("${pkgs.flameshot}/bin/flameshot gui") },
-                { MODKEY|ShiftMask, XK_y, spawn, SHCMD("${pkgs.copyq}/bin/copyq toggle") },
                 { MODKEY, XK_F3, spawn, {.v = (const char*[]){ "${getExe pkgs.displayselect}", NULL} } },
                 { MODKEY, XK_F9, spawn, {.v = (const char*[]){ "/home/opdavies/bin/mounter", NULL } } },
                 { MODKEY, XK_F10, spawn, {.v = (const char*[]){ "/home/opdavies/bin/unmounter", NULL } } },
