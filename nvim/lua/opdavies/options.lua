@@ -6,6 +6,7 @@ local settings = {
   backup = false,
   breakindent = true,
   expandtab = true,
+  exrc = true,
   foldlevel = 1,
   foldlevelstart = 99,
   foldmethod = "indent",
