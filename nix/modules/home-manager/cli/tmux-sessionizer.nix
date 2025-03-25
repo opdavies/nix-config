@@ -31,7 +31,7 @@ with lib;
             return
           fi
 
-          tmux new-window -d -n shell
+          tmux new-window -d -n scratch
           nvim
           clear
         '';
