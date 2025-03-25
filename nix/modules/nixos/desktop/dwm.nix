@@ -113,7 +113,7 @@ with lib;
                 TAGKEYS(XK_7, 6)
                 TAGKEYS(XK_8, 7)
                 TAGKEYS(XK_9, 8)
-                { MODKEY|ShiftMask, XK_b, spawn, SHCMD("${lib.getExe pkgs.brave}") },
+                { MODKEY|ShiftMask, XK_b, spawn, SHCMD("${lib.getExe pkgs.librewolf}") },
                 { MODKEY|ShiftMask, XK_f, spawn, SHCMD("${pkgs.xfce.thunar}/bin/thunar") },
                 { MODKEY|ShiftMask, XK_i, spawn, SHCMD("${pkgs.xdotool}/bin/xdotool type $(cat ~/snippets.txt | grep -v '^#' | grep -v '^$' | sort | dmenu -i -l 50 | cut -d' ' -f1)") },
                 { MODKEY|ShiftMask, XK_p, spawn, {.v = (const char*[]){ "${pkgs.pass}/bin/passmenu", "-i", NULL} } },
