@@ -29,7 +29,7 @@
 
       includes = [
         {
-          condition = "gitdir:${config.home.sessionVariables.XDG_REPOS_DIR}/tfw";
+          condition = "gitdir:${config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}/tfw";
           contents.user.email = "oliver.davies@tfw.wales";
         }
       ];

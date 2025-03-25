@@ -80,16 +80,19 @@ in
     PULUMI_SKIP_UPDATE_CHECK = "true";
     W3M_DIR = "${stateHome}/w3m";
     WGETRC = "${configHome}/wgetrc";
-    XDG_CONFIG_HOME = configHome;
-    XDG_DATA_HOME = dataHome;
-    XDG_DOCUMENTS_DIR = "$HOME/Documents";
-    XDG_REPOS_DIR = "$HOME/Code";
-    XDG_STATE_HOME = config.xdg.stateHome;
   };
 
-  xdg.configFile = {
-    "${config.home.sessionVariables.WGETRC}".text = ''
-      hsts-file = "${cacheHome}/wget-hsts"
-    '';
+  xdg = {
+    configFile = {
+      "${config.home.sessionVariables.WGETRC}".text = ''
+        hsts-file = "${cacheHome}/wget-hsts"
+      '';
+    };
+
+    userDirs = {
+      extraConfig = {
+        XDG_REPOS_DIR = "${config.home.homeDirectory}/Code";
+      };
+    };
   };
 }
