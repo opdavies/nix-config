@@ -90,6 +90,8 @@ in
     };
 
     userDirs = {
+      enable = true;
+
       extraConfig = {
         XDG_REPOS_DIR = "${config.home.homeDirectory}/Code";
       };
