@@ -1,5 +1,7 @@
 local set = vim.keymap.set
 
+set("n", "<C-f>", "<cmd>silent !tmux new-window tmux-sessionizer<CR>")
+
 -- Execute Lua in the current file, line or range.
 set("n", "<leader><leader>x", "<cmd>source %<CR>")
 set("n", "<leader>x", ":.lua<CR>")
