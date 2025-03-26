@@ -83,7 +83,7 @@ in
         bind-key -r f run-shell "tmux new-window tmux-sessionizer"
 
         bind-key -r D new-window -c "#{pane_current_path}" "[[ -e TODO.md ]] && nvim TODO.md || nvim ~/Documents/wiki/todo.txt"
-        bind-key -r N split-window -h "notes"
+        bind-key -r N new-window "notes"
         bind-key -r W split-window -h -c ~/Documents/wiki "nvim '+Telescope find_files'"
       '';
 
