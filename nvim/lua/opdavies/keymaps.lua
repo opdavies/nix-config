@@ -71,6 +71,8 @@ set("n", "n", "nzzzv")
 set("n", "N", "Nzzzv")
 
 set("n", "<leader>ec", ":edit composer.json<CR>")
+set("n", "<leader>ef", ":edit flake.nix<CR>")
+set("n", "<leader>er", ":edit run<CR>")
 
 set({ "n", "v" }, "<leader>y", [["+y]])
 set("n", "<leader>Y", [["+Y]])
