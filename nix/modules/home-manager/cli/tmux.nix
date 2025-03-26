@@ -75,6 +75,7 @@ in
         set-option -g pane-border-style "fg=#1f2335"
 
         # Vim-like pane navigation.
+        bind ^ last-window
         bind h select-pane -L
         bind j select-pane -D
         bind k select-pane -U
