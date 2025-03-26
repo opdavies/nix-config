@@ -21,6 +21,7 @@ stdenv.mkDerivation {
 
   patches = [
     ./move-default-script.patch
+    ./add-tmux-file.patch
     ./configure-directories.patch
   ];
 
