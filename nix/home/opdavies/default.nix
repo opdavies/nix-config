@@ -80,6 +80,9 @@ in
     PULUMI_SKIP_UPDATE_CHECK = "true";
     W3M_DIR = "${stateHome}/w3m";
     WGETRC = "${configHome}/wgetrc";
+    XDG_CONFIG_HOME = config.xdg.configHome;
+    XDG_DATA_HOME = dataHome;
+    XDG_STATE_HOME = stateHome;
   };
 
   xdg = {
