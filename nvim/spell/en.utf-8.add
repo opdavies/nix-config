@@ -58,6 +58,7 @@ Nomensa
 OpenID
 OpenTofu
 PDOException
+PHPDoc
 PHPStan
 PHPUnit
 Packagist
