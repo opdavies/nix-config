@@ -32,7 +32,7 @@ with lib;
           fi
 
           tmux new-window -d -n scratch
-          nvim
+          nvim .
           clear
         '';
       }
