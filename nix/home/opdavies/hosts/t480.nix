@@ -28,6 +28,7 @@
   };
 
   home.packages = with pkgs; [
+    backup-websites
     displayselect
     isync
     upload-to-files

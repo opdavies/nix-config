@@ -6,6 +6,7 @@ let
   vimPlugins = callPackage ./vim-plugins { inherit callPackage; };
 in
 {
+  backup-websites = callPackage ./backup-websites.nix { };
   build-glove80 = callPackage ./build-glove80.nix { };
   displayselect = callPackage ./displayselect { };
   notes = callPackage ./notes { };
