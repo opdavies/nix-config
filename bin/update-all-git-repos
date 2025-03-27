@@ -20,6 +20,6 @@ for dir in $dirs; do
   echo "Updating $(pwd)"
 
   # Update the repository.
-  git fetch --all --jobs=4 --progress --prune
-  git pull --rebase
+  git fetch --all --jobs=4 --progress --prune || true
+  git pull --rebase || true
 done
