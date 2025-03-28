@@ -138,20 +138,20 @@ in
         php
 
         # Language servers
+        bash-language-server
+        dockerfile-language-server-nodejs
         gopls
         lua-language-server
         lua54Packages.luacheck
         marksman
         nixd
-        nodePackages."@tailwindcss/language-server"
-        nodePackages.bash-language-server
-        nodePackages.dockerfile-language-server-nodejs
-        nodePackages.typescript-language-server
-        nodePackages.vscode-langservers-extracted
-        nodePackages.yaml-language-server
         phpactor
+        tailwindcss-language-server
         terraform-ls
+        typescript-language-server
+        vscode-langservers-extracted
         vue-language-server
+        yaml-language-server
 
         # Formatters
         black
