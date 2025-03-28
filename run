@@ -8,6 +8,11 @@ function build {
   _nixos build "$@"
 }
 
+function clean {
+  nix store optimise --verbose
+  nix store gc --verbose
+}
+
 function check {
   nix flake check
 }
