@@ -140,6 +140,7 @@ in
         # Language servers
         bash-language-server
         dockerfile-language-server-nodejs
+        emmet-language-server
         gopls
         lua-language-server
         lua54Packages.luacheck

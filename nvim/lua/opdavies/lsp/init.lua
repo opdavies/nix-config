@@ -15,6 +15,11 @@ lspconfig.cssls.setup {
   end,
 }
 
+lspconfig.emmet_language_server.setup {
+  capabilities = capabilities,
+  filetypes = { "css", "html", "sass", "scss", "twig" },
+}
+
 lspconfig.gopls.setup {
   capabilities = capabilities,
 }
