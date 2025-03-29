@@ -1,12 +1,9 @@
 {
   config,
   headless ? false,
-  hostname,
   inputs,
   outputs,
-  self,
   system,
-  username,
   ...
 }:
 let
@@ -29,15 +26,6 @@ let
     ;
 
   inherit (pkgs) lib;
-
-  shared-packages = import "${self}/lib/shared/home-manager-packages.nix" {
-    inherit
-      headless
-      inputs
-      pkgs
-      username
-      ;
-  };
 in
 {
   imports =
@@ -49,8 +37,6 @@ in
     ++ pkgs.lib.optionals (!headless) [
       ./desktop
     ];
-
-  home.packages = shared-packages;
 
   home.sessionVariables = {
     EDITOR = "nvim";
