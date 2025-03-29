@@ -30,18 +30,6 @@ let
 
   inherit (pkgs) lib;
 
-  shared-config = import "${self}/lib/shared/home-manager.nix" {
-    inherit
-      config
-      hostname
-      inputs
-      lib
-      pkgs
-      self
-      username
-      ;
-  };
-
   shared-packages = import "${self}/lib/shared/home-manager-packages.nix" {
     inherit
       headless
@@ -55,7 +43,7 @@ in
   imports =
     [
       ../common
-      shared-config
+      ./home.nix
       ./modules
     ]
     ++ pkgs.lib.optionals (!headless) [
