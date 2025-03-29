@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  self,
   ...
 }:
 
@@ -178,7 +177,7 @@ in
     };
 
     xdg.configFile.nvim = {
-      source = "${self}/nvim";
+      source = ./config;
       recursive = true;
     };
 
