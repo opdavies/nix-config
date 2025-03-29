@@ -89,7 +89,7 @@ prev.dwm.override {
       { MODKEY|ShiftMask, XK_b, spawn, SHCMD("${lib.getExe prev.librewolf}") },
       { MODKEY|ShiftMask, XK_f, spawn, SHCMD("${prev.xfce.thunar}/bin/thunar") },
       { MODKEY|ShiftMask, XK_i, spawn, SHCMD("${prev.xdotool}/bin/xdotool type $(cat ~/snippets.txt | grep -v '^#' | grep -v '^$' | sort | dmenu -i -l 50 | cut -d' ' -f1)") },
-      { MODKEY|ShiftMask, XK_p, spawn, {.v = (const char*[]){ "${prev.pass}/bin/passmenu", "-i", NULL} } },
+      { MODKEY|ShiftMask, XK_p, spawn, {.v = (const char*[]){ "${lib.getExe prev.passmenu-otp}", "-i", NULL} } },
       { MODKEY|ShiftMask, XK_q, quit, {0} },
       { MODKEY|ShiftMask, XK_r, quit, {1} },
       { MODKEY|ShiftMask, XK_s, spawn, SHCMD("${prev.flameshot}/bin/flameshot gui") },
