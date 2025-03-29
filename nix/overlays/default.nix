@@ -10,6 +10,7 @@
     };
 
   modifications = final: prev: {
+    dwm = import ./mods/dwm { inherit prev; };
   };
 
   stable-packages = final: _prev: {
