@@ -30,7 +30,7 @@ let
 
   inherit (pkgs) lib;
 
-  shared-config = import "${self}/nix/lib/shared/home-manager.nix" {
+  shared-config = import "${self}/lib/shared/home-manager.nix" {
     inherit
       config
       hostname
@@ -42,7 +42,7 @@ let
       ;
   };
 
-  shared-packages = import "${self}/nix/lib/shared/home-manager-packages.nix" {
+  shared-packages = import "${self}/lib/shared/home-manager-packages.nix" {
     inherit
       headless
       inputs

@@ -84,7 +84,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
 
-    users."${username}" = import "${self}/nix/home/${username}";
+    users."${username}" = import "${self}/home/${username}";
   };
 
   nixpkgs = {

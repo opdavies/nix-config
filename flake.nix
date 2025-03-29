@@ -61,11 +61,11 @@
 
       formatter.${system} = pkgs.nixfmt-rfc-style;
 
-      overlays = import ./nix/overlays { inherit inputs; };
+      overlays = import ./overlays { inherit inputs; };
 
-      nixosModules.default = ./nix/modules/nixos;
+      nixosModules.default = ./modules/nixos;
 
-      homeManagerModules.default = ./nix/modules/home-manager;
+      homeManagerModules.default = ./modules/home-manager;
 
       nixosConfigurations = {
         lemp11 = nixpkgs.lib.nixosSystem {
@@ -77,7 +77,7 @@
           modules = [
             agenix.nixosModules.default
 
-            ./nix/hosts/lemp11/configuration.nix
+            ./hosts/lemp11/configuration.nix
           ];
         };
 
@@ -91,7 +91,7 @@
           modules = [
             agenix.nixosModules.default
 
-            ./nix/hosts/nixedo/configuration.nix
+            ./hosts/nixedo/configuration.nix
           ];
         };
 
@@ -106,7 +106,7 @@
             nixos-hardware.nixosModules.common-gpu-intel
             nixos-hardware.nixosModules.lenovo-thinkpad-t480
 
-            ./nix/hosts/t480/configuration.nix
+            ./hosts/t480/configuration.nix
           ];
         };
 
@@ -121,7 +121,7 @@
             nixos-hardware.nixosModules.common-gpu-intel
             nixos-hardware.nixosModules.lenovo-thinkpad-t490
 
-            ./nix/hosts/t490/configuration.nix
+            ./hosts/t490/configuration.nix
           ];
         };
 
@@ -139,7 +139,7 @@
             disko.nixosModules.disko
             nixos-wsl.nixosModules.default
 
-            ./nix/hosts/PW05CH3L/configuration.nix
+            ./hosts/PW05CH3L/configuration.nix
           ];
         };
 
@@ -154,7 +154,7 @@
             agenix.nixosModules.default
             disko.nixosModules.disko
 
-            ./nix/hosts/hetznix/configuration.nix
+            ./hosts/hetznix/configuration.nix
           ];
         };
       };
