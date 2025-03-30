@@ -7,6 +7,7 @@
   "..." = "cd ../..";
   "...." = "cd ../../..";
   "....." = "cd ../../../..";
+  run = "./run";
   s = "secrets";
   secrets = ''doppler --project "$(whoami)" run'';
   tag = "tag-release";
