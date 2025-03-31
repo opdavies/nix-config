@@ -114,7 +114,7 @@ prev.dwm.override {
   '';
 
   patches = with prev; [
-    ./patches/restartsig.patch
+    ./restartsig.patch
 
     (fetchpatch {
       url = "https://dwm.suckless.org/patches/preserveonrestart/dwm-preserveonrestart-6.3.diff";
