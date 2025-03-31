@@ -132,6 +132,7 @@
   dvu = "devenv up";
 
   c = "composer";
+  ci = "composer install";
   cr = "composer require";
   crd = "composer require drupal/%";
   cu = "composer update";
