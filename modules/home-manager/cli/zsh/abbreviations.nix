@@ -108,19 +108,6 @@
   rpub = "run publish";
   rt = "run test";
 
-  "-g A1" = "| awk '{print $1}'";
-  "-g C" = "| xclip -sel clip";
-  "-g Fj" = "| jq .";
-  "-g Fy" = "| yq .";
-  "-g G" = "| grep";
-  "-g GH" = "| grep HTTP";
-  "-g Gi" = "| grep -i";
-  "-g H2" = "| head -n 20";
-  "-g H" = "| head";
-  "-g L" = "| less";
-  "-g V" = "| nvim -";
-  "-g X" = "| xargs -I1";
-
   nah = "git reset --hard; git clean -fd";
   wip = "git commit -m wip";
 

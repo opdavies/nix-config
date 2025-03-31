@@ -10,6 +10,7 @@
       enable = true;
 
       abbreviations = import ./abbreviations.nix;
+      globalAbbreviations = import ./global-abbreviations.nix;
     };
 
     dotDir = ".config/zsh";
