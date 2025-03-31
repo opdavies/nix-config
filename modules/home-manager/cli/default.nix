@@ -14,6 +14,6 @@
     ./starship.nix
     ./tmux.nix
     ./tmux-sessionizer.nix
-    ./zsh.nix
+    ./zsh
   ];
 }

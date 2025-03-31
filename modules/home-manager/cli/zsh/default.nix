@@ -9,12 +9,12 @@
     zsh-abbr = {
       enable = true;
 
-      abbreviations = import ./zsh/abbreviations.nix;
+      abbreviations = import ./abbreviations.nix;
     };
 
     dotDir = ".config/zsh";
 
-    shellAliases = (import ./zsh/aliases.nix { inherit config; });
+    shellAliases = (import ./aliases.nix { inherit config; });
 
     localVariables = {
       ABBR_SET_EXPANSION_CURSOR = 1;
