@@ -19,6 +19,7 @@ set("v", "<down>", "<nop>")
 set("v", "<up>", "<nop>")
 
 -- Easily switch back to visual mode.
+set("i", "jj", "<Esc>")
 set("i", "jk", "<Esc>")
 
 -- Easy insertion of a trailing ; or , from insert mode
