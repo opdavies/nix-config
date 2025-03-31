@@ -17,7 +17,6 @@
     ./security
     ./services
 
-    ../../users/git
     ../../users/opdavies
   ];
 
