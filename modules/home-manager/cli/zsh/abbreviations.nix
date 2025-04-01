@@ -52,6 +52,7 @@
   gsh = "git show";
   gst = "git stash";
   gstp = "git stash pop";
+  gt = "git tag";
 
   # tmux
   ta = "tmux attach";
