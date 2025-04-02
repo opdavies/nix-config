@@ -11,4 +11,8 @@
     tmux.enable = true;
     tmux-sessionizer.enable = true;
   };
+
+  home.sessionVariables = {
+    WAYLAND_DISPLAY = "";
+  };
 }
