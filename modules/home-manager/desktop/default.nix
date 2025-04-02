@@ -1,7 +1,7 @@
 {
   imports = [
     ./discord.nix
-    ./dwm.nix
+    ./dwm
     ./flameshot.nix
     ./gtk.nix
     ./media

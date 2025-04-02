@@ -1,0 +1,5 @@
+systemctl --user import-environment DISPLAY
+poweralertd -s &
+setbg &
+systemctl --user start dwm-status &
+exec dwm
