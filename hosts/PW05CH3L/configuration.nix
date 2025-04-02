@@ -1,18 +1,9 @@
-{
-  inputs,
-  pkgs,
-  username,
-  ...
-}:
+{ inputs, username, ... }:
 
 {
   imports = [
     ../common
     ../../users/opdavies
-  ];
-
-  environment.systemPackages = with pkgs; [
-    wl-clipboard
   ];
 
   nixosModules = {
