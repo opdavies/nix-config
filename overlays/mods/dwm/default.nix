@@ -94,8 +94,8 @@ prev.dwm.override {
       { MODKEY|ShiftMask, XK_r, quit, {1} },
       { MODKEY|ShiftMask, XK_s, spawn, SHCMD("${prev.flameshot}/bin/flameshot gui") },
       { MODKEY, XK_F3, spawn, {.v = (const char*[]){ "${lib.getExe prev.displayselect}", NULL} } },
-      { MODKEY, XK_F9, spawn, {.v = (const char*[]){ "/home/opdavies/bin/mounter", NULL } } },
-      { MODKEY, XK_F10, spawn, {.v = (const char*[]){ "/home/opdavies/bin/unmounter", NULL } } },
+      { MODKEY, XK_F9, spawn, {.v = (const char*[]){ "/home/opdavies/.local/bin/mounter", NULL } } },
+      { MODKEY, XK_F10, spawn, {.v = (const char*[]){ "/home/opdavies/.local/bin/unmounter", NULL } } },
     };
 
     static const Button buttons[] = {
