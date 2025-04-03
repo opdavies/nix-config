@@ -23,7 +23,14 @@
   };
 
   outputs =
-    { nixpkgs, self, ... }@inputs:
+    {
+      agenix,
+      disko,
+      nixos-hardware,
+      nixpkgs,
+      self,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
 
@@ -67,7 +74,12 @@
           };
 
           modules = [
-            inputs.agenix.nixosModules.default
+            agenix.nixosModules.default
+            nixos-hardware.nixosModules.common-cpu-intel
+            nixos-hardware.nixosModules.common-gpu-intel
+            nixos-hardware.nixosModules.common-pc-laptop
+            nixos-hardware.nixosModules.common-pc-laptop-hdd
+            nixos-hardware.nixosModules.system76
 
             ./hosts/lemp11/configuration.nix
           ];
@@ -81,7 +93,7 @@
           };
 
           modules = [
-            inputs.agenix.nixosModules.default
+            agenix.nixosModules.default
 
             ./hosts/nixedo/configuration.nix
           ];
@@ -94,9 +106,9 @@
           };
 
           modules = [
-            inputs.agenix.nixosModules.default
-            inputs.nixos-hardware.nixosModules.common-gpu-intel
-            inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
+            agenix.nixosModules.default
+            nixos-hardware.nixosModules.common-gpu-intel
+            nixos-hardware.nixosModules.lenovo-thinkpad-t480
 
             ./hosts/t480/configuration.nix
           ];
@@ -109,9 +121,9 @@
           };
 
           modules = [
-            inputs.agenix.nixosModules.default
-            inputs.nixos-hardware.nixosModules.common-gpu-intel
-            inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t490
+            agenix.nixosModules.default
+            nixos-hardware.nixosModules.common-gpu-intel
+            nixos-hardware.nixosModules.lenovo-thinkpad-t490
 
             ./hosts/t490/configuration.nix
           ];
@@ -127,8 +139,8 @@
           };
 
           modules = [
-            inputs.agenix.nixosModules.default
-            inputs.disko.nixosModules.disko
+            agenix.nixosModules.default
+            disko.nixosModules.disko
             inputs.nixos-wsl.nixosModules.default
 
             ./hosts/PW05CH3L/configuration.nix
@@ -143,8 +155,8 @@
           };
 
           modules = [
-            inputs.agenix.nixosModules.default
-            inputs.disko.nixosModules.disko
+            agenix.nixosModules.default
+            disko.nixosModules.disko
 
             ./hosts/hetznix/configuration.nix
           ];

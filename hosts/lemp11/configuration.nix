@@ -2,12 +2,6 @@
 
 {
   imports = [
-    inputs.nixos-hardware.nixosModules.common-cpu-intel
-    inputs.nixos-hardware.nixosModules.common-gpu-intel
-    inputs.nixos-hardware.nixosModules.common-pc-laptop
-    inputs.nixos-hardware.nixosModules.common-pc-laptop-hdd
-    inputs.nixos-hardware.nixosModules.system76
-
     ./hardware-configuration.nix
     ./hardware.nix
     ./programs.nix
