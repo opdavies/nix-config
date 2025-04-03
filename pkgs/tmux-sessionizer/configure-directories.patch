@@ -9,7 +9,7 @@ index fa1bec5..4d79e0b 100755
 -    # If someone wants to make this extensible, i'll accept
 -    # PR
 -    selected=$(find ~/ ~/personal ~/personal/dev/env/.config -mindepth 1 -maxdepth 1 -type d | fzf)
-+    selected=$(find -L "${XDG_REPOS_DIR}" "${XDG_REPOS_DIR}/os" "${XDG_DOCUMENTS_DIR}" -maxdepth 1 -mindepth 1 -type d ! -name ".*" ! -name ".old" ! -name "_archive" | sort | fzf)
++    selected=$(find -L "${XDG_REPOS_DIR}/personal" "${XDG_REPOS_DIR}/work" "${XDG_REPOS_DIR}/os" "${XDG_DOCUMENTS_DIR}" -maxdepth 1 -mindepth 1 -type d ! -name ".*" ! -name ".old" ! -name "_archive" | sort | fzf)
  fi
  
  if [[ -z $selected ]]; then
