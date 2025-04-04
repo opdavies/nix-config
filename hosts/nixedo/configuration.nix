@@ -11,7 +11,6 @@
     ./modules/acme.nix
 
     ../common
-    ../../users/git
     ../../users/opdavies
   ];
 
