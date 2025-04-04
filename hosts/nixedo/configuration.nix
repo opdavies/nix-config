@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix
+    ./services.nix
     ./modules/acme.nix
 
     ../common
@@ -48,12 +49,8 @@
 
   users.groups.media = { };
 
-  services.openssh.enable = true;
-
   networking.firewall.allowedTCPPorts = [
     80
     443
   ];
-
-  services.caddy.enable = true;
 }
