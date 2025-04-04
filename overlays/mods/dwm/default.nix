@@ -23,8 +23,8 @@ prev.dwm.override {
     static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
     static const Rule rules[] = {
-      { "Gimp", NULL, NULL, 0, 1, -1 },
-      { "Firefox", NULL, NULL, 1 << 8, 0, -1 },
+      { "0ad", NULL, NULL, 1 << 7, 0, -1 },
+      { "Slack", NULL, NULL, 1 << 8, 0, -1 },
     };
 
     static const float mfact = 0.55;
