@@ -8,7 +8,7 @@
     ./fzf.nix
     ./git.nix
     ./neovim
-    ./newsboat.nix
+    ./newsboat
     ./notes.nix
     ./phpactor
     ./starship.nix
