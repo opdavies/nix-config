@@ -328,6 +328,8 @@ with lib;
           url = "https://feeds.bbci.co.uk/sport/rugby-union/teams/ng-dragons/rss.xml";
           tags = [ "Rugby" ];
         }
+        { url = "https://tinkerbetter.tube/feeds/videos.xml?videoChannelId=2"; }
+        { url = "https://video.fosshq.org/feeds/videos.xml?videoChannelId=2"; }
       ];
     };
   };
