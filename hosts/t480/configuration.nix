@@ -69,4 +69,10 @@
   networking.hosts = {
     "192.168.1.116" = [ "nixedo" ];
   };
+
+  users.users.opdavies.packages = with pkgs; [
+    gimp
+    handbrake
+    kdePackages.kdenlive
+  ];
 }

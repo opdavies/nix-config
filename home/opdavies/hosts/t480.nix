@@ -2,10 +2,7 @@
 
 {
   homeManagerModules = {
-    gimp.enable = true;
     gtk.enable = true;
-    handbrake.enable = true;
-    kdenlive.enable = true;
     mpv.enable = true;
     newsboat.enable = true;
 
