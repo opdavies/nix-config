@@ -8,10 +8,6 @@
     ./services
 
     ../../modules/editor/nvim.nix
-
-    ../../modules/profiles/dwm
-    ../../modules/profiles/xbanish.nix
-
     ../../modules/mixins/bluetooth.nix
     ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
@@ -20,6 +16,8 @@
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
     ../../modules/mixins/thunar.nix
+    ../../modules/profiles/dwm
+    ../../modules/profiles/xbanish.nix
 
     ../common
     ../../users/opdavies
