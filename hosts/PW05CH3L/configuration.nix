@@ -12,6 +12,9 @@
     ../../modules/mixins/tmux.nix
     ../../modules/mixins/zsh
 
+    ./modules/notes.nix
+    ./modules/wiki.nix
+
     ../common
     ../../users/opdavies
   ];
