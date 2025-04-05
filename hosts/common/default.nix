@@ -15,8 +15,6 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
 
-    outputs.nixosModules.default
-
     ./programs.nix
   ];
 

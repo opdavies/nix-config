@@ -62,8 +62,6 @@
 
       overlays = import ./overlays { inherit inputs; };
 
-      nixosModules.default = ./modules/nixos;
-
       homeManagerModules.default = ./modules/home-manager;
 
       nixosConfigurations = {
