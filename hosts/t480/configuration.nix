@@ -30,6 +30,7 @@
     ../common
     ../../users/opdavies
 
+    ./modules/neomutt.nix
     ./modules/newsboat
     ./modules/notes.nix
   ];
