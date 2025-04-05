@@ -10,6 +10,7 @@
     ../../modules/mixins/bluetooth.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/phpactor
+    ../../modules/mixins/thunar.nix
 
     ../common
     ../../users/opdavies
@@ -19,7 +20,6 @@
     dwm.enable = true;
     redshift.enable = true;
     st.enable = true;
-    thunar.enable = true;
     peek.enable = true;
   };
 
