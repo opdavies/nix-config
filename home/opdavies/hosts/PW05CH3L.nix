@@ -7,8 +7,6 @@
 
 {
   homeManagerModules = {
-    neovim.enable = true;
-
     notes = {
       enable = true;
       directory = "$HOME/Documents/wiki/tfw-notes";

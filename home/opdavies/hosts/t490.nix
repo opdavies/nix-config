@@ -8,7 +8,6 @@
     handbrake.enable = true;
     kdenlive.enable = true;
     mpv.enable = true;
-    neovim.enable = true;
 
     notes = {
       enable = true;

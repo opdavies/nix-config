@@ -7,6 +7,8 @@
     ./secrets.nix
     ./services
 
+    ../../modules/editor/nvim.nix
+
     ../../modules/profiles/dwm
 
     ../../modules/mixins/bluetooth.nix
