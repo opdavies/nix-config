@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  homeManagerModules = {
-    tmux.enable = true;
-    tmux-sessionizer.enable = true;
-  };
-
   home.packages = with pkgs; [
     backup-websites
     displayselect

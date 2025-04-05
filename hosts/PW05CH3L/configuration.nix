@@ -7,6 +7,7 @@
     ../../modules/mixins/docker.nix
     ../../modules/mixins/fzf.nix
     ../../modules/mixins/phpactor
+    ../../modules/mixins/tmux.nix
 
     ../common
     ../../users/opdavies

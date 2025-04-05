@@ -20,6 +20,7 @@
     ../../modules/mixins/pipewire.nix
     ../../modules/mixins/screenkey.nix
     ../../modules/mixins/thunar.nix
+    ../../modules/mixins/tmux.nix
     ../../modules/profiles/dwm
     ../../modules/profiles/xbanish.nix
 

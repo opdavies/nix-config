@@ -6,11 +6,6 @@
 }:
 
 {
-  homeManagerModules = {
-    tmux.enable = true;
-    tmux-sessionizer.enable = true;
-  };
-
   home =
     let
       remoteIpAddress = "192.168.1.111";
