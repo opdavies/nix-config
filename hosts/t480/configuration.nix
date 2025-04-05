@@ -12,6 +12,7 @@
     ../../modules/mixins/bluetooth.nix
     ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
+    ../../modules/mixins/fzf.nix
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
     ../../modules/mixins/thunar.nix

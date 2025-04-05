@@ -3,7 +3,6 @@
 {
   imports = [
     ./bin
-    ./fzf.nix
     ./git.nix
     ./neovim
     ./newsboat
