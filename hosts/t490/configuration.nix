@@ -15,7 +15,6 @@
 
   nixosModules = {
     dwm.enable = true;
-    gaming.enable = true;
     redshift.enable = true;
     st.enable = true;
     thunar.enable = true;
