@@ -33,6 +33,7 @@
     ./modules/neomutt.nix
     ./modules/newsboat
     ./modules/notes.nix
+    ./modules/wiki.nix
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
@@ -63,12 +64,16 @@
 
   environment.systemPackages = with pkgs; [
     abook
+    backup-websites
+    displayselect
     gtypist
+    isync
     pam_gnupg
     peek
     slack
     sxiv
     ttyper
+    upload-to-files
     yt-dlp
     zeroad
     zoom-us
