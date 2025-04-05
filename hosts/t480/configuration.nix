@@ -49,6 +49,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    abook
     gtypist
     pam_gnupg
     peek
