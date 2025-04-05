@@ -9,7 +9,6 @@
     ./neovim
     ./newsboat
     ./notes.nix
-    ./phpactor
     ./starship.nix
     ./tmux.nix
     ./tmux-sessionizer.nix

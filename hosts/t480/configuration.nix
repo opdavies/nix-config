@@ -10,6 +10,7 @@
 
     ../../modules/mixins/bluetooth.nix
     ../../modules/mixins/docker.nix
+    ../../modules/mixins/phpactor
 
     ../common
     ../../users/opdavies

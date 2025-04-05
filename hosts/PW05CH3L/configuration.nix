@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/mixins/docker.nix
+    ../../modules/mixins/phpactor
 
     ../common
     ../../users/opdavies
