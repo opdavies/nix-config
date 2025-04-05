@@ -21,6 +21,7 @@
     ../../modules/mixins/node.nix
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
+    ../../modules/mixins/ranger.nix
     ../../modules/mixins/screenkey.nix
     ../../modules/mixins/starship.nix
     ../../modules/mixins/thunar.nix
