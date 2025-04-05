@@ -26,6 +26,7 @@
     ../../modules/mixins/pipewire.nix
     ../../modules/mixins/ranger.nix
     ../../modules/mixins/screenkey.nix
+    ../../modules/mixins/scripts
     ../../modules/mixins/starship.nix
     ../../modules/mixins/thunar.nix
     ../../modules/mixins/tmux.nix

@@ -11,6 +11,7 @@
     ../../modules/mixins/node.nix
     ../../modules/mixins/phpactor
     ../../modules/mixins/ranger.nix
+    ../../modules/mixins/scripts
     ../../modules/mixins/starship.nix
     ../../modules/mixins/tmux.nix
     ../../modules/mixins/zsh

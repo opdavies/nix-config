@@ -1,5 +1,5 @@
 {
-  home = {
+  home-manager.users.opdavies.home = {
     sessionPath = [ "$HOME/.local/bin" ];
 
     file.".local/bin" = {
