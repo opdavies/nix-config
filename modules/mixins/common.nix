@@ -13,8 +13,6 @@
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-
-    ./programs.nix
   ];
 
   nix = {
@@ -31,6 +29,8 @@
       warn-dirty = false;
     };
   };
+
+  programs.zsh.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
 

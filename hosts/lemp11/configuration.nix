@@ -7,7 +7,7 @@
     ./programs.nix
     ./services.nix
 
-    ../../modules/mixins/common
+    ../../modules/mixins/common.nix
     ../../modules/mixins/zsh
 
     ../../users/opdavies

@@ -10,7 +10,7 @@
     ./secrets.nix
     ./services.nix
 
-    ../../modules/mixins/common
+    ../../modules/mixins/common.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/zsh
 

@@ -9,7 +9,7 @@
 
     ../../modules/editor/nvim.nix
     ../../modules/mixins/bluetooth.nix
-    ../../modules/mixins/common
+    ../../modules/mixins/common.nix
     ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/firefox.nix
@@ -17,6 +17,7 @@
     ../../modules/mixins/fonts.nix
     ../../modules/mixins/fzf.nix
     ../../modules/mixins/git.nix
+    ../../modules/mixins/gnupg.nix
     ../../modules/mixins/gtk.nix
     ../../modules/mixins/qutebrowser.nix
     ../../modules/mixins/mpv.nix
