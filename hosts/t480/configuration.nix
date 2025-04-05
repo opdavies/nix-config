@@ -19,6 +19,7 @@
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
     ../../modules/mixins/screenkey.nix
+    ../../modules/mixins/starship.nix
     ../../modules/mixins/thunar.nix
     ../../modules/mixins/tmux.nix
     ../../modules/profiles/dwm
