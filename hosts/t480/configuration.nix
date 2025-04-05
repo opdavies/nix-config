@@ -18,10 +18,6 @@
     ../../users/opdavies
   ];
 
-  nixosModules = {
-    redshift.enable = true;
-  };
-
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   boot = {

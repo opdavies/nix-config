@@ -2,7 +2,6 @@
   imports = [
     ./cron.nix
     ./interception-tools.nix
-    ./redshift.nix
     ./sound.nix
     ./udev.nix
     ./xserver.nix
