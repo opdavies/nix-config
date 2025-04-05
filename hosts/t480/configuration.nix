@@ -18,6 +18,7 @@
     ../../modules/mixins/git.nix
     ../../modules/mixins/gtk.nix
     ../../modules/mixins/mpv.nix
+    ../../modules/mixins/node.nix
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
     ../../modules/mixins/screenkey.nix
