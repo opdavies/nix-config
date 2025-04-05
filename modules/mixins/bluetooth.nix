@@ -1,20 +1,15 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-with lib;
+{ pkgs, ... }:
 
 {
-  options.homeManagerModules.bluetuith.enable = mkEnableOption "Enable bluetuith";
+  hardware.bluetooth.enable = true;
 
-  config = mkIf config.homeManagerModules.bluetuith.enable {
-    home.packages = with pkgs; [
-      bluetuith
-    ];
+  services.blueman.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    bluetuith
+  ];
+
+  home-manager.users.opdavies = {
     xdg.configFile."bluetuith/bluetuith.conf" = {
       text = ''
         {
@@ -23,10 +18,12 @@ with lib;
           connect-bdaddr: ""
           gsm-apn: ""
           gsm-number: ""
+
           keybindings: {
             NavigateDown: j
             NavigateUp: k
           }
+
           receive-dir: ""
           theme: {}
         }

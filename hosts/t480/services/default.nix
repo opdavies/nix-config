@@ -17,8 +17,6 @@
       openFirewall = true;
     };
 
-    blueman.enable = true;
-
     gvfs.enable = true;
     openssh.enable = true;
     power-profiles-daemon.enable = false;

@@ -2,7 +2,6 @@
 
 {
   homeManagerModules = {
-    bluetuith.enable = true;
     direnv.enable = true;
     discord.enable = true;
     dwm.enable = true;
