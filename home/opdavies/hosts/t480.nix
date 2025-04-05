@@ -3,7 +3,6 @@
 {
   homeManagerModules = {
     gtk.enable = true;
-    mpv.enable = true;
     newsboat.enable = true;
 
     notes = {
