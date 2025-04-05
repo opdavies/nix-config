@@ -52,10 +52,12 @@
     gtypist
     pam_gnupg
     peek
+    slack
     sxiv
     ttyper
     yt-dlp
     zeroad
+    zoom-us
   ];
 
   zramSwap.enable = true;

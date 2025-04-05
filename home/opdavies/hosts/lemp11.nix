@@ -9,8 +9,6 @@
     kdenlive.enable = true;
     mpv.enable = true;
     pocket-casts.enable = true;
-    slack.enable = true;
     tmux-sessionizer.enable = true;
-    zoom.enable = true;
   };
 }

@@ -16,10 +16,8 @@
     };
 
     pocket-casts.enable = true;
-    slack.enable = true;
     tmux.enable = true;
     tmux-sessionizer.enable = true;
-    zoom.enable = true;
   };
 
   home.packages = with pkgs; [
