@@ -15,6 +15,7 @@
     ../../modules/mixins/fzf.nix
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
+    ../../modules/mixins/screenkey.nix
     ../../modules/mixins/thunar.nix
     ../../modules/profiles/dwm
     ../../modules/profiles/xbanish.nix
