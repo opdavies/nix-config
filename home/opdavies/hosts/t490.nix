@@ -9,7 +9,6 @@
       directory = "$HOME/Documents/wiki/notes";
     };
 
-    pocket-casts.enable = true;
     tmux.enable = true;
     tmux-sessionizer.enable = true;
   };
