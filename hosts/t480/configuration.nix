@@ -10,6 +10,7 @@
     ../../modules/mixins/bluetooth.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/phpactor
+    ../../modules/mixins/st.nix
     ../../modules/mixins/thunar.nix
 
     ../common
@@ -19,7 +20,6 @@
   nixosModules = {
     dwm.enable = true;
     redshift.enable = true;
-    st.enable = true;
   };
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
