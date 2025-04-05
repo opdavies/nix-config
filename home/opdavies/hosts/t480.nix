@@ -2,8 +2,6 @@
 
 {
   homeManagerModules = {
-    newsboat.enable = true;
-
     notes = {
       enable = true;
       directory = "$HOME/Documents/wiki/notes";

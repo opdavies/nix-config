@@ -25,6 +25,8 @@
 
     ../common
     ../../users/opdavies
+
+    ./modules/newsboat
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
