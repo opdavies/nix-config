@@ -10,6 +10,7 @@
     ../../modules/editor/nvim.nix
 
     ../../modules/profiles/dwm
+    ../../modules/profiles/xbanish.nix
 
     ../../modules/mixins/bluetooth.nix
     ../../modules/mixins/direnv.nix
