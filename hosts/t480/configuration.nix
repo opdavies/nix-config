@@ -20,7 +20,6 @@
     dwm.enable = true;
     redshift.enable = true;
     st.enable = true;
-    peek.enable = true;
   };
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
@@ -52,6 +51,7 @@
   environment.systemPackages = with pkgs; [
     gtypist
     pam_gnupg
+    peek
     sxiv
     ttyper
     yt-dlp
