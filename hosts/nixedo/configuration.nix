@@ -13,6 +13,12 @@
     ../../modules/mixins/docker.nix
 
     ./modules/acme.nix
+    ./modules/audiobookshelf.nix
+    ./modules/containers/pi-hole.nix
+    ./modules/forgejo.nix
+    ./modules/immich.nix
+    ./modules/jellyfin.nix
+    ./modules/paperless.nix
 
     ../common
     ../../users/opdavies
