@@ -27,6 +27,7 @@
     ../../users/opdavies
 
     ./modules/newsboat
+    ./modules/notes.nix
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];

@@ -2,11 +2,6 @@
 
 {
   homeManagerModules = {
-    notes = {
-      enable = true;
-      directory = "$HOME/Documents/wiki/notes";
-    };
-
     tmux.enable = true;
     tmux-sessionizer.enable = true;
   };

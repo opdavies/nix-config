@@ -7,11 +7,6 @@
 
 {
   homeManagerModules = {
-    notes = {
-      enable = true;
-      directory = "$HOME/Documents/wiki/tfw-notes";
-    };
-
     tmux.enable = true;
     tmux-sessionizer.enable = true;
   };
