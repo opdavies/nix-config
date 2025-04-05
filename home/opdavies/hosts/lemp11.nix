@@ -2,7 +2,6 @@
 
 {
   homeManagerModules = {
-    direnv.enable = true;
     discord.enable = true;
     flameshot.enable = true;
     gimp.enable = true;

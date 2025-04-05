@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/phpactor
 

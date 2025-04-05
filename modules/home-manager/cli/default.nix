@@ -3,7 +3,6 @@
 {
   imports = [
     ./bin
-    ./direnv.nix
     ./fzf.nix
     ./git.nix
     ./neovim

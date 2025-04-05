@@ -7,7 +7,6 @@
 
 {
   homeManagerModules = {
-    direnv.enable = true;
     neovim.enable = true;
 
     notes = {

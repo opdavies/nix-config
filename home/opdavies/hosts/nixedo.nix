@@ -1,5 +1,1 @@
-{
-  homeManagerModules = {
-    direnv.enable = true;
-  };
-}
+{ }

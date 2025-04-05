@@ -10,6 +10,7 @@
     ../../modules/profiles/dwm
 
     ../../modules/mixins/bluetooth.nix
+    ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
