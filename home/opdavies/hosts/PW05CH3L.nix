@@ -31,9 +31,5 @@
           '';
         })
       ];
-
-      sessionVariables = {
-        WAYLAND_DISPLAY = "";
-      };
     };
 }
