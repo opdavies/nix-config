@@ -12,11 +12,13 @@
     ../../modules/mixins/common
     ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
+    ../../modules/mixins/firefox.nix
     ../../modules/mixins/flameshot.nix
     ../../modules/mixins/fonts.nix
     ../../modules/mixins/fzf.nix
     ../../modules/mixins/git.nix
     ../../modules/mixins/gtk.nix
+    ../../modules/mixins/qutebrowser.nix
     ../../modules/mixins/mpv.nix
     ../../modules/mixins/node.nix
     ../../modules/mixins/phpactor
