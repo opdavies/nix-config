@@ -67,15 +67,24 @@
   environment.systemPackages = with pkgs; [
     abook
     backup-websites
+    build-glove80
     displayselect
+    gscan2pdf
     gtypist
     isync
+    kdePackages.okular
+    meslo-lg
+    obs-studio
     pam_gnupg
+    pamixer
+    pavucontrol
     peek
     slack
     sxiv
     ttyper
     upload-to-files
+    xcape
+    xsel
     yt-dlp
     zeroad
     zoom-us
