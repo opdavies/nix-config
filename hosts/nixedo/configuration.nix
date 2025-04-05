@@ -9,6 +9,9 @@
     ./hardware-configuration.nix
     ./secrets.nix
     ./services.nix
+
+    ../../modules/mixins/docker.nix
+
     ./modules/acme.nix
 
     ../common
@@ -17,7 +20,6 @@
 
   nixosModules = {
     audiobookshelf.enable = true;
-    docker.enable = true;
     immich.enable = true;
     jellyfin.enable = true;
     paperless.enable = true;

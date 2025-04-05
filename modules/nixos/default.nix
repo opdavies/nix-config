@@ -1,6 +1,5 @@
 {
   imports = [
-    ./cli
     ./desktop
     ./gaming.nix
     ./homelab

@@ -2,13 +2,11 @@
 
 {
   imports = [
+    ../../modules/mixins/docker.nix
+
     ../common
     ../../users/opdavies
   ];
-
-  nixosModules = {
-    docker.enable = true;
-  };
 
   wsl = {
     enable = true;

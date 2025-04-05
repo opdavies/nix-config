@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ lib, pkgs, ... }:
 
 with lib;
 
@@ -16,7 +11,7 @@ with lib;
     extraGroups = [
       "networkmanager"
       "wheel"
-    ] ++ optionals config.virtualisation.docker.enable [ "docker" ];
+    ];
 
     packages = with pkgs; [
       qrencode

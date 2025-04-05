@@ -9,8 +9,7 @@
     ./users.nix
 
     ../../modules/mixins/bluetooth.nix
-
-    ./modules/docker.nix
+    ../../modules/mixins/docker.nix
 
     ../common
     ../../users/opdavies
