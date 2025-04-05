@@ -40,8 +40,6 @@
       username = "opdavies";
 
       specialArgs = {
-        headless = false;
-
         inherit
           inputs
           outputs
@@ -85,7 +83,6 @@
 
         nixedo = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
-            headless = true;
             hostname = "nixedo";
             stateVersion = "24.11";
           };
@@ -131,7 +128,6 @@
           inherit system;
 
           specialArgs = specialArgs // {
-            headless = true;
             hostname = "PW05CH3L";
             stateVersion = "22.11";
           };
@@ -147,10 +143,6 @@
 
         hetznix = nixpkgs.lib.nixosSystem {
           inherit system;
-
-          specialArgs = specialArgs // {
-            headless = true;
-          };
 
           modules = [
             agenix.nixosModules.default

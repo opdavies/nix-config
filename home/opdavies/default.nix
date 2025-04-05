@@ -1,6 +1,5 @@
 {
   config,
-  headless ? false,
   inputs,
   outputs,
   system,
@@ -28,14 +27,9 @@ let
   inherit (pkgs) lib;
 in
 {
-  imports =
-    [
-      ./home.nix
-      ./modules
-    ]
-    ++ pkgs.lib.optionals (!headless) [
-      ./desktop
-    ];
+  imports = [
+    ./home.nix
+  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";

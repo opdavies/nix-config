@@ -68,19 +68,29 @@
 
   environment.systemPackages = with pkgs; [
     abook
+    acpi
+    arandr
     backup-websites
+    brightnessctl
     build-glove80
+    cpufrequtils
     displayselect
+    ffmpegthumbnailer
     gscan2pdf
     gtypist
+    hunspellDicts.en-gb-large
     isync
     kdePackages.okular
+    libnotify
+    libreoffice
     meslo-lg
     obs-studio
     pam_gnupg
     pamixer
     pavucontrol
     peek
+    pmutils
+    shotwell
     slack
     sxiv
     ttyper

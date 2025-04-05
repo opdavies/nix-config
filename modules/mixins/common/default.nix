@@ -1,5 +1,4 @@
 {
-  headless,
   hostname,
   inputs,
   outputs,
@@ -35,37 +34,22 @@
 
   users.defaultUserShell = pkgs.zsh;
 
-  environment.systemPackages =
-    with pkgs;
-    [
-      cryptsetup
-      fastfetch
-      mermaid-cli
-      mkcert
-      passmenu-otp
+  environment.systemPackages = with pkgs; [
+    cryptsetup
+    fastfetch
+    mermaid-cli
+    mkcert
+    passmenu-otp
 
-      (pass.withExtensions (
-        e: with e; [
-          passExtensions.pass-audit
-          passExtensions.pass-import
-          passExtensions.pass-otp
-          passExtensions.pass-update
-        ]
-      ))
-    ]
-    ++ pkgs.lib.optionals (!headless) [
-      acpi
-      arandr
-      brightnessctl
-      cpufrequtils
-      libnotify
-      pmutils
-      ffmpegthumbnailer
-      hunspellDicts.en-gb-large
-      libreoffice
-      shotwell
-      vscode
-    ];
+    (pass.withExtensions (
+      e: with e; [
+        passExtensions.pass-audit
+        passExtensions.pass-import
+        passExtensions.pass-otp
+        passExtensions.pass-update
+      ]
+    ))
+  ];
 
   home-manager = {
     extraSpecialArgs = {
@@ -73,7 +57,6 @@
         hostname
         inputs
         outputs
-        headless
         self
         system
         username
