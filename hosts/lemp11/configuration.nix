@@ -7,6 +7,8 @@
     ./programs.nix
     ./services.nix
 
+    ../../modules/mixins/zsh
+
     ../common
     ../../users/opdavies
     ../../users/eric

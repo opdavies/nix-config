@@ -10,6 +10,7 @@
     ../../modules/mixins/phpactor
     ../../modules/mixins/starship.nix
     ../../modules/mixins/tmux.nix
+    ../../modules/mixins/zsh
 
     ../common
     ../../users/opdavies

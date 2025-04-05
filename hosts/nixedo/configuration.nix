@@ -11,6 +11,7 @@
     ./services.nix
 
     ../../modules/mixins/docker.nix
+    ../../modules/mixins/zsh
 
     ./modules/acme.nix
     ./modules/audiobookshelf.nix

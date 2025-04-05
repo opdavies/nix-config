@@ -23,6 +23,7 @@
     ../../modules/mixins/starship.nix
     ../../modules/mixins/thunar.nix
     ../../modules/mixins/tmux.nix
+    ../../modules/mixins/zsh
     ../../modules/profiles/dwm
     ../../modules/profiles/xbanish.nix
 
