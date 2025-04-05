@@ -2,7 +2,6 @@
 
 {
   homeManagerModules = {
-    flameshot.enable = true;
     gimp.enable = true;
     gtk.enable = true;
     handbrake.enable = true;
