@@ -6,7 +6,6 @@
     ./programs.nix
     ./secrets.nix
     ./services
-    ./users.nix
 
     ../../modules/mixins/bluetooth.nix
     ../../modules/mixins/docker.nix
