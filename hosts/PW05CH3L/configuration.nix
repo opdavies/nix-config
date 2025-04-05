@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/editor/nvim.nix
+    ../../modules/mixins/common
     ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/fzf.nix
@@ -15,7 +16,6 @@
     ./modules/notes.nix
     ./modules/wiki.nix
 
-    ../common
     ../../users/opdavies
   ];
 

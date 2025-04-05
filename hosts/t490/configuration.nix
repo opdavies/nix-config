@@ -9,7 +9,8 @@
     ./services
     ./users.nix
 
-    ../common
+    ../../modules/mixins/common
+
     ../../users/opdavies
   ];
 

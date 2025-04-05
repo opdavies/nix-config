@@ -30,7 +30,6 @@ in
 {
   imports =
     [
-      ../common
       ./home.nix
       ./modules
     ]

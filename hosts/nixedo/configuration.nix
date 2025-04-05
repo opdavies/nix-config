@@ -10,6 +10,7 @@
     ./secrets.nix
     ./services.nix
 
+    ../../modules/mixins/common
     ../../modules/mixins/docker.nix
     ../../modules/mixins/zsh
 
@@ -21,7 +22,6 @@
     ./modules/jellyfin.nix
     ./modules/paperless.nix
 
-    ../common
     ../../users/opdavies
   ];
 
