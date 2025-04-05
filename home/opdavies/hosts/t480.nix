@@ -2,7 +2,6 @@
 
 {
   homeManagerModules = {
-    gtk.enable = true;
     newsboat.enable = true;
 
     notes = {

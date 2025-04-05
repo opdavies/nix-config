@@ -2,8 +2,6 @@
 
 {
   homeManagerModules = {
-    gtk.enable = true;
-
     notes = {
       enable = true;
       directory = "$HOME/Documents/wiki/notes";

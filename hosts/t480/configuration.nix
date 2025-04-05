@@ -14,6 +14,7 @@
     ../../modules/mixins/flameshot.nix
     ../../modules/mixins/fonts.nix
     ../../modules/mixins/fzf.nix
+    ../../modules/mixins/gtk.nix
     ../../modules/mixins/mpv.nix
     ../../modules/mixins/phpactor
     ../../modules/mixins/pipewire.nix
