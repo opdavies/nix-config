@@ -50,8 +50,6 @@
   environment.systemPackages = with pkgs; [
     gtypist
     pam_gnupg
-    rclone
-    rclone-browser
     sxiv
     ttyper
     yt-dlp
