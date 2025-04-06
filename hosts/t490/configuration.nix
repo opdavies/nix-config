@@ -14,14 +14,6 @@
     ../../users/opdavies
   ];
 
-  nixosModules = {
-    dwm.enable = true;
-    redshift.enable = true;
-    st.enable = true;
-    thunar.enable = true;
-    peek.enable = true;
-  };
-
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   boot = {
