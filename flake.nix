@@ -53,7 +53,7 @@
     in
     {
       packages.${system} = {
-        default = mkShell { buildInputs = with pkgs; [ bashInteractive ]; };
+        default = mkShell { buildInputs = with pkgs; [ just ]; };
       };
 
       formatter.${system} = pkgs.nixfmt-rfc-style;
