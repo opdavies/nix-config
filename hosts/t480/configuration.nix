@@ -9,7 +9,7 @@
 
     ../../modules/editor/nvim.nix
     ../../modules/mixins/bluetooth.nix
-    ../../modules/mixins/common.nix
+    ../../modules/mixins/common
     ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/firefox.nix

@@ -3,7 +3,7 @@
 {
   imports = [
     ../../modules/editor/nvim.nix
-    ../../modules/mixins/common.nix
+    ../../modules/mixins/common
     ../../modules/mixins/direnv.nix
     ../../modules/mixins/docker.nix
     ../../modules/mixins/fzf.nix
