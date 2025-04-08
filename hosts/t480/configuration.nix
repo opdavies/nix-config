@@ -10,7 +10,6 @@ in
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix
-    ./services
 
     ../../modules/editor/nvim.nix
     ../../modules/mixins/bluetooth.nix
@@ -42,6 +41,7 @@ in
 
     ../../users/opdavies
 
+    ./modules/cron.nix
     ./modules/neomutt.nix
     ./modules/newsboat
     ./modules/notes.nix
@@ -115,5 +115,33 @@ in
 
   networking.hosts = {
     "192.168.1.116" = [ "nixedo" ];
+  };
+
+  services = {
+    auto-cpufreq.enable = true;
+
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+
+    gvfs.enable = true;
+    openssh.enable = true;
+    power-profiles-daemon.enable = false;
+    printing.enable = true;
+    pulseaudio.enable = false;
+    throttled.enable = true;
+    thermald.enable = true;
+    upower.enable = true;
+
+    xserver = {
+      enable = true;
+
+      xkb = {
+        layout = "gb";
+        variant = "";
+      };
+    };
   };
 }
