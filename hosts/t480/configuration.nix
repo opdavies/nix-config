@@ -78,10 +78,13 @@
     cpufrequtils
     displayselect
     ffmpegthumbnailer
+    gimp
     gscan2pdf
     gtypist
+    handbrake
     hunspellDicts.en-gb-large
     isync
+    kdePackages.kdenlive
     kdePackages.okular
     libnotify
     libreoffice
@@ -109,10 +112,4 @@
   networking.hosts = {
     "192.168.1.116" = [ "nixedo" ];
   };
-
-  users.users.opdavies.packages = with pkgs; [
-    gimp
-    handbrake
-    kdePackages.kdenlive
-  ];
 }
