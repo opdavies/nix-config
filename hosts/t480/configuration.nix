@@ -1,5 +1,11 @@
 { inputs, pkgs, ... }:
 
+let
+  git = {
+    name = "Oliver Davies";
+    emailAddress = "oliver@oliverdavies.uk";
+  };
+in
 {
   imports = [
     ./hardware-configuration.nix
@@ -15,7 +21,6 @@
     ../../modules/mixins/flameshot.nix
     ../../modules/mixins/fonts.nix
     ../../modules/mixins/fzf.nix
-    ../../modules/mixins/git.nix
     ../../modules/mixins/gnupg.nix
     ../../modules/mixins/gtk.nix
     ../../modules/mixins/qutebrowser.nix
@@ -32,6 +37,8 @@
     ../../modules/mixins/zsh
     ../../modules/profiles/dwm
     ../../modules/profiles/xbanish.nix
+
+    (import ../../modules/mixins/git.nix { inherit git; })
 
     ../../users/opdavies
 

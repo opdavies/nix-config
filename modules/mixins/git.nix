@@ -1,4 +1,9 @@
 {
+  git ? { },
+  ...
+}:
+
+{
   home-manager.users.opdavies =
     { config, pkgs, ... }:
     {
@@ -25,8 +30,8 @@
       programs = {
         git = {
           enable = true;
-          userName = "Oliver Davies";
-          userEmail = "oliver@oliverdavies.dev";
+          userName = git.name;
+          userEmail = git.emailAddress;
 
           includes = [
             {
