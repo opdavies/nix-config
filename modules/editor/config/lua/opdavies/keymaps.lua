@@ -77,3 +77,10 @@ set("n", "<leader>er", ":edit run<CR>")
 
 set({ "n", "v" }, "<leader>y", [["+y]])
 set("n", "<leader>Y", [["+Y]])
+
+-- Re-add functionality to open the URL under the cursor.
+-- This is overridden by mini.operators to exchange text regions.
+vim.keymap.set("n", "<leader>gx", function()
+  local url = vim.fn.expand "<cfile>"
+  vim.fn["netrw#BrowseX"](url, 0)
+end, { desc = "Open URL under cursor" })
