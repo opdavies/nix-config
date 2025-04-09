@@ -15,8 +15,6 @@
     ../../users/luke
   ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
   # Bootloader.
   boot = {
     loader = {

@@ -37,8 +37,6 @@
 
   services.logind.lidSwitchExternalPower = "ignore";
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;

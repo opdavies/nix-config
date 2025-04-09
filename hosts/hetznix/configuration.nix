@@ -24,8 +24,6 @@
     extraOptions = ''
       trusted-users = root opdavies
     '';
-
-    nixPath = [ "nixpkgs=${inputs.nixpkgs-2405}" ];
   };
 
   boot.loader.grub = {

@@ -34,7 +34,5 @@ in
     defaultUser = username;
   };
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
   home-manager.users.opdavies.home.sessionVariables.WAYLAND_DISPLAY = "";
 }

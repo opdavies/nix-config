@@ -14,8 +14,6 @@
     ../../users/opdavies
   ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
   boot = {
     loader = {
       systemd-boot = {

@@ -48,8 +48,6 @@ in
     ./modules/wiki.nix
   ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
   boot = {
     loader = {
       systemd-boot = {
