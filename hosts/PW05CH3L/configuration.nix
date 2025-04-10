@@ -14,6 +14,7 @@ in
     mixins-docker
     mixins-fzf
     mixins-node
+    mixins-notes
     mixins-phpactor
     mixins-ranger
     mixins-scripts
@@ -25,7 +26,6 @@ in
 
     (import ../../modules/mixins/git.nix { inherit git; })
 
-    ./modules/notes.nix
     ./modules/wiki.nix
   ];
 

@@ -25,6 +25,7 @@ in
     mixins-qutebrowser
     mixins-mpv
     mixins-node
+    mixins-notes
     mixins-phpactor
     mixins-pipewire
     mixins-ranger
@@ -50,7 +51,6 @@ in
     ./modules/cron.nix
     ./modules/neomutt.nix
     ./modules/newsboat
-    ./modules/notes.nix
     ./modules/wiki.nix
   ];
 
