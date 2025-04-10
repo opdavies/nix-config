@@ -39,6 +39,12 @@ in
 
     (import ../../modules/mixins/git.nix { inherit git; })
 
+    (import ../../modules/mixins/kanata.nix {
+      devices = [
+        "/dev/input/event1"
+      ];
+    })
+
     ../../users/opdavies
 
     ./modules/cron.nix
