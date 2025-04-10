@@ -150,5 +150,7 @@
           ];
         };
       };
+
+      nixosModules = import ./modules { lib = nixpkgs.lib; };
     };
 }

@@ -1,11 +1,12 @@
 {
-  modulesPath,
+  inputs,
   lib,
+  modulesPath,
   pkgs,
   ...
 }:
 {
-  imports = [
+  imports = with inputs.self.nixosModules; [
     (modulesPath + "/installer/scan/not-detected.nix")
     (modulesPath + "/profiles/qemu-guest.nix")
 
@@ -16,7 +17,7 @@
     ./security
     ./services
 
-    ../../users/opdavies
+    ../../modules/users/opdavies.nix
   ];
 
   nix = {

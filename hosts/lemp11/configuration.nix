@@ -1,16 +1,18 @@
+{ inputs, ... }:
+
 {
-  imports = [
+  imports = with inputs.self.nixosModules; [
     ./hardware-configuration.nix
     ./hardware.nix
     ./programs.nix
     ./services.nix
 
-    ../../modules/mixins/common
-    ../../modules/mixins/zsh
+    mixins-common
+    mixins-zsh
 
-    ../../users/opdavies
-    ../../users/eric
-    ../../users/luke
+    users-opdavies
+    users-eric
+    users-luke
   ];
 
   # Bootloader.

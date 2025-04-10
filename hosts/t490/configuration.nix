@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
-  imports = [
+  imports = with inputs.self.nixosModules; [
     ./hardware-configuration.nix
     ./hardware.nix
     ./programs.nix
@@ -9,9 +9,9 @@
     ./services
     ./users.nix
 
-    ../../modules/mixins/common
+    mixins-common
 
-    ../../users/opdavies
+    users-opdavies
   ];
 
   boot = {

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 let
   git = {
@@ -7,35 +7,35 @@ let
   };
 in
 {
-  imports = [
+  imports = with inputs.self.nixosModules; [
     ./hardware-configuration.nix
     ./secrets.nix
 
-    ../../modules/editor/nvim.nix
-    ../../modules/mixins/bluetooth.nix
-    ../../modules/mixins/common
-    ../../modules/mixins/direnv.nix
-    ../../modules/mixins/docker.nix
-    ../../modules/mixins/firefox.nix
-    ../../modules/mixins/flameshot.nix
-    ../../modules/mixins/fonts.nix
-    ../../modules/mixins/fzf.nix
-    ../../modules/mixins/gnupg.nix
-    ../../modules/mixins/gtk.nix
-    ../../modules/mixins/qutebrowser.nix
-    ../../modules/mixins/mpv.nix
-    ../../modules/mixins/node.nix
-    ../../modules/mixins/phpactor
-    ../../modules/mixins/pipewire.nix
-    ../../modules/mixins/ranger.nix
-    ../../modules/mixins/screenkey.nix
-    ../../modules/mixins/scripts
-    ../../modules/mixins/starship.nix
-    ../../modules/mixins/thunar.nix
-    ../../modules/mixins/tmux.nix
-    ../../modules/mixins/zsh
-    ../../modules/profiles/dwm
-    ../../modules/profiles/xbanish.nix
+    editor-nvim
+    mixins-bluetooth
+    mixins-common
+    mixins-direnv
+    mixins-docker
+    mixins-firefox
+    mixins-flameshot
+    mixins-fonts
+    mixins-fzf
+    mixins-gnupg
+    mixins-gtk
+    mixins-qutebrowser
+    mixins-mpv
+    mixins-node
+    mixins-phpactor
+    mixins-pipewire
+    mixins-ranger
+    mixins-screenkey
+    mixins-scripts
+    mixins-starship
+    mixins-thunar
+    mixins-tmux
+    mixins-zsh
+    profiles-dwm
+    profiles-xbanish
 
     (import ../../modules/mixins/git.nix { inherit git; })
 
@@ -45,7 +45,7 @@ in
       ];
     })
 
-    ../../users/opdavies
+    users-opdavies
 
     ./modules/cron.nix
     ./modules/neomutt.nix

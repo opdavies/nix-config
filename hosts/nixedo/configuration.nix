@@ -2,15 +2,19 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
+{ inputs, ... }:
+
 {
-  imports = [
+  imports = with inputs.self.nixosModules; [
     ./hardware-configuration.nix
     ./secrets.nix
     ./services.nix
 
-    ../../modules/mixins/common
-    ../../modules/mixins/docker.nix
-    ../../modules/mixins/zsh
+    mixins-common
+    mixins-docker
+    mixins-zsh
+
+    users-opdavies
 
     ./modules/acme.nix
     ./modules/audiobookshelf.nix
@@ -19,8 +23,6 @@
     ./modules/immich.nix
     ./modules/jellyfin.nix
     ./modules/paperless.nix
-
-    ../../users/opdavies
   ];
 
   nixosModules = {

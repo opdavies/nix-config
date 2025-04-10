@@ -1,4 +1,4 @@
-{ username, ... }:
+{ inputs, username, ... }:
 
 let
   git = {
@@ -7,26 +7,26 @@ let
   };
 in
 {
-  imports = [
-    ../../modules/editor/nvim.nix
-    ../../modules/mixins/common
-    ../../modules/mixins/direnv.nix
-    ../../modules/mixins/docker.nix
-    ../../modules/mixins/fzf.nix
-    ../../modules/mixins/node.nix
-    ../../modules/mixins/phpactor
-    ../../modules/mixins/ranger.nix
-    ../../modules/mixins/scripts
-    ../../modules/mixins/starship.nix
-    ../../modules/mixins/tmux.nix
-    ../../modules/mixins/zsh
+  imports = with inputs.self.nixosModules; [
+    editor-nvim
+    mixins-common
+    mixins-direnv
+    mixins-docker
+    mixins-fzf
+    mixins-node
+    mixins-phpactor
+    mixins-ranger
+    mixins-scripts
+    mixins-starship
+    mixins-tmux
+    mixins-zsh
+
+    users-opdavies
 
     (import ../../modules/mixins/git.nix { inherit git; })
 
     ./modules/notes.nix
     ./modules/wiki.nix
-
-    ../../users/opdavies
   ];
 
   wsl = {
