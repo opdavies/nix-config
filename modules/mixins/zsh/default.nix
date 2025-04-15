@@ -27,6 +27,12 @@
             exec startx &>/dev/null
           fi
 
+          background() {
+            for ((i=2;i<=$#;i++)); do
+              ''${@[1]} ''${@[$i]} &> /dev/null &
+            done
+          }
+
           # suffix
           alias -s gz="tar -tf"
           alias -s {html,HTML}="background firefox"
