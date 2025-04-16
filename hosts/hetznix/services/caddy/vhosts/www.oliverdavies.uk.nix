@@ -15,7 +15,7 @@
         ''
           encode gzip
           file_server
-          root * /var/www/vhosts/www.oliverdavies.uk
+          root * /var/www/vhosts/www.oliverdavies.uk-sculpin
 
           handle_errors {
             @404 {
