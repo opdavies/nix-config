@@ -28,6 +28,12 @@
               }
             '') tomePaths
           );
+
+          redirects = import ./www.oliverdavies.uk-redirects.nix;
+
+          redirectLines = builtins.concatStringsSep "\n" (
+            map (r: "redir ${r.from} ${r.to} permanent") redirects
+          );
         in
         ''
           encode gzip
@@ -44,8 +50,17 @@
           }
 
           ${tomeConfig}
-        ''
-        + builtins.readFile ./www.oliverdavies.uk-redirects.caddy;
+
+          @articles path_regexp ^/articles/(.*)$
+          @talks path_regexp ^/talks/(.*)$
+          @talks-archive path_regexp ^/talks/archive/(.*)$
+
+          redir @articles /blog/{re.1} permanent
+          redir @talks-archive /presentations/{re.1} permanent
+          redir @talks /presentations/{re.1} permanent
+
+          ${redirectLines}
+        '';
     };
   };
 }
