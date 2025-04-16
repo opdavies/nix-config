@@ -34,6 +34,7 @@ in
     mixins-starship
     mixins-thunar
     mixins-tmux
+    mixins-zram
     mixins-zsh
     profiles-dwm
     profiles-xbanish
@@ -116,8 +117,6 @@ in
     zeroad
     zoom-us
   ];
-
-  zramSwap.enable = true;
 
   networking.hosts = {
     "192.168.1.116" = [ "nixedo" ];
