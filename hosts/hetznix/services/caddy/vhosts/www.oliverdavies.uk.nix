@@ -14,19 +14,8 @@
       extraConfig =
         ''
           encode gzip
-
+          file_server
           root * /var/www/vhosts/www.oliverdavies.uk
-
-          file_server {
-            disable_canonical_uris
-          }
-
-          # Remove trailing slashes from all URLs.
-          @trailingSlash {
-            path_regexp trailingSlash ^(.*)/$
-            not path /
-          }
-          redir @trailingSlash {http.regexp.trailingSlash.1} temporary
 
           handle_errors {
             @404 {
