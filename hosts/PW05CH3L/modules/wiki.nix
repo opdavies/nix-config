@@ -18,6 +18,7 @@ with lib;
 
               text = ''
                 ${getExe pkgs.rsync} -avz --update \
+                  --exclude result \
                   ${remoteIpAddress}:${wikiPath}/ ${wikiPath} "$@"
               '';
             })
