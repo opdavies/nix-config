@@ -52,6 +52,7 @@ in
     ./modules/cron.nix
     ./modules/neomutt.nix
     ./modules/newsboat
+    ./modules/ollama.nix
     ./modules/wiki.nix
   ];
 
