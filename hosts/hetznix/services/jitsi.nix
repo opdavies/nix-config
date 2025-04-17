@@ -1,7 +1,7 @@
 {
   services = {
     jitsi-meet = {
-      enable = true;
+      enable = false;
       caddy.enable = true;
       nginx.enable = false;
       secureDomain.enable = true;
