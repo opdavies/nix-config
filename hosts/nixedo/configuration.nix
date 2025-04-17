@@ -20,6 +20,7 @@
 
     ./modules/acme.nix
     ./modules/audiobookshelf.nix
+    ./modules/cloudflared.nix
     ./modules/containers
     ./modules/forgejo.nix
     ./modules/immich.nix
