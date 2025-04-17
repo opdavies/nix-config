@@ -13,7 +13,12 @@
 
       extraConfig =
         let
-          tomePaths = [ "tome-test" ];
+          tomePaths = [
+            "core"
+            "sites/default/files"
+            "themes/custom/opdavies"
+            "tome-test"
+          ];
 
           tomeConfig = builtins.concatStringsSep "\n\n" (
             builtins.map (path: ''

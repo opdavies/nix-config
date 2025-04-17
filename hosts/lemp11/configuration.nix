@@ -40,6 +40,4 @@
     polkit.enable = true;
     rtkit.enable = true;
   };
-
-  zramSwap.enable = true;
 }

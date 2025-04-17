@@ -46,8 +46,6 @@
     yt-dlp
   ];
 
-  zramSwap.enable = true;
-
   networking.hosts = {
     "192.168.1.116" = [ "nixedo" ];
   };
