@@ -290,4 +290,8 @@
   }
   { url = "https://tinkerbetter.tube/feeds/videos.xml?videoChannelId=2"; }
   { url = "https://video.fosshq.org/feeds/videos.xml?videoChannelId=2"; }
+  {
+    url = "https://www.garfieldtech.com/blog/feed";
+    tags = [ "PHP" ];
+  }
 ]
