@@ -10,6 +10,7 @@
     ./users.nix
 
     mixins-common
+    mixins-zram
 
     users-opdavies
   ];

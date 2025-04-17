@@ -8,6 +8,7 @@
     ./services.nix
 
     mixins-common
+    mixins-zram
     mixins-zsh
 
     users-opdavies
