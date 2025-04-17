@@ -18,7 +18,7 @@
 
     ./modules/acme.nix
     ./modules/audiobookshelf.nix
-    ./modules/containers/pi-hole.nix
+    ./modules/containers
     ./modules/forgejo.nix
     ./modules/immich.nix
     ./modules/jellyfin.nix

@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./pi-hole.nix
+  ];
+}
