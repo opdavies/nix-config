@@ -256,6 +256,7 @@
   {
     url = "https://feeds.bbci.co.uk/sport/rugby-union/teams/ng-dragons/rss.xml";
     tags = [ "Rugby" ];
+    title = "BBC Sport - Dragons RFC";
   }
   {
     url = "https://openrss.org/www.twitch.tv/thealtf4stream/videos?filter=all&sort=time";
@@ -285,6 +286,7 @@
   {
     url = "https://feeds.bbci.co.uk/sport/rugby-union/rss.xml";
     tags = [ "Rugby" ];
+    title = "BBC Sport - Rugby Union";
   }
   { url = "https://tinkerbetter.tube/feeds/videos.xml?videoChannelId=2"; }
   { url = "https://video.fosshq.org/feeds/videos.xml?videoChannelId=2"; }
