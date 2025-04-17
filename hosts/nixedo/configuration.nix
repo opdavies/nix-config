@@ -12,6 +12,8 @@
 
     mixins-common
     mixins-docker
+    mixins-fzf
+    mixins-starship
     mixins-zsh
 
     users-opdavies
