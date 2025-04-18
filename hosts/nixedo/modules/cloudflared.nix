@@ -9,9 +9,7 @@
       default = "http_status:404";
 
       ingress = {
-        "test.oliverdavies.uk" = {
-          service = "http://localhost:8000";
-        };
+        "bootstrap-with-tailwind.oliverdavies.uk" = "http://localhost:8000";
       };
     };
   };
