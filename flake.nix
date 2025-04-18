@@ -138,17 +138,6 @@
             ./hosts/PW05CH3L/configuration.nix
           ];
         };
-
-        hetznix = nixpkgs.lib.nixosSystem {
-          inherit system;
-
-          modules = [
-            agenix.nixosModules.default
-            disko.nixosModules.disko
-
-            ./hosts/hetznix/configuration.nix
-          ];
-        };
       };
 
       nixosModules = import ./modules { lib = nixpkgs.lib; };
