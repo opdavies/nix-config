@@ -12,6 +12,7 @@
     mixins-common
     mixins-docker
     mixins-fzf
+    mixins-openssh
     mixins-starship
     mixins-zsh
 
