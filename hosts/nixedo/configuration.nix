@@ -8,7 +8,6 @@
   imports = with inputs.self.nixosModules; [
     ./hardware-configuration.nix
     ./secrets.nix
-    ./services.nix
 
     mixins-common
     mixins-docker
@@ -25,6 +24,7 @@
     ./modules/forgejo.nix
     ./modules/immich.nix
     ./modules/jellyfin.nix
+    ./modules/nginx
     ./modules/paperless.nix
   ];
 
