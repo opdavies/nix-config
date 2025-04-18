@@ -1,34 +1,26 @@
-{ config, lib, ... }:
-
-with lib;
+{ config, ... }:
 
 {
-  options.nixosModules.forgejo.enable = mkEnableOption "Enable forgejo";
+  services = {
+    forgejo = {
+      enable = true;
+      stateDir = "/var/www/forgejo";
 
-  config = mkIf config.nixosModules.forgejo.enable {
-    services = {
-      forgejo = {
-        enable = true;
-        group = "media";
-        stateDir = "/mnt/media/forgejo";
+      settings = {
+        server = {
+          DOMAIN = "code.oliverdavies.uk";
+          HTTP_PORT = 2223;
+        };
 
-        settings = {
-          server = {
-            DOMAIN = "forgejo.oliverdavies.uk";
-            HTTP_PORT = 2223;
-          };
-
-          service = {
-            DISABLE_REGISTRATION = true;
-          };
+        service = {
+          DISABLE_REGISTRATION = true;
         };
       };
+    };
 
-      caddy.virtualHosts."${config.services.forgejo.settings.server.DOMAIN}" = {
-        useACMEHost = "oliverdavies.uk";
-
-        extraConfig = "reverse_proxy localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
-      };
+    cloudflared.tunnels."e1514105-327f-4984-974e-e2fbaca76466".ingress = {
+      "code.oliverdavies.uk" =
+        "http://localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
     };
   };
 }
