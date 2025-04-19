@@ -7,7 +7,7 @@
 
   {
     port = 8084;
-    root = "/var/www/eric";
+    root = "/var/www/eric/public";
     url = "eric.oliverdavies.uk";
 
     extraConfig = ''
