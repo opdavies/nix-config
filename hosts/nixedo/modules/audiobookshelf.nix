@@ -1,26 +1,17 @@
-{ config, lib, ... }:
+{ config, ... }:
 
-with lib;
-
-let
-  cfg = config.nixosModules.audiobookshelf;
-in
 {
-  options.nixosModules.audiobookshelf.enable = mkEnableOption "Enable audiobookshelf";
+  services = {
+    audiobookshelf = {
+      enable = true;
 
-  config = mkIf cfg.enable {
-    services = {
-      audiobookshelf = {
-        enable = true;
+      port = 4001;
+    };
 
-        port = 4001;
-      };
+    caddy.virtualHosts."audiobookshelf.oliverdavies.uk" = {
+      useACMEHost = "oliverdavies.uk";
 
-      caddy.virtualHosts."audiobookshelf.oliverdavies.uk" = {
-        useACMEHost = "oliverdavies.uk";
-
-        extraConfig = "reverse_proxy localhost:${toString config.services.audiobookshelf.port}";
-      };
+      extraConfig = "reverse_proxy localhost:${toString config.services.audiobookshelf.port}";
     };
   };
 }

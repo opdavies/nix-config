@@ -29,14 +29,6 @@
     ./modules/paperless.nix
   ];
 
-  nixosModules = {
-    audiobookshelf.enable = true;
-    immich.enable = true;
-    jellyfin.enable = true;
-    paperless.enable = true;
-    pihole.enable = true;
-  };
-
   programs.dconf.enable = true;
 
   services.logind.lidSwitchExternalPower = "ignore";

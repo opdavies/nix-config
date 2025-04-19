@@ -1,30 +1,21 @@
-{ config, lib, ... }:
+{ config, ... }:
 
-with lib;
-
-let
-  url = "paperless.oliverdavies.uk";
-in
 {
-  options.nixosModules.paperless.enable = mkEnableOption "Enable paperless";
+  services = {
+    paperless = {
+      enable = true;
 
-  config = mkIf config.nixosModules.paperless.enable {
-    services = {
-      paperless = {
-        enable = true;
+      dataDir = "/mnt/media/paperless";
 
-        dataDir = "/mnt/media/paperless";
-
-        settings = {
-          PAPERLESS_URL = "https://${url}";
-        };
+      settings = {
+        PAPERLESS_URL = "https://paperless.oliverdavies.uk";
       };
+    };
 
-      caddy.virtualHosts."${url}" = {
-        useACMEHost = "oliverdavies.uk";
+    caddy.virtualHosts."${config.services.paperless.settings.PAPERLESS_URL}" = {
+      useACMEHost = "oliverdavies.uk";
 
-        extraConfig = "reverse_proxy localhost:28981";
-      };
+      extraConfig = "reverse_proxy localhost:28981";
     };
   };
 }
