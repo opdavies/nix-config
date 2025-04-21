@@ -10,9 +10,9 @@
     ./secrets.nix
 
     mixins-common
-    mixins-docker
     mixins-fzf
     mixins-openssh
+    mixins-podman
     mixins-starship
     mixins-zsh
 
