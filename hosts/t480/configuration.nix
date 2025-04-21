@@ -132,6 +132,8 @@ in
     xserver = {
       enable = true;
 
+      displayManager.startx.enable = true;
+
       xkb = {
         layout = "gb";
         variant = "";
@@ -140,4 +142,11 @@ in
   };
 
   programs.dconf.enable = true;
+
+  home-manager.users.opdavies = {
+    xdg.configFile."pam-gnupg".text = ''
+      098EE055DAD2B9CB68154C6759DD38292D2273B6
+      1E21B58D69FFEFAD077F152A50FEA938A3413F50
+    '';
+  };
 }

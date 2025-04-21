@@ -2,4 +2,9 @@ systemctl --user import-environment DISPLAY
 poweralertd -s &
 setbg &
 systemctl --user start dwm-status &
+
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye
+
 exec dwm

@@ -22,11 +22,13 @@
           ABBR_SET_EXPANSION_CURSOR = 1;
         };
 
-        initExtra = ''
+        profileExtra = ''
           if [[ -z "$DISPLAY" ]] && [[ "$(tty)" == "/dev/tty1" ]]; then
-            exec startx &>/dev/null
+            exec startx
           fi
+        '';
 
+        initExtra = ''
           background() {
             for ((i=2;i<=$#;i++)); do
               ''${@[1]} ''${@[$i]} &> /dev/null &

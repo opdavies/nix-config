@@ -17,10 +17,7 @@
       ];
     };
 
-    xserver = {
-      displayManager.startx.enable = true;
-      windowManager.dwm.enable = true;
-    };
+    xserver.windowManager.dwm.enable = true;
   };
 
   systemd.user.services.dwm-status.serviceConfig.Restart = "on-failure";
