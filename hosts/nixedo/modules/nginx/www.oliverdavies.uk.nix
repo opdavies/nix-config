@@ -19,7 +19,7 @@ let
       name = "/${path}";
 
       value = {
-        root = "/var/www/website-tome";
+        root = "/var/www/vhosts/website-tome";
         tryFiles = "$uri $uri.html $uri/index.html =404";
       };
     }) tomePaths
@@ -29,7 +29,7 @@ in
   services = {
     nginx.virtualHosts = {
       "www.oliverdavies.uk" = {
-        root = "/var/www/website-sculpin";
+        root = "/var/www/vhosts/website-sculpin";
 
         listen = [
           {
