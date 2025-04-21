@@ -9,6 +9,7 @@ let
 
   tomePaths = [
     "core"
+    "examples"
     "sites/default/files"
     "themes/custom/opdavies"
     "tome-test"
