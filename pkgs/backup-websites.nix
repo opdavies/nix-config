@@ -8,6 +8,6 @@ pkgs.writeShellApplication {
 
     mkdir -p "''${backup_path}"
 
-    ${lib.getExe pkgs.rsync} -avzP nixedo:/var/www/vhosts/ "''${backup_path}" --delete-after
+    ${lib.getExe pkgs.rsync} -avzP nixedo.local:/var/www/vhosts/ "''${backup_path}" --delete-after
   '';
 }
