@@ -52,6 +52,8 @@
   ];
 
   home-manager = {
+    backupFileExtension = "backup";
+
     extraSpecialArgs = {
       inherit
         hostname
