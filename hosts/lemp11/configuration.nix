@@ -8,6 +8,7 @@
     ./services.nix
 
     mixins-avahi
+    mixins-bluetooth
     mixins-common
     mixins-zram
     mixins-zsh
