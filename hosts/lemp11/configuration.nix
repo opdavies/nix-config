@@ -12,7 +12,6 @@
 
     users-opdavies
     users-eric
-    users-luke
   ];
 
   services = {
