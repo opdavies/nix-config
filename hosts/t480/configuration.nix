@@ -119,11 +119,6 @@ in
     zoom-us
   ];
 
-  networking.hosts = {
-    "192.168.1.180" = [ "lemp11" ];
-    "192.168.1.116" = [ "nixedo" ];
-  };
-
   services = {
     auto-cpufreq.enable = true;
     gvfs.enable = true;
