@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ./secrets.nix
 
+    mixins-avahi
     mixins-common
     mixins-fzf
     mixins-openssh

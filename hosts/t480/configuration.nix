@@ -12,6 +12,7 @@ in
     ./secrets.nix
 
     editor-nvim
+    mixins-avahi
     mixins-bluetooth
     mixins-common
     mixins-direnv
@@ -119,18 +120,12 @@ in
   ];
 
   networking.hosts = {
+    "192.168.1.180" = [ "lemp11" ];
     "192.168.1.116" = [ "nixedo" ];
   };
 
   services = {
     auto-cpufreq.enable = true;
-
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
-
     gvfs.enable = true;
     power-profiles-daemon.enable = false;
     printing.enable = true;

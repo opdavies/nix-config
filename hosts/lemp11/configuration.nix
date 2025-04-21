@@ -7,6 +7,7 @@
     ./programs.nix
     ./services.nix
 
+    mixins-avahi
     mixins-common
     mixins-zram
     mixins-zsh
