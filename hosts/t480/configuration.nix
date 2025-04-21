@@ -15,7 +15,6 @@ in
     mixins-bluetooth
     mixins-common
     mixins-direnv
-    mixins-docker
     mixins-firefox
     mixins-flameshot
     mixins-fonts
