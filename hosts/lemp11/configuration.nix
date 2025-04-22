@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = with inputs.self.nixosModules; [
@@ -84,4 +84,9 @@
     polkit.enable = true;
     rtkit.enable = true;
   };
+
+  users.users.eric.packages = with pkgs; [
+    git
+    vscodium
+  ];
 }
