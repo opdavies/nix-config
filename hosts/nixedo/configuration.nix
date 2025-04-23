@@ -2,35 +2,21 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, ... }:
-
 {
-  imports = with inputs.self.nixosModules; [
+  imports = [
+    ../common
     ./hardware-configuration.nix
+    ./modules
     ./secrets.nix
 
-    mixins-avahi
-    mixins-common
-    mixins-fzf
-    mixins-openssh
-    mixins-podman
-    mixins-starship
-    mixins-zsh
-
-    users-opdavies
-
-    ./modules/acme.nix
-    ./modules/audiobookshelf.nix
-    ./modules/cloudflared.nix
-    ./modules/containers
-    ./modules/forgejo.nix
-    ./modules/immich.nix
-    ./modules/jellyfin.nix
-    ./modules/nginx
-    ./modules/paperless.nix
+    ../../users/opdavies.nix
   ];
 
-  programs.dconf.enable = true;
+  nixosModules = {
+    core.openssh.enable = true;
+    cli.podman.enable = true;
+    desktop.dconf.enable = true;
+  };
 
   services.logind.lidSwitchExternalPower = "ignore";
 

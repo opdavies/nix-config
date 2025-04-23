@@ -1,37 +1,21 @@
-{ inputs, username, ... }:
-
-let
-  git = {
-    name = "Oliver Davies";
-    emailAddress = "oliver.davies@tfw.wales";
-  };
-in
 {
-  imports = with inputs.self.nixosModules; [
-    editor-nvim
-    mixins-common
-    mixins-direnv
-    mixins-docker
-    mixins-fzf
-    mixins-node
-    mixins-notes
-    mixins-phpactor
-    mixins-ranger
-    mixins-scripts
-    mixins-starship
-    mixins-tmux
-    mixins-zsh
+  imports = [
+    ../common
 
-    users-opdavies
-
-    (import ../../modules/mixins/git.nix { inherit git; })
+    ../../users/opdavies.nix
 
     ./modules/wiki.nix
   ];
 
+  nixosModules = {
+    cli = {
+      docker.enable = true;
+    };
+  };
+
   wsl = {
     enable = true;
-    defaultUser = username;
+    defaultUser = "opdavies";
   };
 
   home-manager.users.opdavies.home.sessionVariables.WAYLAND_DISPLAY = "";

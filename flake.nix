@@ -60,6 +60,10 @@
 
       overlays = import ./overlays { inherit inputs; };
 
+      homeManagerModules.default = import ./modules/home-manager;
+
+      nixosModules.default = import ./modules/nixos;
+
       nixosConfigurations = {
         lemp11 = nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs // {
@@ -139,7 +143,5 @@
           ];
         };
       };
-
-      nixosModules = import ./modules { lib = nixpkgs.lib; };
     };
 }

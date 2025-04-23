@@ -1,60 +1,34 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
-let
-  git = {
-    name = "Oliver Davies";
-    emailAddress = "oliver@oliverdavies.uk";
-  };
-in
 {
-  imports = with inputs.self.nixosModules; [
+  imports = [
+    ../common
+
     ./hardware-configuration.nix
+    ./modules
     ./secrets.nix
+    ./services.nix
 
-    editor-nvim
-    mixins-avahi
-    mixins-bluetooth
-    mixins-common
-    mixins-direnv
-    mixins-firefox
-    mixins-flameshot
-    mixins-fonts
-    mixins-fzf
-    mixins-gnupg
-    mixins-gtk
-    mixins-qutebrowser
-    mixins-mpv
-    mixins-node
-    mixins-notes
-    mixins-phpactor
-    mixins-pipewire
-    mixins-ranger
-    mixins-screenkey
-    mixins-scripts
-    mixins-starship
-    mixins-thunar
-    mixins-tmux
-    mixins-zram
-    mixins-zsh
-    profiles-dwm
-    profiles-xbanish
-
-    (import ../../modules/mixins/git.nix { inherit git; })
-
-    (import ../../modules/mixins/kanata.nix {
-      devices = [
-        "/dev/input/event1"
-      ];
-    })
-
-    users-opdavies
-
-    ./modules/cron.nix
-    ./modules/neomutt.nix
-    ./modules/newsboat
-    ./modules/ollama.nix
-    ./modules/wiki.nix
+    ../../users/opdavies.nix
   ];
+
+  nixosModules = {
+    core = {
+      bluetooth.enable = true;
+      openssh.enable = true;
+      pipewire.enable = true;
+      xbanish.enable = true;
+      zram.enable = true;
+    };
+
+    desktop = {
+      dconf.enable = true;
+      dwm.enable = true;
+      fonts.enable = true;
+      st.enable = true;
+      thunar.enable = true;
+    };
+  };
 
   boot = {
     loader = {
@@ -118,35 +92,4 @@ in
     zeroad
     zoom-us
   ];
-
-  services = {
-    auto-cpufreq.enable = true;
-    gvfs.enable = true;
-    power-profiles-daemon.enable = false;
-    printing.enable = true;
-    pulseaudio.enable = false;
-    throttled.enable = true;
-    thermald.enable = true;
-    upower.enable = true;
-
-    xserver = {
-      enable = true;
-
-      displayManager.startx.enable = true;
-
-      xkb = {
-        layout = "gb";
-        variant = "";
-      };
-    };
-  };
-
-  programs.dconf.enable = true;
-
-  home-manager.users.opdavies = {
-    xdg.configFile."pam-gnupg".text = ''
-      098EE055DAD2B9CB68154C6759DD38292D2273B6
-      1E21B58D69FFEFAD077F152A50FEA938A3413F50
-    '';
-  };
 }

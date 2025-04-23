@@ -1,19 +1,26 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = with inputs.self.nixosModules; [
+  imports = [
+    ../common
+
     ./hardware-configuration.nix
     ./hardware.nix
-    ./programs.nix
     ./secrets.nix
     ./services
     ./users.nix
 
-    mixins-common
-    mixins-zram
-
-    users-opdavies
+    ../../users/opdavies.nix
   ];
+
+  nixosModules = {
+    core = {
+      bluetooth.enable = true;
+      zram.enable = true;
+    };
+
+    desktop.dconf.enable = true;
+  };
 
   boot = {
     loader = {
