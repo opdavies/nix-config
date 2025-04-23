@@ -21,7 +21,6 @@ stdenv.mkDerivation {
 
   patches = [
     ./move-default-script.patch
-    ./add-tmux-file.patch
 
     (fetchpatch {
       url = "https://patch-diff.githubusercontent.com/raw/ThePrimeagen/tmux-sessionizer/pull/2.patch";
