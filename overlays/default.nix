@@ -14,8 +14,7 @@
   };
 
   stable-packages = final: _prev: {
-    nixpkgs-2411 = import inputs.nixpkgs-2411 {
-      config.allowUnfree = true;
+    stable = import inputs.nixpkgs-stable {
       system = final.system;
     };
   };
