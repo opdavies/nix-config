@@ -13,7 +13,15 @@
   ];
 
   nixosModules = {
-    cli.password-store.enable = true;
+    cli.password-store = {
+      enable = true;
+
+      extensions = with pkgs.passExtensions; [
+        pass-audit
+        pass-otp
+        pass-update
+      ];
+    };
 
     core = {
       bluetooth.enable = true;
