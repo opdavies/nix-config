@@ -43,16 +43,6 @@
     fastfetch
     mermaid-cli
     mkcert
-    passmenu-otp
-
-    (pass.withExtensions (
-      e: with e; [
-        passExtensions.pass-audit
-        passExtensions.pass-import
-        passExtensions.pass-otp
-        passExtensions.pass-update
-      ]
-    ))
   ];
 
   home-manager = {

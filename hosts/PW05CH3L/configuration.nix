@@ -10,6 +10,7 @@
   nixosModules = {
     cli = {
       docker.enable = true;
+      password-store.enable = true;
     };
   };
 

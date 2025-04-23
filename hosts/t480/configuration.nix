@@ -13,6 +13,8 @@
   ];
 
   nixosModules = {
+    cli.password-store.enable = true;
+
     core = {
       bluetooth.enable = true;
       openssh.enable = true;
