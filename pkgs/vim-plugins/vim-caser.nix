@@ -4,6 +4,8 @@ with pkgs;
 
 vimUtils.buildVimPlugin {
   name = "vim-caser";
+  version = "2021-07-27";
+
   src = fetchFromGitHub {
     owner = "arthurxavierx";
     repo = "vim-caser";

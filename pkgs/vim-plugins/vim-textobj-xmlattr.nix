@@ -4,6 +4,8 @@ with pkgs;
 
 vimUtils.buildVimPlugin {
   name = "vim-textobj-xmlattr";
+  version = "unstable-2016-06-03";
+
   src = fetchFromGitHub {
     owner = "whatyouhide";
     repo = "vim-textobj-xmlattr";
