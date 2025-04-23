@@ -47,11 +47,14 @@
     };
 
     desktop = {
-      firefox.enable = true;
+      browsers = {
+        firefox.enable = true;
+        qutebrowser.enable = true;
+      };
+
       flameshot.enable = true;
       gtk.enable = true;
-      mpv.enable = true;
-      qutebrowser.enable = true;
+      media.mpv.enable = true;
     };
   };
 

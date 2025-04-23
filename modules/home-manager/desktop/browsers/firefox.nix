@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.desktop.firefox;
+  cfg = config.homeManagerModules.desktop.browsers.firefox;
 in
 {
-  options.homeManagerModules.desktop.firefox.enable = mkEnableOption "Enable firefox";
+  options.homeManagerModules.desktop.browsers.firefox.enable = mkEnableOption "Enable firefox";
 
   config = mkIf cfg.enable {
     programs.firefox.enable = false;

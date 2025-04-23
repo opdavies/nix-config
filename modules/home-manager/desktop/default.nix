@@ -1,10 +1,9 @@
 {
   imports = [
-    ./firefox.nix
+    ./browsers
     ./flameshot.nix
     ./gtk.nix
-    ./qutebrowser.nix
-    ./mpv.nix
+    ./media
     ./screenkey.nix
   ];
 }

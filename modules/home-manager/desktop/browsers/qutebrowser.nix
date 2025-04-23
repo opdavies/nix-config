@@ -3,10 +3,11 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.desktop.qutebrowser;
+  cfg = config.homeManagerModules.desktop.browsers.qutebrowser;
 in
 {
-  options.homeManagerModules.desktop.qutebrowser.enable = mkEnableOption "Enable qutebrowser";
+  options.homeManagerModules.desktop.browsers.qutebrowser.enable =
+    mkEnableOption "Enable qutebrowser";
 
   config = mkIf cfg.enable {
     programs.qutebrowser = {
