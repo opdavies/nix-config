@@ -4,12 +4,12 @@ with pkgs;
 
 stdenv.mkDerivation {
   pname = "passmenu-otp";
-  version = "0.1.0";
+  version = "unstable-2019-04-21";
 
   src = fetchFromGitHub {
     owner = "petrmanek";
     repo = "passmenu-otp";
-    rev = "master";
+    rev = "2623a0845cc2bb68b636a743862693fce9ec8b02";
     sha256 = "sha256-2EGomeK/p3uVfgho5xGR11ovJQ2q3cPZoFG+z88DyxA=";
   };
 

@@ -4,12 +4,12 @@ with pkgs;
 
 stdenv.mkDerivation {
   pname = "tmux-sessionizer";
-  version = "0.1.0";
+  version = "unstable-2024-10-30";
 
   src = fetchFromGitHub {
     owner = "theprimeagen";
     repo = "tmux-sessionizer";
-    rev = "master";
+    rev = "6ebd16e2e30a8c0ebd77f0c2ce18cb46db8397fa";
     sha256 = "bZXt9TyMU1Ed/WR0/ahMQ4oyIi6yXLKnXKYPPNBt/s4=";
   };
 
