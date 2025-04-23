@@ -23,8 +23,6 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      passmenu-otp
-
       (pass.withExtensions (e: with e; cfg.extensions))
     ];
   };
