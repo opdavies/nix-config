@@ -3,7 +3,7 @@
 let
   inherit (pkgs) callPackage;
 
-  vimPlugins = callPackage ./vim-plugins { inherit callPackage; };
+  vimPlugins = callPackage ./vim-plugins { };
 in
 {
   backup-websites = callPackage ./backup-websites.nix { };

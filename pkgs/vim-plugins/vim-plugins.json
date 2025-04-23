@@ -1,0 +1,50 @@
+{
+  "conf-vim": {
+    "owner": "tjdevries",
+    "repo": "conf.vim",
+    "rev": "a716df0fd5d7ba558c07dac2e07f05d5eba11afb",
+    "version": "unstable-2017-10-09",
+    "hash": "sha256-AjiTJsoim0BAnyfqk1IQzNsa6jhFM2+A66E7q9sJqz0="
+  },
+
+  "edit-alternate-vim": {
+    "owner": "tjdevries",
+    "repo": "edit_alternate.vim",
+    "rev": "ef3019115d9bb7ffd691d2859eda213dd99e0b0a",
+    "version": "unstable-2021-10-25",
+    "hash": "sha256-mEKnqYAhgrdxPRoKf4S4yYecdFIHGg8bDxpqPuC1+S4="
+  },
+
+  "standard-vim": {
+    "owner": "tjdevries",
+    "repo": "standard.vim",
+    "rev": "b333ef9a9cf6cf66536deda017a542843613fa75",
+    "version": "unstable-2018-10-15",
+    "hash": "sha256-9VwkvV1Dv6cE4uDkPp36DozjWJOclDR883yDMYw000E="
+  },
+
+  "vim-caser": {
+    "owner": "arthurxavierx",
+    "repo": "vim-caser",
+    "rev": "6bc9f41d170711c58e0157d882a5fe8c30f34bf6",
+    "version": "unstable-2021-07-27",
+    "hash": "sha256-PXAY01O/cHvAdWx3V/pyWFeiV5qJGvLcAKhl5DQc0Ps="
+  },
+
+  "vim-textobj-indent": {
+    "owner": "kana",
+    "repo": "vim-textobj-indent",
+    "rev": "v0.0.6",
+    "version": "0.0.6",
+    "hash": "sha256-oFzUPG+IOkbKZ2gU/kduQ3G/LsLDlEjFhRP0BHBE+1Q="
+  },
+
+  "vim-textobj-xmlattr": {
+    "owner": "whatyouhide",
+    "repo": "vim-textobj-xmlattr",
+    "rev": "694a297f1d75fd527e87da9769f3c6519a87ebb1",
+    "version": "unstable-2016-06-03",
+    "hash": "sha256-+91FVP95oh00flINdltqx6qJuijYo56tHIh3J098G2Q="
+  }
+}
+
