@@ -10,8 +10,7 @@ with lib;
         (pkgs.writeShellApplication (
           let
             remoteIpAddresses = [
-              "116.203.11.255"
-              "192.168.1.116"
+              "nixedo.local"
             ];
 
             wikiPath = "${config.xdg.userDirs.documents}/wiki";
