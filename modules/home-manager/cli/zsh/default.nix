@@ -40,7 +40,7 @@ in
         fi
       '';
 
-      initExtra = ''
+      initContent = ''
         background() {
           for ((i=2;i<=$#;i++)); do
             ''${@[1]} ''${@[$i]} &> /dev/null &
