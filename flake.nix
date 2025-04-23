@@ -16,7 +16,6 @@
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
-    nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
