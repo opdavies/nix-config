@@ -168,7 +168,7 @@ in
     };
 
     home = {
-      packages = with pkgs; [ git-instafix ];
+      packages = with pkgs; [ nixpkgs-2411.git-instafix ];
 
       sessionVariables = {
         GIT_INSTAFIX_UPSTREAM = "origin/main";
