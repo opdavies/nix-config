@@ -1,3 +1,5 @@
+{ config, options, ... }:
+
 {
   imports = [ ../common ];
 
@@ -16,7 +18,24 @@
       ranger.enable = true;
       starship.enable = true;
       tmux.enable = true;
-      tmux-sessionizer.enable = true;
+
+      tmux-sessionizer = {
+        enable = true;
+
+        directories =
+          let
+            inherit (config.xdg.userDirs) documents extraConfig;
+
+            repos = extraConfig.XDG_REPOS_DIR;
+          in
+          options.homeManagerModules.cli.tmux-sessionizer.directories.default
+          ++ [
+            repos
+            "${repos}/*"
+            documents
+          ];
+      };
+
       zsh.enable = true;
     };
 
