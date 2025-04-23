@@ -32,9 +32,4 @@
   networking.networkmanager.enable = true;
 
   users.groups.media = { };
-
-  networking.firewall.allowedTCPPorts = [
-    80
-    443
-  ];
 }
