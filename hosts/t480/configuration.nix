@@ -78,7 +78,6 @@
     gimp
     gscan2pdf
     gtypist
-    handbrake
     hunspellDicts.en-gb-large
     isync
     kdePackages.kdenlive
