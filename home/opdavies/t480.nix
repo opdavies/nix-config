@@ -54,7 +54,11 @@
 
       flameshot.enable = true;
       gtk.enable = true;
-      media.mpv.enable = true;
+
+      media = {
+        makemkv.enable = true;
+        mpv.enable = true;
+      };
     };
   };
 

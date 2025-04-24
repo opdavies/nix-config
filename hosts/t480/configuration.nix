@@ -35,6 +35,7 @@
       dconf.enable = true;
       dwm.enable = true;
       fonts.enable = true;
+      media.makemkv.enable = true;
       st.enable = true;
       thunar.enable = true;
     };

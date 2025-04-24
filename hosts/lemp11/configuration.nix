@@ -16,6 +16,8 @@
       bluetooth.enable = true;
       zram.enable = true;
     };
+
+    desktop.media.makemkv.enable = true;
   };
 
   # Bootloader.
