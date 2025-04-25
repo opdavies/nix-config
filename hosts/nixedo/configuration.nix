@@ -32,5 +32,6 @@
 
   networking.networkmanager.enable = true;
 
+  users.users.opdavies.extraGroups = [ "media" ];
   users.groups.media = { };
 }
