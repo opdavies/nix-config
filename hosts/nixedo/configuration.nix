@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ./modules
     ./secrets.nix
+    ./services
 
     ../../users/opdavies.nix
   ];
