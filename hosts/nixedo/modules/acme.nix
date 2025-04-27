@@ -14,6 +14,7 @@
 
         extraDomainNames = [
           "2020.oliverdavies.uk"
+          "audiobookshelf.oliverdavies.uk"
           "bootstrap-with-tailwind.oliverdavies.uk"
           "code.oliverdavies.uk"
           "eric.oliverdavies.uk"

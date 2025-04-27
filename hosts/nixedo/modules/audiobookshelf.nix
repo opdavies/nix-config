@@ -1,5 +1,8 @@
 { config, ... }:
 
+let
+  cfg = config.services.audiobookshelf;
+in
 {
   services = {
     audiobookshelf = {
@@ -8,10 +11,22 @@
       port = 4001;
     };
 
-    caddy.virtualHosts."audiobookshelf.oliverdavies.uk" = {
+    nginx.virtualHosts."audiobookshelf.oliverdavies.uk" = {
+      forceSSL = true;
       useACMEHost = "oliverdavies.uk";
 
-      extraConfig = "reverse_proxy localhost:${toString config.services.audiobookshelf.port}";
+      locations."/" = {
+        proxyPass = "http://localhost:${toString cfg.port}";
+
+        extraConfig = ''
+          proxy_set_header Host $host;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Host $http_host;
+          proxy_set_header X-Forwarded-Proto $scheme;
+          proxy_set_header X-Forwarded-Protocol $scheme;
+          proxy_set_header X-Real-IP $remote_addr;
+        '';
+      };
     };
   };
 }
