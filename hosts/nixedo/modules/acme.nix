@@ -12,7 +12,12 @@
         environmentFile = config.age.secrets.cloudflare.path;
         webroot = null;
 
-        extraDomainNames = [ "*.oliverdavies.uk" ];
+        extraDomainNames = [
+          "code.oliverdavies.uk"
+          "jellyfin.oliverdavies.uk"
+          "nixedo.oliverdavies.uk"
+          "www.oliverdavies.uk"
+        ];
       };
     };
   };
