@@ -3,7 +3,7 @@
     enable = true;
     openFirewall = true;
 
-    shares = {
+    settings = {
       home = {
         path = "/home/opdavies";
         browseable = true;
