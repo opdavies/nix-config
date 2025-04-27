@@ -21,6 +21,7 @@
           "jellyfin.oliverdavies.uk"
           "luke.oliverdavies.uk"
           "nixedo.oliverdavies.uk"
+          "paperless.oliverdavies.uk"
           "phpsw-sculpin-demo.oliverdavies.uk"
           "rebuilding-acquia.oliverdavies.uk"
           "rebuilding-bartik.oliverdavies.uk"
