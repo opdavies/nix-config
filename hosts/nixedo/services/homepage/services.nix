@@ -9,4 +9,16 @@
       }
     ];
   }
+
+  {
+    "Services" = [
+      {
+        "Paperless-ngx" = {
+          description = "Document management system";
+          href = services.paperless.settings.PAPERLESS_URL;
+          icon = "paperless";
+        };
+      }
+    ];
+  }
 ]
