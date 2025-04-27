@@ -47,5 +47,7 @@ in
     };
   };
 
+  users.users.${config.services.nginx.user}.extraGroups = [ "acme" ];
+
   imports = [ ./www.oliverdavies.uk.nix ];
 }
