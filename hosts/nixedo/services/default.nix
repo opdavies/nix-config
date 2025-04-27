@@ -1,5 +1,6 @@
 {
   imports = [
+    ./homepage
     ./samba.nix
   ];
 }
