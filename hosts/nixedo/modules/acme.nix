@@ -23,6 +23,7 @@
           "luke.oliverdavies.uk"
           "nixedo.oliverdavies.uk"
           "paperless.oliverdavies.uk"
+          "photos.oliverdavies.uk"
           "phpsw-sculpin-demo.oliverdavies.uk"
           "rebuilding-acquia.oliverdavies.uk"
           "rebuilding-bartik.oliverdavies.uk"

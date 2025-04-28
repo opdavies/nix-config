@@ -13,6 +13,15 @@
       }
 
       {
+        "Immich" = {
+          href = "https://photos.oliverdavies.uk";
+          icon = "immich";
+          description = "Self-hosted photo and video management solution";
+          siteMonitor = "http://localhost:${toString config.services.immich.port}";
+        };
+      }
+
+      {
         "Audiobookshelf" = {
           href = "https://audiobookshelf.oliverdavies.uk";
           icon = "audiobookshelf";

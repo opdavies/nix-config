@@ -1,19 +1,42 @@
-{ config, pkgs, ... }:
-
 {
-  services = {
-    immich = {
-      enable = true;
-      group = "media";
-      mediaLocation = "/mnt/media/immich";
-    };
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
-    caddy.virtualHosts."immich.oliverdavies.uk" = {
-      useACMEHost = "oliverdavies.uk";
+with lib;
 
-      extraConfig = "reverse_proxy localhost:${toString config.services.immich.port}";
-    };
+let
+  cfg = config.nixosModules.homelab.immich;
+in
+{
+  options.nixosModules.homelab.immich = {
+    enable = mkEnableOption "Enable immich";
   };
 
-  environment.systemPackages = [ pkgs.immich-cli ];
+  config = mkIf cfg.enable {
+    services = {
+      immich = {
+        enable = true;
+        group = "media";
+        mediaLocation = "/mnt/media/immich";
+      };
+
+      nginx.virtualHosts."photos.oliverdavies.uk" = {
+        forceSSL = true;
+        useACMEHost = "oliverdavies.uk";
+
+        locations."/" = {
+          proxyPass = "http://localhost:${toString config.services.immich.port}";
+          recommendedProxySettings = true;
+        };
+      };
+    };
+
+    environment.systemPackages = with pkgs; [
+      immich-cli
+      immich-go
+    ];
+  };
 }

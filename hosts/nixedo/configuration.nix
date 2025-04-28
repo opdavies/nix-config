@@ -17,6 +17,7 @@
     core.openssh.enable = true;
     cli.podman.enable = true;
     desktop.dconf.enable = true;
+    homelab.immich.enable = true;
   };
 
   services.logind.lidSwitchExternalPower = "ignore";
