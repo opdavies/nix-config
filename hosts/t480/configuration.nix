@@ -72,8 +72,11 @@
     backup-websites
     brightnessctl
     build-glove80
+    cdrkit
     cpufrequtils
     displayselect
+    dvdbackup
+    dvdplusrwtools
     ffmpegthumbnailer
     gimp
     gscan2pdf
