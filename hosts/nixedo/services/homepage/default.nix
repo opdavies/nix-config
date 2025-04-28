@@ -19,7 +19,10 @@
         forceSSL = true;
         useACMEHost = "oliverdavies.uk";
 
-        locations."/".proxyPass = "http://localhost:${toString cfg.listenPort}";
+        locations."/" = {
+          proxyPass = "http://localhost:${toString cfg.listenPort}";
+          recommendedProxySettings = true;
+        };
       };
     };
 }
