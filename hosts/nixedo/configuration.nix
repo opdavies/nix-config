@@ -34,5 +34,8 @@
   networking.networkmanager.enable = true;
 
   users.users.opdavies.extraGroups = [ "media" ];
+
+  powerManagement.powertop.enable = true;
+
   users.groups.media = { };
 }
