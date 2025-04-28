@@ -35,6 +35,15 @@
   {
     "Services" = [
       {
+        "Uptime Kuma" = {
+          description = "A fancy self-hosted monitoring tool";
+          href = "https://uptime.oliverdavies.uk";
+          icon = "uptime-kuma";
+          siteMonitor = "http://localhost:${toString config.services.uptime-kuma.settings.PORT}";
+        };
+      }
+
+      {
         "Paperless-ngx" =
           let
             cfg = config.services.paperless;

@@ -31,6 +31,7 @@
           "rebuilding-symfony.oliverdavies.uk"
           "tailwindcss-demo.oliverdavies.uk"
           "talking-drupal-tailwindcss.oliverdavies.uk"
+          "uptime.oliverdavies.uk"
           "wp-tailwind.oliverdavies.uk"
           "www.oliverdavies.uk"
           "zet.oliverdavies.uk"
