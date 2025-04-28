@@ -1,3 +1,5 @@
+{ config, ... }:
+
 let
   sites = import ./sites.nix;
 in
