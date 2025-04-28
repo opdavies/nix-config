@@ -29,6 +29,7 @@ in
 
         locations."/" = {
           proxyPass = "http://localhost:${toString config.services.immich.port}";
+          proxyWebsockets = true;
           recommendedProxySettings = true;
         };
       };
