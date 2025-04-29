@@ -11,7 +11,14 @@ let
   cfg = config.homeManagerModules.desktop.browsers.firefox;
 in
 {
-  options.homeManagerModules.desktop.browsers.firefox.enable = mkEnableOption "Enable firefox";
+  options.homeManagerModules.desktop.browsers.firefox = {
+    enable = mkEnableOption "Enable firefox";
+
+    homepageUrl = mkOption {
+      description = "The homepage URL.";
+      type = types.nullOr types.str;
+    };
+  };
 
   config = mkIf cfg.enable {
     programs.firefox.enable = false;
@@ -68,6 +75,8 @@ in
         PasswordManagerEnabled = false;
 
         Preferences = {
+          "browser.newtabpage.enabled" = false;
+          "browser.startup.homepage" = cfg.homepageUrl;
           "cookiebanners.service.mode" = 2; # Block cookie banners
           "cookiebanners.service.mode.privateBrowsing" = 2; # Block cookie banners in private browsing
           "privacy.donottrackheader.enabled" = true;

@@ -48,7 +48,12 @@
 
     desktop = {
       browsers = {
-        firefox.enable = true;
+        firefox = {
+          enable = true;
+
+          homepageUrl = "https://nixedo.oliverdavies.uk";
+        };
+
         qutebrowser.enable = true;
       };
 
