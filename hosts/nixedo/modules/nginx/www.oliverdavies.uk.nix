@@ -60,7 +60,11 @@ in
         '';
       };
 
-      "oliverdavies.uk".globalRedirect = "www.oliverdavies.uk";
+      "oliverdavies.uk" = {
+        forceSSL = true;
+        globalRedirect = "www.oliverdavies.uk";
+        useACMEHost = "oliverdavies.uk";
+      };
     };
 
     cloudflared.tunnels."e1514105-327f-4984-974e-e2fbaca76466" = {
