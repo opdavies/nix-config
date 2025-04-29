@@ -81,7 +81,10 @@
         "${personal}/opentofu-dns"
       ];
 
-    schedule.enable = true;
+    schedule = {
+      enable = true;
+      time = "daily";
+    };
   };
 
   xdg.configFile."pam-gnupg".text = ''
