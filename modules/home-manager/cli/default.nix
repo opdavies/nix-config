@@ -1,6 +1,7 @@
 {
   imports = [
     ./bluetuith.nix
+    ./dev-commit.nix
     ./direnv.nix
     ./fzf.nix
     ./git.nix
