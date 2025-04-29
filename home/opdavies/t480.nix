@@ -77,6 +77,7 @@
       in
       [
         "${personal}/nix-config"
+        "${personal}/oliverdavies.uk-tome"
         "${personal}/opentofu-dns"
       ];
 
