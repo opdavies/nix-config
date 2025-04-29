@@ -7,23 +7,29 @@ let
     map (r: "rewrite ^${r.from}/?$ ${r.to} redirect;") redirects
   );
 
-  tomePaths = [
-    "core"
-    "examples"
-    "sites/default/files"
-    "themes/custom/opdavies"
-    "tome-test"
-  ];
+  tome = {
+    root = "/var/www/vhosts/website-tome";
+
+    paths = [
+      "core"
+      "examples"
+      "sites/default/files"
+      "themes/custom/opdavies"
+      "tome-test"
+    ];
+
+    port = 8098;
+  };
 
   tomeLocations = builtins.listToAttrs (
     map (path: {
       name = "/${path}";
 
       value = {
-        root = "/var/www/vhosts/website-tome";
+        root = tome.root;
         tryFiles = "$uri $uri.html $uri/index.html =404";
       };
-    }) tomePaths
+    }) tome.paths
   );
 in
 {
@@ -65,11 +71,34 @@ in
         globalRedirect = "www.oliverdavies.uk";
         useACMEHost = "oliverdavies.uk";
       };
+
+      "tome.oliverdavies.uk" = {
+        listen = [
+          {
+            addr = "localhost";
+            port = tome.port;
+          }
+        ];
+
+        locations."/".tryFiles = "$uri $uri.html $uri/index.html =404";
+
+        root = tome.root;
+
+        extraConfig = ''
+          add_header X-Robots-Tag "noindex, nofollow";
+
+          port_in_redirect off;
+
+          # Remove trailing slashes.
+          rewrite ^/(.*)/$ /$1 permanent;
+        '';
+      };
     };
 
     cloudflared.tunnels."e1514105-327f-4984-974e-e2fbaca76466" = {
       ingress = {
         "oliverdavies.uk" = "http://localhost:${toString port}";
+        "tome.oliverdavies.uk" = "http://localhost:${toString tome.port}";
         "www.oliverdavies.uk" = "http://localhost:${toString port}";
       };
     };
