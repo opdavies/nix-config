@@ -35,7 +35,20 @@ in
         listenPort = cfg.port;
         openFirewall = true;
 
+        customCSS = ''
+          div#footer {
+            display: none;
+          }
+        '';
+
         services = (import ./services.nix { inherit config lib; });
+
+        settings = {
+          headerStyle = "clean";
+          hideVersion = "true";
+          statusStyle = "dot";
+        };
+
         widgets = import ./widgets.nix;
       };
 
