@@ -33,6 +33,7 @@
           "talking-drupal-tailwindcss.oliverdavies.uk"
           "tome.oliverdavies.uk"
           "uptime.oliverdavies.uk"
+          "vaultwarden.oliverdavies.uk"
           "wp-tailwind.oliverdavies.uk"
           "www.oliverdavies.uk"
           "zet.oliverdavies.uk"

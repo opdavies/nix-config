@@ -23,6 +23,8 @@
       jellyfin.enable = true;
       paperless.enable = true;
       uptime-kuma.enable = true;
+
+      vaultwarden.enable = true;
     };
   };
 }
