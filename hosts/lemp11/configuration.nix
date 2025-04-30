@@ -54,6 +54,8 @@
   system.autoUpgrade.enable = true;
 
   environment.systemPackages = with pkgs; [
+    fastfetch
+    htop
     libreoffice
   ];
 }
