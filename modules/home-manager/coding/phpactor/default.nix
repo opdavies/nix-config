@@ -5,13 +5,15 @@
   ...
 }:
 
+with lib;
+
 let
   cfg = config.features.coding.phpactor;
 in
 {
   options.features.coding.phpactor.enable = lib.mkEnableOption "Enable phpactor";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       phpactor
     ];
