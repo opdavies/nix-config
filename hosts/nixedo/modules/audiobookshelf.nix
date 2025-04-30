@@ -15,6 +15,26 @@ in
       default = "audiobookshelf.${homelab.baseDomain}";
       type = types.str;
     };
+
+    homepage.name = mkOption {
+      default = "Audiobookshelf";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "Self-hosted audiobook and podcast server";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "audiobookshelf";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Media";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {

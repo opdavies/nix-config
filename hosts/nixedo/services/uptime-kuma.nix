@@ -15,6 +15,26 @@ in
       default = "uptime.${homelab.baseDomain}";
       type = types.str;
     };
+
+    homepage.name = mkOption {
+      default = "Uptime Kuma";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "A fancy self-hosted monitoring tool";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "uptime-kuma";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Services";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {

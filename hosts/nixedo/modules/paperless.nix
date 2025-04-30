@@ -15,6 +15,26 @@ in
       default = "${service}.${homelab.baseDomain}";
       type = types.str;
     };
+
+    homepage.name = mkOption {
+      default = "Paperless-ngx";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "Document management system";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "paperless";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Services";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {

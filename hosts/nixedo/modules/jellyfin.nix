@@ -15,6 +15,26 @@ in
       default = "${service}.${homelab.baseDomain}";
       type = types.str;
     };
+
+    homepage.name = mkOption {
+      default = "Jellyfin";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "The Free Software Media System";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "jellyfin";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Media";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {

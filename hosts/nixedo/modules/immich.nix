@@ -20,6 +20,26 @@ in
       default = "photos.${homelab.baseDomain}";
       type = types.str;
     };
+
+    homepage.name = mkOption {
+      default = "Immich";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "Self-hosted photo and video management solution";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "immich";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Media";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {

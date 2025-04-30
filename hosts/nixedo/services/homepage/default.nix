@@ -35,7 +35,7 @@ in
         listenPort = cfg.port;
         openFirewall = true;
 
-        services = (import ./services.nix { inherit config; });
+        services = (import ./services.nix { inherit config lib; });
         widgets = import ./widgets.nix;
       };
 
