@@ -5,6 +5,7 @@
     power-profiles-daemon.enable = false;
     printing.enable = true;
     pulseaudio.enable = false;
+    tailscale.enable = true;
     throttled.enable = true;
     thermald.enable = true;
     upower.enable = true;
