@@ -36,8 +36,17 @@ in
         openFirewall = true;
 
         customCSS = ''
+          #information-widgets {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+          }
+
           div#footer {
             display: none;
+          }
+
+          .services-group {
+            margin-bottom: 3rem;
           }
         '';
 
@@ -46,11 +55,12 @@ in
         settings = {
           headerStyle = "clean";
           hideVersion = "true";
+          layout = (import ./layout.nix);
           statusStyle = "dot";
         };
-
-        widgets = import ./widgets.nix;
       };
+
+      glances.enable = true;
 
       nginx.virtualHosts.${cfg.url} = {
         forceSSL = true;

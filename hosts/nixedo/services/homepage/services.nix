@@ -29,4 +29,4 @@ let
         });
   });
 in
-services
+services ++ [ (import ./glances.nix { inherit config; }) ]
