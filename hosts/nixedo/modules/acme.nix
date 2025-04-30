@@ -12,32 +12,36 @@
         environmentFile = config.age.secrets.cloudflare.path;
         webroot = null;
 
-        extraDomainNames = [
-          "2020.oliverdavies.uk"
-          "audiobookshelf.oliverdavies.uk"
-          "bootstrap-with-tailwind.oliverdavies.uk"
-          "code.oliverdavies.uk"
-          "eric.oliverdavies.uk"
-          "florida-drupalcamp-tailwind-css.oliverdavies.uk"
-          "jellyfin.oliverdavies.uk"
-          "luke.oliverdavies.uk"
-          "nixedo.oliverdavies.uk"
-          "paperless.oliverdavies.uk"
-          "photos.oliverdavies.uk"
-          "phpsw-sculpin-demo.oliverdavies.uk"
-          "rebuilding-acquia.oliverdavies.uk"
-          "rebuilding-bartik.oliverdavies.uk"
-          "rebuilding-bristol-js.oliverdavies.uk"
-          "rebuilding-symfony.oliverdavies.uk"
-          "tailwindcss-demo.oliverdavies.uk"
-          "talking-drupal-tailwindcss.oliverdavies.uk"
-          "tome.oliverdavies.uk"
-          "uptime.oliverdavies.uk"
-          "vaultwarden.oliverdavies.uk"
-          "wp-tailwind.oliverdavies.uk"
-          "www.oliverdavies.uk"
-          "zet.oliverdavies.uk"
-        ];
+        extraDomainNames =
+          let
+            baseDomain = "oliverdavies.uk";
+          in
+          [
+            "2020.${baseDomain}"
+            "audiobookshelf.${baseDomain}"
+            "bootstrap-with-tailwind.${baseDomain}"
+            "code.${baseDomain}"
+            "eric.${baseDomain}"
+            "florida-drupalcamp-tailwind-css.${baseDomain}"
+            "jellyfin.${baseDomain}"
+            "luke.${baseDomain}"
+            "nixedo.${baseDomain}"
+            "paperless.${baseDomain}"
+            "photos.${baseDomain}"
+            "phpsw-sculpin-demo.${baseDomain}"
+            "rebuilding-acquia.${baseDomain}"
+            "rebuilding-bartik.${baseDomain}"
+            "rebuilding-bristol-js.${baseDomain}"
+            "rebuilding-symfony.${baseDomain}"
+            "tailwindcss-demo.${baseDomain}"
+            "talking-drupal-tailwindcss.${baseDomain}"
+            "tome.${baseDomain}"
+            "uptime.${baseDomain}"
+            "vaultwarden.${baseDomain}"
+            "wp-tailwind.${baseDomain}"
+            "www.${baseDomain}"
+            "zet.${baseDomain}"
+          ];
       };
     };
   };
