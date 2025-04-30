@@ -1,23 +1,34 @@
-{ config, ... }:
+{ config, lib, ... }:
+
+with lib;
 
 let
-  cfg = config.services.audiobookshelf;
+  cfg = homelab.services.${service};
+  homelab = config.nixosModules.homelab;
+  service = "audiobookshelf";
 in
 {
-  services = {
-    audiobookshelf = {
-      enable = true;
+  options.nixosModules.homelab.services.${service} = {
+    enable = mkEnableOption "Enable ${service}";
 
-      port = 4001;
+    url = mkOption {
+      default = "audiobookshelf.${homelab.baseDomain}";
+      type = types.str;
     };
+  };
 
-    nginx.virtualHosts."audiobookshelf.oliverdavies.uk" = {
-      forceSSL = true;
-      useACMEHost = "oliverdavies.uk";
+  config = mkIf cfg.enable {
+    services = {
+      ${service}.enable = true;
 
-      locations."/" = {
-        proxyPass = "http://localhost:${toString cfg.port}";
-        recommendedProxySettings = true;
+      nginx.virtualHosts.${cfg.url} = {
+        forceSSL = true;
+        useACMEHost = homelab.baseDomain;
+
+        locations."/" = {
+          proxyPass = "http://localhost:${toString cfg.port}";
+          recommendedProxySettings = true;
+        };
       };
     };
   };

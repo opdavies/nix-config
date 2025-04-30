@@ -8,24 +8,31 @@
 with lib;
 
 let
-  cfg = config.nixosModules.homelab.immich;
+  cfg = homelab.services.${service};
+  homelab = config.nixosModules.homelab;
+  service = "immich";
 in
 {
-  options.nixosModules.homelab.immich = {
-    enable = mkEnableOption "Enable immich";
+  options.nixosModules.homelab.services.${service} = {
+    enable = mkEnableOption "Enable ${service}";
+
+    url = mkOption {
+      default = "photos.${homelab.baseDomain}";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {
     services = {
-      immich = {
+      ${service} = {
         enable = true;
         group = "media";
-        mediaLocation = "/mnt/media/immich";
+        mediaLocation = "/mnt/media/${service}";
       };
 
-      nginx.virtualHosts."photos.oliverdavies.uk" = {
+      nginx.virtualHosts."${cfg.url}" = {
         forceSSL = true;
-        useACMEHost = "oliverdavies.uk";
+        useACMEHost = homelab.baseDomain;
 
         locations."/" = {
           proxyPass = "http://localhost:${toString config.services.immich.port}";

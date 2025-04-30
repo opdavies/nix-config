@@ -1,30 +1,43 @@
-{ config, ... }:
+{ config, lib, ... }:
 
+with lib;
+
+let
+  cfg = homelab.services.paperless;
+  homelab = config.nixosModules.homelab;
+  service = "paperless";
+in
 {
-  services =
-    let
-      cfg = config.services.paperless;
-      hostname = "paperless.oliverdavies.uk";
-    in
-    {
-      paperless = {
+  options.nixosModules.homelab.services.${service} = {
+    enable = mkEnableOption "Enable ${service}";
+
+    url = mkOption {
+      default = "${service}.${homelab.baseDomain}";
+      type = types.str;
+    };
+  };
+
+  config = mkIf cfg.enable {
+    services = {
+      ${service} = {
         enable = true;
 
-        dataDir = "/mnt/media/paperless";
+        dataDir = "/mnt/media/${service}";
 
         settings = {
-          PAPERLESS_URL = "https://${hostname}";
+          PAPERLESS_URL = "https://${cfg.url}";
         };
       };
 
-      nginx.virtualHosts."${hostname}" = {
+      nginx.virtualHosts."${cfg.url}" = {
         forceSSL = true;
-        useACMEHost = "oliverdavies.uk";
+        useACMEHost = homelab.baseDomain;
 
         locations."/" = {
-          proxyPass = "http://localhost:${toString cfg.port}";
+          proxyPass = "http://localhost:${toString config.services.${service}.port}";
           recommendedProxySettings = true;
         };
       };
     };
+  };
 }

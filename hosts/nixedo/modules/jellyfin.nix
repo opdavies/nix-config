@@ -1,22 +1,38 @@
+{ config, lib, ... }:
+
+with lib;
+
+let
+  cfg = homelab.services.${service};
+  homelab = config.nixosModules.homelab;
+  service = "jellyfin";
+in
 {
-  services =
-    let
-      port = 8096;
-    in
-    {
-      jellyfin = {
+  options.nixosModules.homelab.services.${service} = {
+    enable = mkEnableOption "Enable ${service}";
+
+    url = mkOption {
+      default = "${service}.${homelab.baseDomain}";
+      type = types.str;
+    };
+  };
+
+  config = mkIf cfg.enable {
+    services = {
+      ${service} = {
         enable = true;
-        openFirewall = true;
+
+        configDir = "/mnt/media/${service}";
         group = "media";
-        configDir = "/mnt/media/jellyfin";
+        openFirewall = true;
       };
 
-      nginx.virtualHosts."jellyfin.oliverdavies.uk" = {
+      nginx.virtualHosts."${cfg.url}" = {
         forceSSL = true;
-        useACMEHost = "oliverdavies.uk";
+        useACMEHost = homelab.baseDomain;
 
         locations."/" = {
-          proxyPass = "http://localhost:${toString port}";
+          proxyPass = "http://localhost:8096";
           recommendedProxySettings = true;
 
           extraConfig = ''
@@ -25,4 +41,5 @@
         };
       };
     };
+  };
 }

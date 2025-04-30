@@ -1,4 +1,17 @@
+{ lib, ... }:
+
+with lib;
+
 {
+  options.nixosModules.homelab = {
+    enable = mkEnableOption "Enable homelab services and configuration";
+
+    baseDomain = mkOption {
+      description = "The base domain to use for this homelab.";
+      type = types.str;
+    };
+  };
+
   imports = [
     ./acme.nix
     ./audiobookshelf.nix

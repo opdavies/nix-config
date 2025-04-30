@@ -1,26 +1,42 @@
-{ config, ... }:
+{ config, lib, ... }:
 
+with lib;
+
+let
+  cfg = homelab.services.${service};
+  homelab = config.nixosModules.homelab;
+  service = "forgejo";
+in
 {
-  services = {
-    forgejo = {
-      enable = true;
-      stateDir = "/var/www/forgejo";
+  options.nixosModules.homelab.services.${service} = {
+    enable = mkEnableOption "Enable ${service}";
 
-      settings = {
-        server = {
-          DOMAIN = "code.oliverdavies.uk";
-          HTTP_PORT = 2223;
-        };
-
-        service = {
-          DISABLE_REGISTRATION = true;
-        };
-      };
+    cloudflared.tunnelId = mkOption {
+      example = "00000000-0000-0000-0000-000000000000";
+      type = types.str;
     };
 
-    cloudflared.tunnels."e1514105-327f-4984-974e-e2fbaca76466".ingress = {
-      "code.oliverdavies.uk" =
-        "http://localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
+    url = mkOption {
+      default = "code.${homelab.baseDomain}";
+      type = types.str;
+    };
+  };
+
+  config = mkIf cfg.enable {
+    services = {
+      ${service} = {
+        enable = true;
+        stateDir = "/var/www/${service}";
+
+        settings = {
+          server.DOMAIN = cfg.url;
+          service.DISABLE_REGISTRATION = true;
+        };
+      };
+
+      cloudflared.tunnels.${cfg.cloudflared.tunnelId}.ingress = {
+        ${cfg.url} = "http://localhost:${toString config.services.${service}.settings.server.HTTP_PORT}";
+      };
     };
   };
 }

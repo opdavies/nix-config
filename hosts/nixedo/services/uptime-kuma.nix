@@ -1,16 +1,34 @@
-{ config, ... }:
+{ config, lib, ... }:
 
+with lib;
+
+let
+  cfg = homelab.services.${service};
+  homelab = config.nixosModules.homelab;
+  service = "uptime-kuma";
+in
 {
-  services = {
-    uptime-kuma.enable = true;
+  options.nixosModules.homelab.services.${service} = {
+    enable = mkEnableOption "Enable ${service}";
 
-    nginx.virtualHosts."uptime.oliverdavies.uk" = {
-      forceSSL = true;
-      useACMEHost = "oliverdavies.uk";
+    url = mkOption {
+      default = "uptime.${homelab.baseDomain}";
+      type = types.str;
+    };
+  };
 
-      locations."/" = {
-        proxyPass = "http://localhost:${toString config.services.uptime-kuma.settings.PORT}";
-        recommendedProxySettings = true;
+  config = mkIf cfg.enable {
+    services = {
+      ${service}.enable = true;
+
+      nginx.virtualHosts.${cfg.url} = {
+        forceSSL = true;
+        useACMEHost = homelab.baseDomain;
+
+        locations."/" = {
+          proxyPass = "http://localhost:${toString config.services.${service}.settings.PORT}";
+          recommendedProxySettings = true;
+        };
       };
     };
   };

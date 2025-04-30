@@ -1,25 +1,51 @@
-{ config, ... }:
-
 {
-  services =
-    let
-      cfg = config.services.homepage-dashboard;
-    in
-    {
-      homepage-dashboard = {
+  config,
+  lib,
+  options,
+  ...
+}:
+
+with lib;
+
+let
+  cfg = homelab.services.${service};
+  homelab = config.homelab;
+  opts = options.services.${service};
+  service = "homepage-dashboard";
+in
+{
+  options.homelab.services.${service} = {
+    enable = mkEnableOption "Enable ${service}";
+
+    port = mkOption {
+      default = opts.listenPort.default;
+      type = types.port;
+    };
+
+    url = mkOption {
+      default = "${config.networking.hostName}.${homelab.baseDomain}";
+      type = types.str;
+    };
+  };
+
+  config = mkIf cfg.enable {
+    services = {
+      ${service} = {
         enable = true;
-        listenPort = 8097;
+        listenPort = cfg.port;
         openFirewall = true;
 
         services = (import ./services.nix { inherit config; });
         widgets = import ./widgets.nix;
       };
 
-      nginx.virtualHosts."nixedo.oliverdavies.uk" = {
+      nginx.virtualHosts.${cfg.url} = {
         forceSSL = true;
-        useACMEHost = "oliverdavies.uk";
+        useACMEHost = homelab.baseDomain;
 
-        locations."/".proxyPass = "http://localhost:${toString cfg.listenPort}";
+        locations."/".proxyPass =
+          "http://localhost:${toString config.services.homepage-dashboard.listenPort}";
       };
     };
+  };
 }
