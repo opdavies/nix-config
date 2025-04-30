@@ -66,7 +66,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    tailscale
     abook
     acpi
     arandr
@@ -98,6 +97,7 @@
     shotwell
     slack
     sxiv
+    tailscale
     ttyper
     upload-to-files
     xcape

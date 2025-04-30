@@ -1,6 +1,5 @@
 {
   imports = [
-    # ./pi-hole.nix
     ./tubearchivist.nix
   ];
 }

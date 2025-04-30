@@ -19,4 +19,9 @@ in
   "secrets/cloudflared-credentials.age".publicKeys = [
     hosts.nixedo
   ] ++ [ users.opdavies ];
+
+  "secrets/tubearchivist-env.age".publicKeys = [
+    hosts.nixedo
+    hosts.t480
+  ] ++ [ users.opdavies ];
 }

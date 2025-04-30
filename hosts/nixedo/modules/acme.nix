@@ -39,6 +39,7 @@
                 "tailwindcss-demo"
                 "talking-drupal-tailwindcss"
                 "tome"
+                "tubearchivist"
                 "uptime"
                 "vaultwarden"
                 "wp-tailwind"

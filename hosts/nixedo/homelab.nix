@@ -22,6 +22,7 @@
       immich.enable = true;
       jellyfin.enable = true;
       paperless.enable = true;
+      tubearchivist.enable = true;
       uptime-kuma.enable = true;
 
       vaultwarden = {
