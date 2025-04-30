@@ -4,45 +4,52 @@
   security.acme = {
     acceptTerms = true;
 
-    certs = {
-      "oliverdavies.uk" = {
+    certs =
+      let
         domain = "oliverdavies.uk";
-        dnsProvider = "cloudflare";
-        email = "oliver@oliverdavies.uk";
-        environmentFile = config.age.secrets.cloudflare.path;
-        webroot = null;
+      in
+      {
+        ${domain} = {
+          inherit domain;
 
-        extraDomainNames =
-          let
-            baseDomain = "oliverdavies.uk";
-          in
-          [
-            "2020.${baseDomain}"
-            "audiobookshelf.${baseDomain}"
-            "bootstrap-with-tailwind.${baseDomain}"
-            "code.${baseDomain}"
-            "eric.${baseDomain}"
-            "florida-drupalcamp-tailwind-css.${baseDomain}"
-            "jellyfin.${baseDomain}"
-            "luke.${baseDomain}"
-            "nixedo.${baseDomain}"
-            "paperless.${baseDomain}"
-            "photos.${baseDomain}"
-            "phpsw-sculpin-demo.${baseDomain}"
-            "rebuilding-acquia.${baseDomain}"
-            "rebuilding-bartik.${baseDomain}"
-            "rebuilding-bristol-js.${baseDomain}"
-            "rebuilding-symfony.${baseDomain}"
-            "tailwindcss-demo.${baseDomain}"
-            "talking-drupal-tailwindcss.${baseDomain}"
-            "tome.${baseDomain}"
-            "uptime.${baseDomain}"
-            "vaultwarden.${baseDomain}"
-            "wp-tailwind.${baseDomain}"
-            "www.${baseDomain}"
-            "zet.${baseDomain}"
-          ];
+          dnsProvider = "cloudflare";
+          email = "oliver@oliverdavies.uk";
+          environmentFile = config.age.secrets.cloudflare.path;
+          webroot = null;
+
+          extraDomainNames =
+            let
+              subdomains = [
+                "2020"
+                "audiobookshelf"
+                "bootstrap-with-tailwind"
+                "code"
+                "eric"
+                "florida-drupalcamp-tailwind-css"
+                "jellyfin"
+                "luke"
+                "nixedo"
+                "paperless"
+                "photos"
+                "phpsw-sculpin-demo"
+                "rebuilding-acquia"
+                "rebuilding-bartik"
+                "rebuilding-bristol-js"
+                "rebuilding-symfony"
+                "tailwindcss-demo"
+                "talking-drupal-tailwindcss"
+                "tome"
+                "uptime"
+                "vaultwarden"
+                "wp-tailwind"
+                "www"
+                "zet"
+              ];
+
+              domains = map (subdomain: "${subdomain}.${domain}") subdomains;
+            in
+            domains;
+        };
       };
-    };
   };
 }
