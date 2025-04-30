@@ -20,8 +20,6 @@
     printing.enable = true;
     pulseaudio.enable = false;
 
-    desktopManager.cosmic.enable = true;
-
     xserver = {
       enable = true;
 
@@ -29,6 +27,9 @@
         layout = "gb";
         variant = "";
       };
+
+      desktopManager.cinnamon.enable = true;
+      displayManager.lightdm.enable = true;
     };
   };
 }
