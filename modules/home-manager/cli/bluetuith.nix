@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.cli.bluetuith;
+  cfg = config.features.cli.bluetuith;
 in
 {
-  options.homeManagerModules.cli.bluetuith.enable = mkEnableOption "Enable bluetuith";
+  options.features.cli.bluetuith.enable = mkEnableOption "Enable bluetuith";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

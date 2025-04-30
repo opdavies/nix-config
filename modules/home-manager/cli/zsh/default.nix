@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.cli.zsh;
+  cfg = config.features.cli.zsh;
 in
 {
-  options.homeManagerModules.cli.zsh.enable = mkEnableOption "Enable zsh";
+  options.features.cli.zsh.enable = mkEnableOption "Enable zsh";
 
   config = mkIf cfg.enable {
     programs.zsh = {

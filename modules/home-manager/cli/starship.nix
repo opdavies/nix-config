@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.cli.starship;
+  cfg = config.features.cli.starship;
 in
 {
-  options.homeManagerModules.cli.starship.enable = mkEnableOption "Enable starship";
+  options.features.cli.starship.enable = mkEnableOption "Enable starship";
 
   config = mkIf cfg.enable {
     programs.starship =

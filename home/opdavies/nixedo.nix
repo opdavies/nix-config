@@ -1,7 +1,7 @@
 {
   imports = [ ../common ];
 
-  homeManagerModules = {
+  features = {
     cli = {
       fzf.enable = true;
       starship.enable = true;

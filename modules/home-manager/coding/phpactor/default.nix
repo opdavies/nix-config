@@ -6,10 +6,10 @@
 }:
 
 let
-  cfg = config.homeManagerModules.coding.phpactor;
+  cfg = config.features.coding.phpactor;
 in
 {
-  options.homeManagerModules.coding.phpactor.enable = lib.mkEnableOption "Enable phpactor";
+  options.features.coding.phpactor.enable = lib.mkEnableOption "Enable phpactor";
 
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [

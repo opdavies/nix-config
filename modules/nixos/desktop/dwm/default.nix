@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.desktop.dwm;
+  cfg = config.features.desktop.dwm;
 in
 {
-  options.nixosModules.desktop.dwm.enable = mkEnableOption "Enable dwm";
+  options.features.desktop.dwm.enable = mkEnableOption "Enable dwm";
 
   config = mkIf cfg.enable {
     services = {

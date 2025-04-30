@@ -12,7 +12,7 @@
     ../../users/opdavies.nix
   ];
 
-  nixosModules = {
+  features = {
     cli.password-store = {
       enable = true;
 

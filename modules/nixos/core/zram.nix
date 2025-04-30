@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.core.zram;
+  cfg = config.features.core.zram;
 in
 {
-  options.nixosModules.core.zram.enable = mkEnableOption "Enable zram";
+  options.features.core.zram.enable = mkEnableOption "Enable zram";
 
   config = mkIf cfg.enable {
     zramSwap = {

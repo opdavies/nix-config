@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.core.pipewire;
+  cfg = config.features.core.pipewire;
 in
 {
-  options.nixosModules.core.pipewire.enable = mkEnableOption "Enable pipewire";
+  options.features.core.pipewire.enable = mkEnableOption "Enable pipewire";
 
   config = mkIf cfg.enable {
     services.pipewire = {

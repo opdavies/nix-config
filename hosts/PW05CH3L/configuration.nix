@@ -7,7 +7,7 @@
     ./modules/wiki.nix
   ];
 
-  nixosModules = {
+  features = {
     cli = {
       docker.enable = true;
       password-store.enable = true;

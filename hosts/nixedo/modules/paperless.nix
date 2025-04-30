@@ -4,11 +4,11 @@ with lib;
 
 let
   cfg = homelab.services.paperless;
-  homelab = config.nixosModules.homelab;
+  homelab = config.features.homelab;
   service = "paperless";
 in
 {
-  options.nixosModules.homelab.services.${service} = {
+  options.features.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     url = mkOption {

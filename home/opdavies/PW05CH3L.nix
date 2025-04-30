@@ -3,7 +3,7 @@
 {
   imports = [ ../common ];
 
-  homeManagerModules = {
+  features = {
     cli = {
       direnv.enable = true;
       fzf.enable = true;
@@ -28,7 +28,7 @@
 
             repos = extraConfig.XDG_REPOS_DIR;
           in
-          options.homeManagerModules.cli.tmux-sessionizer.directories.default
+          options.features.cli.tmux-sessionizer.directories.default
           ++ [
             repos
             "${repos}/*"

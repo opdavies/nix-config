@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.desktop.fonts;
+  cfg = config.features.desktop.fonts;
 in
 {
-  options.nixosModules.desktop.fonts.enable = mkEnableOption "Enable fonts";
+  options.features.desktop.fonts.enable = mkEnableOption "Enable fonts";
 
   config = mkIf cfg.enable {
     fonts = {

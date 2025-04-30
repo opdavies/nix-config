@@ -1,7 +1,7 @@
 {
   imports = [ ../common ];
 
-  homeManagerModules = {
+  features = {
     cli.zsh.enable = true;
 
     desktop.media = {

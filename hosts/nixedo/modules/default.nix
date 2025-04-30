@@ -3,7 +3,7 @@
 with lib;
 
 {
-  options.nixosModules.homelab = {
+  options.features.homelab = {
     enable = mkEnableOption "Enable homelab services and configuration";
 
     baseDomain = mkOption {

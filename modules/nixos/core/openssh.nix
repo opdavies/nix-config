@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.core.openssh;
+  cfg = config.features.core.openssh;
 in
 {
-  options.nixosModules.core.openssh.enable = mkEnableOption "Enable openssh";
+  options.features.core.openssh.enable = mkEnableOption "Enable openssh";
 
   config = mkIf cfg.enable {
     services.openssh = {

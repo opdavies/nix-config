@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.coding.neovim;
+  cfg = config.features.coding.neovim;
 in
 {
-  options.homeManagerModules.coding.neovim.enable = mkEnableOption "Enable neovim";
+  options.features.coding.neovim.enable = mkEnableOption "Enable neovim";
 
   config = mkIf cfg.enable {
     programs.neovim =

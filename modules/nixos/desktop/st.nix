@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.desktop.st;
+  cfg = config.features.desktop.st;
 in
 {
-  options.nixosModules.desktop.st.enable = mkEnableOption "Enable st";
+  options.features.desktop.st.enable = mkEnableOption "Enable st";
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [

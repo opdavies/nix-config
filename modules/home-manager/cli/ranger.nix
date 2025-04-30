@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.cli.ranger;
+  cfg = config.features.cli.ranger;
 in
 {
-  options.homeManagerModules.cli.ranger.enable = mkEnableOption "Enable ranger";
+  options.features.cli.ranger.enable = mkEnableOption "Enable ranger";
 
   config = mkIf cfg.enable {
     programs.ranger.enable = true;

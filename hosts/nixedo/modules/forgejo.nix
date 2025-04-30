@@ -4,11 +4,11 @@ with lib;
 
 let
   cfg = homelab.services.${service};
-  homelab = config.nixosModules.homelab;
+  homelab = config.features.homelab;
   service = "forgejo";
 in
 {
-  options.nixosModules.homelab.services.${service} = {
+  options.features.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     cloudflared.tunnelId = mkOption {

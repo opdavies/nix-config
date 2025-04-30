@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.cli.notes;
+  cfg = config.features.cli.notes;
 in
 {
-  options.homeManagerModules.cli.notes.enable = mkEnableOption "Enable notes";
+  options.features.cli.notes.enable = mkEnableOption "Enable notes";
 
   config = mkIf cfg.enable {
     xdg = {

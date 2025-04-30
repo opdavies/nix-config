@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.cli.podman;
+  cfg = config.features.cli.podman;
 in
 {
-  options.nixosModules.cli.podman.enable = mkEnableOption "Enable podman";
+  options.features.cli.podman.enable = mkEnableOption "Enable podman";
 
   config = mkIf cfg.enable {
     virtualisation = {

@@ -13,7 +13,7 @@
     ../../users/opdavies.nix
   ];
 
-  nixosModules = {
+  features = {
     core = {
       bluetooth.enable = true;
       zram.enable = true;

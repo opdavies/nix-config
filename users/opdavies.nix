@@ -18,8 +18,8 @@ with lib;
         "networkmanager"
         "wheel"
       ]
-      ++ optional config.nixosModules.cli.docker.enable "docker"
-      ++ optional config.nixosModules.cli.podman.enable "podman";
+      ++ optional config.features.cli.docker.enable "docker"
+      ++ optional config.features.cli.podman.enable "podman";
 
     packages = with pkgs; [
       qrencode

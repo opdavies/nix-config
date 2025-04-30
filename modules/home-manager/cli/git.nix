@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.cli.git;
+  cfg = config.features.cli.git;
 in
 {
-  options.homeManagerModules.cli.git = {
+  options.features.cli.git = {
     enable = mkEnableOption "Enable git";
 
     user = mkOption {

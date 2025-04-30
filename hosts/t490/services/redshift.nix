@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.redshift;
+  cfg = config.features.redshift;
 in
 {
-  options.nixosModules.redshift.enable = mkEnableOption "Enable redshift";
+  options.features.redshift.enable = mkEnableOption "Enable redshift";
 
   config = mkIf cfg.enable {
     location = {

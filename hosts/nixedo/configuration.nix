@@ -8,6 +8,7 @@
   imports = [
     ../common
     ./hardware-configuration.nix
+    ./homelab.nix
     ./modules
     ./secrets.nix
     ./services
@@ -15,31 +16,10 @@
     ../../users/opdavies.nix
   ];
 
-  nixosModules = {
+  features = {
     core.openssh.enable = true;
     cli.podman.enable = true;
     desktop.dconf.enable = true;
-
-    homelab = {
-      enable = true;
-
-      baseDomain = "oliverdavies.uk";
-
-      services = {
-        audiobookshelf.enable = true;
-
-        forgejo = {
-          enable = true;
-
-          cloudflared.tunnelId = "e1514105-327f-4984-974e-e2fbaca76466";
-        };
-
-        immich.enable = true;
-        jellyfin.enable = true;
-        paperless.enable = true;
-        uptime-kuma.enable = true;
-      };
-    };
   };
 
   services.logind.lidSwitchExternalPower = "ignore";

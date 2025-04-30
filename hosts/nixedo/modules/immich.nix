@@ -9,11 +9,11 @@ with lib;
 
 let
   cfg = homelab.services.${service};
-  homelab = config.nixosModules.homelab;
+  homelab = config.features.homelab;
   service = "immich";
 in
 {
-  options.nixosModules.homelab.services.${service} = {
+  options.features.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     url = mkOption {

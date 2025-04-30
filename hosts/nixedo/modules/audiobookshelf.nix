@@ -4,11 +4,11 @@ with lib;
 
 let
   cfg = homelab.services.${service};
-  homelab = config.nixosModules.homelab;
+  homelab = config.features.homelab;
   service = "audiobookshelf";
 in
 {
-  options.nixosModules.homelab.services.${service} = {
+  options.features.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     url = mkOption {
@@ -26,7 +26,7 @@ in
         useACMEHost = homelab.baseDomain;
 
         locations."/" = {
-          proxyPass = "http://localhost:${toString cfg.port}";
+          proxyPass = "http://localhost:${toString config.services.${service}.port}";
           recommendedProxySettings = true;
         };
       };

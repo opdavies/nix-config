@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.homeManagerModules.cli.tmux-sessionizer;
+  cfg = config.features.cli.tmux-sessionizer;
 in
 {
-  options.homeManagerModules.cli.tmux-sessionizer = {
+  options.features.cli.tmux-sessionizer = {
     enable = mkEnableOption "Enable tmux-sessionizer";
 
     directories = mkOption {

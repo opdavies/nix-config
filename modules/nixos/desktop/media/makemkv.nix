@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.nixosModules.desktop.media.makemkv;
+  cfg = config.features.desktop.media.makemkv;
 in
 {
-  options.nixosModules.desktop.media.makemkv.enable = mkEnableOption "Enable makemkv";
+  options.features.desktop.media.makemkv.enable = mkEnableOption "Enable makemkv";
 
   config = mkIf cfg.enable {
     boot.kernelModules = [ "sg" ];
