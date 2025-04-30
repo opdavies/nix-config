@@ -66,6 +66,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    tailscale
     abook
     acpi
     arandr
