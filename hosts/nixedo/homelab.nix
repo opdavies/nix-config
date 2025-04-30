@@ -24,7 +24,11 @@
       paperless.enable = true;
       uptime-kuma.enable = true;
 
-      vaultwarden.enable = true;
+      vaultwarden = {
+        enable = true;
+
+        cloudflared.tunnelId = "41feb37d-a0f5-4c21-80c8-36ab63ec3b17";
+      };
     };
   };
 }

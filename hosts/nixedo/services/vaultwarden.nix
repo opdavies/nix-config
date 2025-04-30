@@ -21,6 +21,11 @@ in
       type = types.str;
     };
 
+    cloudflared.tunnelId = mkOption {
+      example = "00000000-0000-0000-0000-000000000000";
+      type = types.str;
+    };
+
     homepage.name = mkOption {
       default = "Vaultwarden";
       type = types.str;
@@ -49,19 +54,18 @@ in
 
         config = {
           DOMAIN = "https://${cfg.url}";
+          ROCKET_ADDRESS = "127.0.0.1";
           ROCKET_PORT = 8222;
           SIGNUPS_ALLOWED = false;
         };
       };
 
-      nginx.virtualHosts.${cfg.url} = {
-        forceSSL = true;
-        useACMEHost = homelab.baseDomain;
-
-        locations."/" = {
-          proxyPass = "http://localhost:${toString config.services.${service}.config.ROCKET_PORT}";
-          recommendedProxySettings = true;
-        };
+      cloudflared.tunnels.${cfg.cloudflared.tunnelId} = {
+        credentialsFile = config.age.secrets.cloudflared.path;
+        default = "http_status:404";
+        ingress."${cfg.url}".service = "http://${config.services.${service}.config.ROCKET_ADDRESS}:${
+          toString config.services.${service}.config.ROCKET_PORT
+        }";
       };
     };
   };
