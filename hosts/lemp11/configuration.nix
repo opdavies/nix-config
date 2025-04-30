@@ -50,4 +50,6 @@
     git
     vscodium
   ];
+
+  system.autoUpgrade.enable = true;
 }
