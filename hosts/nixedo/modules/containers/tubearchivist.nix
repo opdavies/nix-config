@@ -163,7 +163,7 @@ in
         "HOST_GID" = "1000";
         "HOST_UID" = "1000";
         "REDIS_CON" = "redis://archivist-redis:6379";
-        "TA_HOST" = "http://${cfg.url}";
+        "TA_HOST" = "https://${cfg.url}";
         "TZ" = "Europe/London";
       };
 
