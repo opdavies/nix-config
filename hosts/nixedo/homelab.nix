@@ -1,4 +1,8 @@
 {
+  services = {
+    postgresqlBackup.enable = true;
+  };
+
   features.homelab = {
     enable = true;
 
