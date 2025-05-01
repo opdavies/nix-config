@@ -25,6 +25,26 @@ in
       default = "${service}.${homelab.baseDomain}";
       type = types.str;
     };
+
+    homepage.name = mkOption {
+      default = "Tube Archivist";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "Your self hosted YouTube media server";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "tube-archivist";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Media";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {
