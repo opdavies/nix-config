@@ -323,6 +323,7 @@ in
       locations."/" = {
         proxyPass = "http://localhost:${toString cfg.port}";
         recommendedProxySettings = true;
+        proxyWebsockets = true;
 
         extraConfig = ''
           proxy_buffering off;
