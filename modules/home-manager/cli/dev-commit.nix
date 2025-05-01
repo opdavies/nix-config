@@ -83,7 +83,6 @@ in
 
         Timer = {
           OnCalendar = cfg.schedule.time;
-          Persistent = true;
           Unit = "dev-commit.service";
         };
 
