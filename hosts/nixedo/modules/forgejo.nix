@@ -16,8 +16,28 @@ in
       type = types.str;
     };
 
-    url = mkOption {
-      default = "code.${homelab.baseDomain}";
+    homepage.name = mkOption {
+      default = "Forgejo";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "Beyond coding. We forge.";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "forgejo";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Services";
+      type = types.str;
+    };
+
+    cloudflared.tunnelId = mkOption {
+      example = "00000000-0000-0000-0000-000000000000";
       type = types.str;
     };
   };
