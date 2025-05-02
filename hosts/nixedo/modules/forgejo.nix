@@ -35,11 +35,6 @@ in
       default = "Services";
       type = types.str;
     };
-
-    cloudflared.tunnelId = mkOption {
-      example = "00000000-0000-0000-0000-000000000000";
-      type = types.str;
-    };
   };
 
   config = mkIf cfg.enable {
