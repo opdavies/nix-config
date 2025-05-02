@@ -10,6 +10,7 @@
     ./services
     ./users.nix
 
+    ../../users/luke.nix
     ../../users/opdavies.nix
   ];
 
