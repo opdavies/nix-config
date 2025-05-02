@@ -76,6 +76,7 @@
         personal = "${config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}/personal";
       in
       [
+        "${personal}/email-filters"
         "${personal}/nix-config"
         "${personal}/oliverdavies.uk-tome"
         "${personal}/opentofu-dns"
