@@ -11,7 +11,6 @@ in
   config = mkIf cfg.enable {
     boot.kernelModules = [ "sg" ];
 
-    # TODO: is this needed?
-    # users.users.opdavies.extraGroups = [ "cdrom" ];
+    users.users.opdavies.extraGroups = [ "cdrom" ];
   };
 }
