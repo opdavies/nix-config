@@ -11,6 +11,11 @@ in
   options.features.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
+    url = mkOption {
+      default = "code.${homelab.baseDomain}";
+      type = types.str;
+    };
+
     cloudflared.tunnelId = mkOption {
       example = "00000000-0000-0000-0000-000000000000";
       type = types.str;
