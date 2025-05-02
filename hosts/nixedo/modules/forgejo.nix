@@ -29,7 +29,11 @@ in
         stateDir = "/var/www/${service}";
 
         settings = {
-          server.DOMAIN = cfg.url;
+          server = {
+            DOMAIN = cfg.url;
+            ROOT_URL = "https://${cfg.url}";
+          };
+
           service.DISABLE_REGISTRATION = true;
         };
       };
