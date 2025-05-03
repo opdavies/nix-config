@@ -4,11 +4,11 @@ with lib;
 
 let
   cfg = homelab.services.paperless;
-  homelab = config.features.homelab;
+  homelab = config.homelab;
   service = "paperless";
 in
 {
-  options.features.homelab.services.${service} = {
+  options.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     url = mkOption {

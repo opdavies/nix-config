@@ -3,46 +3,44 @@
 {
   imports = [ ../common ];
 
-  features = {
-    cli = {
-      direnv.enable = true;
-      fzf.enable = true;
+  cli = {
+    direnv.enable = true;
+    fzf.enable = true;
 
-      git = {
-        enable = true;
+    git = {
+      enable = true;
 
-        user.emailAddress = "oliver.davies@tfw.wales";
-      };
-
-      node.enable = true;
-      ranger.enable = true;
-      starship.enable = true;
-      tmux.enable = true;
-
-      tmux-sessionizer = {
-        enable = true;
-
-        directories =
-          let
-            inherit (config.xdg.userDirs) documents extraConfig;
-
-            repos = extraConfig.XDG_REPOS_DIR;
-          in
-          options.features.cli.tmux-sessionizer.directories.default
-          ++ [
-            repos
-            "${repos}/*"
-            documents
-          ];
-      };
-
-      zsh.enable = true;
+      user.emailAddress = "oliver.davies@tfw.wales";
     };
 
-    coding = {
-      neovim.enable = true;
-      phpactor.enable = true;
+    node.enable = true;
+    ranger.enable = true;
+    starship.enable = true;
+    tmux.enable = true;
+
+    tmux-sessionizer = {
+      enable = true;
+
+      directories =
+        let
+          inherit (config.xdg.userDirs) documents extraConfig;
+
+          repos = extraConfig.XDG_REPOS_DIR;
+        in
+        options.cli.tmux-sessionizer.directories.default
+        ++ [
+          repos
+          "${repos}/*"
+          documents
+        ];
     };
+
+    zsh.enable = true;
+  };
+
+  coding = {
+    neovim.enable = true;
+    phpactor.enable = true;
   };
 
   xdg.configFile."pam-gnupg".text = ''

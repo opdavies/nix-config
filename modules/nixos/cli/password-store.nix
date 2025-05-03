@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.cli.password-store;
+  cfg = config.cli.password-store;
 in
 {
-  options.features.cli.password-store = {
+  options.cli.password-store = {
     enable = mkEnableOption "Enable pass";
 
     extensions = mkOption {

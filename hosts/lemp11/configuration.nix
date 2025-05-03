@@ -11,14 +11,12 @@
     ../../users/eric.nix
   ];
 
-  features = {
-    core = {
-      bluetooth.enable = true;
-      zram.enable = true;
-    };
-
-    desktop.media.makemkv.enable = true;
+  core = {
+    bluetooth.enable = true;
+    zram.enable = true;
   };
+
+  desktop.media.makemkv.enable = true;
 
   # Bootloader.
   boot = {

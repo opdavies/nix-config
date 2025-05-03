@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.desktop.fonts;
+  cfg = config.desktop.fonts;
 in
 {
-  options.features.desktop.fonts.enable = mkEnableOption "Enable fonts";
+  options.desktop.fonts.enable = mkEnableOption "Enable fonts";
 
   config = mkIf cfg.enable {
     fonts = {

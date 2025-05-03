@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.cli.tmux;
+  cfg = config.cli.tmux;
 in
 {
-  options.features.cli.tmux.enable = mkEnableOption "Enable tmux";
+  options.cli.tmux.enable = mkEnableOption "Enable tmux";
 
   config = mkIf cfg.enable {
     programs.tmux = {

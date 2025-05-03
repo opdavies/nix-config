@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.coding.phpactor;
+  cfg = config.coding.phpactor;
 in
 {
-  options.features.coding.phpactor.enable = lib.mkEnableOption "Enable phpactor";
+  options.coding.phpactor.enable = lib.mkEnableOption "Enable phpactor";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

@@ -16,11 +16,9 @@
     ../../users/opdavies.nix
   ];
 
-  features = {
-    core.openssh.enable = true;
-    cli.podman.enable = true;
-    desktop.dconf.enable = true;
-  };
+  core.openssh.enable = true;
+  cli.podman.enable = true;
+  desktop.dconf.enable = true;
 
   services.logind.lidSwitchExternalPower = "ignore";
 

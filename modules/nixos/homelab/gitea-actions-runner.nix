@@ -10,11 +10,11 @@ with lib;
 
 let
   cfg = homelab.services.${service};
-  homelab = config.features.homelab;
+  homelab = config.homelab;
   service = "gitea-actions-runner";
 in
 {
-  options.features.homelab.services.${service} = {
+  options.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
   };
 

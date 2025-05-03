@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.redshift;
+  cfg = config.redshift;
 in
 {
-  options.features.redshift.enable = mkEnableOption "Enable redshift";
+  options.redshift.enable = mkEnableOption "Enable redshift";
 
   config = mkIf cfg.enable {
     location = {

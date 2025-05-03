@@ -3,68 +3,66 @@
 {
   imports = [ ../common ];
 
-  features = {
-    cli = {
-      bluetuith.enable = true;
-      direnv.enable = true;
-      fzf.enable = true;
+  cli = {
+    bluetuith.enable = true;
+    direnv.enable = true;
+    fzf.enable = true;
 
-      git = {
-        enable = true;
+    git = {
+      enable = true;
 
-        user.emailAddress = "oliver@oliverdavies.uk";
-      };
-
-      node.enable = true;
-      notes.enable = true;
-      ranger.enable = true;
-      starship.enable = true;
-      tmux.enable = true;
-
-      tmux-sessionizer = {
-        enable = true;
-
-        directories =
-          let
-            inherit (config.xdg.userDirs) documents extraConfig;
-
-            repos = extraConfig.XDG_REPOS_DIR;
-          in
-          options.features.cli.tmux-sessionizer.directories.default
-          ++ [
-            repos
-            "${repos}/*"
-            documents
-          ];
-      };
-
-      zsh.enable = true;
+      user.emailAddress = "oliver@oliverdavies.uk";
     };
 
-    coding = {
-      neovim.enable = true;
-      phpactor.enable = true;
+    node.enable = true;
+    notes.enable = true;
+    ranger.enable = true;
+    starship.enable = true;
+    tmux.enable = true;
+
+    tmux-sessionizer = {
+      enable = true;
+
+      directories =
+        let
+          inherit (config.xdg.userDirs) documents extraConfig;
+
+          repos = extraConfig.XDG_REPOS_DIR;
+        in
+        options.cli.tmux-sessionizer.directories.default
+        ++ [
+          repos
+          "${repos}/*"
+          documents
+        ];
     };
 
-    desktop = {
-      browsers = {
-        firefox = {
-          enable = true;
+    zsh.enable = true;
+  };
 
-          homepageUrl = "https://nixedo.oliverdavies.uk";
-        };
+  coding = {
+    neovim.enable = true;
+    phpactor.enable = true;
+  };
 
-        qutebrowser.enable = true;
+  desktop = {
+    browsers = {
+      firefox = {
+        enable = true;
+
+        homepageUrl = "https://nixedo.oliverdavies.uk";
       };
 
-      flameshot.enable = true;
-      gtk.enable = true;
+      qutebrowser.enable = true;
+    };
 
-      media = {
-        handbrake.enable = true;
-        makemkv.enable = true;
-        mpv.enable = true;
-      };
+    flameshot.enable = true;
+    gtk.enable = true;
+
+    media = {
+      handbrake.enable = true;
+      makemkv.enable = true;
+      mpv.enable = true;
     };
   };
 

@@ -9,12 +9,12 @@ with lib;
 
 let
   cfg = homelab.services.${service};
-  homelab = config.features.homelab;
+  homelab = config.homelab;
   opts = options.services.${service};
   service = "homepage-dashboard";
 in
 {
-  options.features.homelab.services.${service} = {
+  options.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     port = mkOption {

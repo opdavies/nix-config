@@ -10,10 +10,10 @@ with lib;
 let
   cfg = homelab.services.${service};
   service = "tubearchivist";
-  homelab = config.features.homelab;
+  homelab = config.homelab;
 in
 {
-  options.features.homelab.services.${service} = {
+  options.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     port = mkOption {

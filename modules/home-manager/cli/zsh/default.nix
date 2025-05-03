@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.cli.zsh;
+  cfg = config.cli.zsh;
 in
 {
-  options.features.cli.zsh.enable = mkEnableOption "Enable zsh";
+  options.cli.zsh.enable = mkEnableOption "Enable zsh";
 
   config = mkIf cfg.enable {
     programs.zsh = {

@@ -3,7 +3,7 @@
 with lib;
 
 {
-  options.features.homelab = {
+  options.homelab = {
     enable = mkEnableOption "Enable homelab services and configuration";
 
     domain = mkOption {

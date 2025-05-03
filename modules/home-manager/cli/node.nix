@@ -3,12 +3,12 @@
 with lib;
 
 let
-  cfg = config.features.cli.node;
+  cfg = config.cli.node;
 
   inherit (config.xdg) configHome dataHome stateHome;
 in
 {
-  options.features.cli.node.enable = mkEnableOption "Enable node";
+  options.cli.node.enable = mkEnableOption "Enable node";
 
   config = mkIf cfg.enable {
     xdg.configFile."${config.home.sessionVariables.NPM_CONFIG_USERCONFIG}".text = ''

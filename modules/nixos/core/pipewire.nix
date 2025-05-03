@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.core.pipewire;
+  cfg = config.core.pipewire;
 in
 {
-  options.features.core.pipewire.enable = mkEnableOption "Enable pipewire";
+  options.core.pipewire.enable = mkEnableOption "Enable pipewire";
 
   config = mkIf cfg.enable {
     services.pipewire = {

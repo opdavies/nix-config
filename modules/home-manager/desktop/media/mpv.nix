@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.desktop.media.mpv;
+  cfg = config.desktop.media.mpv;
 in
 {
-  options.features.desktop.media.mpv.enable = mkEnableOption "Enable mpv";
+  options.desktop.media.mpv.enable = mkEnableOption "Enable mpv";
 
   config = mkIf cfg.enable {
     programs.mpv = {

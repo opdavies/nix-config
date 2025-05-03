@@ -18,8 +18,8 @@ with lib;
         "networkmanager"
         "wheel"
       ]
-      ++ optional config.features.cli.docker.enable "docker"
-      ++ optional config.features.cli.podman.enable "podman";
+      ++ optional config.cli.docker.enable "docker"
+      ++ optional config.cli.podman.enable "podman";
 
     packages = with pkgs; [
       qrencode

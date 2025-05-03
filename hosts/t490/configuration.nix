@@ -14,14 +14,12 @@
     ../../users/opdavies.nix
   ];
 
-  features = {
-    core = {
-      bluetooth.enable = true;
-      zram.enable = true;
-    };
-
-    desktop.dconf.enable = true;
+  core = {
+    bluetooth.enable = true;
+    zram.enable = true;
   };
+
+  desktop.dconf.enable = true;
 
   boot = {
     loader = {

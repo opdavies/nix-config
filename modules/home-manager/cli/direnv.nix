@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.cli.direnv;
+  cfg = config.cli.direnv;
 in
 {
-  options.features.cli.direnv.enable = mkEnableOption "Enable direnv";
+  options.cli.direnv.enable = mkEnableOption "Enable direnv";
 
   config = mkIf cfg.enable {
     programs.direnv = {

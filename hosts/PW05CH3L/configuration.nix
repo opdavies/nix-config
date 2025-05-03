@@ -7,11 +7,9 @@
     ./modules/wiki.nix
   ];
 
-  features = {
-    cli = {
-      docker.enable = true;
-      password-store.enable = true;
-    };
+  cli = {
+    docker.enable = true;
+    password-store.enable = true;
   };
 
   wsl = {

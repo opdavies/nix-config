@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.desktop.st;
+  cfg = config.desktop.st;
 in
 {
-  options.features.desktop.st.enable = mkEnableOption "Enable st";
+  options.desktop.st.enable = mkEnableOption "Enable st";
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [

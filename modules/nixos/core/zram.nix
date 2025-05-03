@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.core.zram;
+  cfg = config.core.zram;
 in
 {
-  options.features.core.zram.enable = mkEnableOption "Enable zram";
+  options.core.zram.enable = mkEnableOption "Enable zram";
 
   config = mkIf cfg.enable {
     zramSwap = {

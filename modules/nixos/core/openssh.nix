@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.core.openssh;
+  cfg = config.core.openssh;
 in
 {
-  options.features.core.openssh.enable = mkEnableOption "Enable openssh";
+  options.core.openssh.enable = mkEnableOption "Enable openssh";
 
   config = mkIf cfg.enable {
     services.openssh = {

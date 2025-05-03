@@ -3,7 +3,7 @@
     postgresqlBackup.enable = true;
   };
 
-  features.homelab = {
+  homelab = {
     enable = true;
 
     domain = "oliverdavies.uk";

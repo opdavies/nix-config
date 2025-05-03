@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.core.bluetooth;
+  cfg = config.core.bluetooth;
 in
 {
-  options.features.core.bluetooth.enable = mkEnableOption "Enable bluetooth";
+  options.core.bluetooth.enable = mkEnableOption "Enable bluetooth";
 
   config = mkIf cfg.enable {
     hardware.bluetooth.enable = true;

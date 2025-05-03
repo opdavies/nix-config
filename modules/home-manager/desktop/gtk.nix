@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.desktop.gtk;
+  cfg = config.desktop.gtk;
 in
 {
-  options.features.desktop.gtk.enable = mkEnableOption "Enable gtk";
+  options.desktop.gtk.enable = mkEnableOption "Enable gtk";
 
   config = mkIf cfg.enable {
     gtk = with pkgs; {

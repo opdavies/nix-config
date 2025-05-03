@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.features.desktop.dwm;
+  cfg = config.desktop.dwm;
 in
 {
-  options.features.desktop.dwm.enable = mkEnableOption "Enable dwm";
+  options.desktop.dwm.enable = mkEnableOption "Enable dwm";
 
   config = mkIf cfg.enable {
     services = {

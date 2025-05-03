@@ -3,7 +3,7 @@
 with lib;
 
 let
-  homelab = config.features.homelab.services;
+  homelab = config.homelab.services;
 
   homepageCategories = [
     "Media"

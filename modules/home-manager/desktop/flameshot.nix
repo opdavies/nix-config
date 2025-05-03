@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.features.desktop.flameshot;
+  cfg = config.desktop.flameshot;
 in
 {
-  options.features.desktop.flameshot.enable = mkEnableOption "Enable flameshot";
+  options.desktop.flameshot.enable = mkEnableOption "Enable flameshot";
 
   config = mkIf cfg.enable {
     services.flameshot = {
