@@ -3,5 +3,6 @@
     ./cli
     ./core
     ./desktop
+    ./homelab
   ];
 }
