@@ -18,6 +18,7 @@
       };
 
       gitea-actions-runner.enable = true;
+      home-assistant.enable = true;
 
       homepage-dashboard = {
         enable = true;

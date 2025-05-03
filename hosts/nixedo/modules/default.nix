@@ -18,6 +18,7 @@ with lib;
     ./cloudflared.nix
     ./containers
     ./forgejo.nix
+    ./home-assistant.nix
     ./immich.nix
     ./jellyfin.nix
     ./nginx

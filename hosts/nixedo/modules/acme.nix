@@ -26,6 +26,7 @@
                 "code"
                 "eric"
                 "florida-drupalcamp-tailwind-css"
+                "home"
                 "jellyfin"
                 "luke"
                 "nixedo"
