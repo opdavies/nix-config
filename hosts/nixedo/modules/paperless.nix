@@ -12,7 +12,7 @@ in
     enable = mkEnableOption "Enable ${service}";
 
     url = mkOption {
-      default = "${service}.${homelab.baseDomain}";
+      default = "${service}.${homelab.domain}";
       type = types.str;
     };
 
@@ -51,7 +51,7 @@ in
 
       nginx.virtualHosts."${cfg.url}" = {
         forceSSL = true;
-        useACMEHost = homelab.baseDomain;
+        useACMEHost = homelab.domain;
 
         locations."/" = {
           proxyPass = "http://localhost:${toString config.services.${service}.port}";

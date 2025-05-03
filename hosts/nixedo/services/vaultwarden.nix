@@ -17,7 +17,7 @@ in
     enable = mkEnableOption "Enable ${service}";
 
     url = mkOption {
-      default = "${service}.${homelab.baseDomain}";
+      default = "${service}.${homelab.domain}";
       type = types.str;
     };
 

@@ -1,5 +1,5 @@
 let
-  baseDomain = "oliverdavies.uk";
+  domain = "oliverdavies.uk";
 
   ports = import ./ports.nix;
 
@@ -12,7 +12,7 @@ let
       inherit root;
 
       port = ports.${name};
-      url = "${name}.${baseDomain}";
+      url = "${name}.${domain}";
     }
     // overrides;
 

@@ -6,7 +6,7 @@ with lib;
   options.features.homelab = {
     enable = mkEnableOption "Enable homelab services and configuration";
 
-    baseDomain = mkOption {
+    domain = mkOption {
       description = "The base domain to use for this homelab.";
       type = types.str;
     };

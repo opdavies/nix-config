@@ -23,7 +23,7 @@ in
     };
 
     url = mkOption {
-      default = "${config.networking.hostName}.${homelab.baseDomain}";
+      default = "${config.networking.hostName}.${homelab.domain}";
       type = types.str;
     };
   };
@@ -64,7 +64,7 @@ in
 
       nginx.virtualHosts.${cfg.url} = {
         forceSSL = true;
-        useACMEHost = homelab.baseDomain;
+        useACMEHost = homelab.domain;
 
         locations."/".proxyPass =
           "http://localhost:${toString config.services.homepage-dashboard.listenPort}";

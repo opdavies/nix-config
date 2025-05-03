@@ -22,7 +22,7 @@ in
     };
 
     url = mkOption {
-      default = "${service}.${homelab.baseDomain}";
+      default = "${service}.${homelab.domain}";
       type = types.str;
     };
 
@@ -318,7 +318,7 @@ in
 
     services.nginx.virtualHosts."${cfg.url}" = {
       forceSSL = true;
-      useACMEHost = homelab.baseDomain;
+      useACMEHost = homelab.domain;
 
       locations."/" = {
         proxyPass = "http://localhost:${toString cfg.port}";

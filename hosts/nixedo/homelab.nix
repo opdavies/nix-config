@@ -6,7 +6,7 @@
   features.homelab = {
     enable = true;
 
-    baseDomain = "oliverdavies.uk";
+    domain = "oliverdavies.uk";
 
     services = {
       audiobookshelf.enable = true;
