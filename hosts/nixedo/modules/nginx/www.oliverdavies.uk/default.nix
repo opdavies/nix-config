@@ -4,10 +4,8 @@ let
   ports = config.homelab.ports;
   port = ports.nginx-website-sculpin;
 
-  redirects = import ./www.oliverdavies.uk-redirects.nix;
-
-  redirectLines = builtins.concatStringsSep "\n" (
-    map (r: "rewrite ^${r.from}/?$ ${r.to} redirect;") redirects
+  redirects = builtins.concatStringsSep "\n" (
+    map (r: "rewrite ^${r.from}/?$ ${r.to} redirect;") (import ./redirects.nix)
   );
 
   tome = {
@@ -65,7 +63,7 @@ in
           rewrite ^/talks/(.*)$ /presentations/$1 permanent;
           rewrite ^/talks/?$ /presentations permanent;
 
-          ${redirectLines}
+          ${redirects}
         '';
       };
 
