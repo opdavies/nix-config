@@ -1,5 +1,8 @@
+{ config, ... }:
+
 let
-  port = 8095;
+  ports = config.homelab.ports;
+  port = ports.nginx-website-sculpin;
 
   redirects = import ./www.oliverdavies.uk-redirects.nix;
 
@@ -18,7 +21,7 @@ let
       "tome-test"
     ];
 
-    port = 8098;
+    port = ports.nginx-website-tome;
   };
 
   tomeLocations = builtins.listToAttrs (

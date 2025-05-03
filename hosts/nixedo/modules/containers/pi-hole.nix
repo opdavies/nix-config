@@ -1,10 +1,11 @@
-{ lib, ... }:
+{ config, lib, ... }:
 
 let
-  port = 8082;
+  service = "pihole";
+  port = config.homelab.ports.${service};
 in
 {
-  virtualisation.oci-containers.containers."pihole" = {
+  virtualisation.oci-containers.containers.${service} = {
     image = "pihole/pihole:latest";
 
     environment = {
@@ -22,7 +23,7 @@ in
       "53:53/tcp"
       "53:53/udp"
       "67:67/udp"
-      "${toString port}:80/tcp"
+      "${port}:80/tcp"
     ];
 
     log-driver = "journald";

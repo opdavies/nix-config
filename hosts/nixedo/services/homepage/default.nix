@@ -1,26 +1,15 @@
-{
-  config,
-  lib,
-  options,
-  ...
-}:
+{ config, lib, ... }:
 
 with lib;
 
 let
   cfg = homelab.services.${service};
   homelab = config.homelab;
-  opts = options.services.${service};
   service = "homepage-dashboard";
 in
 {
   options.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
-
-    port = mkOption {
-      default = opts.listenPort.default;
-      type = types.port;
-    };
 
     url = mkOption {
       default = "${config.networking.hostName}.${homelab.domain}";
@@ -32,7 +21,7 @@ in
     services = {
       ${service} = {
         enable = true;
-        listenPort = cfg.port;
+        listenPort = homelab.ports.${service};
         openFirewall = true;
 
         customCSS = ''

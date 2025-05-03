@@ -11,15 +11,12 @@ let
   cfg = homelab.services.${service};
   service = "tubearchivist";
   homelab = config.homelab;
+
+  port = homelab.ports.${service};
 in
 {
   options.homelab.services.${service} = {
     enable = mkEnableOption "Enable ${service}";
-
-    port = mkOption {
-      default = 8099;
-      type = types.port;
-    };
 
     url = mkOption {
       default = "${service}.${homelab.domain}";
@@ -177,7 +174,7 @@ in
       ];
 
       ports = [
-        "${toString cfg.port}:8000/tcp"
+        "${toString port}:8000/tcp"
       ];
 
       dependsOn = [
@@ -321,7 +318,7 @@ in
       useACMEHost = homelab.domain;
 
       locations."/" = {
-        proxyPass = "http://localhost:${toString cfg.port}";
+        proxyPass = "http://localhost:${toString port}";
         recommendedProxySettings = true;
         proxyWebsockets = true;
 

@@ -1,7 +1,7 @@
 { config, ... }:
 
 let
-  sites = import ./sites.nix;
+  sites = import ./sites.nix { ports = config.homelab.ports; };
 in
 {
   services = {

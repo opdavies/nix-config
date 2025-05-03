@@ -1,4 +1,6 @@
 {
+  imports = [ ./ports.nix ];
+
   services = {
     postgresqlBackup.enable = true;
   };
@@ -19,13 +21,7 @@
 
       gitea-actions-runner.enable = true;
       home-assistant.enable = true;
-
-      homepage-dashboard = {
-        enable = true;
-
-        port = 8097;
-      };
-
+      homepage-dashboard.enable = true;
       immich.enable = true;
       jellyfin.enable = true;
       paperless.enable = true;

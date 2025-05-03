@@ -1,20 +1,14 @@
+{ ports }:
+
 let
-  domain = "oliverdavies.uk";
-
-  ports = import ./ports.nix;
-
   mkSite =
     name: overrides:
     let
       root = "/var/www/vhosts/${name}" + (overrides.rootSuffix or "");
+      port = ports."nginx-${name}";
+      url = "${name}.oliverdavies.uk";
     in
-    {
-      inherit root;
-
-      port = ports.${name};
-      url = "${name}.${domain}";
-    }
-    // overrides;
+    { inherit port root url; } // overrides;
 
   sites = [
     (mkSite "eric" {
