@@ -4,4 +4,4 @@ jobs:
     runs-on: nixos
     steps:
       - uses: actions/checkout@v4
-      - run: nix flake check
+      - run: nix develop -c just check
