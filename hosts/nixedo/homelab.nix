@@ -2,17 +2,13 @@
   homelab = {
     enable = true;
 
+    cloudflared.tunnelId = "e1514105-327f-4984-974e-e2fbaca76466";
+
     domain = "oliverdavies.uk";
 
     services = {
       audiobookshelf.enable = true;
-
-      forgejo = {
-        enable = true;
-
-        cloudflared.tunnelId = "e1514105-327f-4984-974e-e2fbaca76466";
-      };
-
+      forgejo.enable = true;
       gitea-actions-runner.enable = true;
       home-assistant.enable = true;
       homepage-dashboard.enable = true;
@@ -21,12 +17,7 @@
       paperless.enable = true;
       tubearchivist.enable = true;
       uptime-kuma.enable = true;
-
-      vaultwarden = {
-        enable = true;
-
-        cloudflared.tunnelId = "41feb37d-a0f5-4c21-80c8-36ab63ec3b17";
-      };
+      vaultwarden.enable = true;
     };
   };
 }

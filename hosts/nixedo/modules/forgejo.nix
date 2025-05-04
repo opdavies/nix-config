@@ -16,11 +16,6 @@ in
       type = types.str;
     };
 
-    cloudflared.tunnelId = mkOption {
-      example = "00000000-0000-0000-0000-000000000000";
-      type = types.str;
-    };
-
     homepage.name = mkOption {
       default = "Forgejo";
       type = types.str;
@@ -58,7 +53,7 @@ in
         };
       };
 
-      cloudflared.tunnels.${cfg.cloudflared.tunnelId}.ingress = {
+      cloudflared.tunnels.${homelab.cloudflared.tunnelId}.ingress = {
         ${cfg.url} = "http://localhost:${toString config.services.${service}.settings.server.HTTP_PORT}";
       };
     };

@@ -21,11 +21,6 @@ in
       type = types.str;
     };
 
-    cloudflared.tunnelId = mkOption {
-      example = "00000000-0000-0000-0000-000000000000";
-      type = types.str;
-    };
-
     homepage.name = mkOption {
       default = "Vaultwarden";
       type = types.str;
@@ -60,10 +55,8 @@ in
         };
       };
 
-      cloudflared.tunnels.${cfg.cloudflared.tunnelId} = {
-        credentialsFile = config.age.secrets.cloudflared.path;
-        default = "http_status:404";
-        ingress."${cfg.url}".service = "http://${config.services.${service}.config.ROCKET_ADDRESS}:${
+      cloudflared.tunnels.${homelab.cloudflared.tunnelId}.ingress = {
+        "${cfg.url}" = "http://${config.services.${service}.config.ROCKET_ADDRESS}:${
           toString config.services.${service}.config.ROCKET_PORT
         }";
       };
