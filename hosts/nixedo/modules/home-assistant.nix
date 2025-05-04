@@ -69,6 +69,7 @@ in
           # "sia"
           "weather"
           "webostv"
+          "wiz"
         ];
 
         extraPackages =
