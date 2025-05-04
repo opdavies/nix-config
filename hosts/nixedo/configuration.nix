@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ./homelab.nix
     ./modules
+    ./ports.nix
     ./secrets.nix
     ./services
 

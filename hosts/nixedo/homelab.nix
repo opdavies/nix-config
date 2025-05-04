@@ -1,10 +1,4 @@
 {
-  imports = [ ./ports.nix ];
-
-  services = {
-    postgresqlBackup.enable = true;
-  };
-
   homelab = {
     enable = true;
 

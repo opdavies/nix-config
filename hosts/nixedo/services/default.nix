@@ -14,6 +14,7 @@
   ];
 
   services = {
+    postgresqlBackup.enable = true;
     tailscale.enable = true;
   };
 
