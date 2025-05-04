@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
   ...
@@ -327,5 +328,7 @@ in
         '';
       };
     };
+
+    age.secrets.tubearchivist-env.file = "${inputs.self}/secrets/tubearchivist-env.age";
   };
 }
