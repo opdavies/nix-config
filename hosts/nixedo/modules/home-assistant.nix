@@ -55,6 +55,9 @@ in
             ];
             use_x_forwarded_for = true;
           };
+
+          mobile_app = { };
+          # sia = { };
         };
 
         extraComponents = [
@@ -63,10 +66,15 @@ in
           "hive"
           "met"
           "mobile_app"
-          "sia"
+          # "sia"
           "weather"
           "webostv"
         ];
+
+        extraPackages =
+          python3Packages: with python3Packages; [
+            setuptools
+          ];
 
         openFirewall = true;
       };
