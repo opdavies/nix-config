@@ -42,6 +42,7 @@
                 "tome"
                 "tubearchivist"
                 "uptime"
+                "vaultwarden"
                 "wp-tailwind"
                 "www"
                 "zet"
