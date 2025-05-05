@@ -28,5 +28,6 @@ with lib;
     ./jellyfin.nix
     ./nginx
     ./paperless.nix
+    ./peertube.nix
   ];
 }
