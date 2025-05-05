@@ -67,6 +67,8 @@ in
           "met"
           "mobile_app"
           # "sia"
+          "tplink"
+          "tplink_tapo"
           "weather"
           "webostv"
           "wiz"
