@@ -6,7 +6,6 @@ local i = ls.insert_node
 local s = ls.snippet
 
 local fmta = require("luasnip.extras.fmt").fmta
-local rep = require("luasnip.extras").rep
 
 ls.add_snippets("nix", {
   s("homepackages", fmta("home.packages = with pkgs; [ <> ];", i(0))),
@@ -31,18 +30,16 @@ ls.add_snippets("nix", {
       [[
       { config, lib, ... }:
 
-      with lib;
-
       let
         name = "<name>";
-        cfg = config.<namespace>.<name>;
+        cfg = config.<namespace>.${name};
       in
       {
-        options.<namespace>.<name> = {
-          enable = mkEnableOption "Enable ${name}";<more_options>
+        options.<namespace>.${name} = {
+          enable = lib.mkEnableOption "Enable ${name}";<more_options>
         };
 
-        config = mkIf cfg.enable {
+        config = lib.mkIf cfg.enable {
           <finish>
         };
       }
