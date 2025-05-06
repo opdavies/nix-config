@@ -4,6 +4,5 @@
     ./neomutt.nix
     ./newsboat
     ./ollama.nix
-    ./wiki.nix
   ];
 }

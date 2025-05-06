@@ -72,24 +72,35 @@
     };
   };
 
-  programs.dev-commit = {
-    enable = true;
-
-    repoPaths =
-      let
-        personal = "${config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}/personal";
-      in
-      [
-        "${personal}/email-filters"
-        "${personal}/nix-config"
-        "${personal}/oliverdavies.uk-tome"
-        "${personal}/opentofu-dns"
-      ];
-
-    schedule = {
+  programs = {
+    dev-commit = {
       enable = true;
-      time = "daily";
+
+      repoPaths =
+        let
+          personal = "${config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}/personal";
+        in
+        [
+          "${personal}/email-filters"
+          "${personal}/nix-config"
+          "${personal}/oliverdavies.uk-tome"
+          "${personal}/opentofu-dns"
+        ];
+
+      schedule = {
+        enable = true;
+        time = "daily";
+      };
     };
+
+    zsh.shellAliases =
+      let
+        inherit (config.xdg.userDirs) documents;
+      in
+      {
+        "wiki-push" =
+          "rsync -avzP ${documents}/wiki nixedo.oliverdavies.uk:${documents} --delete --delete-after";
+      };
   };
 
   xdg.configFile."pam-gnupg".text = ''

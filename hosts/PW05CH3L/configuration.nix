@@ -5,8 +5,6 @@
     ../common
 
     ../../users/opdavies.nix
-
-    ./modules/wiki.nix
   ];
 
   cli = {
