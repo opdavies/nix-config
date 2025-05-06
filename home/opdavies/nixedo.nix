@@ -1,5 +1,9 @@
 {
-  imports = [ ../common ];
+  imports = [
+    ../common
+
+    ./nixedo/modules/email-filters.nix
+  ];
 
   cli = {
     fzf.enable = true;
