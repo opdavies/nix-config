@@ -34,28 +34,26 @@ ls.add_snippets("nix", {
       with lib;
 
       let
-        name = "<>";
-        cfg = config.<>.<>;
+        name = "<name>";
+        cfg = config.<namespace>.<name>;
       in
       {
-        options.<>.<> = {
-          enable = mkEnableOption "Enable ${name}";<>
+        options.<namespace>.<name> = {
+          enable = mkEnableOption "Enable ${name}";<more_options>
         };
 
         config = mkIf cfg.enable {
-          <>
+          <finish>
         };
       }
       ]],
       {
-        i(1),
-        i(2),
-        rep(1),
-        rep(2),
-        rep(1),
-        i(3),
-        i(0),
-      }
+        finish = i(0),
+        more_options = i(3),
+        name = i(1),
+        namespace = i(2),
+      },
+      { repeat_duplicates = true }
     )
   ),
 
