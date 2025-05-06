@@ -15,7 +15,13 @@
     };
 
     node.enable = true;
-    notes.enable = true;
+
+    notes = {
+      enable = true;
+
+      directory = "${config.xdg.userDirs.documents}/wiki/notes";
+    };
+
     ranger.enable = true;
     starship.enable = true;
     tmux.enable = true;
