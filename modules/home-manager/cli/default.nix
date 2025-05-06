@@ -1,6 +1,7 @@
 {
   imports = [
     ./bluetuith.nix
+    ./bookmarkthis.nix
     ./dev-commit.nix
     ./direnv.nix
     ./fzf.nix

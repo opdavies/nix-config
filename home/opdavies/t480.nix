@@ -5,6 +5,7 @@
 
   cli = {
     bluetuith.enable = true;
+    bookmarkthis.enable = true;
     direnv.enable = true;
     fzf.enable = true;
 

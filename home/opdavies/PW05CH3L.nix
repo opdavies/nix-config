@@ -4,6 +4,7 @@
   imports = [ ../common ];
 
   cli = {
+    bookmarkthis.enable = true;
     direnv.enable = true;
     fzf.enable = true;
 
