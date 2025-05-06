@@ -50,7 +50,7 @@ in
       };
 
       cloudflared.tunnels.${homelab.cloudflared.tunnelId}.ingress = {
-        ${cfg.url} = "http://${toString config.services.${service}.listenWeb}";
+        ${cfg.url} = "http://localhost:${toString config.services.${service}.listenWeb}";
       };
     };
 
