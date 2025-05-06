@@ -15,7 +15,7 @@
       immich.enable = true;
       jellyfin.enable = true;
       paperless.enable = true;
-      peertube.enable = false;
+      peertube.enable = true;
       tubearchivist.enable = true;
       uptime-kuma.enable = true;
       vaultwarden.enable = true;

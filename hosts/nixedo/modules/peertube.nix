@@ -25,6 +25,26 @@ in
       default = "videos.${homelab.domain}";
       type = types.str;
     };
+
+    homepage.name = mkOption {
+      default = "Peertube";
+      type = types.str;
+    };
+
+    homepage.description = mkOption {
+      default = "A free and open-source, decentralized, ActivityPub federated video platform";
+      type = types.str;
+    };
+
+    homepage.icon = mkOption {
+      default = "peertube";
+      type = types.str;
+    };
+
+    homepage.category = mkOption {
+      default = "Media";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -34,7 +54,6 @@ in
 
         configureNginx = true;
         enableWebHttps = false;
-        listenWeb = 80;
         localDomain = cfg.url;
 
         database = {
@@ -47,6 +66,13 @@ in
         };
 
         secrets.secretsFile = config.age.secrets.peertube-env.path;
+
+        settings = {
+          webserver = {
+            hostname = config.services.${service}.localDomain;
+            port = lib.mkForce 443;
+          };
+        };
       };
 
       cloudflared.tunnels.${homelab.cloudflared.tunnelId}.ingress = {
