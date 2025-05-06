@@ -4,13 +4,13 @@ with pkgs;
 
 stdenv.mkDerivation rec {
   pname = "notes";
-  version = "0.3.0";
+  version = "unstable-2024-12-07";
 
   src = fetchFromGitHub {
     owner = "nickjj";
     repo = "notes";
-    rev = "v${version}";
-    sha256 = "gyrsTWPT8w4DsRim3jlbjvpXwX/y+7SwLaM+3LVOJdU=";
+    rev = "f4f0aab865c19132484a2c3998cd984bdb3b9514";
+    sha256 = "sha256-y5SkS+22tW9wf3gH26NHSnrnJ0rkBWSgKvansP8Hlbg=";
   };
 
   buildInputs = [ bash ];
