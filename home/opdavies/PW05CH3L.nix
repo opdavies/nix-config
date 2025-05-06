@@ -14,6 +14,7 @@
     };
 
     node.enable = true;
+    notes.enable = true;
     ranger.enable = true;
     starship.enable = true;
     tmux.enable = true;
