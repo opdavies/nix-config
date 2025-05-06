@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ../common
@@ -9,7 +11,14 @@
 
   cli = {
     docker.enable = true;
-    password-store.enable = true;
+
+    password-store = {
+      enable = true;
+
+      extensions = with pkgs.passExtensions; [
+        pass-otp
+      ];
+    };
   };
 
   wsl = {
