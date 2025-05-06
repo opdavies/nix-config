@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ bash ];
 
   patches = [
-    ./create-daily-notes.patch
+    ./change-filename-format.patch
   ];
 
   installPhase = ''
