@@ -8,7 +8,7 @@ local s = ls.snippet
 local fmta = require("luasnip.extras.fmt").fmta
 
 ls.add_snippets("nix", {
-  s("homepackages", fmta("home.packages = with pkgs; [ <> ];", i(0))),
+  s("home_packages", fmta("home.packages = with pkgs; [ <> ];", i(0))),
 
   s(
     "homepage_options",
@@ -58,7 +58,7 @@ ls.add_snippets("nix", {
   ),
 
   s(
-    "newmodule",
+    "new_module",
     fmta(
       [[
       { config, lib, ... }:
@@ -87,5 +87,5 @@ ls.add_snippets("nix", {
     )
   ),
 
-  s("systempackages", fmta("environment.systemPackages = with pkgs; [<>];", i(0))),
+  s("system_packages", fmta("environment.systemPackages = with pkgs; [<>];", i(0))),
 })
