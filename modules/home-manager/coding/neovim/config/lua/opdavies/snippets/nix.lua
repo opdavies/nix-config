@@ -11,6 +11,39 @@ ls.add_snippets("nix", {
   s("homepackages", fmta("home.packages = with pkgs; [ <> ];", i(0))),
 
   s(
+    "homepage_options",
+    fmta(
+      [[
+      homepage.name = mkOption {
+        default = "<name>";
+        type = types.str;
+      };
+
+      homepage.description = mkOption {
+        default = "<description>";
+        type = types.str;
+      };
+
+      homepage.icon = mkOption {
+        default = "<icon>";
+        type = types.str;
+      };
+
+      homepage.category = mkOption {
+        default = "<finish>";
+        type = types.str;
+      };
+      ]],
+      {
+        description = i(2),
+        finish = i(0),
+        icon = i(3),
+        name = i(1),
+      }
+    )
+  ),
+
+  s(
     "imports",
     fmta(
       [[
