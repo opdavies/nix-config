@@ -1,5 +1,5 @@
 require("oil").setup {
-  columns = { "icon" },
+  columns = {},
 
   keymaps = {
     ["<C-h>"] = false,
