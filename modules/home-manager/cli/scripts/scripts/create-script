@@ -8,14 +8,16 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-cat > "${1}" << EOF
+cat > "$1" << EOF
 #!/usr/bin/env bash
 
 set -o errexit
 set -o nounset
 set -o pipefail
 
-echo "${1}"
+
 EOF
 
-chmod +x "${1}"
+chmod +x "$1"
+
+$EDITOR "$1";
