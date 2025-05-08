@@ -60,6 +60,11 @@
   gstp = "git stash pop";
   gt = "git tag";
 
+  j = "just";
+  jb = "just build";
+  jt = "just test";
+  js = "just switch";
+
   # tmux
   ta = "tmux attach";
   tl = "tmux list-sessions";
