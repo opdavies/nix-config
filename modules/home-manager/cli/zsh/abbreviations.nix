@@ -46,6 +46,8 @@
   gpa = "git push acquia";
   gpam = "git push acquia main";
   gpap = "git push acquia HEAD:production";
+  gpf = "git push --force-with-lease";
+  gpfo = "git push --force-with-lease origin";
   gpl = "git pull";
   gplr = "git pull --rebase";
   gpo = "git push origin";
