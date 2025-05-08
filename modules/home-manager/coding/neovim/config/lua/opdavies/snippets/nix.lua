@@ -58,6 +58,33 @@ ls.add_snippets("nix", {
   ),
 
   s(
+    "new_flake",
+    fmta(
+      [[
+      {
+      inputs = {
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";<inputs>
+      };
+
+      outputs =
+        { nixpkgs, ... }:
+        let
+          system = "x86_64-linux";
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          devShells.${system}.default = pkgs.mkShell {
+            packages = with pkgs; [ <pkgs> ];
+          };<finish>
+
+          formatter.${system} = pkgs.nixfmt-classic;
+        };
+      }
+      ]],
+      { inputs = i(1), pkgs = i(2), finish = i(0) }
+    )
+  ),
+  s(
     "new_module",
     fmta(
       [[
