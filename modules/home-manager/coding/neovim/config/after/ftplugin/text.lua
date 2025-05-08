@@ -15,3 +15,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
   end,
 })
+
+-- Convert lines into a markdown list.
+vim.keymap.set("n", "<leader>l", "vip:norm I- <CR>")
+vim.keymap.set("v", "<leader>l", ":norm I- <CR>")
