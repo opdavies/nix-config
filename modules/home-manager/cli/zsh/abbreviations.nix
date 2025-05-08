@@ -150,4 +150,11 @@
   dscr = "drush php:script";
   duli = "drush uli";
   dup = "drush updatedb -y";
+
+  sg = "vendor/bin/sculpin generate";
+  sge = "vendor/bin/sculpin generate --env";
+  sgs = "vendor/bin/sculpin generate --server";
+  sgsp = "vendor/bin/sculpin generate --server --port";
+  sgsw = "vendor/bin/sculpin generate --server --watch";
+  sgswp = "vendor/bin/sculpin generate --server --watch --port";
 }
