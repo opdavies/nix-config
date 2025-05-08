@@ -11,3 +11,7 @@ table.insert(sources, { name = "buffer" })
 table.insert(sources, { name = "path" })
 
 cmp.setup.buffer { sources = sources }
+
+-- Convert lines into a list.
+vim.keymap.set("n", "<leader>l", "vip:norm I* <CR>")
+vim.keymap.set("v", "<leader>l", ":norm I* <CR>")
