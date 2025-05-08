@@ -13,6 +13,12 @@
   evl = "export-video-list";
   vv = "cat ~/Documents/videos.json";
 
+  f = "find .";
+  fd = "find . -type d";
+  fdn = "find . -type d -name";
+  ff = "find . -type f";
+  ffn = "find . -type f -name";
+
   g = "git";
   ga = "git add";
   gan = "git add -N";
