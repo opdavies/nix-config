@@ -37,8 +37,11 @@
   gf = "git fetch";
   gfa = "git fetch --all";
   gl = "git log";
+  glg = "git log --grep";
   glo = "git log --oneline";
-  gls = "git log --stat";
+  glog = "git log --oneline --grep";
+  glos = "git log --oneline -S";
+  gls = "git log -S";
   gm = "git merge";
   gmf = "git merge --ff";
   gmnf = "git merge --no-ff";
