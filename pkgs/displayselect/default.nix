@@ -1,28 +1,30 @@
 { pkgs, ... }:
 
-with pkgs;
-
-stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation {
   pname = "displayselect";
   version = "unstable-2024-05-11";
 
-  src = fetchFromGitHub {
-    owner = "lukesmithxyz";
-    repo = "voidrice";
-    rev = "97687287bdfd332398b82a196b5f1feaec73f1d7";
-    sha256 = "sha256-9U1Do0w2oT5E6uZxSKoHAzbGbSLQRQlT65KcPGzwhW8=";
+  src = builtins.fetchurl {
+    url = "https://raw.githubusercontent.com/lukesmithxyz/voidrice/97687287bdfd332398b82a196b5f1feaec73f1d7/.local/bin/displayselect";
+    sha256 = "sha256:11r561pfhb48a3xmi42zzvpljahnwlfad9rz8qmmp64dhz1f2vp0";
   };
 
-  buildInputs = [
+  dontUnpack = true;
+
+  buildInputs = with pkgs; [
     bash
     xorg.xrandr
   ];
+
+  prePatch = ''
+    cp $src displayselect
+  '';
 
   patches = [ ./scaling.patch ];
 
   installPhase = ''
     mkdir -p $out/bin
-    cp .local/bin/displayselect $out/bin
+    cp displayselect $out/bin
     chmod +x $out/bin/displayselect
   '';
 
