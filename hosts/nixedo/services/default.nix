@@ -8,6 +8,7 @@
 {
   imports = [
     ./homepage
+    ./mastodon.nix
     ./samba.nix
     ./uptime-kuma.nix
     ./vaultwarden.nix
