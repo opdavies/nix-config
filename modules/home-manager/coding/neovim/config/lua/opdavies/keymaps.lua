@@ -18,6 +18,9 @@ set("n", "N", "Nzzzv")
 set("v", "<down>", "<nop>")
 set("v", "<up>", "<nop>")
 
+set("n", "<Left>", "gT")
+set("n", "<Right>", "gt")
+
 -- Easily switch back to visual mode.
 set("i", "jj", "<Esc>")
 set("i", "jk", "<Esc>")
