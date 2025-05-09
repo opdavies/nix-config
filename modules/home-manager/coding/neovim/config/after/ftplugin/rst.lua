@@ -15,3 +15,6 @@ cmp.setup.buffer { sources = sources }
 -- Convert lines into a list.
 vim.keymap.set("n", "<leader>l", "vip:norm I* <CR>")
 vim.keymap.set("v", "<leader>l", ":norm I* <CR>")
+
+vim.keymap.set("n", "<leader>ta", '_iTextAnnotation "<Esc>A"<Esc>j')
+vim.keymap.set("v", "<leader>ta", ':norm ITextAnnotation "<Esc>gv:norm A"<Esc>')
