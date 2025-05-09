@@ -26,7 +26,7 @@
   "vim-textobj-indent": {
     "owner": "kana",
     "repo": "vim-textobj-indent",
-    "rev": "v0.0.6",
+    "rev": "deb76867c302f933c8f21753806cbf2d8461b548",
     "version": "0.0.6",
     "hash": "sha256-oFzUPG+IOkbKZ2gU/kduQ3G/LsLDlEjFhRP0BHBE+1Q="
   },
