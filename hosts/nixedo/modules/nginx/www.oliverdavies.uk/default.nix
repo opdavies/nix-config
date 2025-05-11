@@ -12,7 +12,9 @@ let
     root = "/var/www/vhosts/website-tome";
 
     paths = [
+      "archive"
       "core"
+      "daily/.+"
       "examples"
       "sites/default/files"
       "themes/custom/opdavies"
@@ -24,7 +26,7 @@ let
 
   tomeLocations = builtins.listToAttrs (
     map (path: {
-      name = "/${path}";
+      name = "~ ^/${path}";
 
       value = {
         root = tome.root;
