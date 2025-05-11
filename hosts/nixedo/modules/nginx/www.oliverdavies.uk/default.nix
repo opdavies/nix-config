@@ -16,6 +16,7 @@ let
       "core"
       "daily/.+"
       "examples"
+      "homelab"
       "sites/default/files"
       "themes/custom/opdavies"
       "tome-test"
