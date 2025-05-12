@@ -26,10 +26,5 @@
     throttled.enable = true;
     thermald.enable = true;
     upower.enable = true;
-
-    xserver = {
-      desktopManager.cinnamon.enable = true;
-      displayManager.lightdm.enable = true;
-    };
   };
 }

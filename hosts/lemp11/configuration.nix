@@ -18,6 +18,8 @@
 
   desktop.media.makemkv.enable = true;
 
+  nixpad.enable = true;
+
   # Bootloader.
   boot = {
     loader = {
@@ -49,11 +51,8 @@
     vscodium
   ];
 
-  system.autoUpgrade.enable = true;
-
   environment.systemPackages = with pkgs; [
     fastfetch
     htop
-    libreoffice
   ];
 }

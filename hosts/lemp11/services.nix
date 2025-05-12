@@ -27,9 +27,6 @@
         layout = "gb";
         variant = "";
       };
-
-      desktopManager.cinnamon.enable = true;
-      displayManager.lightdm.enable = true;
     };
   };
 }

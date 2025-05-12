@@ -17,6 +17,8 @@
 
   desktop.dconf.enable = true;
 
+  nixpad.enable = true;
+
   boot = {
     loader = {
       systemd-boot = {
@@ -35,6 +37,4 @@
   '';
 
   networking.networkmanager.enable = true;
-
-  system.autoUpgrade.enable = true;
 }
