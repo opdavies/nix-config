@@ -1,14 +1,10 @@
-{ pkgs, ... }:
-
 {
   imports = [
     ../common
 
     ./hardware-configuration.nix
     ./hardware.nix
-    ./secrets.nix
     ./services
-    ./users.nix
 
     ../../users/luke.nix
     ../../users/opdavies.nix
@@ -39,23 +35,6 @@
   '';
 
   networking.networkmanager.enable = true;
-
-  security = {
-    polkit.enable = true;
-    rtkit.enable = true;
-  };
-
-  environment.systemPackages = with pkgs; [
-    gtypist
-    pam_gnupg
-    sxiv
-    ttyper
-    yt-dlp
-  ];
-
-  networking.hosts = {
-    "192.168.1.116" = [ "nixedo" ];
-  };
 
   system.autoUpgrade.enable = true;
 }

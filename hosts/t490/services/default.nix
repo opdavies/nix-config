@@ -2,7 +2,6 @@
   imports = [
     ./cron.nix
     ./interception-tools.nix
-    ./redshift.nix
     ./sound.nix
     ./udev.nix
     ./xserver.nix
@@ -27,5 +26,10 @@
     throttled.enable = true;
     thermald.enable = true;
     upower.enable = true;
+
+    xserver = {
+      desktopManager.cinnamon.enable = true;
+      displayManager.lightdm.enable = true;
+    };
   };
 }
