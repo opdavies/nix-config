@@ -17,6 +17,7 @@ let
       "daily/.+"
       "examples"
       "homelab"
+      "rss/daily.xml"
       "sites/default/files"
       "themes/custom/opdavies"
       "tome-test"
