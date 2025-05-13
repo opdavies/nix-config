@@ -21,10 +21,12 @@ in
       displayManager.lightdm.enable = true;
     };
 
-    programs.firefox.enable = true;
+    programs = {
+      firefox.enable = true;
+      git.enable = true;
+    };
 
     environment.systemPackages = with pkgs; [
-      git
       libreoffice
     ];
 
