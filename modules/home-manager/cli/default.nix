@@ -11,6 +11,7 @@
     ./ranger.nix
     ./scripts
     ./starship.nix
+    ./todos.nix
     ./tmux.nix
     ./tmux-sessionizer.nix
     ./zsh
