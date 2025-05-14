@@ -63,17 +63,19 @@ ls.add_snippets("nix", {
       [[
       {
       inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";<inputs>
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";<inputs>
       };
 
       outputs =
         { nixpkgs, ... }:
         let
           system = "x86_64-linux";
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs { inherit system; };
+
+          inherit (pkgs) mkShell;
         in
         {
-          devShells.${system}.default = pkgs.mkShell {
+          devShells.${system}.default = mkShell {
             packages = with pkgs; [ <pkgs> ];
           };<finish>
 
