@@ -26,6 +26,7 @@ with lib;
     ./home-assistant.nix
     ./immich.nix
     ./jellyfin.nix
+    ./jitsi.nix
     ./nginx
     ./paperless.nix
     ./peertube.nix

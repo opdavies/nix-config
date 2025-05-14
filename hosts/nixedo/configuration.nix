@@ -21,6 +21,11 @@
   cli.podman.enable = true;
   desktop.dconf.enable = true;
 
+  # TODO: why didn't it work when adding this to jitsi.nix?
+  nixpkgs.config.permittedInsecurePackages = [
+    "jitsi-meet-1.0.8043"
+  ];
+
   services.logind.lidSwitchExternalPower = "ignore";
 
   boot.loader = {
