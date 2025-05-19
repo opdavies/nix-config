@@ -24,8 +24,6 @@ in
 
         plugins = with pkgs.vimPlugins; [
           comment-nvim
-          conf-vim
-          edit-alternate-vim
           gitsigns-nvim
           harpoon2
           mini-nvim
@@ -33,7 +31,6 @@ in
           oil-nvim
           phpactor
           refactoring-nvim
-          standard-vim
           undotree
           vim-nix
           vim-pasta
