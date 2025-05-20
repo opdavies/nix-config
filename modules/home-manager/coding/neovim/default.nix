@@ -32,13 +32,6 @@ in
           refactoring-nvim
           undotree
           vim-nix
-          vim-pasta
-          vim-repeat
-          vim-sleuth
-          vim-textobj-indent
-          vim-textobj-user
-          vim-textobj-xmlattr
-          vim-unimpaired
 
           # Testing
           vim-test
@@ -109,7 +102,6 @@ in
           nvim-cmp
 
           # Snippets
-          friendly-snippets
           luasnip
 
           # Telescope
@@ -128,6 +120,10 @@ in
 
           # Themes
           catppuccin-nvim
+        ];
+
+        extraPackages = with pkgs; [
+          ripgrep
         ];
       };
 

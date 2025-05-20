@@ -55,6 +55,7 @@
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
           lua54Packages.luacheck
+          just
           nixd
         ];
       };
