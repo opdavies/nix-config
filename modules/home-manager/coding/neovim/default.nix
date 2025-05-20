@@ -17,7 +17,6 @@ in
     programs.neovim =
       let
         php = pkgs.php82;
-        phpPackages = pkgs.php82Packages;
       in
       {
         enable = true;
@@ -129,51 +128,6 @@ in
 
           # Themes
           catppuccin-nvim
-        ];
-
-        extraPackages = with pkgs; [
-          # Languages
-          nodePackages.typescript
-          nodejs-slim
-          php
-
-          # Language servers
-          bash-language-server
-          dockerfile-language-server-nodejs
-          emmet-language-server
-          gopls
-          lua-language-server
-          lua54Packages.luacheck
-          marksman
-          nixd
-          phpactor
-          tailwindcss-language-server
-          terraform-ls
-          typescript-language-server
-          vscode-langservers-extracted
-          vue-language-server
-          yaml-language-server
-
-          # Formatters
-          black
-          eslint_d
-          nixfmt-rfc-style
-          nodePackages.prettier
-          stylua
-          yamlfmt
-
-          # Tools
-          hadolint
-          html-tidy
-          mariadb
-          nodePackages.jsonlint
-          nodePackages.markdownlint-cli
-          phpPackages.php-codesniffer
-          phpPackages.phpstan
-          proselint
-          ripgrep
-          shellcheck
-          yamllint
         ];
       };
 

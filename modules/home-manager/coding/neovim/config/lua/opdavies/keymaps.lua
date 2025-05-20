@@ -90,3 +90,5 @@ vim.keymap.set("n", "<leader>gx", function()
   local url = vim.fn.expand "<cfile>"
   vim.fn["netrw#BrowseX"](url, 0)
 end, { desc = "Open URL under cursor" })
+
+set("n", "<leader>f", vim.lsp.buf.format);

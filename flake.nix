@@ -52,6 +52,13 @@
       inherit (pkgs) mkShell;
     in
     {
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          lua54Packages.luacheck
+          nixd
+        ];
+      };
+
       packages.${system} = {
         default = mkShell { buildInputs = with pkgs; [ just ]; };
       };

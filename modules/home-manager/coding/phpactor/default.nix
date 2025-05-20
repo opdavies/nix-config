@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, lib, ... }:
 
 with lib;
 
@@ -11,13 +6,9 @@ let
   cfg = config.coding.phpactor;
 in
 {
-  options.coding.phpactor.enable = lib.mkEnableOption "Enable phpactor";
+  options.coding.phpactor.enable = mkEnableOption "Enable phpactor";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      phpactor
-    ];
-
     xdg.configFile.phpactor = {
       source = ./config;
       recursive = true;
