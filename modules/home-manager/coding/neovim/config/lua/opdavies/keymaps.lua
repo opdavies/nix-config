@@ -92,3 +92,30 @@ vim.keymap.set("n", "<leader>gx", function()
 end, { desc = "Open URL under cursor" })
 
 set("n", "<leader>f", vim.lsp.buf.format);
+
+local notes_directory = os.getenv("NOTES_DIRECTORY")
+local wiki_directory = os.getenv("XDG_DOCUMENTS_DIR") .. "/wiki"
+
+set("n", "<leader>gn", function()
+  require("telescope.builtin").live_grep({
+    cwd = notes_directory,
+  })
+end)
+
+set("n", "<leader>n", function()
+  local filepath = string.format("%s/%s.txt", notes_directory, os.date("%Y-%m-%d"))
+
+  vim.cmd.tabnew(vim.fn.fnameescape(filepath))
+end)
+
+set("n", "<leader>fw", function()
+  require("telescope.builtin").find_files({
+    cwd = wiki_directory,
+  })
+end)
+
+set("n", "<leader>gw", function()
+  require("telescope.builtin").live_grep({
+    cwd = wiki_directory,
+  })
+end)
