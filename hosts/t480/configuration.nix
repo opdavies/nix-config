@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
     ./modules
     ./secrets.nix
-    ./services.nix
+    ./services
 
     ../../users/opdavies.nix
   ];
