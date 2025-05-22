@@ -54,8 +54,9 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          lua54Packages.luacheck
           just
+          lua-language-server
+          lua54Packages.luacheck
           nixd
         ];
       };
