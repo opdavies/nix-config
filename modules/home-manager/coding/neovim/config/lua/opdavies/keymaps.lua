@@ -79,7 +79,7 @@ set("n", "<leader>ef", ":edit flake.nix<CR>")
 set("n", "<leader>ej", ":edit justfile<CR>")
 set("n", "<leader>en", ":edit notes.txt<CR>")
 set("n", "<leader>er", ":edit run<CR>")
-set("n", "<leader>et", ":edit todo.txt<CR>")
+set("n", "<leader>et", function() vim.cmd.tabnew("todo.txt") end)
 
 set({ "n", "v" }, "<leader>y", [["+y]])
 set("n", "<leader>Y", [["+Y]])
