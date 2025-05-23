@@ -17,6 +17,7 @@ let
       "daily/.+"
       "examples"
       "homelab"
+      "podcast/28-ai-tools-web-coding-luke-mccormick"
       "rss/daily.xml"
       "sites/default/files"
       "themes/custom/opdavies"
