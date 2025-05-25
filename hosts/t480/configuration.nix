@@ -12,14 +12,24 @@
     ../../users/opdavies.nix
   ];
 
-  cli.password-store = {
-    enable = true;
+  cli = {
+    kanata = {
+      enable = true;
 
-    extensions = with pkgs.passExtensions; [
-      pass-audit
-      pass-otp
-      pass-update
-    ];
+      devices = [
+        "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+      ];
+    };
+
+    password-store = {
+      enable = true;
+
+      extensions = with pkgs.passExtensions; [
+        pass-audit
+        pass-otp
+        pass-update
+      ];
+    };
   };
 
   core = {
