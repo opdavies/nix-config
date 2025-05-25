@@ -1,4 +1,4 @@
-{ config, options, ... }:
+{ config, lib, options, pkgs, ... }:
 
 {
   imports = [ ../common ];
@@ -109,4 +109,12 @@
     098EE055DAD2B9CB68154C6759DD38292D2273B6
     1E21B58D69FFEFAD077F152A50FEA938A3413F50
   '';
+
+  services.sxhkd = {
+    enable = true;
+
+    keybindings = {
+      "{_,shift + ,super + }XF86MonBrightness{Down,Up}" = "${lib.getExe pkgs.brightnessctl} set {5%-,10%-,10%,+5%,+10%,100%}";
+    };
+  };
 }
