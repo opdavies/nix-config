@@ -18,6 +18,7 @@ let
       "examples"
       "homelab"
       "podcast/28-ai-tools-web-coding-luke-mccormick"
+      "podcast/28-using-ai-tools-web-coding"
       "rss/daily.xml"
       "sites/default/files"
       "themes/custom/opdavies"
