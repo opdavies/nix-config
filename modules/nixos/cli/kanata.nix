@@ -34,18 +34,19 @@ in
             (defvar
               tap-time 150
               hold-time 200
+              hold-time-slow 300
             )
 
             (defalias
               escctrl (tap-hold 100 100 esc lctl)
-              a (tap-hold $tap-time $hold-time a lmet)
-              s (tap-hold $tap-time $hold-time s lalt)
+              a (tap-hold $tap-time $hold-time-slow a lmet)
+              s (tap-hold $tap-time $hold-time-slow s lalt)
               d (tap-hold $tap-time $hold-time d lsft)
               f (tap-hold $tap-time $hold-time f lctl)
               j (tap-hold $tap-time $hold-time j rctl)
               k (tap-hold $tap-time $hold-time k rsft)
-              l (tap-hold $tap-time $hold-time l ralt)
-              ; (tap-hold $tap-time $hold-time ; rmet)
+              l (tap-hold $tap-time $hold-time-slow l ralt)
+              ; (tap-hold $tap-time $hold-time-slow ; rmet)
             )
 
             (deflayer base
