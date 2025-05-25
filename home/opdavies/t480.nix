@@ -115,6 +115,7 @@
 
     keybindings = {
       "{_,shift + ,super + }XF86MonBrightness{Down,Up}" = "${lib.getExe pkgs.brightnessctl} set {5%-,10%-,10%,+5%,+10%,100%}";
+      "super + x; {1,2,3}" = "st {newsboat,nmtui,bluetuith";
     };
   };
 }
