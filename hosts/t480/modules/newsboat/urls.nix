@@ -294,4 +294,5 @@
     url = "https://www.garfieldtech.com/blog/feed";
     tags = [ "PHP" ];
   }
+  { url = "https://world.hey.com/dhh/feed.atom"; }
 ]
