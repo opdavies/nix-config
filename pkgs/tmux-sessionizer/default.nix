@@ -26,6 +26,9 @@ stdenv.mkDerivation {
       url = "https://patch-diff.githubusercontent.com/raw/ThePrimeagen/tmux-sessionizer/pull/2.patch";
       sha256 = "sha256-4/4rzve49T3FHnl9WWUPJVcb0NQojMQjIVnEZGwVAsY=";
     })
+
+    ./shorten-suggested-paths.patch
+    ./sort-suggestions.patch
   ];
 
   installPhase = ''
