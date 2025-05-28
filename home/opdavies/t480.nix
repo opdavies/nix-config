@@ -37,8 +37,7 @@
 
           repos = extraConfig.XDG_REPOS_DIR;
         in
-        options.cli.tmux-sessionizer.directories.default
-        ++ [
+        [
           repos
           "${repos}/*"
           documents
