@@ -55,6 +55,7 @@
   gplr = "git pull --rebase";
   gpo = "git push origin";
   gpom = "git push origin main";
+  gpt = "git push --tags";
   gr = "git rebase";
   gra = "git rebase --abort";
   grc = "git rebase --continue";
