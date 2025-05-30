@@ -30,6 +30,7 @@
 
     tmux-sessionizer = {
       enable = true;
+      enableDmenuIntegration = true;
 
       directories =
         let

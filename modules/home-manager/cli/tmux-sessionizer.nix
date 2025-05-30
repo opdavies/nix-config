@@ -13,6 +13,7 @@ in
 {
   options.cli.tmux-sessionizer = {
     enable = mkEnableOption "Enable tmux-sessionizer";
+    enableDmenuIntegration = mkEnableOption "Enable dmenu integration";
 
     directories = mkOption {
       default = [ config.home.homeDirectory ];
@@ -24,7 +25,18 @@ in
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       tmux-sessionizer
-    ];
+    ] ++ (optional cfg.enableDmenuIntegration (
+        pkgs.writeShellApplication {
+          name = "tmux-sessionizer-dmenu";
+
+          text = ''
+            # shellcheck disable=SC2046
+            selected=$(find $(eval echo "$(xargs < "$XDG_CONFIG_HOME/tmux-sessionizer/directories")") -mindepth 1 -maxdepth 1 -type d | dmenu -i -l 20)
+
+            ${pkgs.coreutils}/bin/nohup st -e tmux-sessionizer "$selected" >/dev/null 2>&1 &
+          '';
+        }
+    ));
 
     xdg.configFile = {
       "tmux-sessionizer/default".source = "${
