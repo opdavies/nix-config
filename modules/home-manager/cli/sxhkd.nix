@@ -12,6 +12,8 @@ in
   };
 
   config = mkIf cfg.enable {
+    xsession.enable = true;
+
     services.${service} = {
       enable = true;
 
