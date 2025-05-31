@@ -23,14 +23,7 @@
   };
 
   outputs =
-    {
-      agenix,
-      disko,
-      nixos-hardware,
-      nixpkgs,
-      self,
-      ...
-    }@inputs:
+    { nixpkgs, self, ... }@inputs:
     let
       inherit (self) outputs;
 
@@ -81,13 +74,6 @@
           };
 
           modules = [
-            agenix.nixosModules.default
-            nixos-hardware.nixosModules.common-cpu-intel
-            nixos-hardware.nixosModules.common-gpu-intel
-            nixos-hardware.nixosModules.common-pc-laptop
-            nixos-hardware.nixosModules.common-pc-laptop-hdd
-            nixos-hardware.nixosModules.system76
-
             ./hosts/lemp11/configuration.nix
           ];
         };
@@ -99,8 +85,6 @@
           };
 
           modules = [
-            agenix.nixosModules.default
-
             ./hosts/nixedo/configuration.nix
           ];
         };
@@ -112,10 +96,6 @@
           };
 
           modules = [
-            agenix.nixosModules.default
-            nixos-hardware.nixosModules.common-gpu-intel
-            nixos-hardware.nixosModules.lenovo-thinkpad-t480
-
             ./hosts/t480/configuration.nix
           ];
         };
@@ -127,10 +107,6 @@
           };
 
           modules = [
-            agenix.nixosModules.default
-            nixos-hardware.nixosModules.common-gpu-intel
-            nixos-hardware.nixosModules.lenovo-thinkpad-t490
-
             ./hosts/t490/configuration.nix
           ];
         };
@@ -144,10 +120,6 @@
           };
 
           modules = [
-            agenix.nixosModules.default
-            disko.nixosModules.disko
-            inputs.nixos-wsl.nixosModules.default
-
             ./hosts/PW05CH3L/configuration.nix
           ];
         };

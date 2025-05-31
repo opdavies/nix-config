@@ -1,7 +1,11 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
+    inputs.agenix.nixosModules.default
+    inputs.disko.nixosModules.disko
+    inputs.nixos-wsl.nixosModules.default
+
     ../common
 
     ../../users/opdavies.nix

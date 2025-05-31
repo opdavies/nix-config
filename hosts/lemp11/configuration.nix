@@ -1,7 +1,14 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
+    inputs.agenix.nixosModules.default
+    inputs.nixos-hardware.nixosModules.common-cpu-intel
+    inputs.nixos-hardware.nixosModules.common-gpu-intel
+    inputs.nixos-hardware.nixosModules.common-pc-laptop
+    inputs.nixos-hardware.nixosModules.common-pc-laptop-hdd
+    inputs.nixos-hardware.nixosModules.system76
+
     ../common
     ./hardware-configuration.nix
     ./programs.nix

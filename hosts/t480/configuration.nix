@@ -1,7 +1,11 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
+    inputs.agenix.nixosModules.default
+    inputs.nixos-hardware.nixosModules.common-gpu-intel
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
+
     ../common
 
     ./hardware-configuration.nix
