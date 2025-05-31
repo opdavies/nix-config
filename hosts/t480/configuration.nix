@@ -68,6 +68,18 @@
 
   networking.networkmanager.enable = true;
 
+  networking.hosts = {
+    "192.168.1.116" = [
+      "home.oliverdavies.uk"
+      "jellyfin.oliverdavies.uk"
+      "nixedo.oliverdavies.uk"
+      "paperless.oliverdavies.uk"
+      "photos.oliverdavies.uk"
+      "ssh.oliverdavies.uk"
+      "tubearchivist.oliverdavies.uk"
+    ];
+  };
+
   security = {
     polkit.enable = true;
     rtkit.enable = true;
