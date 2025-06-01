@@ -115,16 +115,19 @@ prev.dwm.override {
     ./restartsig.patch
 
     (fetchpatch {
+      name = "preserveonrestart";
       url = "https://dwm.suckless.org/patches/preserveonrestart/dwm-preserveonrestart-6.3.diff";
       sha256 = "zgwTCgD3YE+2K4BF6Em+qkM1Gax5vOZfeuWa6zXx8cE=";
     })
 
     (fetchpatch {
+      name = "hide_vacant_tags";
       url = "https://dwm.suckless.org/patches/hide_vacant_tags/dwm-hide_vacant_tags-6.4.diff";
       sha256 = "GIbRW0Inwbp99rsKLfIDGvPwZ3pqihROMBp5vFlHx5Q=";
     })
 
     (fetchpatch {
+      name = "pertag";
       url = "https://dwm.suckless.org/patches/pertag/dwm-pertag-20200914-61bb8b2.diff";
       sha256 = "wRZP/27V7xYOBnFAGxqeJFXdoDk4K1EQMA3bEoAXr/0=";
     })
