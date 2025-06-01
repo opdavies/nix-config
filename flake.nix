@@ -68,60 +68,60 @@
 
       nixosConfigurations = {
         lemp11 = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./hosts/lemp11/configuration.nix
+          ];
+
           specialArgs = specialArgs // {
             hostname = "lemp11";
             stateVersion = "22.11";
           };
-
-          modules = [
-            ./hosts/lemp11/configuration.nix
-          ];
         };
 
         nixedo = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./hosts/nixedo/configuration.nix
+          ];
+
           specialArgs = specialArgs // {
             hostname = "nixedo";
             stateVersion = "24.11";
           };
-
-          modules = [
-            ./hosts/nixedo/configuration.nix
-          ];
         };
 
         t480 = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./hosts/t480/configuration.nix
+          ];
+
           specialArgs = specialArgs // {
             hostname = "t480";
             stateVersion = "22.11";
           };
-
-          modules = [
-            ./hosts/t480/configuration.nix
-          ];
         };
 
         t490 = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./hosts/t490/configuration.nix
+          ];
+
           specialArgs = specialArgs // {
             hostname = "t490";
             stateVersion = "22.11";
           };
-
-          modules = [
-            ./hosts/t490/configuration.nix
-          ];
         };
 
         PW05CH3L = nixpkgs.lib.nixosSystem {
           inherit system;
 
+          modules = [
+            ./hosts/PW05CH3L/configuration.nix
+          ];
+
           specialArgs = specialArgs // {
             hostname = "PW05CH3L";
             stateVersion = "22.11";
           };
-
-          modules = [
-            ./hosts/PW05CH3L/configuration.nix
-          ];
         };
       };
     };
