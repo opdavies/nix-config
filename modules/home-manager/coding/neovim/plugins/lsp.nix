@@ -1,0 +1,3 @@
+{
+  plugins.lsp.enable = true;
+}
