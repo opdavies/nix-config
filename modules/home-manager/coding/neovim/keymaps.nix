@@ -20,7 +20,7 @@
     {
       action = "\"+y";
       key = "<leader>y";
-      mode = "x";
+      mode = ["n" "x"];
     }
 
     {
