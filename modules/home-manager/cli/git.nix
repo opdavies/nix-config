@@ -168,7 +168,10 @@ in
     };
 
     home = {
-      packages = with pkgs; [ stable.git-instafix ];
+      packages = with pkgs; [
+        git-trim
+        stable.git-instafix
+      ];
 
       sessionVariables = {
         GIT_INSTAFIX_UPSTREAM = "origin/main";
