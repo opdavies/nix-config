@@ -15,6 +15,7 @@
     {
       action = "<cmd>lua vim.lsp.buf.format()<CR>";
       key = "<leader>f";
+      options.silent = true;
     }
 
     {
@@ -31,6 +32,7 @@
     {
       action = "<cmd>silent !tmux new-window tmux-sessionizer<CR>";
       key = "<C-f>";
+      options.silent = true;
     }
 
     {
