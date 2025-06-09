@@ -56,6 +56,8 @@
 
   desktop = {
     browsers = {
+      chromium.enable = true;
+
       firefox = {
         enable = true;
 
