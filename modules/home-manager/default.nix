@@ -12,20 +12,21 @@
     ./cli/scripts
     ./cli/starship.nix
     ./cli/sxhkd.nix
-    ./cli/todos.nix
-    ./cli/tmux.nix
     ./cli/tmux-sessionizer.nix
+    ./cli/tmux.nix
+    ./cli/todos.nix
     ./cli/zsh
-
     ./coding/neovim
     ./coding/phpactor
-
     ./core/gnupg.nix
-
-    ./desktop/browsers
+    ./desktop/browsers/chromium.nix
+    ./desktop/browsers/firefox.nix
+    ./desktop/browsers/qutebrowser.nix
     ./desktop/flameshot.nix
     ./desktop/gtk.nix
-    ./desktop/media
+    ./desktop/media/handbrake.nix
+    ./desktop/media/makemkv.nix
+    ./desktop/media/mpv.nix
     ./desktop/screenkey.nix
   ];
 }
