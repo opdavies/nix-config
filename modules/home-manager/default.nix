@@ -27,6 +27,7 @@
     ./desktop/media/handbrake.nix
     ./desktop/media/makemkv.nix
     ./desktop/media/mpv.nix
+    ./desktop/redshift.nix
     ./desktop/screenkey.nix
   ];
 }

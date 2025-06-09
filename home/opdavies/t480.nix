@@ -75,6 +75,8 @@
       makemkv.enable = true;
       mpv.enable = true;
     };
+
+    redshift.enable = true;
   };
 
   programs = {
