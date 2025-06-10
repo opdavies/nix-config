@@ -13,6 +13,16 @@
     }
 
     {
+      action = "<cmd>!drush cache-rebuild<CR>";
+      key = "<leader>dcr";
+    }
+
+    {
+      action = "<cmd>:edit todo.txt<CR>";
+      key = "<leader>et";
+    }
+
+    {
       action = "<cmd>lua vim.lsp.buf.format()<CR>";
       key = "<leader>f";
       options.silent = true;
