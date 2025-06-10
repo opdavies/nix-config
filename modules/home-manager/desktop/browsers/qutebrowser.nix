@@ -19,6 +19,7 @@ in
         gh = "https://github.com/search?q={}";
         mn = "https://mynixos.com/search?q={}";
         nx = "https://search.nixos.org/packages?query={}";
+        yt = "https://www.youtube.com/results?search_query={}";
       };
 
       settings = {
