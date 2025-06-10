@@ -11,6 +11,7 @@
     number = true;
     relativenumber = true;
     shiftwidth = 2;
+    signcolumn = "yes:1";
     smartindent = true;
     softtabstop = 2;
     splitbelow = true;
