@@ -43,6 +43,7 @@ in
         ./plugins/lualine.nix
         ./plugins/luasnip.nix
         ./plugins/mini.nix
+        ./plugins/nvim-autopairs.nix
         ./plugins/oil.nix
         ./plugins/phpactor.nix
         ./plugins/refactoring.nix
