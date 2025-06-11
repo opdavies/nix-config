@@ -70,5 +70,11 @@
       action = "<cmd>edit flake.nix<CR>";
       key = "<leader>ef";
     }
+
+    {
+      action = "<Esc>";
+      key = "jk";
+      mode = "i";
+    }
   ];
 }
