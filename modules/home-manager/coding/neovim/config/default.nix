@@ -8,6 +8,7 @@
   imports = [
     ./keymaps.nix
     ./options.nix
+    ./plugins/auto-save.nix
     ./plugins/cmp.nix
     ./plugins/conform.nix
     ./plugins/fidget.nix
