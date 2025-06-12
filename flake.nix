@@ -46,7 +46,7 @@
       neovimWithConfig = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
         inherit pkgs;
 
-        module = import ./modules/home-manager/coding/neovim/nixvim.nix;
+        module = import ./modules/home-manager/coding/neovim/config;
       };
     in
     {

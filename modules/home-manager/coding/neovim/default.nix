@@ -24,7 +24,7 @@ in
       viAlias = true;
       vimAlias = true;
 
-      imports = [ ./nixvim.nix ];
+      imports = [ ./config ];
     };
   };
 }
