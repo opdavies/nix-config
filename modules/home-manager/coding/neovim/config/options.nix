@@ -10,6 +10,7 @@
     list = true;
     number = true;
     relativenumber = true;
+    scrolloff = 5;
     shiftwidth = 2;
     signcolumn = "yes:1";
     smartindent = true;
