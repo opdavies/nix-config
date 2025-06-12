@@ -33,7 +33,7 @@
     {
       action = "<cmd>Gitsigns stage_buffer<CR>";
       key = "<leader>hS";
-      mode = "x";
+      mode = "n";
     }
 
     {
