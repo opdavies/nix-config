@@ -42,6 +42,12 @@
       };
 
       inherit (pkgs) mkShell;
+
+      neovimWithConfig = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
+        inherit pkgs;
+
+        module = import ./modules/home-manager/coding/neovim/nixvim.nix;
+      };
     in
     {
       devShells.${system}.default = pkgs.mkShell {
@@ -55,6 +61,8 @@
 
       packages.${system} = {
         default = mkShell { buildInputs = with pkgs; [ just ]; };
+
+        nvim = neovimWithConfig;
       };
 
       formatter.${system} = pkgs.nixfmt-rfc-style;
