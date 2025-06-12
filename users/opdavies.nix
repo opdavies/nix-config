@@ -22,6 +22,7 @@ with lib;
       ++ optional config.cli.podman.enable "podman";
 
     packages = with pkgs; [
+      comma
       qrencode
     ];
 
