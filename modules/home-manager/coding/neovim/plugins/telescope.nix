@@ -9,6 +9,7 @@
     };
 
     keymaps = {
+      "<leader>/" = "current_buffer_fuzzy_find";
       "<leader>fb" = "buffers";
       "<leader>fd" = "find_files";
       "<leader>fg" = "live_grep";
