@@ -1,0 +1,1 @@
+Re-configure diagnostic output in neovim.
