@@ -38,6 +38,16 @@
     settings.flavour = "mocha";
   };
 
+  diagnostic.settings  = {
+    signs = true;
+    underline = false;
+    update_in_insert = false;
+    virtual_text = {
+      enable = true;
+      spacing = 2;
+    };
+  };
+
   extraPackages = with pkgs; [
     nixfmt-rfc-style
     stylua
