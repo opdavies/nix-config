@@ -4,7 +4,8 @@
   plugins.auto-save.settings.condition = ''
     function(buf)
       local excluded_filetypes = {
-        "harpoon"
+        "harpoon",
+        "oil",
       }
 
       local excluded_filenames = {}
