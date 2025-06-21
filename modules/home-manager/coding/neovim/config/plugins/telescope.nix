@@ -25,6 +25,8 @@
 
     settings.defaults.layout_config.prompt_position = "top";
     settings.defaults.sorting_strategy = "ascending";
+
+    settings.pickers.find_files.hidden = true;
   };
 }
 
