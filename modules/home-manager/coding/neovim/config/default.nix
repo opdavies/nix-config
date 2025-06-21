@@ -27,6 +27,7 @@
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/undotree.nix
+    ./plugins/vim-cool.nix
     ./plugins/vim-dadbod.nix
     ./plugins/vim-highlightedyank.nix
     ./plugins/vim-test.nix
