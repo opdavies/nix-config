@@ -1,10 +1,10 @@
 {
   services = {
     ollama = {
-      enable = true;
+      enable = false;
       acceleration = "rocm";
     };
 
-    open-webui.enable = true;
+    open-webui.enable = false;
   };
 }

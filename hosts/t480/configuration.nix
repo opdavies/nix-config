@@ -99,11 +99,8 @@
     cdrkit
     cpufrequtils
     displayselect
-    dvdbackup
-    dvdplusrwtools
     ffmpegthumbnailer
     gimp
-    gscan2pdf
     gtypist
     hunspellDicts.en-gb-large
     isync
@@ -120,6 +117,9 @@
     pmutils
     shotwell
     slack
+    stable.dvdbackup
+    stable.dvdplusrwtools
+    stable.gscan2pdf
     sxiv
     tailscale
     ttyper

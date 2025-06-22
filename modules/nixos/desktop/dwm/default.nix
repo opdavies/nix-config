@@ -18,7 +18,7 @@ in
       dwm-status = {
         enable = true;
 
-        order = [
+        settings.order = [
           "audio"
           "battery"
           "network"

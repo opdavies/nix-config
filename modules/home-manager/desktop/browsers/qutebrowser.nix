@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -12,6 +12,8 @@ in
   config = mkIf cfg.enable {
     programs.qutebrowser = {
       enable = true;
+
+      package = pkgs.stable.qutebrowser;
 
       searchEngines = {
         dp = "https://www.drupal.org/project/{}";
