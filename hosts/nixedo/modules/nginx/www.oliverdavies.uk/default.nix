@@ -18,6 +18,7 @@ let
       "examples"
       "homelab"
       "podcast"
+      "rss/bb.xml"
       "rss/daily.xml"
       "sites/default/files"
       "themes/custom/opdavies"
