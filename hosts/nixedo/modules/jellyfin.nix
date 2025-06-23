@@ -1,65 +1,23 @@
-{ config, lib, ... }:
-
-with lib;
-
-let
-  cfg = homelab.services.${service};
-  homelab = config.homelab;
-  service = "jellyfin";
-in
 {
-  options.homelab.services.${service} = {
-    enable = mkEnableOption "Enable ${service}";
+  services.jellyfin = {
+    enable = true;
 
-    url = mkOption {
-      default = "${service}.${homelab.domain}";
-      type = types.str;
-    };
-
-    homepage.name = mkOption {
-      default = "Jellyfin";
-      type = types.str;
-    };
-
-    homepage.description = mkOption {
-      default = "The Free Software Media System";
-      type = types.str;
-    };
-
-    homepage.icon = mkOption {
-      default = "jellyfin";
-      type = types.str;
-    };
-
-    homepage.category = mkOption {
-      default = "Media";
-      type = types.str;
-    };
+    configDir = "/mnt/media/jellyfin";
+    group = "media";
+    openFirewall = true;
   };
 
-  config = mkIf cfg.enable {
-    services = {
-      ${service} = {
-        enable = true;
+  services.nginx.virtualHosts."jellyfin.oliverdavies.uk" = {
+    forceSSL = true;
+    useACMEHost = "oliverdavies.uk";
 
-        configDir = "/mnt/media/${service}";
-        group = "media";
-        openFirewall = true;
-      };
+    locations."/" = {
+      proxyPass = "http://localhost:8096";
+      recommendedProxySettings = true;
 
-      nginx.virtualHosts."${cfg.url}" = {
-        forceSSL = true;
-        useACMEHost = homelab.domain;
-
-        locations."/" = {
-          proxyPass = "http://localhost:8096";
-          recommendedProxySettings = true;
-
-          extraConfig = ''
-            proxy_buffering off;
-          '';
-        };
-      };
+      extraConfig = ''
+        proxy_buffering off;
+      '';
     };
   };
 }

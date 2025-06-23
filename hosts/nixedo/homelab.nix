@@ -13,7 +13,6 @@
       home-assistant.enable = true;
       homepage-dashboard.enable = true;
       immich.enable = true;
-      jellyfin.enable = true;
       jitsi.enable = true;
       paperless.enable = true;
       peertube.enable = true;
