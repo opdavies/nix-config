@@ -1,70 +1,25 @@
+{ config, pkgs, ... }:
+
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+  services.immich = {
+    enable = true;
+    group = "media";
+    mediaLocation = "/mnt/media/immich";
+  };
 
-with lib;
+  services.nginx.virtualHosts."photos.oliverdavies.uk" = {
+    forceSSL = true;
+    useACMEHost = "oliverdavies.uk";
 
-let
-  cfg = homelab.services.${service};
-  homelab = config.homelab;
-  service = "immich";
-in
-{
-  options.homelab.services.${service} = {
-    enable = mkEnableOption "Enable ${service}";
-
-    url = mkOption {
-      default = "photos.${homelab.domain}";
-      type = types.str;
-    };
-
-    homepage.name = mkOption {
-      default = "Immich";
-      type = types.str;
-    };
-
-    homepage.description = mkOption {
-      default = "Self-hosted photo and video management solution";
-      type = types.str;
-    };
-
-    homepage.icon = mkOption {
-      default = "immich";
-      type = types.str;
-    };
-
-    homepage.category = mkOption {
-      default = "Media";
-      type = types.str;
+    locations."/" = {
+      proxyPass = "http://localhost:${toString config.services.immich.port}";
+      proxyWebsockets = true;
+      recommendedProxySettings = true;
     };
   };
 
-  config = mkIf cfg.enable {
-    services = {
-      ${service} = {
-        enable = true;
-        group = "media";
-        mediaLocation = "/mnt/media/${service}";
-      };
-
-      nginx.virtualHosts."${cfg.url}" = {
-        forceSSL = true;
-        useACMEHost = homelab.domain;
-
-        locations."/" = {
-          proxyPass = "http://localhost:${toString config.services.immich.port}";
-          proxyWebsockets = true;
-          recommendedProxySettings = true;
-        };
-      };
-    };
-
-    environment.systemPackages = with pkgs; [
-      immich-cli
-      immich-go
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    immich-cli
+    immich-go
+  ];
 }
