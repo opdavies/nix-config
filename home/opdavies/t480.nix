@@ -1,7 +1,10 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
-  imports = [ ../common ];
+  imports = [
+    ../common
+    ./t480/gammastep.nix
+  ];
 
   cli = {
     bluetuith.enable = true;
@@ -78,10 +81,6 @@
 
     # redshift.enable = true;
   };
-
-  services.gammastep.enable = true;
-  services.gammastep.provider = "geoclue2";
-  home.packages = with pkgs; [geoclue2];
 
   programs = {
     dev-commit = {

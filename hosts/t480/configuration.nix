@@ -16,6 +16,8 @@
     ../../users/opdavies.nix
   ];
 
+  services.geoclue2.enable = true;
+
   cli = {
     kanata = {
       enable = true;
