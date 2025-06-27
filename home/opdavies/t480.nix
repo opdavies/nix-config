@@ -76,8 +76,11 @@
       mpv.enable = true;
     };
 
-    redshift.enable = true;
+    # redshift.enable = true;
   };
+
+  services.gammastep.enable = true;
+  services.gammastep.provider = "geoclue2";
 
   programs = {
     dev-commit = {
