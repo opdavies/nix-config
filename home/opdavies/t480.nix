@@ -93,7 +93,7 @@
         [
           "${personal}/email-filters"
           "${personal}/nix-config"
-          "${personal}/oliverdavies.uk-tome"
+          "${personal}/oliverdavies.uk"
           "${personal}/opentofu-dns"
         ];
 
