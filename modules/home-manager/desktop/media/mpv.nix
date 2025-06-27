@@ -11,7 +11,6 @@ in
   config = mkIf cfg.enable {
     programs.mpv = {
       enable = true;
-      package = pkgs.stable.mpv;
 
       # https://github.com/mpv-player/mpv/blob/master/etc/input.conf
       bindings = {

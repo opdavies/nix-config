@@ -101,6 +101,8 @@
     cdrkit
     cpufrequtils
     displayselect
+    dvdbackup
+    dvdplusrwtools
     ffmpegthumbnailer
     gimp
     gtypist
@@ -119,8 +121,6 @@
     pmutils
     shotwell
     slack
-    stable.dvdbackup
-    stable.dvdplusrwtools
     stable.gscan2pdf
     sxiv
     tailscale
