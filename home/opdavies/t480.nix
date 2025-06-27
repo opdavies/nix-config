@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [ ../common ];
@@ -81,6 +81,7 @@
 
   services.gammastep.enable = true;
   services.gammastep.provider = "geoclue2";
+  home.packages = with pkgs; [geoclue2];
 
   programs = {
     dev-commit = {
