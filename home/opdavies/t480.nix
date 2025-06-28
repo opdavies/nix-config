@@ -84,7 +84,7 @@
 
   programs = {
     dev-commit = {
-      enable = true;
+      enable = false;
 
       repoPaths =
         let
