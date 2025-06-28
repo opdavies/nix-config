@@ -24,6 +24,7 @@
   gan = "git add -N";
   gap = "git add -p";
   gb = "git branch";
+  gba = "git branch --all";
   gbl = "git blame";
   gc = "git commit";
   gca = "git commit --amend";
