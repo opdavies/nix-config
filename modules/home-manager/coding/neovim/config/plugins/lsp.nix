@@ -16,4 +16,6 @@
       gr = "references";
     };
   };
+
+  plugins.lsp.servers.phpactor.enable = true;
 }
