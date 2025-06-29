@@ -11,6 +11,7 @@ in
 
   config.homelab.ports = {
     homepage-dashboard = 8097;
+    mealie = 9001;
     pihole = 8082;
     tubearchivist = 8099;
     vaultwarden = 8022;

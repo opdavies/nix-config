@@ -9,6 +9,7 @@
   imports = [
     ./homepage
     ./mastodon.nix
+    ./mealie.nix
     ./samba.nix
     ./uptime-kuma.nix
     ./vaultwarden.nix

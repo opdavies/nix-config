@@ -29,6 +29,7 @@
                 "home"
                 "jellyfin"
                 "luke"
+                "mealie"
                 "nixedo"
                 "paperless"
                 "photos"
