@@ -2,10 +2,6 @@
   services.xserver = {
     enable = true;
 
-    displayManager.sessionCommands = ''
-      setbg &
-    '';
-
     displayManager.startx.enable = true;
 
     xkb = {
