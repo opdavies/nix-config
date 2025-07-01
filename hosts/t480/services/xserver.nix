@@ -9,6 +9,4 @@
       variant = "";
     };
   };
-
-  services.displayManager.ly.enable = true;
 }
