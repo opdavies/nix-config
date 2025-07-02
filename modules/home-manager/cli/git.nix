@@ -169,6 +169,7 @@ in
 
     home = {
       packages = with pkgs; [
+        git-extras
         git-trim
         stable.git-instafix
       ];
