@@ -23,6 +23,7 @@ with lib;
 
     packages = with pkgs; [
       comma
+      magic-wormhole
       qrencode
     ];
 
