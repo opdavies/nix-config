@@ -13,6 +13,8 @@ let
 
     paths = [
       "archive"
+      "at"
+      "automated-testing"
       "core"
       "daily/.+"
       "examples"
@@ -21,6 +23,7 @@ let
       "rss/bb.xml"
       "rss/daily.xml"
       "sites/default/files"
+      "testing"
       "themes/custom/opdavies"
       "tome-test"
     ];
