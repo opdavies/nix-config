@@ -9,14 +9,15 @@
     ../common
 
     ./hardware-configuration.nix
-    ./modules
+    ./cron.nix
+    ./neomutt.nix
+    ./newsboat
+    ./ollama.nix
     ./secrets.nix
-    ./services
+    ./xserver.nix
 
     ../../users/opdavies.nix
   ];
-
-  services.geoclue2.enable = true;
 
   cli = {
     kanata = {
@@ -53,6 +54,19 @@
     media.makemkv.enable = true;
     st.enable = true;
     thunar.enable = true;
+  };
+
+  services = {
+    auto-cpufreq.enable = true;
+    geoclue2.enable = true;
+    gvfs.enable = true;
+    power-profiles-daemon.enable = false;
+    printing.enable = true;
+    pulseaudio.enable = false;
+    tailscale.enable = true;
+    thermald.enable = true;
+    throttled.enable = true;
+    upower.enable = true;
   };
 
   boot = {
