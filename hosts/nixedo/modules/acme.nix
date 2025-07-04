@@ -21,6 +21,7 @@
             let
               subdomains = [
                 "2020"
+                "2025"
                 "audiobookshelf"
                 "bootstrap-with-tailwind"
                 "code"

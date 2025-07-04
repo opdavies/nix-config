@@ -19,6 +19,7 @@ in
     nginx-website-sculpin = 8095;
     nginx-website-tome = 8098;
 
+    nginx-website-2025 = 9002;
     nginx-bootstrap-with-tailwind = 8081;
     nginx-eric = 8084;
     nginx-florida-drupalcamp-tailwind-css = 8083;

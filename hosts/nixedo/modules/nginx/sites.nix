@@ -11,6 +11,16 @@ let
     { inherit port root url; } // overrides;
 
   sites = [
+    {
+      root = "/var/www/vhosts/website-sculpin";
+      port = ports.nginx-website-2025;
+      url = "2025.oliverdavies.uk";
+
+      extraConfig = ''
+        add_header X-Robots-Tag "noindex, nofollow";
+      '';
+    }
+
     (mkSite "eric" {
       rootSuffix = "/public";
 
