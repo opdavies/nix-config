@@ -16,6 +16,7 @@ let
       "at"
       "automated-testing"
       "core"
+      "daily"
       "daily/.+"
       "examples"
       "homelab"
