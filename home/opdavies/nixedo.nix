@@ -2,7 +2,7 @@
   imports = [
     ../common
 
-    ./nixedo/modules/email-filters.nix
+    ./nixedo/email-filters.nix
   ];
 
   cli = {
