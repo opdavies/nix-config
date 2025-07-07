@@ -25,5 +25,11 @@ stdenv.mkDerivation {
     chmod +x $out/bin/tmux-sessionizer
   '';
 
-  # TODO: create another patch to sort results.
+  patches = [
+    (fetchpatch {
+      name = "Sort directories alphabetically #23";
+      sha256 = "sha256-+YvXIV3VLdxzIDPYCNaJDHLxUxWuInnNNdS3VrqTpIs=";
+      url = "https://patch-diff.githubusercontent.com/raw/ThePrimeagen/tmux-sessionizer/pull/23.patch";
+    })
+  ];
 }
