@@ -23,16 +23,14 @@
     tmux-sessionizer = {
       enable = true;
 
-      directories =
+      searchPaths =
         let
           inherit (config.xdg.userDirs) documents extraConfig;
 
           repos = extraConfig.XDG_REPOS_DIR;
         in
-        options.cli.tmux-sessionizer.directories.default
-        ++ [
+        [
           repos
-          "${repos}/*"
           documents
         ];
     };

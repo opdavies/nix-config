@@ -35,7 +35,7 @@
       enable = true;
       enableDmenuIntegration = true;
 
-      directories =
+      searchPaths =
         let
           inherit (config.xdg.userDirs) documents extraConfig;
 
