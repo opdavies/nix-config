@@ -90,7 +90,6 @@ in
 
       plugins = with pkgs.tmuxPlugins; [
         resurrect
-        vim-tmux-navigator
         yank
       ];
     };
