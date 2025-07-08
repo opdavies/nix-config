@@ -1,5 +1,6 @@
 {
   inputs = {
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
     agenix.url = "github:ryantm/agenix";
 
     disko.inputs.nixpkgs.follows = "nixpkgs";
