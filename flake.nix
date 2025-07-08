@@ -6,6 +6,8 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
 
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/master";
 
@@ -13,6 +15,7 @@
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
+    nixvim.inputs.flake-parts.follows = "flake-parts";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:nix-community/nixvim";
 
@@ -24,114 +27,118 @@
   };
 
   outputs =
-    { nixpkgs, self, ... }@inputs:
-    let
-      inherit (self) outputs;
+    inputs@{
+      flake-parts,
+      nixpkgs,
+      self,
+      ...
+    }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      flake =
+        let
+          inherit (self) outputs;
 
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+          specialArgs = {
+            inherit inputs outputs self;
 
-      username = "opdavies";
+            system = "x86_64-linux";
+            username = "opdavies";
+          };
+        in
+        {
+          homeManagerModules.default = import ./modules/home-manager;
 
-      specialArgs = {
-        inherit
-          inputs
-          outputs
-          self
-          system
-          username
-          ;
-      };
+          nixosConfigurations = {
+            lemp11 = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./hosts/lemp11/configuration.nix
+              ];
 
-      inherit (pkgs) mkShell;
+              specialArgs = specialArgs // {
+                hostname = "lemp11";
+                stateVersion = "22.11";
+              };
+            };
 
-      nixvim = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
-        inherit pkgs;
+            nixedo = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./hosts/nixedo/configuration.nix
+              ];
 
-        module = import ./modules/home-manager/coding/neovim/config;
-      };
-    in
-    {
-      devShells.${system}.default = pkgs.mkShell {
-        packages = with pkgs; [
-          just
-          lua-language-server
-          lua54Packages.luacheck
-          nixd
-        ];
-      };
+              specialArgs = specialArgs // {
+                hostname = "nixedo";
+                stateVersion = "24.11";
+              };
+            };
 
-      packages.${system} = {
-        inherit nixvim;
+            t480 = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./hosts/t480/configuration.nix
+              ];
 
-        default = mkShell { buildInputs = with pkgs; [ just ]; };
-      };
+              specialArgs = specialArgs // {
+                hostname = "t480";
+                stateVersion = "22.11";
+              };
+            };
 
-      formatter.${system} = pkgs.nixfmt-rfc-style;
+            t490 = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./hosts/t490/configuration.nix
+              ];
 
-      overlays = import ./overlays { inherit inputs; };
+              specialArgs = specialArgs // {
+                hostname = "t490";
+                stateVersion = "22.11";
+              };
+            };
 
-      homeManagerModules.default = import ./modules/home-manager;
+            PW05CH3L = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./hosts/PW05CH3L/configuration.nix
+              ];
 
-      nixosModules.default = import ./modules/nixos;
+              specialArgs = specialArgs // {
+                hostname = "PW05CH3L";
+                stateVersion = "22.11";
+              };
+            };
+          };
 
-      nixosConfigurations = {
-        lemp11 = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./hosts/lemp11/configuration.nix
-          ];
+          nixosModules.default = import ./modules/nixos;
 
-          specialArgs = specialArgs // {
-            hostname = "lemp11";
-            stateVersion = "22.11";
+          overlays = import ./overlays { inherit inputs; };
+        };
+
+      perSystem =
+        { pkgs, system, ... }:
+        let
+          # TODO: refactor to use inputs' or similar.
+          nixvim = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
+            inherit pkgs;
+
+            module = import ./modules/home-manager/coding/neovim/config;
+          };
+        in
+        {
+          devShells.default = pkgs.mkShell {
+            packages = with pkgs; [
+              just
+              lua-language-server
+              lua54Packages.luacheck
+              nixd
+            ];
+          };
+
+          formatter = pkgs.nixfmt-rfc-style;
+
+          packages = {
+            inherit nixvim;
+
+            default = pkgs.mkShell { buildInputs = with pkgs; [ just ]; };
           };
         };
 
-        nixedo = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./hosts/nixedo/configuration.nix
-          ];
-
-          specialArgs = specialArgs // {
-            hostname = "nixedo";
-            stateVersion = "24.11";
-          };
-        };
-
-        t480 = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./hosts/t480/configuration.nix
-          ];
-
-          specialArgs = specialArgs // {
-            hostname = "t480";
-            stateVersion = "22.11";
-          };
-        };
-
-        t490 = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./hosts/t490/configuration.nix
-          ];
-
-          specialArgs = specialArgs // {
-            hostname = "t490";
-            stateVersion = "22.11";
-          };
-        };
-
-        PW05CH3L = nixpkgs.lib.nixosSystem {
-          inherit system;
-
-          modules = [
-            ./hosts/PW05CH3L/configuration.nix
-          ];
-
-          specialArgs = specialArgs // {
-            hostname = "PW05CH3L";
-            stateVersion = "22.11";
-          };
-        };
-      };
+      systems = [ "x86_64-linux" ];
     };
 }

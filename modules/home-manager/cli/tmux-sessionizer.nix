@@ -58,6 +58,7 @@ in
 
     xdg.configFile."tmux-sessionizer/tmux-sessionizer.conf".text = ''
       TS_SEARCH_PATHS=(${builtins.concatStringsSep " " cfg.searchPaths})
+      TS_SESSION_COMMANDS=(nvim .)
     '';
   };
 }
