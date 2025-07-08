@@ -18,6 +18,7 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nur.inputs.nixpkgs.follows = "nixpkgs";
     nur.url = "github:nix-community/NUR";
   };
 
