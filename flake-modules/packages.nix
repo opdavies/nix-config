@@ -7,7 +7,7 @@
       packages = {
         default = pkgs.mkShell { buildInputs = with pkgs; [ just ]; };
 
-        nixvim = inputs'.nixvim.legacyPackages.makeNixvimWithModule {
+        neovim = inputs'.nixvim.legacyPackages.makeNixvimWithModule {
           inherit pkgs;
 
           module = import "${self}/modules/home-manager/coding/neovim/config";
