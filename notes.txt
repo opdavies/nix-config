@@ -1,0 +1,4 @@
+Running Neovim as a package:
+
+nix run .#neovim
+nix run git+https://code.oliverdavies.uk/opdavies/nix-config#neovim
