@@ -23,16 +23,10 @@
     tmux-sessionizer = {
       enable = true;
 
-      searchPaths =
-        let
-          inherit (config.xdg.userDirs) documents extraConfig;
-
-          repos = extraConfig.XDG_REPOS_DIR;
-        in
-        [
-          repos
-          documents
-        ];
+      searchPaths = [
+        "${config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}:2"
+        "${config.xdg.userDirs.documents}:1"
+      ];
     };
 
     todos.enable = true;
