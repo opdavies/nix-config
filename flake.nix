@@ -27,89 +27,22 @@
   };
 
   outputs =
-    inputs@{
-      flake-parts,
-      nixpkgs,
-      self,
-      ...
-    }:
+    inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      flake =
-        let
-          inherit (self) outputs;
+      flake = {
+        homeManagerModules.default = import ./modules/home-manager;
 
-          specialArgs = {
-            inherit inputs outputs self;
+        nixosModules.default = import ./modules/nixos;
 
-            system = "x86_64-linux";
-            username = "opdavies";
-          };
+        overlays = import ./overlays { inherit inputs; };
+      };
 
-          mkNixosConfiguration =
-            {
-              hostname,
-              stateVersion ? "22.11",
-              system ? "x86_64-linux",
-            }:
-            nixpkgs.lib.nixosSystem {
-              inherit system;
-
-              modules = [ ./hosts/${hostname}/configuration.nix ];
-
-              specialArgs = specialArgs // {
-                inherit hostname stateVersion system;
-              };
-            };
-        in
-        {
-          homeManagerModules.default = import ./modules/home-manager;
-
-          nixosConfigurations = {
-            lemp11 = mkNixosConfiguration { hostname = "lemp11"; };
-
-            nixedo = mkNixosConfiguration {
-              hostname = "nixedo";
-              stateVersion = "24.11";
-            };
-
-            t480 = mkNixosConfiguration { hostname = "t480"; };
-            t490 = mkNixosConfiguration { hostname = "t490"; };
-            PW05CH3L = mkNixosConfiguration { hostname = "PW05CH3L"; };
-          };
-
-          nixosModules.default = import ./modules/nixos;
-
-          overlays = import ./overlays { inherit inputs; };
-        };
-
-      perSystem =
-        { pkgs, system, ... }:
-        let
-          # TODO: refactor to use inputs' or similar.
-          nixvim = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
-            inherit pkgs;
-
-            module = import ./modules/home-manager/coding/neovim/config;
-          };
-        in
-        {
-          devShells.default = pkgs.mkShell {
-            packages = with pkgs; [
-              just
-              lua-language-server
-              lua54Packages.luacheck
-              nixd
-            ];
-          };
-
-          formatter = pkgs.nixfmt-rfc-style;
-
-          packages = {
-            inherit nixvim;
-
-            default = pkgs.mkShell { buildInputs = with pkgs; [ just ]; };
-          };
-        };
+      imports = [
+        ./flake-modules/dev-shell.nix
+        ./flake-modules/formatting.nix
+        ./flake-modules/nixos-configurations.nix
+        ./flake-modules/packages.nix
+      ];
 
       systems = [ "x86_64-linux" ];
     };
