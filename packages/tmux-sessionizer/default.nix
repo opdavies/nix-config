@@ -28,7 +28,7 @@ stdenv.mkDerivation {
   patches = [
     (fetchpatch {
       name = "Sort directories alphabetically #23";
-      sha256 = "sha256-+YvXIV3VLdxzIDPYCNaJDHLxUxWuInnNNdS3VrqTpIs=";
+      sha256 = "sha256-/5ob/cVieu/qq0keFOJy2sq0NNdbUiy9k2a8/6ydju4=";
       url = "https://patch-diff.githubusercontent.com/raw/ThePrimeagen/tmux-sessionizer/pull/23.patch";
     })
   ];
