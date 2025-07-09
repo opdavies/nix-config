@@ -44,65 +44,37 @@
             system = "x86_64-linux";
             username = "opdavies";
           };
+
+          mkNixosConfiguration =
+            {
+              hostname,
+              stateVersion ? "22.11",
+              system ? "x86_64-linux",
+            }:
+            nixpkgs.lib.nixosSystem {
+              inherit system;
+
+              modules = [ ./hosts/${hostname}/configuration.nix ];
+
+              specialArgs = specialArgs // {
+                inherit hostname stateVersion system;
+              };
+            };
         in
         {
           homeManagerModules.default = import ./modules/home-manager;
 
           nixosConfigurations = {
-            lemp11 = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./hosts/lemp11/configuration.nix
-              ];
+            lemp11 = mkNixosConfiguration { hostname = "lemp11"; };
 
-              specialArgs = specialArgs // {
-                hostname = "lemp11";
-                stateVersion = "22.11";
-              };
+            nixedo = mkNixosConfiguration {
+              hostname = "nixedo";
+              stateVersion = "24.11";
             };
 
-            nixedo = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./hosts/nixedo/configuration.nix
-              ];
-
-              specialArgs = specialArgs // {
-                hostname = "nixedo";
-                stateVersion = "24.11";
-              };
-            };
-
-            t480 = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./hosts/t480/configuration.nix
-              ];
-
-              specialArgs = specialArgs // {
-                hostname = "t480";
-                stateVersion = "22.11";
-              };
-            };
-
-            t490 = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./hosts/t490/configuration.nix
-              ];
-
-              specialArgs = specialArgs // {
-                hostname = "t490";
-                stateVersion = "22.11";
-              };
-            };
-
-            PW05CH3L = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./hosts/PW05CH3L/configuration.nix
-              ];
-
-              specialArgs = specialArgs // {
-                hostname = "PW05CH3L";
-                stateVersion = "22.11";
-              };
-            };
+            t480 = mkNixosConfiguration { hostname = "t480"; };
+            t490 = mkNixosConfiguration { hostname = "t490"; };
+            PW05CH3L = mkNixosConfiguration { hostname = "PW05CH3L"; };
           };
 
           nixosModules.default = import ./modules/nixos;
