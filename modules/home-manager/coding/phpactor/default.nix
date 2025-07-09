@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.coding.phpactor;
+  cfg = config.features.coding.phpactor;
 in
 {
-  options.coding.phpactor.enable = mkEnableOption "Enable phpactor";
+  options.features.coding.phpactor.enable = mkEnableOption "Enable phpactor";
 
   config = mkIf cfg.enable {
     xdg.configFile.phpactor = {

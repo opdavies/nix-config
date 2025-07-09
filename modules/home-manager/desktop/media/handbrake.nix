@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.desktop.media.handbrake;
+  cfg = config.features.desktop.media.handbrake;
 in
 {
-  options.desktop.media.handbrake.enable = mkEnableOption "Enable handbrake";
+  options.features.desktop.media.handbrake.enable = mkEnableOption "Enable handbrake";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

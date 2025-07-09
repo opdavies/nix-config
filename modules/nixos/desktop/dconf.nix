@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.desktop.dconf;
+  cfg = config.features.desktop.dconf;
 in
 {
-  options.desktop.dconf.enable = mkEnableOption "Enable dconf";
+  options.features.desktop.dconf.enable = mkEnableOption "Enable dconf";
 
   config = mkIf cfg.enable {
     programs.dconf.enable = true;

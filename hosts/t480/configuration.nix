@@ -19,41 +19,43 @@
     ../../users/opdavies.nix
   ];
 
-  cli = {
-    kanata = {
-      enable = true;
+  features = {
+    cli = {
+      kanata = {
+        enable = true;
 
-      devices = [
-        "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
-      ];
+        devices = [
+          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+        ];
+      };
+
+      password-store = {
+        enable = true;
+
+        extensions = with pkgs.passExtensions; [
+          pass-audit
+          pass-otp
+          pass-update
+        ];
+      };
     };
 
-    password-store = {
-      enable = true;
-
-      extensions = with pkgs.passExtensions; [
-        pass-audit
-        pass-otp
-        pass-update
-      ];
+    core = {
+      bluetooth.enable = true;
+      openssh.enable = true;
+      pipewire.enable = true;
+      xbanish.enable = true;
+      zram.enable = true;
     };
-  };
 
-  core = {
-    bluetooth.enable = true;
-    openssh.enable = true;
-    pipewire.enable = true;
-    xbanish.enable = true;
-    zram.enable = true;
-  };
-
-  desktop = {
-    dconf.enable = true;
-    dwm.enable = true;
-    fonts.enable = true;
-    media.makemkv.enable = true;
-    st.enable = true;
-    thunar.enable = true;
+    desktop = {
+      dconf.enable = true;
+      dwm.enable = true;
+      fonts.enable = true;
+      media.makemkv.enable = true;
+      st.enable = true;
+      thunar.enable = true;
+    };
   };
 
   services = {

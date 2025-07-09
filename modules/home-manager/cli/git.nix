@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.cli.git;
+  cfg = config.features.cli.git;
 in
 {
-  options.cli.git = {
+  options.features.cli.git = {
     enable = mkEnableOption "Enable git";
 
     user = mkOption {

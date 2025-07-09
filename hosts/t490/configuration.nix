@@ -16,12 +16,14 @@
     ../../users/opdavies.nix
   ];
 
-  core = {
-    bluetooth.enable = true;
-    zram.enable = true;
-  };
+  features = {
+    core = {
+      bluetooth.enable = true;
+      zram.enable = true;
+    };
 
-  desktop.dconf.enable = true;
+    desktop.dconf.enable = true;
+  };
 
   nixpad.enable = true;
 

@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.desktop.thunar;
+  cfg = config.features.desktop.thunar;
 in
 {
-  options.desktop.thunar.enable = mkEnableOption "Enable thunar";
+  options.features.desktop.thunar.enable = mkEnableOption "Enable thunar";
 
   config = mkIf cfg.enable {
     programs.thunar = {

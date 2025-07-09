@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.cli.podman;
+  cfg = config.features.cli.podman;
 in
 {
-  options.cli.podman.enable = mkEnableOption "Enable podman";
+  options.features.cli.podman.enable = mkEnableOption "Enable podman";
 
   config = mkIf cfg.enable {
     virtualisation = {

@@ -8,14 +8,14 @@
 with lib;
 
 let
-  cfg = config.coding.neovim;
+  cfg = config.features.coding.neovim;
 in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  options.coding.neovim.enable = mkEnableOption "Enable neovim";
+  options.features.coding.neovim.enable = mkEnableOption "Enable neovim";
 
   config = mkIf cfg.enable {
     programs.nixvim = {

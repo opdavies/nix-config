@@ -1,13 +1,13 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.cli.${service};
+  cfg = config.features.cli.${service};
   service = "sxhkd";
 
   inherit (lib) getExe mkIf mkEnableOption;
 in
 {
-  options.cli.${service} = {
+  options.features.cli.${service} = {
     enable = mkEnableOption "Enable ${service}";
   };
 

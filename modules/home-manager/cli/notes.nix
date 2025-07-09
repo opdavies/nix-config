@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.cli.notes;
+  cfg = config.features.cli.notes;
 in
 {
-  options.cli.notes = {
+  options.features.cli.notes = {
     enable = mkEnableOption "Enable notes";
 
     directory = mkOption {

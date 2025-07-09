@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.cli.tmux-sessionizer;
+  cfg = config.features.cli.tmux-sessionizer;
 in
 {
-  options.cli.tmux-sessionizer = {
+  options.features.cli.tmux-sessionizer = {
     enable = mkEnableOption "Enable tmux-sessionizer";
     enableDmenuIntegration = mkEnableOption "Enable dmenu integration";
 

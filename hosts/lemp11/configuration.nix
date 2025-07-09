@@ -18,12 +18,14 @@
     ../../users/eric.nix
   ];
 
-  core = {
-    bluetooth.enable = true;
-    zram.enable = true;
-  };
+  features = {
+    core = {
+      bluetooth.enable = true;
+      zram.enable = true;
+    };
 
-  desktop.media.makemkv.enable = true;
+    desktop.media.makemkv.enable = true;
+  };
 
   nixpad.enable = true;
 

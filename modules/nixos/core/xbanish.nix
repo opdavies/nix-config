@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.core.xbanish;
+  cfg = config.features.core.xbanish;
 in
 {
-  options.core.xbanish.enable = mkEnableOption "Enable xbanish";
+  options.features.core.xbanish.enable = mkEnableOption "Enable xbanish";
 
   config = mkIf cfg.enable {
     services.xbanish.enable = true;

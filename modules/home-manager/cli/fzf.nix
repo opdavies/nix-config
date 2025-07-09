@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.cli.fzf;
+  cfg = config.features.cli.fzf;
 in
 {
-  options.cli.fzf.enable = mkEnableOption "Enable fzf";
+  options.features.cli.fzf.enable = mkEnableOption "Enable fzf";
 
   config = mkIf cfg.enable {
     programs.fzf = {

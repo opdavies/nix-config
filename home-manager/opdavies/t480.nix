@@ -6,80 +6,80 @@
     ./t480/gammastep.nix
   ];
 
-  cli = {
-    bluetuith.enable = true;
-    bookmarkthis.enable = true;
-    direnv.enable = true;
-    fzf.enable = true;
+  features = {
+    cli = {
+      bluetuith.enable = true;
+      bookmarkthis.enable = true;
+      direnv.enable = true;
+      fzf.enable = true;
 
-    git = {
-      enable = true;
-
-      user.emailAddress = "oliver@oliverdavies.uk";
-    };
-
-    node.enable = true;
-
-    notes = {
-      enable = true;
-
-      directory = "${config.xdg.userDirs.documents}/wiki/notes";
-    };
-
-    ranger.enable = true;
-    sxhkd.enable = true;
-    starship.enable = true;
-    tmux.enable = true;
-
-    tmux-sessionizer = {
-      enable = true;
-      enableDmenuIntegration = true;
-
-      searchPaths =
-        let
-          inherit (config.xdg.userDirs) documents extraConfig;
-
-          repos = extraConfig.XDG_REPOS_DIR;
-        in
-        [
-          repos
-          "${repos}/*"
-          documents
-        ];
-    };
-
-    todos.enable = true;
-    zsh.enable = true;
-  };
-
-  coding = {
-    neovim.enable = true;
-    phpactor.enable = true;
-  };
-
-  desktop = {
-    browsers = {
-      chromium.enable = true;
-
-      firefox = {
+      git = {
         enable = true;
 
-        homepageUrl = "https://nixedo.oliverdavies.uk";
+        user.emailAddress = "oliver@oliverdavies.uk";
       };
 
-      qutebrowser.enable = true;
+      node.enable = true;
+
+      notes = {
+        enable = true;
+
+        directory = "${config.xdg.userDirs.documents}/wiki/notes";
+      };
+
+      ranger.enable = true;
+      sxhkd.enable = true;
+      starship.enable = true;
+      tmux.enable = true;
+
+      tmux-sessionizer = {
+        enable = true;
+        enableDmenuIntegration = true;
+
+        searchPaths =
+          let
+            inherit (config.xdg.userDirs) documents extraConfig;
+
+            repos = extraConfig.XDG_REPOS_DIR;
+          in
+          [
+            repos
+            "${repos}/*"
+            documents
+          ];
+      };
+
+      todos.enable = true;
+      zsh.enable = true;
     };
 
-    flameshot.enable = true;
-    gtk.enable = true;
-
-    media = {
-      handbrake.enable = true;
-      makemkv.enable = true;
-      mpv.enable = true;
+    coding = {
+      neovim.enable = true;
+      phpactor.enable = true;
     };
 
-    # redshift.enable = true;
+    desktop = {
+      browsers = {
+        chromium.enable = true;
+
+        firefox = {
+          enable = true;
+
+          homepageUrl = "https://nixedo.oliverdavies.uk";
+        };
+
+        qutebrowser.enable = true;
+      };
+
+      flameshot.enable = true;
+      gtk.enable = true;
+
+      media = {
+        handbrake.enable = true;
+        makemkv.enable = true;
+        mpv.enable = true;
+      };
+    };
   };
 
   programs = {

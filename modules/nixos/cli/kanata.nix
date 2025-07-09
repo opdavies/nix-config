@@ -1,13 +1,13 @@
 { config, lib, ... }:
 
 let
-  cfg = config.cli.${service};
+  cfg = config.features.cli.${service};
   service = "kanata";
 
   inherit (lib) mkEnableOption mkIf mkOption types;
 in
 {
-  options.cli.${service} = {
+  options.features.cli.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     devices = mkOption {

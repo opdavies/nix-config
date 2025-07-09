@@ -8,11 +8,11 @@
 let
   inherit (lib) mkEnableOption mkOption;
 
-  cfg = config.cli.${name};
+  cfg = config.features.cli.${name};
   name = "bookmarkthis";
 in
 {
-  options.cli.${name} = {
+  options.features.cli.${name} = {
     enable = mkEnableOption "Enable ${name}";
 
     snippetsFile = mkOption {

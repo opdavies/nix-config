@@ -1,12 +1,12 @@
 { config, lib, ... }:
 
 let
-  cfg = config.desktop.redshift;
+  cfg = config.features.desktop.redshift;
 
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.desktop.redshift = {
+  options.features.desktop.redshift = {
     enable = mkEnableOption "Enable redshift";
   };
 

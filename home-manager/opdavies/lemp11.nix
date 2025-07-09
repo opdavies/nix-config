@@ -1,11 +1,13 @@
 {
   imports = [ ../common ];
 
-  cli.zsh.enable = true;
+  features = {
+    cli.zsh.enable = true;
 
-  desktop.media = {
-    handbrake.enable = true;
-    makemkv.enable = true;
-    mpv.enable = true;
+    desktop.media = {
+      handbrake.enable = true;
+      makemkv.enable = true;
+      mpv.enable = true;
+    };
   };
 }

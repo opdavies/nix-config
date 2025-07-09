@@ -11,15 +11,17 @@
     ../../users/opdavies.nix
   ];
 
-  cli = {
-    docker.enable = true;
+  features = {
+    cli = {
+      docker.enable = true;
 
-    password-store = {
-      enable = true;
+      password-store = {
+        enable = true;
 
-      extensions = with pkgs.passExtensions; [
-        pass-otp
-      ];
+        extensions = with pkgs.passExtensions; [
+          pass-otp
+        ];
+      };
     };
   };
 

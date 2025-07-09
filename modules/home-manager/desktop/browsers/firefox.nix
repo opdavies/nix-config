@@ -8,10 +8,10 @@
 with lib;
 
 let
-  cfg = config.desktop.browsers.firefox;
+  cfg = config.features.desktop.browsers.firefox;
 in
 {
-  options.desktop.browsers.firefox = {
+  options.features.desktop.browsers.firefox = {
     enable = mkEnableOption "Enable firefox";
 
     homepageUrl = mkOption {

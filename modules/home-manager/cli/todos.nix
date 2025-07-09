@@ -7,12 +7,12 @@
 
 let
   name = "todos";
-  cfg = config.cli.${name};
+  cfg = config.features.cli.${name};
 
   inherit (lib) mkOption types;
 in
 {
-  options.cli.${name} = {
+  options.features.cli.${name} = {
     enable = lib.mkEnableOption "Enable ${name}";
 
     directory = mkOption {

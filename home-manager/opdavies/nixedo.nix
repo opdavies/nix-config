@@ -5,7 +5,7 @@
     ./nixedo/email-filters.nix
   ];
 
-  cli = {
+  features.cli = {
     fzf.enable = true;
     starship.enable = true;
     zsh.enable = true;

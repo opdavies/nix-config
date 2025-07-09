@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.desktop.browsers.qutebrowser;
+  cfg = config.features.desktop.browsers.qutebrowser;
 in
 {
-  options.desktop.browsers.qutebrowser.enable =
+  options.features.desktop.browsers.qutebrowser.enable =
     mkEnableOption "Enable qutebrowser";
 
   config = mkIf cfg.enable {

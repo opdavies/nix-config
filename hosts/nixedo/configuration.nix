@@ -19,9 +19,11 @@
     ../../users/opdavies.nix
   ];
 
-  core.openssh.enable = true;
-  cli.podman.enable = true;
-  desktop.dconf.enable = true;
+  features = {
+    core.openssh.enable = true;
+    cli.podman.enable = true;
+    desktop.dconf.enable = true;
+  };
 
   # TODO: why didn't it work when adding this to jitsi.nix?
   nixpkgs.config.permittedInsecurePackages = [

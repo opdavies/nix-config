@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.cli.docker;
+  cfg = config.features.cli.docker;
 in
 {
-  options.cli.docker.enable = mkEnableOption "Enable docker";
+  options.features.cli.docker.enable = mkEnableOption "Enable docker";
 
   config = mkIf cfg.enable {
     virtualisation = {
