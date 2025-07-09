@@ -13,41 +13,32 @@
       direnv.enable = true;
       fzf.enable = true;
 
-      git = {
-        enable = true;
-
-        user.emailAddress = "oliver@oliverdavies.uk";
-      };
+      git.enable = true;
+      git.user.emailAddress = "oliver@oliverdavies.uk";
 
       node.enable = true;
 
-      notes = {
-        enable = true;
-
-        directory = "${config.xdg.userDirs.documents}/wiki/notes";
-      };
+      notes.enable = true;
+      notes.directory = "${config.xdg.userDirs.documents}/wiki/notes";
 
       ranger.enable = true;
       sxhkd.enable = true;
       starship.enable = true;
       tmux.enable = true;
 
-      tmux-sessionizer = {
-        enable = true;
-        enableDmenuIntegration = true;
+      tmux-sessionizer.enable = true;
 
-        searchPaths =
-          let
-            inherit (config.xdg.userDirs) documents extraConfig;
+      tmux-sessionizer.searchPaths =
+        let
+          inherit (config.xdg.userDirs) documents extraConfig;
 
-            repos = extraConfig.XDG_REPOS_DIR;
-          in
-          [
-            repos
-            "${repos}/*"
-            documents
-          ];
-      };
+          repos = extraConfig.XDG_REPOS_DIR;
+        in
+        [
+          repos
+          "${repos}/*"
+          documents
+        ];
 
       todos.enable = true;
       zsh.enable = true;
@@ -62,11 +53,8 @@
       browsers = {
         chromium.enable = true;
 
-        firefox = {
-          enable = true;
-
-          homepageUrl = "https://nixedo.oliverdavies.uk";
-        };
+        firefox.enable = true;
+        firefox.homepageUrl = "https://nixedo.oliverdavies.uk";
 
         qutebrowser.enable = true;
       };

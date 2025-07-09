@@ -21,23 +21,17 @@
 
   features = {
     cli = {
-      kanata = {
-        enable = true;
+      kanata.enable = true;
+      kanata.devices = [
+        "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+      ];
 
-        devices = [
-          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
-        ];
-      };
-
-      password-store = {
-        enable = true;
-
-        extensions = with pkgs.passExtensions; [
-          pass-audit
-          pass-otp
-          pass-update
-        ];
-      };
+      password-store.enable = true;
+      password-store.extensions = with pkgs.passExtensions; [
+        pass-audit
+        pass-otp
+        pass-update
+      ];
     };
 
     core = {
@@ -73,14 +67,10 @@
 
   boot = {
     loader = {
-      systemd-boot = {
-        enable = true;
-        configurationLimit = 10;
-      };
+      systemd-boot.enable = true;
+      systemd-boot.configurationLimit = 10;
 
-      efi = {
-        canTouchEfiVariables = true;
-      };
+      efi.canTouchEfiVariables = true;
     };
   };
 

@@ -33,10 +33,7 @@
   services.logind.lidSwitchExternalPower = "ignore";
 
   boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-    };
-
+    efi.canTouchEfiVariables = true;
     systemd-boot.enable = true;
   };
 

@@ -15,13 +15,10 @@
     cli = {
       docker.enable = true;
 
-      password-store = {
-        enable = true;
-
-        extensions = with pkgs.passExtensions; [
-          pass-otp
-        ];
-      };
+      password-store.enable = true;
+      password-store.extensions = with pkgs.passExtensions; [
+        pass-otp
+      ];
     };
   };
 

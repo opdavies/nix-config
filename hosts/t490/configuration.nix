@@ -17,11 +17,8 @@
   ];
 
   features = {
-    core = {
-      bluetooth.enable = true;
-      zram.enable = true;
-    };
-
+    core.bluetooth.enable = true;
+    core.zram.enable = true;
     desktop.dconf.enable = true;
   };
 
@@ -29,14 +26,10 @@
 
   boot = {
     loader = {
-      systemd-boot = {
-        enable = true;
-        configurationLimit = 10;
-      };
+      efi.canTouchEfiVariables = true;
 
-      efi = {
-        canTouchEfiVariables = true;
-      };
+      systemd-boot.enable = true;
+      systemd-boot.configurationLimit = 10;
     };
   };
 
