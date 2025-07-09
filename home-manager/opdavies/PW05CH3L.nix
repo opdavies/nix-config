@@ -19,10 +19,14 @@
       tmux.enable = true;
 
       tmux-sessionizer.enable = true;
-      tmux-sessionizer.searchPaths = [
-        "${config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}:2"
-        "${config.xdg.userDirs.documents}:1"
-      ];
+      tmux-sessionizer.searchPaths =
+        let
+          inherit (config.xdg) userDirs;
+        in
+        [
+          "${userDirs.extraConfig.XDG_REPOS_DIR}:2"
+          "${userDirs.documents}:1"
+        ];
 
       todos.enable = true;
       zsh.enable = true;
