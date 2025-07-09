@@ -3,7 +3,7 @@
 {
   additions =
     final: prev:
-    import ../pkgs {
+    import ../packages {
       inherit prev;
 
       pkgs = final;
