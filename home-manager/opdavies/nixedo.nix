@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ../common
@@ -10,4 +12,8 @@
     starship.enable = true;
     zsh.enable = true;
   };
+
+  home.packages = with pkgs; [
+    yt-dlp
+  ];
 }
