@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-xwallpaper --zoom ${XDG_REPOS_DIR}/personal/nix-config/wallpaper/wallpaper.jpg

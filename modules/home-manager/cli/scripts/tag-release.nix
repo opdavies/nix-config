@@ -1,0 +1,17 @@
+{ git, writeShellApplication }:
+
+writeShellApplication {
+  name = "tag-release";
+
+  runtimeInputs = [ git ];
+
+  text = ''
+    commit_sha="''${1:-HEAD}"
+    tag="$(date '+%Y-%m-%d-%H.%M.%S')"
+
+    echo "Tagging commit $(git rev-parse "''${commit_sha}") as ''${tag}."
+    echo ""
+
+    git tag "''${tag}" "''${commit_sha}"
+  '';
+}
