@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -95,6 +95,19 @@
           "rsync -avzP ${documents}/wiki nixedo.oliverdavies.uk:${documents} --delete --delete-after";
       };
   };
+
+  home.packages = with pkgs; [
+    backup-websites
+    build-glove80
+    displayselect
+    mounter
+    move-firefox-screenshots
+    setbg
+    tag-release
+    todos-add
+    unmounter
+    update-all-git-repos
+  ];
 
   xdg.configFile."pam-gnupg".text = ''
     098EE055DAD2B9CB68154C6759DD38292D2273B6

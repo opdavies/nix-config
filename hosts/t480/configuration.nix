@@ -101,12 +101,9 @@
     abook
     acpi
     arandr
-    backup-websites
     brightnessctl
-    build-glove80
     cdrkit
     cpufrequtils
-    displayselect
     dvdbackup
     dvdplusrwtools
     ffmpegthumbnailer
@@ -131,7 +128,6 @@
     sxiv
     tailscale
     ttyper
-    upload-to-files
     xcape
     xsel
     yt-dlp

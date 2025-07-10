@@ -9,7 +9,6 @@
     ./cli/node.nix
     ./cli/notes.nix
     ./cli/ranger.nix
-    ./cli/scripts
     ./cli/starship.nix
     ./cli/sxhkd.nix
     ./cli/tmux-sessionizer.nix

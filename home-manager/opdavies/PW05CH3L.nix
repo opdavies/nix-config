@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [ ../common ];
@@ -36,6 +36,12 @@
       phpactor.enable = true;
     };
   };
+
+  home.packages = with pkgs; [
+    tag-release
+    todos-add
+    update-all-git-repos
+  ];
 
   xdg.configFile."pam-gnupg".text = ''
     C0D940F9A390F286FCAAE8439D501171E39D0A47
