@@ -100,6 +100,7 @@
     backup-websites
     build-glove80
     displayselect
+    qrencode
     mounter
     move-firefox-screenshots
     setbg
