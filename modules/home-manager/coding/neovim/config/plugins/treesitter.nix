@@ -44,4 +44,3 @@
     treesitter-textobjects.enable = true;
   };
 }
-

@@ -31,7 +31,10 @@
     {
       action = "\"+y";
       key = "<leader>y";
-      mode = ["n" "x"];
+      mode = [
+        "n"
+        "x"
+      ];
     }
 
     {
@@ -48,7 +51,10 @@
     {
       action = "<Esc>:w<CR>";
       key = "<C-s>";
-      mode = ["i" "n"];
+      mode = [
+        "i"
+        "n"
+      ];
     }
 
     {

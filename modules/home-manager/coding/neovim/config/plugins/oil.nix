@@ -15,6 +15,9 @@
   };
 
   keymaps = lib.mkIf config.plugins.oil.enable [
-    { action = "<cmd>Oil<CR>"; key = "-"; }
+    {
+      action = "<cmd>Oil<CR>";
+      key = "-";
+    }
   ];
 }

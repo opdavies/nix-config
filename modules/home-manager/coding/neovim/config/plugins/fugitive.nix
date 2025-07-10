@@ -5,8 +5,8 @@
 
   keymaps = lib.mkIf config.plugins.fugitive.enable [
     {
-       key = "<leader>gc";
-       action = "<cmd>Git commit<CR><C-w>K";
+      key = "<leader>gc";
+      action = "<cmd>Git commit<CR><C-w>K";
     }
 
     {

@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
@@ -6,8 +11,7 @@ let
   cfg = config.features.desktop.browsers.qutebrowser;
 in
 {
-  options.features.desktop.browsers.qutebrowser.enable =
-    mkEnableOption "Enable qutebrowser";
+  options.features.desktop.browsers.qutebrowser.enable = mkEnableOption "Enable qutebrowser";
 
   config = mkIf cfg.enable {
     programs.qutebrowser = {

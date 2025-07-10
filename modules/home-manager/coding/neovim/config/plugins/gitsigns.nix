@@ -27,7 +27,10 @@
     {
       action = "<cmd>Gitsigns stage_hunk<CR>";
       key = "<leader>hs";
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
     }
 
     {

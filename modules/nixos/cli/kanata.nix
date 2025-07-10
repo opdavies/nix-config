@@ -4,14 +4,19 @@ let
   cfg = config.features.cli.${service};
   service = "kanata";
 
-  inherit (lib) mkEnableOption mkIf mkOption types;
+  inherit (lib)
+    mkEnableOption
+    mkIf
+    mkOption
+    types
+    ;
 in
 {
   options.features.cli.${service} = {
     enable = mkEnableOption "Enable ${service}";
 
     devices = mkOption {
-      default = [];
+      default = [ ];
       type = types.listOf types.str;
     };
   };

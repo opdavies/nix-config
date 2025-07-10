@@ -38,7 +38,7 @@
     settings.flavour = "mocha";
   };
 
-  diagnostic.settings  = {
+  diagnostic.settings = {
     signs = true;
     underline = false;
     update_in_insert = false;

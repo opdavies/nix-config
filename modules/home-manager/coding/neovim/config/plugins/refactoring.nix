@@ -6,8 +6,8 @@
     enableTelescope = true;
   };
 
-  keymaps =
-    lib.mkIf config.plugins.refactoring.enable ([
+  keymaps = lib.mkIf config.plugins.refactoring.enable (
+    [
       {
         key = "<leader>ri";
         action = "<cmd>Refactor inline_var<CR>";
@@ -43,5 +43,6 @@
         '';
         options.silent = true;
       }
-    ]);
+    ]
+  );
 }
