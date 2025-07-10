@@ -98,6 +98,10 @@ in
           command ${pkgs.ttyper}/bin/ttyper --language english1000 --words 50 "''${@}"
         }
 
+        weather() {
+          curl "https://wttr.in/''$1"
+        }
+
         yt-dlp() {
           command yt-dlp --paths ~/Videos "$@"
         }
