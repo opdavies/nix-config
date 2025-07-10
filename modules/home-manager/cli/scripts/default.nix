@@ -10,6 +10,7 @@
         "move-firefox-screenshots"
         "setbg"
         "tag-release"
+        "todos-add"
         "unmounter"
         "update-all-git-repos"
       ];

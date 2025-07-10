@@ -14,7 +14,6 @@
     ./cli/sxhkd.nix
     ./cli/tmux-sessionizer.nix
     ./cli/tmux.nix
-    ./cli/todos.nix
     ./cli/zsh
     ./coding/neovim
     ./coding/phpactor

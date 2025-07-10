@@ -28,7 +28,6 @@
           "${userDirs.documents}:1"
         ];
 
-      todos.enable = true;
       zsh.enable = true;
     };
 

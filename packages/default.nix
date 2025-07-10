@@ -12,8 +12,6 @@ in
   displayselect = callPackage ./displayselect { };
   notes = callPackage ./notes { };
   passmenu-otp = callPackage ./passmenu-otp.nix { };
-  todos-add = callPackage ./todos/todos-add.nix { };
-  todos-edit = callPackage ./todos/todos-edit.nix { };
   tmux-sessionizer = callPackage ./tmux-sessionizer { };
   upload-to-files = callPackage ./upload-to-files.nix { };
 
