@@ -99,6 +99,7 @@
   home.packages = with pkgs; [
     backup-websites
     build-glove80
+    create-script
     displayselect
     qrencode
     mounter

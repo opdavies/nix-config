@@ -38,6 +38,7 @@
   };
 
   home.packages = with pkgs; [
+    create-script
     tag-release
     todos-add
     update-all-git-repos
