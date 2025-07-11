@@ -99,8 +99,10 @@
   home.packages = with pkgs; [
     backup-websites
     build-glove80
+    count-tags
     create-script
     displayselect
+    get-tags
     qrencode
     mounter
     move-firefox-screenshots

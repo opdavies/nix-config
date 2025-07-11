@@ -38,7 +38,9 @@
   };
 
   home.packages = with pkgs; [
+    count-tags
     create-script
+    get-tags
     tag-release
     time-until
     update-all-git-repos

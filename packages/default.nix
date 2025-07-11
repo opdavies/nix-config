@@ -9,9 +9,11 @@ in
   _timer = callPackage ./_timer.nix { };
   backup-websites = callPackage ./backup-websites.nix { };
   build-glove80 = callPackage ./build-glove80.nix { };
+  count-tags = callPackage ./count-tags.nix { };
   create-script = callPackage ./create-script.nix { };
   dev-commit = callPackage ./dev-commit.nix { };
   displayselect = callPackage ./displayselect { };
+  get-tags = callPackage ./get-tags.nix { };
   git-graph = callPackage ./git-graph.nix { };
   mounter = callPackage ./mounter.nix { };
   move-firefox-screenshots = callPackage ./move-firefox-screenshots.nix { };
