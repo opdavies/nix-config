@@ -12,6 +12,7 @@ in
   create-script = callPackage ./create-script.nix { };
   dev-commit = callPackage ./dev-commit.nix { };
   displayselect = callPackage ./displayselect { };
+  git-graph = callPackage ./git-graph.nix { };
   mounter = callPackage ./mounter.nix { };
   move-firefox-screenshots = callPackage ./move-firefox-screenshots.nix { };
   notes = callPackage ./notes { };
