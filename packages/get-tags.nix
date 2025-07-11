@@ -3,10 +3,7 @@
 pkgs.writeShellApplication {
   name = "get-tags";
 
-  runtimeInputs = with pkgs; [
-    git
-    unixtools.column
-  ];
+  runtimeInputs = with pkgs; [ git ];
 
   text = ''
     if [[ "$#" -gt 0 ]]; then
