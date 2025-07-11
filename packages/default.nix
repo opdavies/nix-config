@@ -26,6 +26,7 @@ in
   todos-edit = callPackage ./todos-edit.nix { };
   unmounter = callPackage ./unmounter.nix { };
   update-all-git-repos = callPackage ./update-all-git-repos.nix { };
+  vix = callPackage ./vix.nix { };
 
   vimPlugins = prev.vimPlugins // vimPlugins;
 }

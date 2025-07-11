@@ -112,6 +112,7 @@
     todos-edit
     unmounter
     update-all-git-repos
+    vix
   ];
 
   xdg.configFile."pam-gnupg".text = ''
