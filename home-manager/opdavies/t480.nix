@@ -109,6 +109,7 @@
     time-until
     timer
     todos-add
+    todos-edit
     unmounter
     update-all-git-repos
   ];

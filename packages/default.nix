@@ -23,6 +23,7 @@ in
   timer = callPackage ./timer.nix { };
   tmux-sessionizer = callPackage ./tmux-sessionizer { };
   todos-add = callPackage ./todos-add.nix { };
+  todos-edit = callPackage ./todos-edit.nix { };
   unmounter = callPackage ./unmounter.nix { };
   update-all-git-repos = callPackage ./update-all-git-repos.nix { };
 
