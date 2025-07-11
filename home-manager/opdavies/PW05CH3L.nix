@@ -40,6 +40,7 @@
   home.packages = with pkgs; [
     create-script
     tag-release
+    time-until
     todos-add
     update-all-git-repos
   ];

@@ -18,6 +18,7 @@ in
   passmenu-otp = callPackage ./passmenu-otp.nix { };
   setbg = callPackage ./setbg.nix { };
   tag-release = callPackage ./tag-release.nix { };
+  time-until = callPackage ./time-until.nix { };
   timer = callPackage ./timer.nix { };
   tmux-sessionizer = callPackage ./tmux-sessionizer { };
   todos-add = callPackage ./todos-add.nix { };
