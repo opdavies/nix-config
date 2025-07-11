@@ -1,7 +1,7 @@
 { pkgs, writeShellApplication }:
 
 writeShellApplication {
-  name = "setbg";
+  name = "set-background";
 
   runtimeInputs = with pkgs; [ xwallpaper ];
 

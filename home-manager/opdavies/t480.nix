@@ -106,7 +106,7 @@
     qrencode
     mounter
     move-firefox-screenshots
-    setbg
+    set-background
     tag-release
     time-until
     timer

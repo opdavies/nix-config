@@ -19,7 +19,7 @@ in
   move-firefox-screenshots = callPackage ./move-firefox-screenshots.nix { };
   notes = callPackage ./notes { };
   passmenu-otp = callPackage ./passmenu-otp.nix { };
-  setbg = callPackage ./setbg.nix { };
+  set-background = callPackage ./set-background.nix { };
   tag-release = callPackage ./tag-release.nix { };
   time-until = callPackage ./time-until.nix { };
   timer = callPackage ./timer.nix { };
