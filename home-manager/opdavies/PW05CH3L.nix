@@ -41,8 +41,6 @@
     create-script
     tag-release
     time-until
-    todos-add
-    todos-edit
     update-all-git-repos
   ];
 
