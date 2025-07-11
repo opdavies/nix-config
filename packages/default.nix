@@ -6,6 +6,7 @@ let
   vimPlugins = callPackage ./vim-plugins { };
 in
 {
+  _timer = callPackage ./_timer.nix { };
   backup-websites = callPackage ./backup-websites.nix { };
   build-glove80 = callPackage ./build-glove80.nix { };
   create-script = callPackage ./create-script.nix { };
@@ -17,6 +18,7 @@ in
   passmenu-otp = callPackage ./passmenu-otp.nix { };
   setbg = callPackage ./setbg.nix { };
   tag-release = callPackage ./tag-release.nix { };
+  timer = callPackage ./timer.nix { };
   tmux-sessionizer = callPackage ./tmux-sessionizer { };
   todos-add = callPackage ./todos-add.nix { };
   unmounter = callPackage ./unmounter.nix { };

@@ -105,6 +105,7 @@
     move-firefox-screenshots
     setbg
     tag-release
+    timer
     todos-add
     unmounter
     update-all-git-repos
