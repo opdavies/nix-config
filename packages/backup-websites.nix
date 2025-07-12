@@ -1,13 +1,15 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 pkgs.writeShellApplication {
   name = "backup-websites";
 
+  runtimeInputs = with pkgs; [ rsync ];
+
   text = ''
-    backup_path="''${HOME}/server-backup"
+    backup_path="''$HOME/server-backup"
 
-    mkdir -p "''${backup_path}"
+    mkdir -p "''$backup_path"
 
-    ${lib.getExe pkgs.rsync} -avzP nixedo.local:/var/www/vhosts/ "''${backup_path}" --delete-after
+    rsync -avzP nixedo.oliverdavies.uk:/var/www/vhosts/ "''$backup_path" --delete-after
   '';
 }
