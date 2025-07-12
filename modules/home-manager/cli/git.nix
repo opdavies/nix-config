@@ -169,6 +169,7 @@ in
 
     home = {
       packages = with pkgs; [
+        git-exclude
         git-extras
         git-graph
         git-trim

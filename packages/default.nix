@@ -14,6 +14,7 @@ in
   dev-commit = callPackage ./dev-commit.nix { };
   displayselect = callPackage ./displayselect { };
   get-tags = callPackage ./get-tags.nix { };
+  git-exclude = callPackage ./git-exclude.nix { };
   git-graph = callPackage ./git-graph.nix { };
   mounter = callPackage ./mounter.nix { };
   move-firefox-screenshots = callPackage ./move-firefox-screenshots.nix { };
