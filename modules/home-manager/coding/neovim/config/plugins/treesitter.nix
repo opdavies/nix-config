@@ -39,6 +39,8 @@
         xml
         yaml
       ];
+
+      settings.highlight.enable = true;
     };
 
     treesitter-textobjects.enable = true;
