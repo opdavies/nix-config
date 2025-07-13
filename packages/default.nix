@@ -16,6 +16,7 @@ in
   get-tags = callPackage ./get-tags.nix { };
   git-exclude = callPackage ./git-exclude.nix { };
   git-graph = callPackage ./git-graph.nix { };
+  import-to-jellyfin = callPackage ./import-to-jellyfin.nix { };
   mounter = callPackage ./mounter.nix { };
   move-firefox-screenshots = callPackage ./move-firefox-screenshots.nix { };
   notes = callPackage ./notes { };

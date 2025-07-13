@@ -14,6 +14,7 @@
   };
 
   home.packages = with pkgs; [
+    import-to-jellyfin
     vix
     yt-dlp
   ];
