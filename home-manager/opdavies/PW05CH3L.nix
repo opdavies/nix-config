@@ -45,6 +45,7 @@
     time-until
     update-all-git-repos
     vix
+    zet-new
   ];
 
   xdg.configFile."pam-gnupg".text = ''

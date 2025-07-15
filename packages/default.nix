@@ -31,6 +31,7 @@ in
   unmounter = callPackage ./unmounter.nix { };
   update-all-git-repos = callPackage ./update-all-git-repos.nix { };
   vix = callPackage ./vix.nix { };
+  zet-new = callPackage ./zet-new.nix { };
 
   vimPlugins = prev.vimPlugins // vimPlugins;
 }
