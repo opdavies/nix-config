@@ -8,7 +8,7 @@ pkgs.writeShellApplication {
   ];
 
   text = ''
-    folder="''${ZET_DIR:-"$XDG_DOCUMENTS_DIR/wiki/zet"}"
+    folder="''${ZET_DIR:-"$XDG_DOCUMENTS_DIR/wiki/zet"}/$(date +%Y)/$(date +%m)"
 
     mkdir -p "$folder"
 
