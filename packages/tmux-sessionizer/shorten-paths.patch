@@ -1,0 +1,23 @@
+diff --git a/tmux-sessionizer b/tmux-sessionizer
+index 036d2a3..cd11500 100755
+--- a/tmux-sessionizer
++++ b/tmux-sessionizer
+@@ -252,7 +252,7 @@ find_dirs() {
+         if [[ -d "$path" ]]; then
+             while IFS= read -r dir; do
+                 dir_list+=("$dir")
+-            done < <(find "$path" -mindepth 1 -maxdepth "$depth" -path '*/.git' -prune -o -type d -print)
++            done < <(find "$path" -mindepth 1 -maxdepth "$depth" -path '*/.git' -prune -o -type d -print | sed "s#$HOME/##" )
+         fi
+     done
+ 
+@@ -341,6 +341,9 @@ fi
+ 
+ if [[ "$selected" =~ ^\[TMUX\]\ (.+)$ ]]; then
+     selected="${BASH_REMATCH[1]}"
++else
++    # Re-add the Home directory back to the selected path.
++    selected="$HOME/$selected"
+ fi
+ 
+ selected_name=$(basename "$selected" | tr . _)

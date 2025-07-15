@@ -31,5 +31,7 @@ stdenv.mkDerivation {
       sha256 = "sha256-AtaOlV2JSeR0BmDsfuv8ZFbu5G0vz4RdUPY4ZF4UqQc=";
       url = "https://patch-diff.githubusercontent.com/raw/ThePrimeagen/tmux-sessionizer/pull/23.patch";
     })
+
+    ./shorten-paths.patch
   ];
 }
