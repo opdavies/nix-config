@@ -17,6 +17,8 @@
       url = "github:nix-community/home-manager/master";
     };
 
+    import-tree.url = "github:vic/import-tree";
+
     nix-index-database = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nix-index-database";
@@ -54,6 +56,8 @@
       };
 
       imports = [
+        (inputs.import-tree ./modules2)
+
         ./flake-modules/dev-shell.nix
         ./flake-modules/formatting.nix
         ./flake-modules/nixos-configurations.nix
