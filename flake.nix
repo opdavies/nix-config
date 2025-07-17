@@ -17,6 +17,11 @@
       url = "github:nix-community/home-manager/master";
     };
 
+    nix-index-database = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nix-index-database";
+    };
+
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";

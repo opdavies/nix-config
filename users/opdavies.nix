@@ -22,7 +22,6 @@ with lib;
       ++ optional config.features.cli.podman.enable "podman";
 
     packages = with pkgs; [
-      comma
       magic-wormhole
     ];
 

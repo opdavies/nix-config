@@ -22,6 +22,7 @@
 
     ./homelab/gitea-actions-runner.nix
 
+    ./nix-index.nix
     ./nixpad
   ];
 }
