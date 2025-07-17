@@ -118,6 +118,24 @@ in
             privateDefault = "ddg";
           };
 
+          search.engines = {
+            # TODO: Drupal.org users.
+            # TODO: Mastodon.
+            # TODO: GitHub.
+            # TODO: Forgejo.
+            drupal_projects = {
+              name = "Drupal.org projects";
+              urls = [ { template = "https://www.drupal.org/project/{searchTerms}"; } ];
+              definedAliases = [ "@dp" ];
+            };
+
+            nixvim = {
+              name = "Nixvim options search";
+              urls = [ { template = "https://nix-community.github.io/nixvim/search/?query={searchTerms}"; } ];
+              definedAliases = [ "@nxv" ];
+            };
+          };
+
           settings = {
             "browser.search.isUS" = false;
             "browser.search.region" = "GB";

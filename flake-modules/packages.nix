@@ -10,7 +10,7 @@
         neovim = inputs'.nixvim.legacyPackages.makeNixvimWithModule {
           inherit pkgs;
 
-          module = import "${self}/modules/home-manager/coding/neovim/config";
+          module = import "${self}/modules/home-manager/neovim/config";
         };
       };
     };
