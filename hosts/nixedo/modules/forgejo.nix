@@ -8,10 +8,13 @@
     settings = {
       server = {
         DOMAIN = "code.oliverdavies.uk";
+        LANDING_PAGE = "explore";
         ROOT_URL = "https://${config.services.forgejo.settings.server.DOMAIN}";
       };
 
       service.DISABLE_REGISTRATION = true;
+
+      ui.DEFAULT_THEME = "forgejo-auto";
     };
   };
 
