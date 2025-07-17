@@ -15,10 +15,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ bash ];
 
-  patches = [
-    ./change-filename-format.patch
-  ];
-
   installPhase = ''
     mkdir -p $out/bin
     cp notes $out/bin/notes
