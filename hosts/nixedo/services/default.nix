@@ -30,6 +30,7 @@
       gawk
       gitMinimal
       gnused
+      jq
       nix
       nodejs
       wget
