@@ -107,7 +107,7 @@
     dvdbackup
     dvdplusrwtools
     ffmpegthumbnailer
-    gimp
+    gimp3
     gtypist
     hunspellDicts.en-gb-large
     isync
