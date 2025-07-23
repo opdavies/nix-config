@@ -56,7 +56,5 @@
       };
 
       imports = [ (inputs.import-tree ./modules2) ];
-
-      systems = [ "x86_64-linux" ];
     };
 }
