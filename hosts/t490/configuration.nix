@@ -9,7 +9,6 @@
     ../common
 
     ./hardware-configuration.nix
-    ./hardware.nix
     ./services
 
     ../../users/luke.nix
