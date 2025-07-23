@@ -33,7 +33,7 @@ let
 
   tomeLocations = builtins.listToAttrs (
     map (path: {
-      name = "~ ^/${path}$";
+      name = "~ ^/${path}";
 
       value = {
         root = tome.root;
