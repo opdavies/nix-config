@@ -55,14 +55,7 @@
         overlays = import ./overlays { inherit inputs; };
       };
 
-      imports = [
-        (inputs.import-tree ./modules2)
-
-        ./flake-modules/dev-shell.nix
-        ./flake-modules/formatting.nix
-        ./flake-modules/nixos-configurations.nix
-        ./flake-modules/packages.nix
-      ];
+      imports = [ (inputs.import-tree ./modules2) ];
 
       systems = [ "x86_64-linux" ];
     };
