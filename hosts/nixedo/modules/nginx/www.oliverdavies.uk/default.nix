@@ -13,7 +13,6 @@ let
 
     paths = [
       "archive"
-      "at"
       "automated-testing"
       "core"
       "daily/.+"
