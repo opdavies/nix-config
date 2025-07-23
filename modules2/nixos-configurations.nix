@@ -1,4 +1,4 @@
-{ inputs, self, ... }:
+{ config, inputs, self, ... }:
 
 {
   flake =
@@ -21,7 +21,11 @@
         inputs.nixpkgs.lib.nixosSystem {
           inherit system;
 
-          modules = [ "${self}/hosts/${hostname}/configuration.nix" ];
+          modules = [
+            "${self}/hosts/${hostname}/configuration.nix"
+
+            config.flake.modules.nixos."hosts/${hostname}"
+          ];
 
           specialArgs = specialArgs // {
             inherit hostname stateVersion system;

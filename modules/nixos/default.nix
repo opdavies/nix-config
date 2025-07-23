@@ -1,7 +1,6 @@
 {
   imports = [
     ./avahi.nix
-    ./bluetooth.nix
     ./dconf.nix
     ./docker.nix
     ./dwm

@@ -17,7 +17,6 @@
   ];
 
   features = {
-    core.bluetooth.enable = true;
     core.zram.enable = true;
     desktop.dconf.enable = true;
   };
