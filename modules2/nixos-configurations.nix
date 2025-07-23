@@ -15,16 +15,15 @@
       mkNixosConfiguration =
         {
           hostname,
+          modules ? [],
           stateVersion ? "22.11",
           system ? "x86_64-linux",
         }:
         inputs.nixpkgs.lib.nixosSystem {
           inherit system;
 
-          modules = [
+          modules = modules ++ [
             "${self}/hosts/${hostname}/configuration.nix"
-
-            config.flake.modules.nixos."hosts/${hostname}"
           ];
 
           specialArgs = specialArgs // {
@@ -34,16 +33,28 @@
     in
     {
       nixosConfigurations = {
-        lemp11 = mkNixosConfiguration { hostname = "lemp11"; };
+        lemp11 = mkNixosConfiguration rec {
+          hostname = "lemp11";
+
+          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+        };
 
         nixedo = mkNixosConfiguration {
           hostname = "nixedo";
           stateVersion = "24.11";
         };
 
-        t480 = mkNixosConfiguration { hostname = "t480"; };
+        t480 = mkNixosConfiguration rec {
+          hostname = "t480";
 
-        t490 = mkNixosConfiguration { hostname = "t490"; };
+          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+        };
+
+        t490 = mkNixosConfiguration rec {
+          hostname = "t490";
+
+          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+        };
 
         PW05CH3L = mkNixosConfiguration { hostname = "PW05CH3L"; };
       };
