@@ -1,4 +1,9 @@
-{ config, inputs, self, ... }:
+{
+  config,
+  inputs,
+  self,
+  ...
+}:
 
 {
   flake =
@@ -15,7 +20,7 @@
       mkNixosConfiguration =
         {
           hostname,
-          modules ? [],
+          modules ? [ ],
           stateVersion ? "22.11",
           system ? "x86_64-linux",
         }:

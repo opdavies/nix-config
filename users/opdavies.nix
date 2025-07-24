@@ -13,13 +13,12 @@ with lib;
     initialPassword = "opdavies";
     isNormalUser = true;
 
-    extraGroups =
-      [
-        "networkmanager"
-        "wheel"
-      ]
-      ++ optional config.features.cli.docker.enable "docker"
-      ++ optional config.features.cli.podman.enable "podman";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ]
+    ++ optional config.features.cli.docker.enable "docker"
+    ++ optional config.features.cli.podman.enable "podman";
 
     packages = with pkgs; [
       magic-wormhole

@@ -13,22 +13,27 @@ in
   "secrets/cloudflare.age".publicKeys = [
     hosts.nixedo
     hosts.t480
-  ] ++ [ users.opdavies ];
+  ]
+  ++ [ users.opdavies ];
 
   "secrets/cloudflared-credentials.age".publicKeys = [
     hosts.nixedo
-  ] ++ [ users.opdavies ];
+  ]
+  ++ [ users.opdavies ];
 
   "secrets/forgejo-runner-token.age".publicKeys = [
     hosts.nixedo
-  ] ++ [ users.opdavies ];
+  ]
+  ++ [ users.opdavies ];
 
   "secrets/peertube-env.age".publicKeys = [
     hosts.nixedo
-  ] ++ [ users.opdavies ];
+  ]
+  ++ [ users.opdavies ];
 
   "secrets/tubearchivist-env.age".publicKeys = [
     hosts.nixedo
     hosts.t480
-  ] ++ [ users.opdavies ];
+  ]
+  ++ [ users.opdavies ];
 }
