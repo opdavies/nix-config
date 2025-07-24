@@ -24,7 +24,6 @@
     ./starship.nix
     ./sxhkd.nix
     ./tmux-sessionizer.nix
-    ./tmux.nix
     ./zsh
   ];
 }

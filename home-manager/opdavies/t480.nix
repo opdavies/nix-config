@@ -21,7 +21,6 @@
       ranger.enable = true;
       sxhkd.enable = true;
       starship.enable = true;
-      tmux.enable = true;
 
       tmux-sessionizer.enable = true;
       tmux-sessionizer.searchPaths =
