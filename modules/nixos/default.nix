@@ -3,7 +3,6 @@
     ./avahi.nix
     ./dconf.nix
     ./dwm
-    ./fonts.nix
     ./gitea-actions-runner.nix
     ./gnupg.nix
     ./kanata.nix
