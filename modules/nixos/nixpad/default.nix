@@ -23,7 +23,6 @@ in
 
     programs = {
       firefox.enable = true;
-      git.enable = true;
     };
 
     environment.systemPackages = with pkgs; [

@@ -13,9 +13,6 @@
       direnv.enable = true;
       fzf.enable = true;
 
-      git.enable = true;
-      git.user.emailAddress = "oliver@oliverdavies.uk";
-
       node.enable = true;
 
       notes.enable = true;

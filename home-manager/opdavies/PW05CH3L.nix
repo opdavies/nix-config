@@ -9,9 +9,6 @@
       direnv.enable = true;
       fzf.enable = true;
 
-      git.enable = true;
-      git.user.emailAddress = "oliver.davies@tfw.wales";
-
       node.enable = true;
       notes.enable = true;
       ranger.enable = true;

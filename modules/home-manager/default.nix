@@ -9,7 +9,6 @@
     ./direnv.nix
     ./flameshot.nix
     ./fzf.nix
-    ./git.nix
     ./gnupg.nix
     ./gtk.nix
     ./media/handbrake.nix
