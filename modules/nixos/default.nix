@@ -2,7 +2,6 @@
   imports = [
     ./avahi.nix
     ./dconf.nix
-    ./docker.nix
     ./dwm
     ./fonts.nix
     ./gitea-actions-runner.nix

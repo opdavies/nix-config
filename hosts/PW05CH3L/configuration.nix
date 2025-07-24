@@ -13,8 +13,6 @@
 
   features = {
     cli = {
-      docker.enable = true;
-
       password-store.enable = true;
       password-store.extensions = with pkgs.passExtensions; [
         pass-otp

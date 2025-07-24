@@ -1,14 +1,7 @@
-{ config, lib, ... }:
+{ config, ... }:
 
-with lib;
-
-let
-  cfg = config.features.cli.docker;
-in
 {
-  options.features.cli.docker.enable = mkEnableOption "Enable docker";
-
-  config = mkIf cfg.enable {
+  flake.modules.nixos.pc = {
     virtualisation = {
       oci-containers.backend = "docker";
 
@@ -21,5 +14,7 @@ in
         };
       };
     };
+
+    users.users.${config.flake.meta.owner.username}.extraGroups = [ "docker" ];
   };
 }
