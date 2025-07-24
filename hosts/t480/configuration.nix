@@ -130,7 +130,6 @@
     xcape
     xsel
     yt-dlp
-    zeroad
     zoom-us
   ];
 }
