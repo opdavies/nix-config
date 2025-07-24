@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 
 {
   imports = [
@@ -10,15 +10,6 @@
 
     ../../users/opdavies.nix
   ];
-
-  features = {
-    cli = {
-      password-store.enable = true;
-      password-store.extensions = with pkgs.passExtensions; [
-        pass-otp
-      ];
-    };
-  };
 
   wsl = {
     enable = true;

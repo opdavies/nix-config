@@ -11,7 +11,6 @@
     ./nix-index.nix
     ./nixpad
     ./openssh.nix
-    ./password-store.nix
     ./pipewire.nix
     ./podman.nix
     ./st.nix

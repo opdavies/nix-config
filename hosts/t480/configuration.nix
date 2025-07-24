@@ -25,13 +25,6 @@
       kanata.devices = [
         "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
       ];
-
-      password-store.enable = true;
-      password-store.extensions = with pkgs.passExtensions; [
-        pass-audit
-        pass-otp
-        pass-update
-      ];
     };
 
     core = {
