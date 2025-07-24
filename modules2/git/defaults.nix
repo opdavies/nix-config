@@ -1,12 +1,8 @@
-{ config, ... }:
-
 {
-  flake.modules.homeManager.base = hmArgs: {
-    programs.git = {
-      userName = config.flake.meta.owner.name;
-      userEmail = config.flake.meta.owner.email;
-
-      extraConfig = {
+  flake.modules.homeManager.base =
+    { config, ... }:
+    {
+      programs.git.extraConfig = {
         branch = {
           autosetupmerge = true;
           autosetuprebase = "always";
@@ -16,11 +12,11 @@
         checkout.defaultRemote = "origin";
         color.ui = true;
         column.ui = "auto";
-        commit.template = "${hmArgs.config.xdg.configHome}/git/message";
+        commit.template = "${config.xdg.configHome}/git/message";
 
         core = {
           editor = "nvim";
-          excludesFile = "~/.config/git/ignore";
+          excludesFile = "${config.xdg.configHome}/git/ignore";
         };
 
         diff.tool = "vimdiff";
@@ -55,5 +51,4 @@
         user.signingkey = "~/.ssh/id_rsa.pub";
       };
     };
-  };
 }
