@@ -23,7 +23,6 @@
     ./screenkey.nix
     ./starship.nix
     ./sxhkd.nix
-    ./tmux-sessionizer.nix
     ./zsh
   ];
 }

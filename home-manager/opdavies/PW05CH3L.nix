@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [ ../common ];
@@ -13,17 +13,6 @@
       notes.enable = true;
       ranger.enable = true;
       starship.enable = true;
-
-      tmux-sessionizer.enable = true;
-      tmux-sessionizer.searchPaths =
-        let
-          inherit (config.xdg) userDirs;
-        in
-        [
-          "${userDirs.extraConfig.XDG_REPOS_DIR}:2"
-          "${userDirs.documents}:1"
-        ];
-
       zsh.enable = true;
     };
 
