@@ -6,7 +6,6 @@
     ./gitea-actions-runner.nix
     ./gnupg.nix
     ./kanata.nix
-    ./nix-index.nix
     ./nixpad
     ./pipewire.nix
     ./podman.nix
