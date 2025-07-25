@@ -19,7 +19,6 @@
     blueman.enable = true;
 
     gvfs.enable = true;
-    openssh.enable = true;
     power-profiles-daemon.enable = false;
     printing.enable = true;
     pulseaudio.enable = false;

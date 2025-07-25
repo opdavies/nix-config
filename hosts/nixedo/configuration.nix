@@ -20,7 +20,6 @@
   ];
 
   features = {
-    core.openssh.enable = true;
     cli.podman.enable = true;
     desktop.dconf.enable = true;
   };

@@ -2,7 +2,6 @@
   services = {
     auto-cpufreq.enable = true;
     gvfs.enable = true;
-    openssh.enable = true;
     power-profiles-daemon.enable = false;
     thermald.enable = true;
 

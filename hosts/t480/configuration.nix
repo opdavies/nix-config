@@ -27,7 +27,6 @@
     };
 
     core = {
-      openssh.enable = true;
       pipewire.enable = true;
       zram.enable = true;
     };
