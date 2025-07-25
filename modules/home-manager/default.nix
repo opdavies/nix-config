@@ -15,7 +15,6 @@
     ./media/mpv.nix
     ./neovim
     ./node.nix
-    ./notes.nix
     ./phpactor
     ./ranger.nix
     ./redshift.nix

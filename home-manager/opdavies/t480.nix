@@ -15,9 +15,6 @@
 
       node.enable = true;
 
-      notes.enable = true;
-      notes.directory = "${config.xdg.userDirs.documents}/wiki/notes";
-
       ranger.enable = true;
       sxhkd.enable = true;
       starship.enable = true;
