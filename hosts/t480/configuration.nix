@@ -12,7 +12,6 @@
     ./cron.nix
     ./neomutt.nix
     ./newsboat
-    ./ollama.nix
     ./secrets.nix
     ./xserver.nix
 
