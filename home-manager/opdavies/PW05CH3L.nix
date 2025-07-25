@@ -7,8 +7,6 @@
     cli = {
       bookmarkthis.enable = true;
       direnv.enable = true;
-      fzf.enable = true;
-
       node.enable = true;
       ranger.enable = true;
       starship.enable = true;

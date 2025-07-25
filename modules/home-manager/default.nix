@@ -8,7 +8,6 @@
     ./dev-commit.nix
     ./direnv.nix
     ./flameshot.nix
-    ./fzf.nix
     ./gnupg.nix
     ./gtk.nix
     ./media/handbrake.nix
