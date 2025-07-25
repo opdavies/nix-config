@@ -1,20 +1,24 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 {
-  flake.modules.nixos.pc = {
-    virtualisation = {
-      oci-containers.backend = "docker";
+  flake.modules.nixos.pc = args: {
+    options.docker.enable = lib.mkEnableOption "Enable Docker";
 
-      docker = {
-        enable = true;
+    config = lib.mkIf args.config.docker.enable {
+      virtualisation = {
+        oci-containers.backend = "docker";
 
-        autoPrune = {
+        docker = {
           enable = true;
-          dates = "weekly";
+
+          autoPrune = {
+            enable = true;
+            dates = "weekly";
+          };
         };
       };
-    };
 
-    users.users.${config.flake.meta.owner.username}.extraGroups = [ "docker" ];
+      users.users.${config.flake.meta.owner.username}.extraGroups = [ "docker" ];
+    };
   };
 }
