@@ -28,7 +28,6 @@
 
     core = {
       pipewire.enable = true;
-      zram.enable = true;
     };
 
     desktop = {

@@ -16,7 +16,6 @@
   ];
 
   features = {
-    core.zram.enable = true;
     desktop.dconf.enable = true;
   };
 

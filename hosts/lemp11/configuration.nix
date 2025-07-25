@@ -19,10 +19,6 @@
   ];
 
   features = {
-    core = {
-      zram.enable = true;
-    };
-
     desktop.media.makemkv.enable = true;
   };
 

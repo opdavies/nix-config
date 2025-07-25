@@ -12,6 +12,5 @@
     ./pipewire.nix
     ./podman.nix
     ./st.nix
-    ./zram.nix
   ];
 }
