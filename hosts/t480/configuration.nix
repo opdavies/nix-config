@@ -29,7 +29,6 @@
     core = {
       openssh.enable = true;
       pipewire.enable = true;
-      xbanish.enable = true;
       zram.enable = true;
     };
 

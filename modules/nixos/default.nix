@@ -14,7 +14,6 @@
     ./podman.nix
     ./st.nix
     ./thunar.nix
-    ./xbanish.nix
     ./zram.nix
   ];
 }
