@@ -36,7 +36,6 @@
       dwm.enable = true;
       media.makemkv.enable = true;
       st.enable = true;
-      thunar.enable = true;
     };
   };
 
