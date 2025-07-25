@@ -33,7 +33,6 @@
     desktop = {
       dconf.enable = true;
       dwm.enable = true;
-      media.makemkv.enable = true;
       st.enable = true;
     };
   };

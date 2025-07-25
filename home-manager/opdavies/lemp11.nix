@@ -6,7 +6,6 @@
 
     desktop.media = {
       handbrake.enable = true;
-      makemkv.enable = true;
       mpv.enable = true;
     };
   };

@@ -18,10 +18,6 @@
     ../../users/eric.nix
   ];
 
-  features = {
-    desktop.media.makemkv.enable = true;
-  };
-
   nixpad.enable = true;
 
   # Bootloader.

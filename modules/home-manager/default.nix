@@ -12,7 +12,6 @@
     ./gnupg.nix
     ./gtk.nix
     ./media/handbrake.nix
-    ./media/makemkv.nix
     ./media/mpv.nix
     ./neovim
     ./node.nix

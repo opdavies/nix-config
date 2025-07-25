@@ -6,7 +6,6 @@
     ./gitea-actions-runner.nix
     ./gnupg.nix
     ./kanata.nix
-    ./media
     ./nix-index.nix
     ./nixpad
     ./pipewire.nix
