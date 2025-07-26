@@ -7,7 +7,6 @@
     ./gnupg.nix
     ./kanata.nix
     ./nixpad
-    ./pipewire.nix
     ./podman.nix
     ./st.nix
   ];

@@ -26,10 +26,6 @@
       ];
     };
 
-    core = {
-      pipewire.enable = true;
-    };
-
     desktop = {
       dconf.enable = true;
       dwm.enable = true;
