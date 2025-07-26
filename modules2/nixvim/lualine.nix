@@ -1,5 +1,5 @@
 {
-  plugins.lualine = {
+  flake.modules.nixvim.custom.plugins.lualine = {
     enable = true;
 
     settings.options = {

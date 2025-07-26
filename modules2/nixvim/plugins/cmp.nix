@@ -1,5 +1,5 @@
 {
-  plugins.cmp = {
+  flake.modules.nixvim.custom.plugins.cmp = {
     enable = true;
 
     autoEnableSources = true;

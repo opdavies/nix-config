@@ -1,4 +1,4 @@
-{ self, ... }:
+{ config, ... }:
 
 {
   perSystem =
@@ -10,7 +10,7 @@
         neovim = inputs'.nixvim.legacyPackages.makeNixvimWithModule {
           inherit pkgs;
 
-          module = import "${self}/modules/home-manager/neovim/config";
+          module = config.flake.modules.nixvim.custom;
         };
       };
     };

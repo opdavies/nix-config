@@ -20,7 +20,6 @@
     };
 
     coding = {
-      neovim.enable = true;
       phpactor.enable = true;
     };
 

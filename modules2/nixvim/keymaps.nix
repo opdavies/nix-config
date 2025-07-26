@@ -1,5 +1,5 @@
 {
-  keymaps = [
+  flake.modules.nixvim.custom.keymaps = [
     {
       action = "<Esc>A,<Esc>";
       key = ",,";

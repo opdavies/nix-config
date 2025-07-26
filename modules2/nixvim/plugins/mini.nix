@@ -1,5 +1,5 @@
 {
-  plugins.mini = {
+  flake.modules.nixvim.custom.plugins.mini = {
     enable = true;
 
     modules = {

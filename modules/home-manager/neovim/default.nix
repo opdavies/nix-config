@@ -11,9 +11,9 @@ let
   cfg = config.features.coding.neovim;
 in
 {
-  imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-  ];
+  # imports = [
+  #   inputs.nixvim.homeManagerModules.nixvim
+  # ];
 
   options.features.coding.neovim.enable = mkEnableOption "Enable neovim";
 

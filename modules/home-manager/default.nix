@@ -12,7 +12,6 @@
     ./gtk.nix
     ./media/handbrake.nix
     ./media/mpv.nix
-    ./neovim
     ./node.nix
     ./phpactor
     ./ranger.nix

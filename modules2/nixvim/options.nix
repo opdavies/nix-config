@@ -1,5 +1,5 @@
 {
-  opts = {
+  flake.modules.nixvim.custom.opts = {
     expandtab = true;
     exrc = true;
     foldlevel = 1;

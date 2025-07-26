@@ -1,5 +1,3 @@
-{ config, lib, ... }:
-
 let
   leaderBinding = key: command: {
     key = "<leader>${key}";
@@ -8,13 +6,13 @@ let
   };
 in
 {
-  plugins.harpoon = {
-    enable = true;
-    enableTelescope = true;
-  };
+  flake.modules.nixvim.custom = {
+    plugins.harpoon = {
+      enable = true;
+      enableTelescope = true;
+    };
 
-  keymaps = lib.mkIf config.plugins.harpoon.enable (
-    [
+    keymaps = [
       {
         key = "<leader>a";
         action.__raw = "function() require'harpoon':list():add() end";
@@ -42,6 +40,6 @@ in
         8
         9
       ]
-    )
-  );
+    );
+  };
 }
