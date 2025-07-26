@@ -19,10 +19,6 @@
       zsh.enable = true;
     };
 
-    coding = {
-      phpactor.enable = true;
-    };
-
     desktop = {
       browsers = {
         chromium.enable = true;

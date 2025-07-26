@@ -12,10 +12,6 @@
       starship.enable = true;
       zsh.enable = true;
     };
-
-    coding = {
-      phpactor.enable = true;
-    };
   };
 
   home.packages = with pkgs; [

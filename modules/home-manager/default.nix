@@ -13,7 +13,6 @@
     ./media/handbrake.nix
     ./media/mpv.nix
     ./node.nix
-    ./phpactor
     ./ranger.nix
     ./redshift.nix
     ./screenkey.nix
