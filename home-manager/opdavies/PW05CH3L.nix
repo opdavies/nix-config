@@ -7,7 +7,6 @@
     cli = {
       bookmarkthis.enable = true;
       node.enable = true;
-      ranger.enable = true;
       starship.enable = true;
       zsh.enable = true;
     };

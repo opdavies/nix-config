@@ -8,7 +8,6 @@
     ./gtk.nix
     ./media/handbrake.nix
     ./node.nix
-    ./ranger.nix
     ./redshift.nix
     ./screenkey.nix
     ./starship.nix
