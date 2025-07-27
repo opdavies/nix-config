@@ -8,7 +8,6 @@
     ./gtk.nix
     ./media/handbrake.nix
     ./node.nix
-    ./redshift.nix
     ./starship.nix
     ./zsh
   ];
