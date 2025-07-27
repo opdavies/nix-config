@@ -15,11 +15,6 @@
     };
 
     desktop = {
-      browsers = {
-        firefox.enable = true;
-        firefox.homepageUrl = "https://nixedo.oliverdavies.uk";
-      };
-
       gtk.enable = true;
 
       media = {
