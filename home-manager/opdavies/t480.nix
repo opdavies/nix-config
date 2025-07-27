@@ -16,8 +16,6 @@
 
     desktop = {
       browsers = {
-        chromium.enable = true;
-
         firefox.enable = true;
         firefox.homepageUrl = "https://nixedo.oliverdavies.uk";
       };

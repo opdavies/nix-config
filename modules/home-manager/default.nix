@@ -1,7 +1,6 @@
 {
   imports = [
     ./bookmarkthis.nix
-    ./browsers/chromium.nix
     ./browsers/firefox.nix
     ./dev-commit.nix
     ./gtk.nix
