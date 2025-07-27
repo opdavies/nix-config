@@ -6,7 +6,6 @@
   features = {
     cli = {
       bookmarkthis.enable = true;
-      direnv.enable = true;
       node.enable = true;
       ranger.enable = true;
       starship.enable = true;

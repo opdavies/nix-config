@@ -5,7 +5,6 @@
     ./browsers/firefox.nix
     ./browsers/qutebrowser.nix
     ./dev-commit.nix
-    ./direnv.nix
     ./gtk.nix
     ./media/handbrake.nix
     ./media/mpv.nix
