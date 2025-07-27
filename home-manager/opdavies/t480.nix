@@ -28,7 +28,6 @@
         qutebrowser.enable = true;
       };
 
-      flameshot.enable = true;
       gtk.enable = true;
 
       media = {

@@ -6,7 +6,6 @@
     ./browsers/qutebrowser.nix
     ./dev-commit.nix
     ./direnv.nix
-    ./flameshot.nix
     ./gtk.nix
     ./media/handbrake.nix
     ./media/mpv.nix
