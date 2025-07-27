@@ -7,7 +7,6 @@
     ./dev-commit.nix
     ./gtk.nix
     ./media/handbrake.nix
-    ./media/mpv.nix
     ./node.nix
     ./ranger.nix
     ./redshift.nix

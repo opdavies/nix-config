@@ -6,7 +6,6 @@
 
     desktop.media = {
       handbrake.enable = true;
-      mpv.enable = true;
     };
   };
 }
