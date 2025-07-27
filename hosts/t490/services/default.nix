@@ -8,15 +8,7 @@
 
   services = {
     auto-cpufreq.enable = true;
-
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
-
     blueman.enable = true;
-
     gvfs.enable = true;
     power-profiles-daemon.enable = false;
     printing.enable = true;

@@ -1,6 +1,5 @@
 {
   imports = [
-    ./avahi.nix
     ./dwm
     ./gitea-actions-runner.nix
     ./nixpad
