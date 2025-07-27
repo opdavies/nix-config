@@ -18,12 +18,6 @@
     ../../users/opdavies.nix
   ];
 
-  features = {
-    desktop = {
-      dwm.enable = true;
-    };
-  };
-
   services = {
     auto-cpufreq.enable = true;
     geoclue2.enable = true;
