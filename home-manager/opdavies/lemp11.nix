@@ -3,9 +3,5 @@
 
   features = {
     cli.zsh.enable = true;
-
-    desktop.media = {
-      handbrake.enable = true;
-    };
   };
 }

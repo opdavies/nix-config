@@ -16,10 +16,6 @@
 
     desktop = {
       gtk.enable = true;
-
-      media = {
-        handbrake.enable = true;
-      };
     };
   };
 
