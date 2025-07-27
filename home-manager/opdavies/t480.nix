@@ -8,7 +8,6 @@
 
   features = {
     cli = {
-      bluetuith.enable = true;
       bookmarkthis.enable = true;
       direnv.enable = true;
       node.enable = true;

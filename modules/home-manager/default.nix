@@ -1,6 +1,5 @@
 {
   imports = [
-    ./bluetuith.nix
     ./bookmarkthis.nix
     ./browsers/chromium.nix
     ./browsers/firefox.nix
