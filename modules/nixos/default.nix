@@ -7,6 +7,5 @@
     ./kanata.nix
     ./nixpad
     ./podman.nix
-    ./st.nix
   ];
 }

@@ -28,7 +28,6 @@
 
     desktop = {
       dwm.enable = true;
-      st.enable = true;
     };
   };
 
