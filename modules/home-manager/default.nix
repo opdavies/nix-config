@@ -9,7 +9,6 @@
     ./media/handbrake.nix
     ./node.nix
     ./redshift.nix
-    ./screenkey.nix
     ./starship.nix
     ./zsh
   ];
