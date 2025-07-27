@@ -20,8 +20,6 @@
 
         firefox.enable = true;
         firefox.homepageUrl = "https://nixedo.oliverdavies.uk";
-
-        qutebrowser.enable = true;
       };
 
       gtk.enable = true;
