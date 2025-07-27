@@ -10,7 +10,6 @@
     cli = {
       bookmarkthis.enable = true;
       node.enable = true;
-      sxhkd.enable = true;
       starship.enable = true;
       zsh.enable = true;
     };

@@ -11,7 +11,6 @@
     ./redshift.nix
     ./screenkey.nix
     ./starship.nix
-    ./sxhkd.nix
     ./zsh
   ];
 }
