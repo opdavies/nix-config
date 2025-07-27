@@ -19,13 +19,6 @@
   ];
 
   features = {
-    cli = {
-      kanata.enable = true;
-      kanata.devices = [
-        "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
-      ];
-    };
-
     desktop = {
       dwm.enable = true;
     };
