@@ -21,7 +21,6 @@
 
   features = {
     cli.podman.enable = true;
-    desktop.dconf.enable = true;
   };
 
   # TODO: why didn't it work when adding this to jitsi.nix?

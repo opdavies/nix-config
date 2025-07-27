@@ -27,7 +27,6 @@
     };
 
     desktop = {
-      dconf.enable = true;
       dwm.enable = true;
       st.enable = true;
     };

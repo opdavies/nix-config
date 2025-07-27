@@ -15,10 +15,6 @@
     ../../users/opdavies.nix
   ];
 
-  features = {
-    desktop.dconf.enable = true;
-  };
-
   nixpad.enable = true;
 
   boot = {

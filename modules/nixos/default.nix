@@ -1,7 +1,6 @@
 {
   imports = [
     ./avahi.nix
-    ./dconf.nix
     ./dwm
     ./gitea-actions-runner.nix
     ./gnupg.nix
