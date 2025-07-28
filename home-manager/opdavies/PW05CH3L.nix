@@ -6,7 +6,6 @@
   features = {
     cli = {
       bookmarkthis.enable = true;
-      node.enable = true;
       starship.enable = true;
       zsh.enable = true;
     };
