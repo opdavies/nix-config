@@ -14,26 +14,6 @@
   };
 
   programs = {
-    dev-commit = {
-      enable = false;
-
-      repoPaths =
-        let
-          personal = "${config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}/personal";
-        in
-        [
-          "${personal}/email-filters"
-          "${personal}/nix-config"
-          "${personal}/oliverdavies.uk"
-          "${personal}/opentofu-dns"
-        ];
-
-      schedule = {
-        enable = true;
-        time = "daily";
-      };
-    };
-
     zsh.shellAliases =
       let
         inherit (config.xdg.userDirs) documents;
