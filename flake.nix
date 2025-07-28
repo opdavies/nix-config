@@ -48,8 +48,6 @@
     inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       flake = {
-        homeManagerModules.default = import ./modules/home-manager;
-
         nixosModules.default = import ./modules/nixos;
 
         overlays = import ./overlays { inherit inputs; };

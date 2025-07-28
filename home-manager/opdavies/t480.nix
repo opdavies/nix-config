@@ -2,15 +2,8 @@
 
 {
   imports = [
-    ../common
     ./t480/gammastep.nix
   ];
-
-  features = {
-    cli = {
-      zsh.enable = true;
-    };
-  };
 
   programs = {
     zsh.shellAliases =

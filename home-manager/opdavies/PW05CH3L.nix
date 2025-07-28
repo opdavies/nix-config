@@ -1,14 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [ ../common ];
-
-  features = {
-    cli = {
-      zsh.enable = true;
-    };
-  };
-
   home.packages = with pkgs; [
     count-tags
     create-script

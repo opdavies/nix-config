@@ -1,46 +1,8 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-with lib;
-
-let
-  cfg = config.features.cli.zsh;
-in
-{
-  options.features.cli.zsh.enable = mkEnableOption "Enable zsh";
-
-  config = mkIf cfg.enable {
-    programs.zsh = {
-      enable = true;
-      enableCompletion = true;
-      syntaxHighlighting.enable = true;
-
-      zsh-abbr = {
-        enable = true;
-
-        abbreviations = import ./abbreviations.nix;
-        globalAbbreviations = import ./global-abbreviations.nix;
-      };
-
-      dotDir = ".config/zsh";
-
-      shellAliases = (import ./aliases.nix { inherit config; });
-
-      localVariables = {
-        ABBR_SET_EXPANSION_CURSOR = 1;
-      };
-
-      profileExtra = ''
-        if [[ -z "$DISPLAY" ]] && [[ "$(tty)" == "/dev/tty1" ]]; then
-          exec startx &>/dev/null
-        fi
-      '';
-
-      initContent = ''
+  flake.modules.homeManager.base =
+    { config, pkgs, ... }:
+    {
+      programs.zsh.initContent = ''
         background() {
           for ((i=2;i<=$#;i++)); do
             ''${@[1]} ''${@[$i]} &> /dev/null &
@@ -115,5 +77,4 @@ in
         setopt pushdminus
       '';
     };
-  };
 }

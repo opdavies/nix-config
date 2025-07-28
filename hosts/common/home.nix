@@ -27,10 +27,6 @@ let
     ;
 in
 {
-  imports = [
-    outputs.homeManagerModules.default
-  ];
-
   home.username = "opdavies";
   home.homeDirectory = "/home/${config.home.username}";
 
