@@ -13,8 +13,7 @@ check:
     nix flake check
 
 clean:
-    nix store optimise --verbose
-    nix store gc --verbose
+    nh clean all
 
 collect-garbage:
     nix-collect-garbage -d
@@ -33,4 +32,4 @@ update:
     nix flake update
 
 _nixos command *args:
-    sudo nixos-rebuild {{ command }} --flake . {{ args }}
+    nh os {{ command }} . {{ args }}
