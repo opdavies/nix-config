@@ -89,7 +89,6 @@
     peek
     pmutils
     shotwell
-    slack
     stable.gscan2pdf
     sxiv
     tailscale
@@ -97,6 +96,5 @@
     xcape
     xsel
     yt-dlp
-    zoom-us
   ];
 }

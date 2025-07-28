@@ -1,4 +1,8 @@
 {
+  nixpkgs.allowedUnfreePackages = [
+    "zsh-abbr"
+  ];
+
   flake.modules.homeManager.base.programs.zsh.zsh-abbr.abbreviations = {
     cl = "clear";
     cs = "create-script";
