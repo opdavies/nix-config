@@ -61,7 +61,10 @@
           modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
         };
 
-        PW05CH3L = mkNixosConfiguration { hostname = "PW05CH3L"; };
+        PW05CH3L = mkNixosConfiguration rec {
+          hostname = "PW05CH3L";
+          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+        };
       };
     };
 }
