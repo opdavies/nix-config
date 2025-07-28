@@ -1,8 +1,6 @@
 { config, ... }:
 
 {
-  nixpkgs.allowedUnfreePackages = [ "makemkv" ];
-
   flake.modules.nixos.pc =
     { pkgs, ... }:
     {

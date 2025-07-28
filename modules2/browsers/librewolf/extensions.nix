@@ -7,6 +7,7 @@
           awesome-rss
           bitwarden
           darkreader
+          onetab
           tree-style-tab
           ublock-origin
           videospeed
