@@ -64,21 +64,13 @@
     users."${username}" = import ./home.nix;
   };
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
+  nixpkgs.overlays = [
+    inputs.nur.overlays.default
 
-      permittedInsecurePackages = [ "electron-27.3.11" ];
-    };
-
-    overlays = [
-      inputs.nur.overlays.default
-
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.stable-packages
-    ];
-  };
+    outputs.overlays.additions
+    outputs.overlays.modifications
+    outputs.overlays.stable-packages
+  ];
 
   nix.extraOptions = ''
     trusted-users = root ${username}

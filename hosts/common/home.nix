@@ -9,8 +9,6 @@ let
   pkgs = import inputs.nixpkgs {
     inherit system;
 
-    config.allowUnfree = true;
-
     overlays = [
       outputs.overlays.additions
       outputs.overlays.stable-packages
