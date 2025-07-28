@@ -8,7 +8,6 @@
   ];
 
   features.cli = {
-    starship.enable = true;
     zsh.enable = true;
   };
 
