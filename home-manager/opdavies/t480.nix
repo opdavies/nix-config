@@ -13,10 +13,6 @@
       starship.enable = true;
       zsh.enable = true;
     };
-
-    desktop = {
-      gtk.enable = true;
-    };
   };
 
   programs = {
