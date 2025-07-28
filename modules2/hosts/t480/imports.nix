@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  flake.modules.nixos."hosts/t480".imports = with config.flake.modules.nixos; [
+  flake.modules.nixos."nixosConfigurations/t480".imports = with config.flake.modules.nixos; [
     pc
   ];
 }

@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  flake.modules.nixos."hosts/PW05CH3L".imports = with config.flake.modules.nixos; [
+  flake.modules.nixos."nixosConfigurations/PW05CH3L".imports = with config.flake.modules.nixos; [
     workstation
   ];
 }

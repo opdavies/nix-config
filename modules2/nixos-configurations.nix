@@ -41,7 +41,7 @@
         lemp11 = mkNixosConfiguration rec {
           hostname = "lemp11";
 
-          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+          modules = [ config.flake.modules.nixos."nixosConfigurations/${hostname}" ];
         };
 
         nixedo = mkNixosConfiguration {
@@ -52,18 +52,18 @@
         t480 = mkNixosConfiguration rec {
           hostname = "t480";
 
-          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+          modules = [ config.flake.modules.nixos."nixosConfigurations/${hostname}" ];
         };
 
         t490 = mkNixosConfiguration rec {
           hostname = "t490";
 
-          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+          modules = [ config.flake.modules.nixos."nixosConfigurations/${hostname}" ];
         };
 
         PW05CH3L = mkNixosConfiguration rec {
           hostname = "PW05CH3L";
-          modules = [ config.flake.modules.nixos."hosts/${hostname}" ];
+          modules = [ config.flake.modules.nixos."nixosConfigurations/${hostname}" ];
         };
       };
     };

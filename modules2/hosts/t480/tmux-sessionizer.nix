@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  flake.modules.nixos."hosts/t480".home-manager.users.${config.flake.meta.owner.username} = args: {
+  flake.modules.nixos."nixosConfigurations/t480".home-manager.users.${config.flake.meta.owner.username} = args: {
     programs.tmux-sessionizer.searchPaths =
       let
         inherit (args.config.xdg) userDirs;
