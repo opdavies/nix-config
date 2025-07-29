@@ -10,11 +10,11 @@
         let
           repos = "${hmArgs.config.xdg.userDirs.extraConfig.XDG_REPOS_DIR}/forgejo/opdavies";
         in
-        [
-          "${repos}/email-filters"
-          "${repos}/nix-config"
-          "${repos}/oliverdavies.uk"
-          "${repos}/opentofu-dns"
+        map (name: "${repos}/${name}") [
+          "email-filters"
+          "nix-config"
+          "oliverdavies.uk"
+          "opentofu-dns"
         ];
     };
 }
