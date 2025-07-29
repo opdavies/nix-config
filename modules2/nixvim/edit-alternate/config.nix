@@ -1,20 +1,24 @@
 {
   flake.modules.nixvim.custom.extraConfigLua = ''
-    vim.fn["edit_alternate#rule#add"]("go", function(filename)
+    local add_rule = function(ft, fn)
+      vim.fn["edit_alternate#rule#add"](ft, fn)
+    end
+
+    add_rule("go", function(filename)
       return filename:find "_test%.go$"
         and filename:gsub("_test%.go$", ".go")
         or filename:gsub("%.go$", "_test.go")
     end)
 
-    vim.fn["edit_alternate#rule#add"]("php", function(filename)
+    add_rule("php", function(filename)
       if filename:find "Test.php$" then
         filename = filename:gsub("Test.php$", ".php")
 
         return filename:find "tests/src/"
           and filename:gsub("tests/src/(.-)/", "src/")
-          or filename:gsub("tests/", "src/")
+          or  filename:gsub("tests/", "src/")
       else
-        test_filename = filename:gsub(".php$", "Test.php")
+        local test_filename = filename:gsub("%.php$", "Test.php")
 
         if test_filename:find "modules/custom" then
           local test_types = { "Functional", "FunctionalJavaScript", "Kernel", "Unit" }
@@ -33,24 +37,21 @@
     end)
 
     if vim.fn.filereadable "composer.json" == 1 then
-      vim.fn["edit_alternate#rule#add"]("json", function(filename)
-        if filename:find "composer.json" and filename:gsub("%.json$", ".lock") or nil
-        end
+      add_rule("json", function(filename)
+        return filename:find "composer.json" and filename:gsub("%.json$", ".lock") or nil
       end)
 
-      vim.fn["edit_alternate#rule#add"]("lock", function(filename)
-        if filename:find "composer.lock" then
-          return filename:gsub("%.lock$", ".json")
-        end
+      add_rule("lock", function(filename)
+        return filename:find "composer.lock" and filename:gsub("%.lock$", ".json") or nil
       end)
     end
 
     if vim.fn.filereadable "fractal.config.js" == 1 then
-      vim.fn["edit_alternate#rule#add"]("twig", function(filename)
+      add_rule("twig", function(filename)
         return filename:gsub("%.twig$", ".config.yml")
       end)
 
-      vim.fn["edit_alternate#rule#add"]("yml", function(filename)
+      add_rule("yml", function(filename)
         return filename:gsub("%.config.yml$", ".twig")
       end)
     end
