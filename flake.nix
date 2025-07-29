@@ -3,8 +3,14 @@
     agenix.inputs.nixpkgs.follows = "nixpkgs";
     agenix.url = "github:ryantm/agenix";
 
+    conf-vim.flake = false;
+    conf-vim.url = "github:tjdevries/conf.vim";
+
     disko.inputs.nixpkgs.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
+
+    edit-alternate-vim.flake = false;
+    edit-alternate-vim.url = "github:tjdevries/edit_alternate.vim";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
@@ -30,6 +36,9 @@
 
     nur.inputs.nixpkgs.follows = "nixpkgs";
     nur.url = "github:nix-community/NUR";
+
+    standard-vim.flake = false;
+    standard-vim.url = "github:tjdevries/standard.vim";
   };
 
   outputs =
