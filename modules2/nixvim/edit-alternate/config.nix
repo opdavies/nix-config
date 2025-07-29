@@ -1,63 +1,57 @@
 {
   flake.modules.nixvim.custom.extraConfigLua = ''
     vim.fn["edit_alternate#rule#add"]("go", function(filename)
-      if filename:find "_test%.go$" then
-        return filename:gsub("_test%.go$", ".go")
-      else
-        return filename:gsub("%.go$", "_test.go")
-      end
+      return filename:find "_test%.go$"
+        and filename:gsub("_test%.go$", ".go")
+        or filename:gsub("%.go$", "_test.go")
     end)
 
     vim.fn["edit_alternate#rule#add"]("php", function(filename)
       if filename:find "Test.php$" then
         filename = filename:gsub("Test.php$", ".php")
 
-        if filename:find "tests/src/" then
-          -- Drupal tests. Remove the `src/{type}` from the path.
-          return filename:gsub("tests/src/(.-)/", "src/")
-        else
-          return filename:gsub("tests/", "src/")
-        end
+        return filename:find "tests/src/"
+          and filename:gsub("tests/src/(.-)/", "src/")
+          or filename:gsub("tests/", "src/")
       else
-        filename = filename:gsub(".php$", "Test.php")
+        test_filename = filename:gsub(".php$", "Test.php")
 
-        if filename:find "modules/custom" then
-          -- Drupal test types.
+        if test_filename:find "modules/custom" then
           local test_types = { "Functional", "FunctionalJavaScript", "Kernel", "Unit" }
 
           for _, test_type in ipairs(test_types) do
-            local filename_with_test_type = filename:gsub("src/", string.format("tests/src/%s/", test_type))
+            local candidate = test_filename:gsub("src/", string.format("tests/src/%s/", test_type))
 
-            -- Return the first matching test file that exists.
-            if vim.fn.filereadable(filename_with_test_type) == 1 then
-              return filename_with_test_type
+            if vim.fn.filereadable(candidate) == 1 then
+              return candidate
             end
           end
         end
+
+        return test_filename
       end
     end)
 
     if vim.fn.filereadable "composer.json" == 1 then
       vim.fn["edit_alternate#rule#add"]("json", function(filename)
-        if filename:find "composer.json" then
-          return (filename:gsub("%.json$", ".lock"))
+        if filename:find "composer.json" and filename:gsub("%.json$", ".lock") or nil
         end
       end)
 
       vim.fn["edit_alternate#rule#add"]("lock", function(filename)
         if filename:find "composer.lock" then
-          return (filename:gsub("%.lock$", ".json"))
+          return filename:gsub("%.lock$", ".json")
         end
       end)
     end
 
     if vim.fn.filereadable "fractal.config.js" == 1 then
       vim.fn["edit_alternate#rule#add"]("twig", function(filename)
-        return (filename:gsub("%.twig$", ".config.yml"))
+        return filename:gsub("%.twig$", ".config.yml")
       end)
 
       vim.fn["edit_alternate#rule#add"]("yml", function(filename)
-        return (filename:gsub("%.config.yml$", ".twig"))
+        return filename:gsub("%.config.yml$", ".twig")
       end)
     end
   '';

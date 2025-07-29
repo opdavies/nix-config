@@ -1,1 +1,10 @@
-Re-configure diagnostic output in neovim.
+Configure external hard drives on nixedo.
+
+server:
+jellyfin
+immich
+tubearchivist
+websites
+forgejo
+
+Create a Home Manager module for bluetuith.
