@@ -1,3 +1,5 @@
 {
-  flake.modules.homeManager.base.programs.zsh.dotDir = ".config/zsh";
+  flake.modules.homeManager.base = {
+    programs.zsh.dotDir = ".config/zsh";
+  };
 }

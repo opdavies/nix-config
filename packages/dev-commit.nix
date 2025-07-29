@@ -6,6 +6,7 @@ pkgs.writeShellApplication {
   runtimeInputs = with pkgs; [
     coreutils
     git
+    logger
     openssh
   ];
 
@@ -13,14 +14,29 @@ pkgs.writeShellApplication {
     IFS=':' read -ra repos <<< "$DEV_COMMIT_PATHS"
 
     for repo in "''${repos[@]}"; do
-      echo "Processing $repo"
-      pushd "$repo"
+      logger "Processing repository: $repo"
 
-      git add .
-      git commit -m "Automated dev commit" || true
-      git push
+      pushd "$repo" > /dev/null 2>&1
 
-      popd
+      if [[ -n $(git status --porcelain) ]]; then
+        logger "Changes detected in $repo"
+
+        git status --short | while read -r line; do
+          logger "Changed file: $line"
+        done
+
+        git add .
+
+        if git commit -m "Automated dev commit"; then
+          logger "Commit successful in $repo"
+        else
+          logger "No changes to commit in $repo"
+        fi
+      else
+        logger "No changes in $repo"
+      fi
+
+      popd > /dev/null 2>&1
     done
   '';
 }

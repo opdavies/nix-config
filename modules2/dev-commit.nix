@@ -56,8 +56,6 @@
 
           systemd.user = lib.mkIf cfg.schedule.enable {
             services.dev-commit = {
-              Install.WantedBy = [ "default.target" ];
-
               Service = {
                 Environment = [ "DEV_COMMIT_PATHS=${repoPaths}" ];
                 ExecStart = "${lib.getExe pkgs.dev-commit}";
