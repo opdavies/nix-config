@@ -3,6 +3,8 @@
 {
   flake.modules.nixos."nixosConfigurations/t480".home-manager.users.${config.flake.meta.owner.username} =
     hmArgs: {
+      programs.dev-commit.enable = true;
+
       programs.dev-commit.schedule.enable = true;
       programs.dev-commit.schedule.time = "daily";
 

@@ -5,6 +5,8 @@
     { config, pkgs, ... }:
     {
       options.programs.dev-commit = {
+        enable = lib.mkEnableOption "Enable dev-commit";
+
         repoPaths = lib.mkOption {
           default = [ ];
           description = "A list of repository paths that should have automated commits";
@@ -48,7 +50,7 @@
           repoPaths = lib.concatStringsSep ":" cfg.repoPaths;
         in
         {
-          home = {
+          home = lib.mkIf cfg.enable {
             packages = [ pkgs.dev-commit ];
 
             sessionVariables.DEV_COMMIT_PATHS = repoPaths;
