@@ -39,6 +39,9 @@
 
     standard-vim.flake = false;
     standard-vim.url = "github:tjdevries/standard.vim";
+
+    vim-textobj-xmlattr.flake = false;
+    vim-textobj-xmlattr.url = "github:whatyouhide/vim-textobj-xmlattr";
   };
 
   outputs =

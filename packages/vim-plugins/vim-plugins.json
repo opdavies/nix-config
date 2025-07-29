@@ -5,14 +5,6 @@
     "rev": "deb76867c302f933c8f21753806cbf2d8461b548",
     "version": "0.0.6",
     "hash": "sha256-oFzUPG+IOkbKZ2gU/kduQ3G/LsLDlEjFhRP0BHBE+1Q="
-  },
-
-  "vim-textobj-xmlattr": {
-    "owner": "whatyouhide",
-    "repo": "vim-textobj-xmlattr",
-    "rev": "694a297f1d75fd527e87da9769f3c6519a87ebb1",
-    "version": "unstable-2016-06-03",
-    "hash": "sha256-+91FVP95oh00flINdltqx6qJuijYo56tHIh3J098G2Q="
   }
 }
 
