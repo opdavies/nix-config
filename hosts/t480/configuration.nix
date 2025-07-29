@@ -25,7 +25,6 @@
     power-profiles-daemon.enable = false;
     printing.enable = true;
     pulseaudio.enable = false;
-    tailscale.enable = true;
     thermald.enable = true;
     throttled.enable = true;
     upower.enable = true;
@@ -91,7 +90,6 @@
     shotwell
     stable.gscan2pdf
     sxiv
-    tailscale
     ttyper
     xcape
     xsel

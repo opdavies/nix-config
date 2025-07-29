@@ -17,7 +17,6 @@
 
   services = {
     postgresqlBackup.enable = true;
-    tailscale.enable = true;
   };
 
   services.gitea-actions-runner.instances.default = {
