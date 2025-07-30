@@ -16,7 +16,7 @@
 
         return filename:find "tests/src/"
           and filename:gsub("tests/src/(.-)/", "src/")
-          or  filename:gsub("tests/", "src/")
+          or filename:gsub("tests/", "src/")
       else
         local test_filename = filename:gsub("%.php$", "Test.php")
 
