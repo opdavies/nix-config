@@ -6,7 +6,7 @@ in
 prev.dwm.override {
   conf = ''
     #define BROWSER "${lib.getExe prev.librewolf}"
-    #define TERMINAL "/run/current-system/sw/bin/st"
+    #define TERMINAL "${lib.getExe prev.st}"
 
     static const unsigned int borderpx  = 1;
     static const unsigned int snap = 32;
