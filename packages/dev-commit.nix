@@ -29,6 +29,12 @@ pkgs.writeShellApplication {
 
         if git commit -m "Automated dev commit"; then
           logger "Commit successful in $repo"
+
+          if git push; then
+            logger "Push successful in $repo"
+          else
+            logger "Push failed in $repo"
+          fi
         else
           logger "No changes to commit in $repo"
         fi
