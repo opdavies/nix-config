@@ -14,6 +14,7 @@
         in
         map (name: "${repos}/${name}") [
           "email-filters"
+          "git-repo-updater"
           "nix-config"
           "oliverdavies.uk"
           "opentofu-dns"
