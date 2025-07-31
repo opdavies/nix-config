@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.pc.services.ollama.loadModels = [
+  flake.modules.nixos.desktop.services.ollama.loadModels = [
     "dimavz/whisper-tiny"
   ];
 }

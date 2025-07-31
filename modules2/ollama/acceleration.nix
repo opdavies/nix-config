@@ -1,3 +1,3 @@
 {
-  flake.modules.nixos.pc.services.ollama.acceleration = "rocm";
+  flake.modules.nixos.desktop.services.ollama.acceleration = "rocm";
 }

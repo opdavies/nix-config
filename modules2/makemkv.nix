@@ -3,7 +3,7 @@
 {
   nixpkgs.allowedUnfreePackages = [ "makemkv" ];
 
-  flake.modules.nixos.pc =
+  flake.modules.nixos.desktop =
     { pkgs, ... }:
     {
       boot.kernelModules = [ "sg" ];

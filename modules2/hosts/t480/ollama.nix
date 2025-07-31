@@ -1,3 +1,3 @@
 {
-  flake.modules.nixos.pc.services.ollama.enable = true;
+  flake.modules.nixos.desktop.services.ollama.enable = true;
 }

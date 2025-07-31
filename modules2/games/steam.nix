@@ -4,5 +4,5 @@
     "steam-unwrapped"
   ];
 
-  flake.modules.nixos.pc.programs.steam.enable = true;
+  flake.modules.nixos.desktop.programs.steam.enable = true;
 }

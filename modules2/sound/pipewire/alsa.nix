@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.pc.services.pipewire.alsa = {
+  flake.modules.nixos.desktop.services.pipewire.alsa = {
     enable = true;
     support32Bit = true;
   };
