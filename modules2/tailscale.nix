@@ -1,3 +1,3 @@
 {
-  flake.modules.nixos.workstation.services.tailscale.enable = true;
+  flake.modules.nixos.pc.services.tailscale.enable = true;
 }

@@ -7,7 +7,7 @@
 
 {
   flake.modules.nixos = {
-    workstation = {
+    pc = {
       imports = [ inputs.home-manager.nixosModules.home-manager ];
 
       home-manager = {
@@ -31,7 +31,7 @@
       };
     };
 
-    pc.home-manager.users.${config.flake.meta.owner.username}.imports = [
+    desktop.home-manager.users.${config.flake.meta.owner.username}.imports = [
       config.flake.modules.homeManager.gui
     ];
   };
