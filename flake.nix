@@ -22,6 +22,13 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    git-repo-updater = {
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.import-tree.follows = "import-tree";
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "git+https://code.oliverdavies.uk/opdavies/git-repo-updater";
+    };
+
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager/master";

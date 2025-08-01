@@ -61,6 +61,27 @@
         "type": "github"
       }
     },
+    "devshell": {
+      "inputs": {
+        "nixpkgs": [
+          "git-repo-updater",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741473158,
+        "narHash": "sha256-kWNaq6wQUbUMlPgw8Y+9/9wP0F8SHkjy24/mN3UAppg=",
+        "owner": "numtide",
+        "repo": "devshell",
+        "rev": "7c9e793ebe66bcba8292989a68c0419b737a22a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "devshell",
+        "type": "github"
+      }
+    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -168,6 +189,33 @@
         "owner": "numtide",
         "repo": "flake-utils",
         "type": "github"
+      }
+    },
+    "git-repo-updater": {
+      "inputs": {
+        "devshell": "devshell",
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "import-tree": [
+          "import-tree"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754037000,
+        "narHash": "sha256-xTOa8qJMSr+tIX4iImfPRXoWSuEMyBvmpmxZj2JTwKk=",
+        "ref": "refs/heads/main",
+        "rev": "959f92dea25f962a4e46d582507278277610ca9f",
+        "revCount": 32,
+        "type": "git",
+        "url": "https://code.oliverdavies.uk/opdavies/git-repo-updater"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://code.oliverdavies.uk/opdavies/git-repo-updater"
       }
     },
     "home-manager": {
@@ -450,6 +498,7 @@
         "disko": "disko",
         "edit-alternate-vim": "edit-alternate-vim",
         "flake-parts": "flake-parts",
+        "git-repo-updater": "git-repo-updater",
         "home-manager": "home-manager_2",
         "import-tree": "import-tree",
         "nix-index-database": "nix-index-database",
