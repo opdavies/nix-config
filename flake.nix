@@ -58,6 +58,11 @@
       url = "github:tjdevries/standard.vim";
     };
 
+    vim-heritage = {
+      flake = false;
+      url = "github:jessarcher/vim-heritage";
+    };
+
     vim-textobj-xmlattr = {
       flake = false;
       url = "github:whatyouhide/vim-textobj-xmlattr";

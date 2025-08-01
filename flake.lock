@@ -460,6 +460,7 @@
         "nixvim": "nixvim",
         "nur": "nur",
         "standard-vim": "standard-vim",
+        "vim-heritage": "vim-heritage",
         "vim-textobj-xmlattr": "vim-textobj-xmlattr"
       }
     },
@@ -521,6 +522,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "vim-heritage": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1716350150,
+        "narHash": "sha256-YzqP2+Go8bW3heFyzzcS/91LrMkwjpZ89+ptrjjBKrM=",
+        "owner": "jessarcher",
+        "repo": "vim-heritage",
+        "rev": "574baeb0679681a710adce5110a0d8b2ae1c2637",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jessarcher",
+        "repo": "vim-heritage",
         "type": "github"
       }
     },
