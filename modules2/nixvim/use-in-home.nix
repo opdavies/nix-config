@@ -7,7 +7,7 @@
       # Ideally:
       # nixvim = self.packages.${pkgs.system}.nixvim;
       # but https://github.com/danth/stylix/pull/415#issuecomment-2832398958
-      nixvim = inputs.nixvim.legacyPackages.${pkgs.system}.makeNixvimWithModule {
+      neovim = inputs.nixvim.legacyPackages.${pkgs.system}.makeNixvimWithModule {
         inherit pkgs;
 
         extraSpecialArgs.homeConfig = hmArgs.config;
@@ -17,8 +17,8 @@
     in
     {
       home = {
-        packages = [ nixvim ];
-        sessionVariables.EDITOR = lib.mkForce (lib.getExe nixvim);
+        packages = [ neovim ];
+        sessionVariables.EDITOR = lib.mkForce (lib.getExe neovim);
       };
     };
 }
