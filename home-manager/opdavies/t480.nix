@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./t480/gammastep.nix
-  ];
-
   programs = {
     zsh.shellAliases =
       let
