@@ -2,6 +2,7 @@ systemctl --user import-environment DISPLAY
 poweralertd -s &
 set-background &
 systemctl --user start dwm-status &
+gammastep &
 
 sxhkd &
 
