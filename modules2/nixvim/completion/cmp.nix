@@ -51,7 +51,6 @@
           name = "buffer";
           keyword_length = 3;
         }
-        { name = "calc"; }
       ];
     };
   };
