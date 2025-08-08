@@ -1,17 +1,16 @@
+{ inputs, ... }:
+
 {
-  flake.modules.nixos.pc =
+  flake.modules.homeManager.base =
     { pkgs, ... }:
     {
-      environment.systemPackages = [
-        (pkgs.writeShellApplication {
+      home.packages = [
+        (pkgs.writeShellApplication rec {
           name = "heightwidth";
 
           runtimeInputs = [ pkgs.ffmpeg ];
 
-          # https://github.com/rwxrob/dot/blob/main/scripts/heightwidth.
-          text = ''
-            ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of default=noprint_wrappers=1 "$1"
-          '';
+          text = builtins.readFile "${inputs.rwxrob-dot}/scripts/${name}";
         })
       ];
     };
