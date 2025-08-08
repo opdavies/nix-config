@@ -60,6 +60,11 @@
       url = "github:nix-community/NUR";
     };
 
+    rwxrob-dot = {
+      flake = false;
+      url = "github:rwxrob/dot";
+    };
+
     standard-vim = {
       flake = false;
       url = "github:tjdevries/standard.vim";

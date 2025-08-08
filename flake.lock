@@ -508,9 +508,26 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
         "nur": "nur",
+        "rwxrob-dot": "rwxrob-dot",
         "standard-vim": "standard-vim",
         "vim-heritage": "vim-heritage",
         "vim-textobj-xmlattr": "vim-textobj-xmlattr"
+      }
+    },
+    "rwxrob-dot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1751898094,
+        "narHash": "sha256-kGpHL2l9p/yOtmG+AZvOb0Y5mH1d+Zoh2dd5N3Xjizc=",
+        "owner": "rwxrob",
+        "repo": "dot",
+        "rev": "90794c77061f270078e847af45c376610768c6e2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rwxrob",
+        "repo": "dot",
+        "type": "github"
       }
     },
     "standard-vim": {
