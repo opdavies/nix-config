@@ -7,7 +7,7 @@
 
   home.packages = with pkgs; [
     import-to-jellyfin
-    vix
+    vic
     yt-dlp
   ];
 }

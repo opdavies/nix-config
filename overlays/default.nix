@@ -4,7 +4,7 @@
   additions =
     final: prev:
     import ../packages {
-      inherit prev;
+      inherit inputs prev;
 
       pkgs = final;
     };

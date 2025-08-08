@@ -1,4 +1,9 @@
-{ pkgs, prev, ... }:
+{
+  inputs,
+  pkgs,
+  prev,
+  ...
+}:
 
 let
   inherit (pkgs) callPackage;
@@ -30,7 +35,7 @@ in
   todos-edit = callPackage ./todos-edit.nix { };
   unmounter = callPackage ./unmounter.nix { };
   update-all-git-repos = callPackage ./update-all-git-repos.nix { };
-  vix = callPackage ./vix.nix { };
+  vic = callPackage ./vic.nix { inherit inputs; };
   zet-new = callPackage ./zet-new.nix { };
 
   vimPlugins = prev.vimPlugins // vimPlugins;

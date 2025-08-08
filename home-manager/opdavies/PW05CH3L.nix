@@ -8,7 +8,7 @@
     tag-release
     time-until
     update-all-git-repos
-    vix
+    vic
     zet-new
   ];
 

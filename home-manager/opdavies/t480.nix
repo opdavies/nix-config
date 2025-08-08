@@ -30,7 +30,7 @@
     todos-edit
     unmounter
     update-all-git-repos
-    vix
+    vic
     zet-new
   ];
 
